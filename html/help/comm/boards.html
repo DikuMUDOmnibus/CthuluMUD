@@ -1,0 +1,51 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (Win98; I) [Netscape]">
+   <meta name="Author" content="mystery">
+   <title>CthulhuMud Help - Boards</title>
+<CthulhuMud-Title    Boards>
+<CthulhuMud-Index    Commands>
+<CthulhuMud-Keywords board note>
+</head>
+<body>
+
+<h3>
+<b>Boards</b></h3>
+
+<p><br>These commands are used for the new note system. Instead of just
+one board, there are several, each with its special purpose.
+<br>Changing between the boards is accomplished using the <b>board</b>
+command. Board without any arguments gives you a list of all boards together
+with number ofunread message. To change, type board &lt;number> or board
+&lt;name of the board>.
+<p>To read next unread note, type <b>note</b>. To read a note with a specified
+number, type note read &lt;number>. Typing note while in a board with no
+unread notes shifts you to the next board. Note that unlike the standard
+note system, a note has the same number in note list and note read.
+<p>Posting a message is as simple as writing note write. You will be moved
+into interactive mode, where all you see are prompts for the fields like
+To:, From: etc. You will be automatically put AFK while writing a note.
+<p>To see the list of the notes in the current board, type note list. Typing
+note list &lt;number> will list only &lt;number> of the last notes in the
+area.
+<br>You can remove your own note by using note remove &lt;number>. Implementors
+may remove other people's notes. Implementors can also select how many
+days their note is kept before being purged. Purging happens automatically
+at bootup. Purged notes are not deleted, but saved into a file.
+<p>To let only immortals see your note, address it to "imm". To let players
+of a specific level and above, address it to that level (no other recipients
+may appear in that case).
+<br>&nbsp;
+<p><b>Syntax:</b>
+<br><b>&nbsp; board</b>
+<br><b>&nbsp; board &lt;number></b>
+<br><b>&nbsp; note</b>
+<br><b>&nbsp; note read &lt;number></b>
+<br><b>&nbsp; note list</b>
+<br><b>&nbsp; note remove</b>
+<br><b>&nbsp; note write</b>
+<br><b>&nbsp; note catchup</b>
+</body>
+</html>

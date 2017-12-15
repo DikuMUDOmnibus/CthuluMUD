@@ -1,0 +1,1099 @@
+#HELPS
+
+-1 WIZLIST~
+[{rImp{w]
+   Tsathoggua
+   Yog Sothoth
+   Shub Niggurath
+
+[{bGreater Gods{w]
+   Bast
+
+[{gLesser Gods{w]
+   Marduk
+   Dagon
+
+[{yBuilders{w]
+   Shalquin
+   Hatama
+   Nyarlathotep   
+
+~
+-1 'NEWBIE INFO'~
+Greetings mortal! Here ye shall find adventure and danger, and maybe 
+even a little bit 'o fame. But aye, before ye begin, there are a few
+things ye should know. Be sure to "practice" your weapons in one of 
+the training rooms. Then try the "equipment", "spells" and "skills"
+commands to see what you own, spells you know (if any) and what you
+know how to do. For a complete list of commands, type "commands".
+For a list of available help topics, type "hlist".
+
+If you want COLOR type COLOR from the prompt once in the game.
+~
+-1 MOTD~
+Hello @a2, welcome to @g0.
+ 
+This is a RP Mud - try to stay in character as much as possible.
+This is also a PK Mud - don't try to kill at sight, you won't be killed at
+sight either. It is allowed but strictly and only in character and
+with good RP reasons. Even if we play rough sometimes - don't be scared.
+This is a helpful place - ask and you'll get assistance.
+~
+-1 IMPGREETING~
+<IMG SRC="http://195.34.155.132/mud/cthulhu.jpg">
+
+*** Welcome to CthulhuMud ***
+Your gods are:
+Tsathoggua, Marduk, Yog,
+Shub, Bast, Dagon,
+Nyarlathotep, Hatama
+and Cthugha.
+<BACK COLOR=black>
+~
+51 IMOTD~
+Fill in IMOTD Message here.
+~
+51 JOBS~
+This is a partial list of what a god of any given level should be doing.
+It is just a rough guideline and not exact.
+
+Heroes / Superheroes:
+You should be helping mortals in minor ways (i.e. not handing out free spells
+right and left).  An ideal example is leading quest parties or missions to 
+get corpses...don't just get the corpse for a person, make them come along and
+help you do it. Getting newbies startet won't harm too
+
+Lesser Gods:
+Lesser Gods may not assist mortals directly in any way.  
+A Lesser's main job is to help with quests (via switch), or possibly run
+small quest of their own -- but the rewards should be minimal.
+
+Gods:
+Deities have two main roles: reimbursement and quest running.  Be skeptical
+on reimburses, don't just hand out every piece of gear.  I suggest limiting
+reimbursements to 10 items at a time, and make sure that you do not load things
+at too high a level (new format items have hard-coded levels, so are not a
+problem).  vnum and stat are useful for this.  You can draft Angels to help you
+run a quest, and please note that quests should NOT have huge rewards -- the
+main point should be to have fun.  Deities have no business trying to enforce
+rules -- the most you should do to a player is a NOCHANNEL or similar light
+punishment. This level is also used for most of the mud's builders who do 
+not have other duties.
+
+Greater Gods:
+Gods can run quests just like Deities, and it's nice to do reimbursements too.
+However, the main role of a God is keeping the peace.  Gods can enforce (but
+not create rules), using the various NOTELL-class commands, as well as deny,
+purge, freeze, and ban (but be careful with these commands!)  Gods are expected
+to help make the mud run more smoothly, power trips are strictly verbotten.
+
+Not fufilling the roles of your office can result in demotion or deletion.
+~
+51 COMMANDMENTS LAWS 'GOD RULES' GODS~
+******************************
+
+                         **    {r   The Rules {x         **
+                         ******************************
+
+1)  Do not kill mortals, do not kill mortals, do not kill mortals.
+    This includes transferring/summoning them to aggressive mobs.
+
+2)  Do not cheat for ANY mortal in ANY way, especially your own. 
+    Unless of course you LIKE deletion. Yes this includes tanking,
+    healing/restoring, casting protection spells <armor, sanct>,    
+    and softening up or altering mobs.
+
+3)  Do not transfer or summon mobs to mortals or mortals to mobs.
+    They have legs, if they want to kill a mob, they can easilly
+    go there themselves.
+
+4)  DO NOT kill the shopkeepers for any reason at ALL.
+
+5)  DO NOT use reboot.  <--- Note, simple English.
+
+6)  Do not give out free equipment.  You don't need to win brownie
+    points with the mortals.  Quest are fine but handing out items
+    isn't.
+
+7)  A note on quests: Quests are a good thing, more or less, BUT 
+    do not give out overly extravagant prizes.  Exercise some 
+    common sense here folks.  Do not load items more than 4 levels
+    below their normal level (i.e. no level 5 ogre gauntlets).
+
+8)  Do not undermine the authority of a higher level god.  If you 
+    see that someone has been frozen or nochannelled do not restore
+    their priveleges.  They are being punished for a reason. Also,
+    NEVER argue with an administrator or implementor. If you *are*
+    an administrator, NEVER argue with the final decision of the 
+    implementor.
+
+9)  Do not try to overrule each other. If a disagreement between to
+    immortals occurs, it should be turned over to a higher level god.
+
+10) Trusted mortals:  Do not use your god powers to help your mortal
+    character.  If you do, your trust will be taken away.
+
+11) If you are a BUILDER, do not give out or use equipment from your 
+    area until it has been approved. Also, editing things not your own
+    can result in severe punishment. 
+~
+-1 RULES~
+This are the rules of CthulhuMUD.  For other matters, use commom sense.
+
+* Player killing {Ris{x allowed. Type "help pkill" for details.
+  Do not kill without good reason and never attack newbies.
+
+* foul and/or abusive language will not be tolerated on Cthulhu, from anyone
+  (including gods). Punishments range from deletion to NOCHANNELing.
+
+* sexual harassment of any form will not be tolerated, punishable by deletion
+
+* no multiple logins, multiple playing, or helping your own characters with 
+  other characters you own -- by any arrangment.
+
+* no kill stealing.  This means you cannot attack a mob someone else is 
+  fighting, unless they ask you to. If a mob is injured, and you are not
+  the one who injured it, you may not under any circumsances attack it.
+  This means NO. Whether it is an easy mob or a hard mob or there is not
+  even anybody else logged in! A flag will soon be added to make spotting
+  of injured mobs easier.
+
+* cheating will not be tolerated.  This includes accepting favors from gods
+  and exploiting bugs. If you find a bug, report it, then do not use it.
+  {RIf you are unsure of what constitutes a bug, read HELP BUG.{w
+~
+-1 BUG BUGS~
+A bug is anything in the game that the immortals have deemed a mistake in
+the code, areas, rules, or layouts. Immortal comment is FINAL on saying
+whether or not something is a bug. If an immortal tells you something you
+are doing is a bug, you may not argue that it is not. Continuing to exploit
+a bug after being warned WILL result in deletion. Just because you are able
+to do it does not make it legal.
+
+- The Staff.
+~
+55 CLONE~
+Syntax:
+  clone obj <object>
+  clone mob <mobile>
+  clone <name>
+
+The clone command duplicates an object or mobile.  The level of item or mobile
+that may be cloned depends on your level.  The target object or mob must be in
+the same room as you, or in your posession.  Strung and set information is
+preserved by clone, as well as any spell effects and container contents or
+mobile inventory, except for items which are too high for you to clone.  
+Strung extended descriptions on objects are not kept, however.
+~
+52 XINFO~
+The xinfo command toggles an immortal's extra information display.  Only
+has limited use currently, affects extra autoexit information display.
+~
+-1 PROMPT~
+syntax: prompt
+        prompt <string>
+        prompt default
+
+The prompt command with no argument toggles your prompt on and off.
+The default argument returns your prompt to the default.
+
+Any other argument is taken as the new setting for your prompt.  It may
+contain a mixture of normal characters, color codes and special strings.
+See {wHELP COLOR{x for help with the color codes.  The special strings
+you can use are:
+
+%h current hp           %H maximum hp
+%m current mana         %M maximum mana
+%v current movement     %V maximum movement
+%g total gold           %w current wait states
+%l current level        %n characters name
+%t time in hours        %T Time in hh:mm format 
+
+The default prompt is:
+
+{{G({{W%h/%Hhp %m/%Mmn %v/%Vmv{{G){{x
+
+which gives something like:
+
+{G({W25/37hp 32/63mn 97/126mv{G){x
+
+Immortals may find other information shown as a part of their prompt.
+~
+52 OLC EDIT~
+Syntax: EDIT AREA [create/reset] [vnum]		- Area Creation and Repoping.
+
+   Note: EDIT AREA is available to IMPS only. Ask one to create your area.
+
+Syntax: EDIT ROOM ( [create] [vnum] )		- Room Creation and Editing.
+Syntax: EDIT OBJ  [create] <vnum>		- Object Creation and Editing.
+Syntax: EDIT MOB  [create] <vnum>		- Mobile Creation and Editing.
+
+Syntax: ASAVE  <world/area/changed/list>	- Save Editing to Disk.
+Syntax: ALIST                                   - Listing of Areas.
+Syntax: RESET  See Help Resets.			- Set Game Resets.
+
+Definition: [optional]  <required>  (combined arguments)
+
+     Inside an editor, typing COMMANDS lists working commands and ? gives
+help. AEDIT and REDIT default to the current area or room. EDIT ROOM RESET
+resets the current room.  Most commands with no arguments display syntax.
+
+     To exit an editor, type END. Be sure to save or your changes will
+be LOST at the next reboot. Save *OFTEN* because a crash can wipe your changes 
+too! 
+
+Note: AEDIT,REDIT,MEDIT and OEDIT are not commands, they are modes.
+See also help: AEDIT REDIT MEDIT OEDIT. Also see help: DEFAULT
+To edit HELPS, see "help hedit"
+~
+52 ALIST~
+Syntax: ALIST
+
+This command gives you a listing of all the areas along with their
+vnum assignments and the builder(s) assigned to editing them.
+~
+52 AEDIT~
+Syntax: edit area	 -Enters the editor for the current area.
+Syntax: edit area <vnum> -Enters the editor for the selected area.
+
+The follow commands are available from within the AEDITOR:
+
+age <number>        - set the age of the area
+builder <player>    - toggle that builder's access
+commands            - prints a list of possible commands
+create              - create a brand new area and switch to it
+done                - exits the area editor and returns to normal play
+filename <filename> - change the file name for the area (be careful)
+name <name>         - change the 'AREAS' name of this area
+reset               - resets the current area
+security <rating>   - set the security rating for this area
+show                - hitting return, or 'show' shows the area stats
+vnum <lower> <upper>- set the lower and upper vnum's
+lvnum <lower>       - set the lower vnum
+uvnum <upper>       - set the upper vnum
+flags <flag>        - set area flag <flag> - type ? AREA for a list
+~
+52 REDIT~
+Syntax: edit room		-Enters the editor for the current room.
+
+The following commands are available from within the REDITOR:
+
+commands            - prints a list of possible commands
+used				- shows all used room vnums in the current area
+unused				- shows all unused room vnums in the current area
+create <vnum>       - creates a room with a certain vnum
+desc                - edit description of room
+done                - exists the room editor and returns to normal play
+ed                  - type this command for additonal extra-description help
+format              - format(wordwrap) the room description
+name <room title>   - changes the room title
+show                - hitting return, or 'show' shows the room stats
+oshow <vnum>        - shows an object with given vnum
+olist               - lists objects in this area.
+mshow <vnum>        - shows a mobile with given vnum
+mlist               - lists mobiles in this area.
+flags <flag>        - set room attribute to <flag> - ? ROOM for list
+sector <sector>     - set room terrain, type ? SECTOR for a list
+<direction>         - see help EXIT, or type <dir> ?
+oreset              - Sets object resets in room.
+mreset              - Sets mob resets in room. 
+{RNOTE: {Y--- {R Use the two reset commands above, and RESET only if the
+two above will not do what you need. RESET is buggy, the ORESET and MRESET 
+commands work better.{w 
+~
+52 EXIT~
+For exits, type the direction (north/s/e/w) followed by:
+
+dig <vnum>         - creates the room and makes a two way link
+link <room vnum>   - make a two way link
+room <room vnum>   - make a one way link (use with caution)
+key <object vnum>  - makes specified object the vnum of the key required
+name <door name>   - makes the door's name/keywords = to the given name
+desc               - edit the description of the exit
+delete             - delete this exit
+<exit-flags>       - type ? EXIT for a list(make exit door, locked etc.)
+
+The exit flags are presented in the following manner.  The capitalized
+flags are ones not included in the reset info.  i.e. closed is due to
+a player closing the door and not due to the door being set to be closed.
+
+-South to [ 3744] Key: [   -1] Exit flags: [door CLOSED bashed pickproof]
+~
+52 OEDIT~
+Syntax: edit object <vnum>	-Enters the editor for the selected object.
+
+The following commands are available from within the OEDITOR:
+
+addaffect           - attaches an affect to an object, no args for help
+addapply			- attaches an apply to an object, no args for help
+delaffect           - removes an affect or apply from an object, no args for help
+commands            - prints a list of possible commands
+cost <gold>         - sets the gold value of the object
+create <vnum>       - creates object with specified vnum
+done                - exits the object editor and returns to normal play
+ed                  - type this for info on adding/editing extended descripts
+long                - edit long description (the one in the room)
+name <keywords>     - sets the keywords on an object
+short <desc>        - sets the 'name' of an object (a sword, a fish etc)
+show                - hitting return, or 'show' shows the object stats
+v0 <num>            - sets the value '0' on the object
+v1 <num>            - sets the value '1' on the object
+v2 <num>            - sets the value '2' on the object
+v3 <num>            - sets the value '3' on the object
+v4 <num>            - sets the vlaue '4' on the objcet
+weight <num>        - sets the weight of the object
+type         	    - type of object, type ? TYPE for a list
+extra		    - attributes of object, type ? EXTRA for a list
+wear                - where object is worn, type ? WEAR for a list
+material            - material the object is made from
+~
+52 MEDIT~
+Syntax: medit <vnum>		-Enters the editor for the selected mobile.
+
+The following commands are available from within the MEDITOR:
+
+alignment <value>   - set the mobile's alignment
+commands            - prints a list of possible commands
+create <vnum>       - creates mobile with specified vnum
+desc                - edit the mobile's description (when looked at)
+done                - exits the mobile editor and returns to normal play
+level <level>       - set the mobile's level
+long                - edit long description (the one in the room)
+name <keywords>     - sets the keywords on an mobile
+shop                - type this command for further information
+short <desc>        - sets the 'name' of an mobile (a sword, a fish etc)
+show                - hitting return, or 'show' shows the mobile stats
+spec                - sets a mobiles spec proc, type ? SPEC for a list
+sex                 - set the mobile's sex, type ? SEX for a list
+act                 - mobiles actions, type ? ACT for a list
+affect              - mobile affects, type ? AFFECT for a list
+ac		    - set the mobile's ac, type ? AC for a list
+form		    - mobiles body-form, type ? FORM for a list
+part		    - mobiles bodyparts, type ? PART for a list
+imm		    - mobile is immune to, type ? IMM for a list
+res		    - mobile is resistant to, type ? RES for a list
+vuln		    - mobile is vulnerable to, type ? VULN for a list
+material	    - material mobile is made from, type ? MATERIAL for a list
+off		    - offensive behaviour, type ? OFF for a list
+size		    - size, type ? SIZE for a list
+hitdice		    - dice to toss to get mobile's hitpoints
+manadice	    - dice to toss to get mobile's mana
+damdice		    - dice to toss to get mobile's hand to hand damage
+damtype		- weaponless damage type, ie "hit", "wrath", "bite"
+
+type 'help HITDICE', 'help MANADICE', 'help DAMDICE' for lists of reasonable dice 
+combinations on different levels.
+~
+52 RESET RESETS ~
+Syntax: 
+  ORESET <vnum> <number>
+  ORESET <vnum> <number> <in obj name>
+  ORESET <vnum> <number> <in mob name> <wear location>
+
+  MRESET <vnum> <number>
+
+  RESET
+  RESET <number> DELETE
+  EDIT ROOM RESET
+
+Typing ? WEAR-LOC will list possible locations that an object can be loaded to.
+~
+52 ITEM_LIGHT~
+value 0    unused
+   value 1    unused
+   value 2    hours of light available, 0 is dead, -1 or 599 is infinite            
+   value 3    unused
+   value 4    unused
+~
+52 ITEM_STAFF_WAND~
+value 0    level
+   value 1    max charges
+   value 2    current charges
+   value 3    spell name
+   value 4    unused
+
+An up-to-date list of spells can be obtained by typing:
+? SPELLS [ignore/attack/defend/self/object/all]
+~
+52 ITEM_SCROLL_POTION_PILL~
+value 0    level
+   value 1    spell name 1
+   value 2    spell name 2
+   value 3    spell name 3
+   value 4    unused
+
+An up-to-date list of spells can be obtained by typing:
+? SPELLS [ignore/attack/defend/self/object/all]
+~
+52 ITEM_ARMOR~
+value 0    ac pierce
+   value 1    ac bash
+   value 2    ac slash
+   value 3    ac exotic (magic)
+   value 4    unused
+~
+52 ITEM_WEAPON~
+value 0    weapon class.
+   value 1    number of dice to roll.
+   value 2    type of dice to roll.
+   value 3    weapon type.
+   value 4    special weapon type.
+
+An up-to-date list of values can be obtained by typing
+? WCLASS
+help WEAPON_DICE
+? WEAPON
+? WTYPE
+~
+52 ITEM_CONTAINER~
+value 0    weight capacity
+   value 1    flags: closeable, pickproof, closed, locked            
+   value 2    key vnum
+   value 3    unused
+   value 4    unused
+
+An up-to-date list of flags can be obtained by typing
+? CONTAINTER
+~
+52 ITEM_DRINK~
+value0    capacity
+   value 1    current quantity
+   value 2    liquid type
+   value 3    poisoned?
+   value 4    unused
+
+An up-to-date list of liquid types can be obtained by typing
+? LIQUID
+~
+52 ITEM_FOOD~
+value 0    hours of food value
+   value 1    unused
+   value 2    unused
+   value 3    poisoned?
+   value 4    unused
+~
+52 ITEM_MONEY~
+value 0    value in gold pieces
+   value 1    unused
+   value 2    unused
+   value 3    unused
+   value 4    unused
+~
+52 DEFAULT~
+Sets the MOB or Object you are creating to default values. These values
+are the de-facto standard for CthulhuMUD, and you may vary them, but these
+are the standards and if you ignore them totally your area will be adjusted
+to meet them, or be deleted.
+~
+-1 SUMMARY~
+{RYour first Steps here:{x
+
+1) Have a look at {bHELP RULES{x
+2) Set your AUTO-Settings ({bHELP AUTO{x)
+3) Learn how to move around ({bn, e, s, w, u, d, in , out, RECALL{x)
+4) Have a look at your character ({bSCORE, INV, EQ, HELP PROFESSIONS{x)
+5) Train your Stats ({bTRAIN{x)
+6) Find a teacher and practice your skills ({bHELP PRACTICE, PRAC{x)
+7) Ready your weapons ({bINV, HELP WEAR{x)
+8) Hunt some mobs in your {rNewbie Area{x ({bHELP CONSIDER, HELP KILL, HELP FLEE{x)
+9) Use the new stuff you find during your expeditions ({bHELP COMPARE, HELP SACRIFICE{x)
+10) If you're stuck somewhere, ask for help. The best way to do so is GOSSIP channel ({bCHANNELS{x)
+
+For a complete HELP database go to:
+=> @g1/help/
+~
+0 HELP~
+Syntax: help
+Syntax: help <keyword>
+
+HELP without any arguments shows a one-page command summary.
+HELP <keyword> shows a page of help on that keyword.  The keywords include
+all the commands, spells, and skills listed in the game.
+
+HLIST shows a list of all locally available help topics.
+For a complete HELP database go to:
+http://195.34.155.132/help/
+~
+60 ADVANCE~
+Syntax: advance <character> <level>
+
+ADVANCE sets a character's level to the specified value.  It is the
+only way to create new immortal characters within the game.  ADVANCE
+may also be used to demote characters.
+~
+60 TRUST~
+Syntax: trust <character> <level>
+
+TRUST sets a character's trust to the specified level.  This is similar to
+advancing the character for accessing immortal commands, but has no effect
+on combat strength, et cetera.  You can give more trust to mortal (or
+immortal) characters to give them access to more power without messing up
+the character.  You can also restrict a player's trust to less than their
+natural level.
+
+A trust of 0 means to use the character's natural level again.
+~
+58 ALLOW BAN~
+Syntax: allow   <site>
+	ban     <site>
+	ban
+
+BAN <site> prohibits players from that site from logging in.  BAN with
+no arguments lists the banned sites.  ALLOW <site> removes a site from
+the ban list.
+
+The site ban test works by suffix comparison, so if you ban 'foo.edu',
+all sites within 'foo.edu' are banned as well.
+
+Site bans are not saved; every time the server is rebooted, the site
+ban list is cleared.  
+~
+59 REBOOT SHUTDOWN~
+Syntax: reboot <timer>
+              shutdown <timer>
+
+Reboot shuts down the server.  When the normal 'startup' script is used
+to control the server, a delay of fifteen seconds will ensue (to allow
+old connections to die), followed by a reboot.
+
+Shutdown shuts down the server and prevents the normal 'startup' script
+from restarting it.
+
+Never, ever, shutdown the mud without permission from Lotherius.
+~
+56 WIZLOCK NEWLOCK~
+Syntax: wizlock
+	newlock
+
+Wizlock and newlock both block login attempts to the mud.  Wizlock locks
+out all non-gods (i.e. level less than 51), except for link-dead players who
+are returning.  Newlock only locks out new character generation, typically
+used for preventing a spammer from returning.  Wizlocking should be avoided,
+and newlocking should be accompanied by mail or a note to Zeran.
+~
+59 DENY~
+Syntax: deny <name>
+
+Deny locks a character out of a game permanently, rendering their character
+name unusable.  It may only be removed by editing the file, for this reason
+freeze is usually preferred.
+~
+57 DISCONNECT~
+Syntax: disconnect <name>
+
+Disconnect breaks a player's link to the game, dumping them back to the telnet
+prompt.  This is a non-lethal way of getting rid of spammers and annoying
+players.
+~
+57 FREEZE~
+Syntax: freeze <name>
+
+FREEZE <character> is a toggle which prevents a character from issuing any
+commands at all. It can be removed from within the game, so freezing a 
+troublemaker is usually a better option than they deny command.
+~
+53 FORCE~
+Syntax: force <character> <command>
+Syntax: force all <command>
+
+FORCE forces one character to execute a command, except of course delete.
+
+Below level 57 (Deity) force can only be used on mobiles, and force all is
+unavailable.  You also cannot 'force orc murder hugo', for example. 
+
+FORCE 'all' forces all player characters to execute a command.
+This is typically used for 'force all save'.
+~
+56 SOCKETS~
+Syntax: sockets
+              sockets <name> 
+
+SOCKETS reports all of the visible users connected to the server, including 
+users in the process of logging in.  The two numbers inside brackets are the 
+channel number and the 'connected' state.  The 'connected' states are listed in 
+merc.h: 0 is CON_PLAYING; non-zero values are various states of logging in.
+
+The optional name argument shows the site of a player, or optional can be used
+to identify switched gods (i.e. socket orc shows the name of anyone switched
+into an orc).
+~
+54 LOAD~
+Syntax: load mob <vnum>
+              load obj <vnum> <level>
+
+The load command is used to load new objects or mobiles (use clone to 
+duplicate strung items and mobs).  The vnums can be found with the vnum
+command, or by stat'ing an existing mob or object.
+
+Load puts objects in inventory if they can be carried, otherwise they are
+put in the room.  Mobiles are always put into the same room as the god. Old
+format objects must be given a level argument to determine their power, new
+format objects have a preset level that cannot be changed without set.
+(see also clone, vnum, stat)
+~
+58 SET~
+Syntax: set mob   <mobile> <field> <value>
+	set obj   <object> <field> <value>
+	set room  <number> <field> <value>
+	set skill <char>   <name>  <rating>
+	set skill <char>   all     <rating>
+
+The qet command is used to change the numerical values of the various data
+structures. Type set <class> without an argument to see a listing of options.
+Set skill all (pc's only) will set all the character's skills to the value
+given.  Use string to change the strings on an object or mobile.
+(see also string, stat)
+~
+55 STRING~
+Syntax: string obj <field> <string>
+	string mob <field> <string>
+
+The string command changes the various strings associated with an object or
+mobile.  A full list of fields can be viewed by typing string obj or string
+mob.  Sorry, multi-line strings are not yet supported.
+~
+55 NOCHANNEL NOEMOTE NOSHOUT NOTELL~
+Syntax: nochannel <character>
+	noemote   <character>
+	noshout   <character>
+	notell    <character>
+
+Noemote, noshout, and notell are used to muffle other characters, by
+preventing them from emoting, shouting, and telling, respectively.
+Characters who are noshout'ed or no'telled will also not receive those
+forms of communication.
+
+The nochannel command is similar, but more drastic. It prevents the victim
+from using any of the channels (gossip, auction, Q/A, music) on the game.
+Nochannels usually result from swearing or spamming on public channels.
+~
+57 PARDON~
+Syntax: pardon <character> killer
+	pardon <character> thief
+
+Pardon pardons a player for their crimes.  Don't pardon a player unless you
+are sure they deserve it.  Being killed by Hassan acts as an automatic
+pardon.
+~
+53 PURGE~
+Syntax: purge
+              purge <character>
+
+Purge is used to clean up the world.  Purge with no arguments removes all the
+NPC's and objects in the current room.  Purge with an argument purges one
+character from anywhere in the world.
+
+Purge will not get rid of PC's, or objects or mobiles with a NOPURGE flag
+set (i.e. the pit, the fountain, shopkeepers, Hassan).  Mobiles may be
+purged if they are called directly by name.
+~
+56 RESTORE~
+Syntax: restore <character>
+              restore room
+              restore all
+
+Restore restores full hit points, mana points, and movement points to the
+target character.  It also heals poison, plague, and blindness.
+Restore room (or restore with no argument) performs a restore on every player
+in the room, restore all does the same for all connected players. Restore all
+is only usable by creators and implementors.  Restore should be used sparingly
+or not at all.
+~
+57 SLAY~
+Syntax: slay <character>
+
+Slay kills a character in cold blood, no saving throw.  Best not to use this
+command on players if you enjoy being a god.
+~
+55 TRANSFER TELEPORT~
+Syntax: transfer <character>
+	transfer all
+	transfer <character> <location>
+	transfer all         <location>
+
+Transfer transfers the target character, or ALL player characters,
+to your current location (default) or to a specified location. Trans all 
+should almost never be used, as 100 players popping into one room can have
+horrible effects on slow links. Teleport is a synonym for transfer. 
+~
+54 AT~
+Syntax: at <location> <command>
+
+At executes the given command (which may have arguments) at the given
+location.  The location may be specified as a vnum, as the name of
+a mobile, or as the name of an object.
+
+At works by temporarily moving you to that location, executing the
+command, and then moving you back (if the command didn't change your
+location).
+~
+54 ECHO GECHO PECHO~
+Syntax: echo  <message>
+	gecho <message>
+	pecho <character> <message>
+
+These commands all perform similar functions.  Echo sends the message to
+all characters in the same room as the user, with no indication of who sent
+it.  Gecho does the same for all players connected to the game, and pecho
+sends the message to the player specified as the target.  Any higher-level
+god will see a prompt in front of your message, informing him or her that it
+is an echo.
+~
+52 GOTO~
+Syntax: goto <location>
+
+Goto takes you to a location.  The location may be specified as a vnum,
+as the name of a mobile, or as the name of an object.
+
+You may not Goto a room if it is PRIVATE and has two (or more) characters
+already present, or if it is SOLITARY and has one (or more) characters
+already present. Some other rooms are barred to players below a certain
+god level.
+~
+52 HOLYLIGHT WIZINVIS CLOAK~
+Syntax: holylight
+	winvis <level>
+                 invis  <level> 
+    	cloak  <level>
+
+Holylight is a toggle that allows you to see (almost) every character and
+mobile in the game.  With holy light, you can see what's in the game more
+easily.  Without holy light, you can see what mortal players see.
+
+Wizinvis takes a level argument, and will make you invisible to all players of
+a lower level than your invisibility level.  It defaults to the maximum
+(your level) if no argument is given.  Wizi 60 characters are totally 
+invisible. Typing invis is the same thing.
+
+Cloak is similar to wizinvis, except that people in the room with you
+can still see you.  Great for when you want to talk to someone without
+being wizinvis but still want to be hidden from the rest of the world.    
+~
+52 MEMORY~
+Syntax: memory
+
+Memory reports the size of your mud.
+
+The 'Mobs' and 'Objs' lines report the number of types of mobiles and objects,
+not the number of instances currently in the game.
+
+The 'Strings' line shows memory used by area-file strings.  These strings have
+a maximum limit, which is also shown.
+
+The 'Perms' line shows permanently allocated memory blocks.  There is no limit
+on the number and size of these blocks.
+~
+56 VNUM~
+Syntax: vnum <name>
+	vnum <obj or mob> <name>
+	vnum skill <name>
+
+Vnum finds all objects and mobiles with a particular name, and prints out
+the results.  Use vnum obj or vnum mob to limit the search.  This vnum is
+very useful for loading. Vnum skill returns the skill number (for set) and
+the slot number (for making new areas) of a skill name.
+(see also load)
+~
+52 STAT~
+Syntax: stat <name>
+	stat mob  <name>
+	stat obj  <name>
+	stat room <number>
+
+The stat command gives you detailed information on an object, mobile, or room
+within the game.  Without a class argument, the command will return a object
+(if found), a mobile (if no object exists, but a mobile does), or a room 
+(if a number is  given).  Stat room with no argument stats the room you are
+standing in.  Stat can be used to find room vnums for goto.
+(see also goto, transfer)
+~
+52 MWHERE~
+Syntax: mwhere <name>
+
+Mwhere shows you the locations of all mobiles with a particular name.
+~
+52 PEACE~
+Syntax: peace
+
+Peace causes all characters in a room to stop fighting. It also strips the
+AGGRESSIVE bit from mobiles.
+~
+52 POOFIN POOFOUT~
+Syntax: poofin  <message>
+Syntax: pooffout <message>
+
+The standard messages for goto are 'arrives in a swirling mist' and
+'leaves in a swirling mist'.  You can replace these messages with messages of
+your own choosing using the poofin and poofout commands.  These messages
+must include your name somewhere in the string.
+
+Poofin and poofout only show to characters who can see you.
+(see also goto)
+~
+55 LOG SNOOP~
+Syntax: log   <character>
+	log   all
+	snoop <character>
+
+Log <character> causes all of a character's commands to be logged into
+the server's log file.  Like Freeze, it is a permanent character toggle.
+Logs may only be used by creators and implementors, and should be accompanied
+by mail to the Admin.
+
+Certain commands (Password) are protected against log.  Conversely, certain
+commands (especially immortal commands) are always logged.
+
+Log all logs all character commands.  It is a server-wide toggle; it does not
+persist across reboots. Please do not use this unless you tell Zeran.
+
+Snoop shows you a copy of all the input and output going to a character.
+The character must have an open channel.  You may snoop more than one
+character at a time. Try to respect privacy.  Abuse of snoop will
+incur severe punishment.
+
+Snoop yourself to cancel all outstanding snoops.
+~
+54 SWITCH RETURN~
+Syntax: switch <character>
+	return
+
+Switch switches you into the body of another character (who must not
+already have a descriptor, e.g. you can't switch into a PC). You also cannot
+switch into link-dead PCs.
+
+Return returns you to your original body.
+~
+51 IMMTALK :~
+Syntax: immtalk <message>
+	immtalk
+
+Immtalk sends a message to all immortals.  : is a synonym for immtalk.
+Using this command with no argument turns off the immortal channel (or
+turns it back on).
+~
+51 WIZHELP~
+Syntax: wizhelp
+
+Wizhelp provides a list of all the immortal commands.
+~
+0 COLOUR COLOR ANSI~
+Syntax: colour    Toggles colour mode on/off
+
+        You may also talk in colour; the format is like this:
+	the 'escape character' to specify a colour is the left
+	handed brace '{{', following 
+	that you should use one of the following letters,
+		{r{{r     red     {c{{c     cyan
+		{g{{g     green   {y{{y     yellow
+		{b{{b     blue    {w{{w     white
+		{m{{m     magenta {x{{x     clear(reset colour)
+		{{{{      {{ char {{*       beep
+		{{/       newline {{3       Underline{x
+		{4{{4     reverse{x
+	Note that not all codes work on all terminals. This is not
+	the fault of the mud, but a fault of some terminals.
+                When using colour, it looks better if you finish the line
+	with whatever colour it would normally be in, such as a
+	gossip, the colour is magenta, so:
+		{mLope gossips '{ghello,{r world{m'{x
+	looks better than:
+		{mLope gossips '{ghello,{r world'{x
+	To make {YBRIGHT{x colors, use capital letters.
+
+                ColoUr is written by Lope (ant@solace.mh.se)
+~
+53 hedit~
+syntax: edit help <keyword>
+
+Allows online editing of helpfiles.
+To see commands available, type "commands" from within the help 
+editor. 
+
+To quit, type "done".
+To save, type "save" from within the editor.
+~
+-1 hlist~
+syntax: hlist <min> <max>
+
+Lists all the helpfile keywords between the levels of
+the <min> and <max> you set.
+~
+0 ALIAS ALIASES UNALIAS~
+Syntax: alias 'name' 'command string'
+Syntax: unalias 'name'
+
+Do not enter the alias using the ' ' marks.
+
+The Alias command lets you specify macros that execute more complex 
+commands with a short sequence of keystrokes.
+
+Unalias will clear an existing alias.
+See Also: Multi
+~
+0 'MULTIPLE COMMANDS' 'MULTIPLE' 'MULTI'~
+This mud has the capability for entering multiple commands.
+
+To do so, insert a | character between the commands you would
+like to execute. You can use this character in aliases as well.
+
+On your keyboard, the | character (called a pipe) will look similar
+to the colon, but have a tiny break in the middle.
+
+See Also: Alias
+~
+0 NOTE 'NOTE WRITE' 'NOTE READ' BOARD 'NOTE SYSTEM' BOARDS~
+Syntax:
+
+board [number|name]                     Shows or changes board.
+note                                    Reads next note.
+note read [number]                      Reads a certain note.
+note forward [number]
+note reply [number]
+note remove <number>                    Removes a note written by you.
+note list [number]                      Shows up to number notes.
+note write                              Posts a note.
+note catchup                            Marks all notes in this board read.
+
+These commands are used for the new note system. Instead of just one board, 
+there are several, each with its special purpose. 
+
+Changing between the boards is accomplished using the BOARD command. BOARD
+without any arguments gives you a list of all boards together with number of
+unread message. To change, type BOARD <number> or BOARD <name of the board>.
+
+To read next unread note, type NOTE. To read a note with a specified number,
+type NOTE READ <number>. Typing NOTE while in a board with no unread notes
+shifts you to the next board. Note that unlike the standard note system, a 
+note has the same number in NOTE LIST and NOTE READ.
+
+Posting a message is as simple as writing NOTE WRITE. You will be moved 
+into interactive mode, where all you see are prompts for the fields like 
+To:, From: etc. You will be automatically put AFK while writing a note.
+
+To see the list of the notes in the current board, type NOTE LIST. Typing
+NOTE LIST <number> will list only <number> of the last notes in the area.
+
+You can remove your own note by using NOTE REMOVE <number>. Implementors may
+remove other people's notes. Implementors can also select how many days
+Their note is kept before being purged. Purging happens automatically at
+bootup. Purged notes are not deleted, but saved into a file.
+
+To let only immortals see your note, address it to "imm". To let players of
+a specific level and above, address it to that level (no other recipients may
+appear in that case).
+
+This board system was created by Erwin S. Andreasen, erwin@pip.dknet.dk, aka
+Phunk and is freely available. The general outlook was based on Mystic 
+Adventure's note system (mud.gel.ulaval.ca 4000).
+~
+100 immtitle~
+Syntax: immtitle <string>
+Your immtitle can be up to 15 characters long, including color codes.
+This is what shows in the who list instead
+of race.
+~
+-1 NAMES~
+We'll accept all sorts of real (or at least realistic) names, that will
+fit into the world of the 1930s.  What we will not accept are: 
+ * Fantasy names
+ * Names of Gods (No matter if Mtythos Gods or not)
+ * 'Action Names' (Hellraiser, Flash,...)
+ * Names, that could cause any other problems
+
+A name, found unsuitable to the style of this MUD, can cause your {RDeletion{x!
+~
+0 cthulhu~
+Cthulhu is a god who figures very largely in Lovecraft's Cthulhu mythos. 
+This tentacle-faced denizen of the sea lies sleeping in R'Lyeh where he
+waits for the time when his followers will release him from his chains so he
+can rule the world once more.  He is an evil god who is bent on the
+destruction of the human race, despite this fact he does have a large number
+of followers who do actively try to release him using such books as the
+Necronomicon.  
+~
+51 devour~
+syntax: devour <mob>
+        devour <player>
+ 
+This command will cause you to devour the specifed creature.  Mobs will
+be slain, characters will be transported somewhere strange (room 20030).
+
+Use with caution on injured or lower level characters as the destination
+environment is somewhat hostile. 
+
+You get no xps for devouring mobs, regardless of their level.
+~
+0 impsummary~
+<a href=@g1/help/index.html>CthulhuMud Online Help</a>
+~
+0 diku~
+                    Original game idea, concept, and design:
+
+          Katja Nyboe               [Superwoman] (katz@freja.diku.dk)
+          Tom Madsen              [Stormbringer] (noop@freja.diku.dk)
+          Hans Henrik Staerfeldt           [God] (bombman@freja.diku.dk)
+          Michael Seifert                 [Papi] (seifert@freja.diku.dk)
+          Sebastian Hammer               [Quinn] (quinn@freja.diku.dk)
+
+
+Developed at: DIKU -- The Department of Computer Science
+                      at the University of Copenhagen.
+
+Based off CthulhuMud (cthulhu.mud.at:9999),by Mik Clarke
+(mykael@vianet.net.au), Joachim Hustler (mystery@chello.at)
+~
+0 greeting~
+This is the help entry GREETING: Fill in the greeting message of your
+choice and don't forget the credits.
+  
+ROM 2.3, Original DikuMUD by Hans Staerfeldt, Katja Nyboe, Tom Madsen, 
+Michael Seifert, and Sebastian Hammer Based on MERC 2.1 code by Hatchet, 
+Furey, and Kahn ROM 2.3 copyright (c) 1993-1996 Russ Taylor
+Based off CthulhuMud (cthulhu.mud.at:9999),by Mik Clarke
+(mykael@vianet.net.au), Joachim Hustler (mystery@chello.at)
+~
+0 nohelp~
+This help is unavailiable online.  Please consult our large {RHELP-DATABASE{x
+on:
+http://195.34.155.132/help/
+ 
+There you should be able to find help on all topics.
+~
+0 nmotd~
+{rREAD THIS READ THIS READ THIS READ THIS READ THIS READ THIS READ THIS{x
+   Your help database online: {chttp://195.34.155.132/help/{x
+   The Cthulhumud webpage: {chttp://195.34.155.132/{x
+   The players are here to help, as are the imms. But please... don't 
+abuse us for it. We're here to play just like you are. A smidgin of 
+politeness and niceness will work wonders if you hope to make friends 
+and allies here. Explore, use your help files, learn... but remember 
+that whenever you learn something for yourself you get a lot more 
+respect and you get a lot more understanding than if it was spoon fed 
+to you. A more detailed version of this is under newbie help. Go to
+ {chttp://195.34.155.132/help/{x and look under newbie help.
+{rREAD THIS READ THIS READ THIS READ THIS READ THIS READ THIS READ THIS{x
+~
+50 hmotd~
+{rREAD THIS READ THIS READ THIS READ THIS READ THIS READ THIS READ THIS{x
+   Welcome to hero status. Congrats, you're now an elder player and a 
+leader on this mud. That means we expect somethings out of you. One, play 
+nice with the newbies. If they are under level {c10{x, you aren't allowed to 
+hurt them. Two, we expect you to give some help every now and then, but 
+that doesn't mean you're there to be abused by the lower level sorts. Tell 
+the player if they're asking for too much. Point them in the direction of
+other help, be it imm, player or help file. For further details on what we 
+expect out of you, with your newfound position read hero help at 
+ ({chttp://195.34.155.132/help/{x).
+{rREAD THIS READ THIS READ THIS READ THIS READ THIS READ THIS READ THIS{x
+~
+0 chat~
+Welcome to the @g0 chat channel.  This is a free OOC channel but please
+try to stick to your manners.  
+/? ... Help
+/w ... Who
+/q ... Quit
+~
+0 $~
+
+
+#$

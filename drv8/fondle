@@ -1,0 +1,11 @@
+#!/bin/bash 
+#
+# Touch all of the source files to resync the date...
+
+touch *.c
+touch *.h
+touch Makefile
+
+# All done
+
+exit 0

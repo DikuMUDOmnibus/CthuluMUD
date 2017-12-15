@@ -1,0 +1,78 @@
+#!/bin/csh -f
+# CthulhuMud
+#
+# Driver 5
+# --------
+#   Changed port from 6666 to 9999
+#
+# Driver 2
+# --------
+#   Changed port from 5000 to 6666
+#
+# Written by Furey.
+# With additions from Tony.
+# With additions by Lotherius.
+
+# Set the port number.
+set port = 9999
+if ( "$1" != "" ) set port="$1"
+
+# Change to area directory.
+set CTHULU_DIR="/home/kyndig/win32/cthulu3"
+
+cd "$CTHULU_DIR/area"
+
+# Set limits. umask is in case different users start the mud
+# it will always set to be group readable/writable.
+# For security you may want to make a "MUD" group.
+umask 006
+unlimit core
+
+    if ( -e "$CTHULU_DIR/run.inf" ) then
+        cp ../html/shutdown.html ../html/online.html
+        chmod 664 ../html/online.html
+        exit 0
+    endif
+
+# Kill the zombies
+killproc "$CTHULU_DIR/drv8/cthulhu"
+killproc "$CTHULU_DIR/drv8/startyog"
+
+while ( 1 )
+
+    # Post status as booting
+    cp "$CTHULU_DIR/html/booting.html" "$CTHULU_DIR/html/online.html"
+    chmod 664 "$CTHULU_DIR/html/online.html"
+
+    # If you want to have logs in a different directory,
+    #   change the 'set logfile' line to reflect the directory name.
+    set index = 1000
+    while ( 1 )
+	set logfile = ../log/$index.log
+	if ( ! -e $logfile ) break
+	@ index++
+    end
+
+    # Run merc.
+    if (! -e ../run.lock) then
+        ../drv8/cthulhu $port >&! $logfile
+    endif
+
+    # Restart if ../run_lock exists 
+    if (  -e ../run.lock ) then
+        # Post status as shutdown
+        cp ../html/shutdown.html ../html/online.html
+        chmod 664 ../html/online.html
+	exit 0
+    endif
+
+    # Post status as crashed
+    cp ../html/crashed.html ../html/online.html
+    chmod 664 ../html/online.html
+
+    # Restart, giving old connections a chance to die.
+    sleep 10
+end
+
+#       
+

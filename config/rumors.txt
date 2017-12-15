@@ -1,0 +1,42 @@
+RUMOR A short sword is not as good as a long sword.~
+RUMOR Afraid of your valuables being stolen?  Carry more junk!~
+RUMOR Always be aware of the phase of the moon!~
+RUMOR Gods expect the best from their priesthood.~
+RUMOR Gods look down their noses at demigods.~
+RUMOR Half Moon tonight.  (At least it's better than no Moon at all.)~
+RUMOR It is dangerous to visit a graveyard at midnight.~
+RUMOR Keep your armors away from rust.~
+RUMOR Keep your weaponry away from acids.~
+RUMOR Never attack a guard.~
+RUMOR Some animals can be tamed.~
+RUMOR The best equipment for your work is, of course, the most expensive.~
+RUMOR The gods don't appreciate pesky priesthood.~
+RUMOR The moon is not the only heavenly body to influence this game.~
+RUMOR They say that 'very strong' might not be strong enough.~
+RUMOR They say that after drinking booze you should never try to read scrolls.~
+RUMOR They say that killing a shopkeeper brings bad luck.~
+RUMOR They say that you are what you eat.~
+RUMOR They say that you should pray for divine inspiration.~
+RUMOR They say that you should religiously give your gold away.~
+RUMOR Vampires hate light.~
+RUMOR Zap yourself and see what happens...~
+RUMOR A monstrous mind is a toy forever.~
+RUMOR Death is just life's way of telling you you've been fired.~
+RUMOR Didn't you forget to pay?~
+RUMOR Don't tell a soul you found a secret door, otherwise it isn't a secret anymore.~
+RUMOR For any remedy there is a misery.~
+RUMOR If you can't learn to do it well, learn to enjoy doing it badly.~
+RUMOR Kicking the terminal doesn't hurt the monsters.~
+RUMOR Not all rumors are as misleading as this one.~
+RUMOR PLEASE ignore previous rumor.~
+RUMOR Segmentation fault (core dumped).~
+Comm  mpforce @at curse~	
+RUMOR Sorry, no fortune this time.  Better luck next time!~
+RUMOR They say that good things come to those that wait.~
+RUMOR They say that it's not over till the fat ladies sing.~
+RUMOR They say that the gods generally welcome your sacrifices.~
+RUMOR They say that you cannot trust rumors.~
+RUMOR Unfortunately, this message was left intentionally blank.~
+RUMOR You are destined to be misled by a fortune.~
+Comm  mpforce @at scream~
+END

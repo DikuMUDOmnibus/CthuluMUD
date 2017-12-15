@@ -1,0 +1,57 @@
+To Generate a Help Index
+------------------------
+
+	cd cthulhu/html/help
+	./index
+
+	Files MUST be in unix format (LF between lines, not CRLF pairs)
+
+This results in 2 files:
+
+	index.dat
+
+		CthulhuMud should be able to read this directly and use it as its internal 'map'
+		of the help files.  In includes help keywords, filenames and conditions.
+
+	index.html
+
+		This can be viewed with a web browser to provide an index of the help files.
+
+	A number of intermediate files are also produced.
+
+Within Help Files
+-----------------
+
+Each file is required to have four Cthulhumud entries in its html.
+
+<CthulhuMud-Title    Quests>
+
+	This gives the title that appears on the general help index.
+
+<CthulhuMud-Index    Adventuring>
+
+	This identifies the section of the general index that the file is listed in.
+
+<CthulhuMud-Keywords quests quest>
+
+	This specifies the help keywords that are associated with the help file.  When a player
+	issues a help xyz command, these are the keywords that will be searched.
+
+<CthulhuMud-Cond     1 2 'level' 10 -1>
+
+	This is optional and specifies a condition that the player must satisfy to be allowed
+	to see the help file.  Multiple conditions may be specified. (The condition shown here
+	means those below 10th level cannot see the file).
+
+Observer and Research
+---------------------
+
+These are two additional html diretories, which are also indexed (and for which the mud should be
+able to load thier indexes).  The Observer directory is for the Arkham Observer, where individual
+articles can be stored as html files and then access through the mud.  Conditions can be used to
+restrict articles to certain players.  The reasearch directory is similer but is specifically
+desgned to support an in game 'research' command which could be issued in libraries and other
+places of knowledge.  There would be a chance, based on the researchers 'research' skill and the
+rooms 'research effect' of them finding one or more articles from the research database.  The
+conditions needed for the article would also have to be satisfied.
+

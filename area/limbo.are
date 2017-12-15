@@ -1,0 +1,1112 @@
+#AREADATA
+Name        [ {rSystem{g] Modified Limbo~
+Copyright   (null)~
+Zone        0
+Builders    Cthulhumud~
+Map         None~
+VNUMs       1 65
+Security    9
+Recall      0
+Respawn     0
+Morgue      0
+Dream       0
+Mare       0
+Prison     0
+Climate     0
+Version     1
+MAX_CURRENCY    5
+Currency -1 -1 -1 -1 -1
+End
+
+
+
+#MOBILES
+#1
+cthulhu~
+Little Cthulhu~
+Little Cthulhu is here trying to prove it's a higher being.
+~
+~
+old one~
+Ab DFHZc 0 0
+25 0 5d10+550 26d5+100 4d6+3 'epower' 'old'
+-15 -15 -15 -10
+FHKR 0 CD N
+'standing' 'standing' 'neutral' 500
+ACHMS EFLMNP 'medium' 'protoplasma'
+X
+Nature 0
+End
+#2
+zombie~
+a zombie~
+A zombie is here, slaving away for its master.
+~
+This zombie has a blank look on its face.  Rest assured, it wouldn't stir if
+you held a knife to its throat.
+~
+undead~
+ABOT N 0 0
+1 0 1d2+6 1d10+100 1d2+0 'pound' 'bash'
+9 9 9 9
+CEFGIKNU BLPQR 0 HN
+'standing' 'standing' 'neutral' 0
+ADHIMV ABCDEFGHIJK 'medium' 'unknown'
+X
+Nature 0
+Script 1 'drool'
+ScriptLine 10 0 0 drool~
+Script 2 'fart'
+ScriptLine 10 0 0 fart~
+Script 3 'lose'
+ScriptLine 10 0 0 emote nonchalantly loses a limb.~
+Chat 0 10  1 0  1 0  2 0  2 0  1 0  2 0  1 0  3 0
+Fright 50
+End
+#3
+mummy~
+a mummy~
+A mummy is here, raised from the dead.
+~
+~
+undead~
+ABORT FNOZce 0 0
+1 0 0d0+0 0d0+0 0d0+0 'grep' 'chaos'
+0 0 0 0
+CFGIK BLPQR 0 HN
+'standing' 'standing' 'neutral' 0
+DI ABCGHJK 'medium' 'unknown'
+X
+Nature 4097
+Fright 55
+End
+#4
+mirror mob~
+mirror mob~
+Mirror mob
+~
+~
+human~
+AF DFZ 0 0
+0 0 0d0+0 0d0+0 0d0+0 'none' 'none'
+0 0 0 0
+FK 0 0 0
+'standing' 'standing' 'neutral' 0
+AHMV ABCDEFGHIJK 'medium' 'unknown'
+X
+Nature 0
+End
+#5
+astral body~
+Astral Body~
+A shimmering astral body is gently floating here.
+~
+~
+ghost~
+AO BDENTUZh 0 0
+0 0 0d0+0 0d0+0 0d0+0 'wrath' 'negative power'
+0 0 0 0
+GK LPQR 0 HN
+'standing' 'standing' 'neutral' 0
+DIK 0 'medium' 'air'
+X
+Nature 67584
+End
+#10
+MAGIC WATCHER~
+The Watcher of Magic~
+MAGIC WATCHER
+~
+~
+human~
+A DFZ 0 0
+100 0 0d0+0 0d0+0 0d0+0 'none' 'none'
+0 0 0 0
+FK 0 0 0
+'standing' 'standing' 'neutral' 0
+AHMV ABCDEFGHIJK 'medium' 'unknown'
+X
+Nature 0
+Script 5 'deactivate'
+ScriptLine 5 0 0 mpat @at mpechoat @at You walk through the illusionary wall...~
+ScriptLine 10 1 0 mpat @at mpdeed @a1 remove 571~
+ScriptLine 15 2 0 mpat @at mpdeed @a1 remove 570~
+Script 4 'arcanuum'
+ScriptLine 5 0 0 mpat @at mpecho Something in your vision changes.~
+ScriptLine 10 0 0 mpat @at mpdeed @at add 571 1 Activate UA Door~
+Script 3 'clankey'
+ScriptLine 5 0 0 mpat @at mpecho From thin air, a silver key appears.~
+ScriptLine 10 0 0 mpat @at mpoload 571 1~
+ScriptLine 15 0 0 mpat @at drop key~
+Script 1 'praiseyog'
+ScriptLine 10 0 0 mpat @at mpecho All praise Great Yog-Sothoth!~
+ScriptLine 20 0 0 mpat @at mpforce @at bow~
+Script 2 'call_byakhee'
+ScriptLine 10 0 0 mpat @at mpmload 31003 25~
+ScriptLine 20 0 0 MPAT @ar MPECHO A winged monstrosity descends from the sky with a horrible scream.~
+Script 6 'marduk_blessing'
+ScriptLine 10 0 0 mpat @at mpecho As you chant Marduk's blessing evil seems to wither away.~
+ScriptLine 20 0 0 mpat @at mpecho The ground begins to tremble and the altar starts rocking and shaking.~
+ScriptLine 30 3 0 mpat @at mpecho Then it explodes!~
+ScriptLine 40 3 0 mpat @at mpreward @at 2000~
+ScriptLine 50 3 0 mpat @at mphurt @at 50 50 0 0 0 0~
+ScriptLine 60 3 0 mpat @at mppurge altar~
+ScriptLine 70 3 0 mpat @at mpquest @at update 3038 7 Report back to Mr Martin.~
+TriggerReact 24 10 2 1
+TriggerText ia yog sothoth~
+TriggerReact 31 10 9 2
+TriggerText ia ia hastur ai ai hastur~
+TriggerReact 31 20 9 6
+TriggerText tlanar ru teneb t latru n valis~
+TriggerCond 1 15 'wearing' 3078 3078
+TriggerCond 1 18 'in_room' 3131 3131
+TriggerCond 1 36 '3038' 6 6
+TriggerReact 31 50 9 4
+TriggerText onthedayofthedead~
+TriggerReact 14 10 0 5
+TriggerCond 1 19 'deed' 570 1
+TriggerCond 1 18 'in_room' 570 570
+TriggerReact 14 20 0 5
+TriggerCond 1 18 'in_room' 570 570
+TriggerCond 1 19 'deed' 571 1
+Monitor 0 10 1300
+End
+#11
+COMMAND WATCHER~
+COMMAND WATCHER~
+COMMAND WATCHER
+~
+~
+human~
+AB DFZ 0 0
+100 0 0d0+0 0d0+0 0d0+0 'none' 'none'
+0 0 0 0
+FK 0 0 0
+'standing' 'standing' 'neutral' 0
+AHMV ABCDEFGHIJK 'medium' 'unknown'
+X
+Nature 0
+Script 7 'disconnect'
+ScriptLine 10 0 0 mpat @at mpforce @at quit~
+Script 5 'mainframe'
+ScriptLine 10 0 0 mpat @at mpecho You sabotage the mainframe and it shuts down.~
+ScriptLine 20 0 0 mpat @at mpecho Now better hurry before they can repair it...~
+ScriptLine 30 1 0 mpoload 5 1~
+ScriptLine 40 1 0 mpat 2257 unlock west~
+ScriptLine 50 1 0 mpat 2257 open west~
+ScriptLine 60 2 0 mpjunk key~
+Script 4 'searchlight'
+ScriptLine 10 0 0 mpat @at mpecho {cYou turn on the searchlight.{x~
+ScriptLine 20 1 0 mpat @at mpecho You begin scanning the surrounding ocean floor.~
+ScriptLine 30 1 0 mpat @at mpecho You notice a school of dolphins swimming around the ship~
+ScriptLine 40 1 0 mpat @at mpecho Further off you notice an ancient city~
+ScriptLine 50 2 0 mpat @at mpecho {cYou turn off the search light to conserve its batteries.{x~
+Script 3 'ready'
+ScriptLine 10 0 0 mpat @at mpforce @at say ready~
+Script 1 'yes'
+ScriptLine 10 0 0 mpat @at mpforce @at say yes~
+Script 2 'no'
+ScriptLine 10 0 0 mpat @at mpforce @at say nope~
+Script 10 'control_maid'
+ScriptLine 10 0 0 mpat 1090 mpforce maiden mpgoto 867~
+ScriptLine 20 0 0 mpat 867 mpforce maiden say Thank you for rescueing me. But now let's get out of here.~
+ScriptLine 30 0 0 mpat 867 mpforce maiden mppet @at~
+TriggerChallange 35 10 1 1
+TriggerText yes~
+TriggerChallange 35 20 1 2
+TriggerText nope~
+TriggerChallange 35 30 1 3
+TriggerText ready~
+TriggerChallange 35 40 1 4
+TriggerText turnon searchlight|turnon light~
+TriggerCond 1 18 'in_room' 20134 20134
+TriggerChallange 35 50 1 5
+TriggerText sabotage mainframe|destroy mainframe~
+TriggerCond 1 18 'in_room' 2254 2254
+TriggerChallange 35 60 1 6
+TriggerText release maiden|untie maiden|release maid|untie maid|release sacrifice|untie sacrifice~
+TriggerCond 1 18 'in_room' 867 867
+TriggerCond 1 70 'is_alone' 0 -1
+TriggerReact 36 10 1 4
+TriggerCond 9 17 'vnum' 20103 20103
+TriggerReact 17 10 3 7
+End
+#12
+OPROG WATCHER~
+OPROG WATCHER~
+OPROG WATCHER
+~
+~
+human~
+A 0 0 0
+100 0 0d0+0 0d0+0 0d0+0 'none' 'none'
+0 0 0 0
+FK 0 0 0
+'standing' 'standing' 'neutral' 0
+AHMV ABCDEFGHIJK 'medium' 'unknown'
+X
+Nature 0
+Script 4 'transport'
+ScriptLine 5 0 0 mpat @at mpecho A transporter beam appears...~
+ScriptLine 10 0 0 mpat @at mptransfer @at 20350~
+Script 2 'slotmachine'
+ScriptLine 10 0 0 mpat @at mpforce @at gamble slotmachine~
+Script 1 'first_aid'
+ScriptLine 10 0 0 mpat @at mpeffect @at 'heal'~
+Script 3 'leeches'
+ScriptLine 5 0 0 mpat @at mpecho You apply the leeches...~
+ScriptLine 10 0 0 mpat @at mpeffect @at 'cure poison'~
+TriggerReact 36 10 1 1
+TriggerCond 9 17 'vnum' 3134 3134
+TriggerReact 36 20 1 2
+TriggerCond 9 17 'vnum' 7606 7606
+TriggerReact 36 30 1 3
+TriggerCond 9 17 'vnum' 20035 20035
+TriggerReact 36 40 1 4
+TriggerCond 9 17 'vnum' 20222 20222
+End
+#13
+joachim haeusler makers admins~
+Joachim Haeusler~
+One of the makers of Cthulhumud is here, telling you unimportant details.
+~
+~
+human~
+ABZ DFZ 0 0
+10 0 0d0+0 0d0+0 0d0+0 'none' 'none'
+0 0 0 0
+FK 0 0 0
+'standing' 'standing' 'male' 0
+AHMV ABCDEFGHIJK 'medium' 'skin'
+X
+Nature 0
+Conv 13 'admin'
+ConvSub 6 'others' 'other people others'
+ConvSubTrans 10 0 0 runscript 7~
+ConvSub 1 'cthulhumud' 'cthulhu cthulhumud'
+ConvSubTrans 10 0 0 runscript 2~
+ConvSub 2 'sundermud' 'sunder sundermud'
+ConvSubTrans 10 0 0 runscript 3~
+ConvSub 3 'rom' 'rom'
+ConvSubTrans 10 0 0 runscript 4~
+ConvSub 4 'merc' 'merc'
+ConvSubTrans 10 0 0 runscript 5~
+ConvSub 5 'diku' 'diku'
+ConvSubTrans 10 0 0 runscript 6~
+Script 7 'others'
+ScriptLine 10 0 0 say There are hundreds of people who contributed great stuff to mudding but special thanks to:~
+ScriptLine 20 0 0 say Erwin S. Andreasen (Boards; Copyover and a lot more)~
+ScriptLine 30 0 0 say erwin@@aandreasen.org, http://pip.dknet.dk/-erwin~
+ScriptLine 40 0 0 say Chris Busch (ELIZA chat)~
+ScriptLine 50 0 0 say cbusch@@dd.umn.edu~
+Script 1 'return-home'
+ScriptLine 10 0 0 mppurge self~
+Script 2 'CthulhuMud'
+ScriptLine 10 0 0 say {rCthulhuMud:{g~
+ScriptLine 20 0 0 say Mik Clarke (mykael@@vvianet.net.au)~
+ScriptLine 30 0 0 say Joachim Haeusler (mystery@@cchello.at)~
+ScriptLine 40 0 0 say CthulhuMud is open source, but if you want to use this codebase, please inform~
+ScriptLine 50 0 0 say one of the admins and make sure, CthulhuMud address & the the maker's emails are~
+ScriptLine 60 0 0 say included in your greeting message.~
+Script 3 'SunderMud'
+ScriptLine 10 0 0 say {rSunderMud:{g~
+ScriptLine 20 0 0 say SunderMud 1 is the result of the efforts of:~
+ScriptLine 30 0 0 say Lotherius (elfren@@aaros.net)~
+Script 4 'ROM'
+ScriptLine 10 0 0 say {rRivers of MUD:{g~
+ScriptLine 20 0 0 say ROM 2.4 copyright (c) 1993-1996 Russ Taylor~
+Script 5 'MERC'
+ScriptLine 10 0 0 say {rMERC:{g~
+ScriptLine 20 0 0 say Merc 2.2, created by Kahn, Hatchet, and Furey~
+Script 6 'DIKU'
+ScriptLine 10 0 0 say {rDIKU:{g~
+ScriptLine 20 0 0 say DIKU Mud, created by~
+ScriptLine 30 0 0 say Katja Nyboe~
+ScriptLine 40 0 0 say Tom Madsen~
+ScriptLine 50 0 0 say Hans Henrik Staerfeldt~
+ScriptLine 60 0 0 say Michael Seifert~
+ScriptLine 70 0 0 say Sebastian Hammer~
+TriggerReact 16 10 1 1
+TriggerCond 0 100 'calander' 12 12
+TriggerReact 15 10 6 1
+TriggerCond 1 70 'is_alone' 0 -1
+TimeSub 160
+End
+#18
+ADMIN~
+ADMIN~
+ADMIN
+~
+~
+human~
+ABg DFZ 0 0
+150 220 0d0+0 0d0+0 0d0+0 'none' 'bash'
+0 0 0 0
+FK AU 0 0
+'standing' 'standing' 'neutral' 0
+AHMV ABCDEFGHIJK 'medium' 'skin'
+X
+Nature 0
+End
+#19
+jukebox~
+Jukebox~
+Jukebox
+~
+~
+machine~
+AB Z 0 0
+100 0 0d0+0 0d0+0 0d0+0 'none' 'none'
+0 0 0 0
+FGK BMNPQ HI 0
+'standing' 'standing' 'neutral' 0
+EJd ABCGHJK 'medium' 'steel'
+X
+Nature 0
+End
+#20
+unspeakable possessor hulk humanoid unspeakable one~
+Unspeakable Possessor~
+A large scarcely humanoid hulk is here, ready to serve the Unspeakable One.
+~
+~
+shambler~
+AHU DFXZce 0 0
+110 130 16d816+3522 110d10+100 5d23+132 'punch' 'bash'
+-58 -58 -58 -24
+FGHK LQ BCDPT J
+'standing' 'standing' 'neutral' 0
+BDHMS ADEMN 'large' 'unknown'
+X
+Nature 65
+Script 1 'foe'
+ScriptLine 5 0 0 speak english~
+ScriptLine 7 0 0 mpgoto @at~
+ScriptLine 10 0 0 say You called the name of the Unspeakable One!~
+ScriptLine 20 0 0 say And now you'll die!~
+ScriptLine 30 0 0 mpkill @at~
+TriggerReact 24 10 2 1
+TriggerText hastur hastur hastur~
+TriggerCond 1 -19 'deed' 20 1
+Fright 70
+End
++ 104 hand to hand~
++ 89 martial arts~
++ 78 black belt~
++ 89 bash~
++ 94 berserk~
++ 88 dirt kicking~
++ 95 disarm~
++ 108 kick~
++ 102 rescue~
++ 99 rotate~
++ 101 trip~
++ 108 dodge~
++ 102 parry~
++ 91 second attack~
++ 100 third attack~
++ 90 fourth attack~
++ 84 enhanced damage~
++ 72 ultra damage~
++ 88 lethal damage~
++ 94 fast healing~
++ 90 english~
+#0
+
+
+
+#NEWOBJECTS
+#1
+dummy object~
+a dummy object~
+Dummy object is used for loading non-existent objects~
+unknown~
+'trash' 0 0
+0 0 0 0 0
+0 0 0 P
+R 100
+#2
+money %s~
+a %s~
+One miserable %s.~
+unknown~
+'money' 0 A
+A 0 0 0 0
+0 1 0 P
+R 100
+#3
+pile money %s~
+%d %s~
+A pile of %s.~
+unknown~
+'money' 0 A
+0 0 0 0 0
+0 1 0 P
+R 100
+#4
+vellum~
+a blank piece of vellum~
+A blank piece of vellum is here.~
+unknown~
+'treasure' 0 A
+0 0 0 0 0
+1 1 300 P
+R 100
+#5
+master key default~
+a master key~
+The fabled master key lies here.~
+unknown~
+'key' G A
+0 0 0 0 0
+0 1 0 P
+R 100
+#6
+hair~
+hair~
+A streak of hair lies here.~
+hair~
+'trash' 0 AO
+0 0 0 0 0
+0 0 0 P
+R 100
+#7
+voodoo doll~
+a voodoo doll~
+A rag doll lies here.~
+cloth~
+'voodoo_doll' 0 AO
+0 0 0 0 0
+0 1 0 P
+R 100
+#8
+wrath cthuga~
+the {Rw{Yr{Ra{Yt{Rh {Yo{Rf {YC{Rt{Yh{Ru{Yg{Ra{x~
+A {Yb{Rr{Yi{Rg{Yh{Rt {Yb{Ra{Yl{Rl {Yo{Rf {Yf{Ri{Yr{Re {xlies here.~
+fire~
+'explosive' A AO
+0 0 0 0 0
+0 0 0 P
+R 100
+#10
+corpse~
+corpse of %s~
+The corpse of %s is lying here.~
+unknown~
+'npc_corpse' 0 A
+0 0 0 A 0
+0 100 0 D
+R 100
+#11
+pcorpse corpse~
+corpse of %s~
+The corpse of %s is lying here.~
+unknown~
+'pc_corpse' O A
+0 0 0 A 0
+0 100 0 D
+R 100
+#12
+head~
+the head of %s~
+The severed head of %s is lying here.~
+unknown~
+'trash' 0 A
+0 0 0 0 0
+0 5 0 D
+R 100
+#13
+heart~
+the heart of %s~
+The torn-out heart of %s is lying here.~
+unknown~
+'food' 0 A
+16 0 'none' 0 0
+0 2 0 D
+R 100
+#14
+arm~
+the arm of %s~
+The sliced-off arm of %s is lying here.~
+unknown~
+'food' 0 A
+20 0 'none' 0 0
+0 5 0 D
+R 100
+#15
+leg~
+the leg of %s~
+The sliced-off leg of %s is lying here.~
+unknown~
+'food' 0 A
+20 0 'none' 0 0
+0 5 0 D
+R 100
+#16
+guts entrails~
+the guts of %s~
+A steaming pile of %s's entrails is lying here.~
+unknown~
+'food' 0 A
+5 0 'none' 1 0
+0 2 0 D
+R 100
+#17
+brains brain~
+the brains of %s~
+The splattered brains of %s are lying here.~
+unknown~
+'food' 0 A
+10 0 'none' 0 0
+0 2 0 D
+R 100
+#18
+soul blade~
+{WS{Boul Blad{We{x~
+A blade forged from a soul is here.~
+unknown~
+'weapon' BG AN
+'exotic' 0 0 'wrath' 0
+0 1 0 P
+R 100
+#19
+DEFAULT TRAP~
+DEFAULT TRAP~
+DEFAULT TRAP~
+unknown~
+'trap' R 0
+0 0 0 0 0
+0 0 0 P
+R 100
+#20
+Bundle of Fruits and Vegetables~
+Bundle of Fruits and Vegetables~
+A bundle of fruits and vegetables lies here.~
+unknown~
+'food' 0 A
+8 0 'none' 0 0
+0 1 10 P
+R 100
+#21
+ball light~
+a bright ball of light~
+A bright ball of light shimmers in the air.~
+unknown~
+'light' A A
+0 0 -1 0 0
+0 0 0 P
+R 100
+#22
+spring~
+a magical spring~
+A magical spring flows from the ground here.~
+water~
+'fountain' GR 0
+'water' 0 0 'none' 0
+0 0 0 P
+R 100
+#23
+vial empty~
+an empty vial~
+An empty vial lies here.~
+unknown~
+'potion' G AO
+0 'none' 'none' 'none' 'none'
+10 1 65 P
+R 1
+#24
+scroll empty vellum~
+an empty scroll~
+An empty scroll lies here.~
+unknown~
+'scroll' G AO
+0 'none' 'none' 'none' 'none'
+10 1 0 P
+R 1
+#25
+pride symbol~
+a generic pride symbol~
+A generic pride symbol is here.~
+unknown~
+'pride' A A
+0 0 0 0 0
+10 1 1 P
+R 1
+#26
+shovel~
+a shovel~
+A sturdy shovel lies here.~
+iron~
+'dig' 0 AO
+0 0 0 0 0
+15 5 750 P
+R 100
+#27
+protection force field~
+a magical force field~
+A magical force field~
+air~
+'armor' G AK
+0 0 0 0 0
+0 0 0 P
+R 100
+#28
+anvil~
+an anvil~
+A heavy anvil sits here.~
+iron~
+'forge' 0 A
+0 0 0 0 0
+0 200 0 P
+R 100
+#29
+chains~
+a magic chain~
+Magic chains lie here to bind the foes of the Gods.~
+steel~
+'bondage_obj' 0 AO
+0 0 0 0 0
+20 0 0 P
+R 100
+#30
+light~
+light source~
+Light~
+unknown~
+'light' 0 A
+0 0 48 0 0
+0 1 0 P
+R 1
+#31
+seed~
+a seed~
+A small seed lies here.~
+food~
+'tree' T A
+0 0 0 0 0
+1 1 0 P
+R 1
+#32
+ring~
+ring~
+A random ring makes the 'VNUM' for a random ring.~
+unknown~
+'jewelry' 0 AB
+0 0 0 0 0
+0 1 0 P
+R 1
+#33
+necklace~
+necklace~
+A random necklace makes the 'VNUM' for a random necklace.~
+unknown~
+'jewelry' 0 AC
+0 0 0 0 0
+0 1 0 P
+R 1
+#34
+cape~
+cape~
+A random cape makes the 'VNUM' for a random cape.~
+unknown~
+'armor' 0 AC
+AB AB AB 0 0
+0 5 0 P
+R 1
+#35
+body armor~
+body armor~
+Random body armor makes the 'VNUM' for random body armor.~
+unknown~
+'armor' 0 AD
+AB AB AB 0 0
+0 10 0 P
+R 1
+#36
+helmet~
+helmet~
+A random helmet makes the 'VNUM' for a random helmet.~
+unknown~
+'armor' 0 AE
+AB AB AB 0 0
+0 5 0 P
+R 1
+#37
+leggings~
+leggings~
+Random leggings make the 'VNUM' for random leggings.~
+unknown~
+'armor' 0 AF
+AB AB AB 0 0
+0 5 0 P
+R 1
+#38
+boots~
+boots~
+Random boots make the 'VNUM' for random boots.~
+unknown~
+'armor' 0 AG
+AB AB AB 0 0
+0 5 0 P
+R 1
+#39
+gauntlets~
+gauntlets~
+Random gauntlets make the 'VNUM' for random gauntlets.~
+unknown~
+'armor' 0 AH
+AB AB AB 0 0
+0 5 0 P
+R 1
+#40
+sleeves~
+sleeves~
+Random sleeves make the 'VNUM' for random sleeves.~
+unknown~
+'armor' 0 AI
+AB AB AB 0 0
+0 4 0 P
+R 1
+#41
+shield~
+shield~
+A random shield makes the 'VNUM' for a random shield.~
+unknown~
+'armor' 0 AJ
+AB AB AB 0 0
+0 12 0 P
+R 1
+#42
+robe~
+robe~
+A random robe makes the 'VNUM' for a random robe.~
+unknown~
+'armor' 0 AK
+AB AB AB 0 0
+0 2 0 P
+R 1
+#43
+belt~
+belt~
+A random belt makes the 'VNUM' for a random belt.~
+unknown~
+'armor' 0 AL
+AB AB AB 0 0
+0 3 0 P
+R 1
+#44
+bracelet~
+bracelet~
+A random bracelet makes the 'VNUM' for a random bracelet.~
+unknown~
+'treasure' 0 AM
+0 0 0 0 0
+0 1 0 P
+R 1
+#45
+bracer~
+bracer~
+A random bracer makes the 'VNUM' for a random bracer.~
+unknown~
+'armor' 0 AM
+AB AB AB 0 0
+0 5 0 P
+R 1
+#46
+weapon template~
+weapon template~
+Weapon template~
+unknown~
+'weapon' 0 AN
+'exotic' 1 7 'none' 0
+0 5 10 P
+R 1
+#47
+passport~
+a passport~
+A US passport lies here.~
+paper~
+'passport' T AO
+0 0 0 0 0
+0 1 0 P
+R 1
+#48
+default share~
+default share~
+Default share~
+paper~
+'share' ORT A
+0 0 0 0 0
+0 0 0 P
+R 1
+#49
+focus~
+a magical focus~
+A magical focus lies here.~
+crystal~
+'trash' G AO
+0 0 0 0 0
+0 1 0 P
+R 1
+#50
+campfire fire~
+a campfire~
+A {Rc{Ya{Rm{Yp{Rf{Yi{Rr{Ye{x is burning merrily here.~
+fire~
+'decoration' R 0
+0 0 0 0 0
+0 0 0 P
+R 1
+#51
+grimoire~
+an ancient grimoire~
+An ancient grimoire lies here.~
+vellum~
+'grimoire' GT AO
+0 0 0 0 0
+0 1 0 P
+R 1
+#52
+default figurine~
+default figurine~
+Default figurine~
+unknown~
+'figurine' 0 A
+0 0 0 0 0
+0 1 0 P
+R 1
+#53
+box gunpowder~
+a small box of gunpowder~
+A small box sits here.~
+earth~
+'trash' 0 AO
+0 0 0 0 0
+10 1 5 P
+R 100
+#54
+puddle blood~
+a puddle of {rblood{x~
+A large {rpuddle of blood{x is here.~
+unknown~
+'trash' R 0
+0 0 0 0 0
+0 0 0 P
+R 100
+#55
+portal~
+a shimmery portal~
+A generic portal.~
+unique~
+'portal' AGRT 0
+0 0 0 0 0
+0 0 0 P
+R 100
+#56
+Club~
+a club~
+A club is here.~
+wood~
+'weapon' 0 AN
+'mace' 1 8 'pound' 0
+0 6 0 P
+R 100
+A 18 2
+E
+club~
+A small club which you have taken to taking with you for your own defence.  
+~
+#57
+dagger~
+a dagger~
+A short dagger lies here.~
+unknown~
+'weapon' 0 AN
+'dagger' 1 6 'pierce' 0
+0 3 0 P
+R 100
+A 18 2
+E
+dagger~
+This is the fixed blade knife you took to calling a dagger after your
+father gave it to you many years ago.
+~
+#58
+bowie~
+a bowie knife~
+A large bowie knife lies here.~
+steel~
+'weapon' 0 AN
+'sword' 1 8 'slash' 0
+0 3 0 P
+R 100
+A 18 2
+E
+bowie~
+This is the large hunting knife that your father gave you when you were
+young.  
+~
+E
+bowie~
+~
+#59
+vest~
+a stylish vest~
+A stylish vest lies here.~
+unknown~
+'armor' 0 AD
+A A A 0 0
+0 5 0 P
+R 100
+E
+vest~
+This is a very classy dress vest.  Perfect for seeing the Headmaster in.  
+~
+#60
+brief case~
+a hard brief case~
+A hard sided brief case lies here.~
+unknown~
+'container' 0 AJ
+50 AC 0 100 0
+0 3 0 P
+R 100
+A 24 1
+A 17 3
+E
+case~
+This battered brief case has been used to fend off a few blows.  Why do
+you get in so many fights?  
+~
+#61
+lantern~
+a lantern~
+A small copper lantern is on the floor here.~
+unknown~
+'light' AG A
+0 0 200 0 0
+0 2 0 P
+R 100
+A 24 -1
+A 17 -1
+E
+lantern~
+This small copper lantern is one item you carry always, just in case the
+sun should abandon you before you are home.  
+~
+#62
+shocking rod~
+a shocking rod~
+A bizarre stout rod lies here.~
+plastic~
+'weapon' BY AN
+'dagger' 1 5 'chill' 0
+3 3 0 P
+R 100
+Z ABCDEFGHIJM
+#63
+canoe~
+a canoe~
+A canoe has been left here.~
+unknown~
+'boat' 0 AO
+0 0 0 0 0
+0 32 1000 G
+R 100
+E
+canoe~
+The canoe is fairly light.
+~
+#64
+bag~
+a bag~
+A small bag.~
+unknown~
+'container' 0 AO
+50 0 0 100 0
+0 2 20 P
+R 100
+#65
+pit~
+the donation pit~
+A pit for sacrifices is in front of the altar.~
+unknown~
+'container' O 0
+10000 0 0 100 0
+0 0 0 P
+R 100
+E
+pit~
+This is where you put money and items to help the City expand this shrine
+and
+convert more people to the belief of Zeran, lord of the gods.
+~
+#0
+
+
+
+#ROOMS
+#1
+The Void~
+You are floating in nothing.
+~
+0 12 1
+X
+End
+S
+#2
+The Void~
+You are floating in nothing.
+~
+0 12 1
+X
+End
+S
+#20
+GLOBAL MONITOR ROOM~
+~
+0 32772 0
+X
+End
+S
+#21
+MOB RESERVOIR~
+~
+0 4 0
+X
+End
+S
+#22
+OBJ RESERVOIR~
+~
+0 32772 0
+X
+End
+S
+#0
+
+
+
+#SPECIALS
+M 3 spec_cast_undead Load to: a mummy
+S
+
+
+
+#RESETS
+M 0 18 1 1 Load ADMIN
+M 0 10 1 20 Load The Watcher of Magic
+M 0 20 1 20 Load Unspeakable Possessor
+M 0 11 1 20 Load COMMAND WATCHER
+M 0 12 1 20 Load OPROG WATCHER
+M 0 19 1 21 Load Jukebox
+S
+
+
+
+#SHOPS
+0
+
+
+
+#$

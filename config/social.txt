@@ -1,0 +1,1895 @@
+tourniquet
+Who is bleeding?
+@a2 wants to try out @a3 new tourniquet skill...is anyone bleeding? 
+You wrap cloth around @v2's neck and twist!
+@a2 ties a tight tourniquet around @v2's neck!  MUST STOP THAT NOSEBLEED! 
+@a2 rushes to bind your wounds and ties a tourniquet around your neck! CHOKE!  
+That person isn't here.
+You quickly tie a tourniquet around your neck to stop your nosebleed!
+#
+
+gack
+Gaaack!
+@a2 gacks with dismay!
+Appalled, you gack at @v2.
+@a2 gacks expressively, shooting @v2 a dismayed look.
+@a2 gacks, and looks your way, dismayed.
+That person isn't here.
+*GACK!*
+#
+
+kiss
+> 3
+Isn't there someone you want to kiss?
+$
+You kiss @v4.
+@a2 kisses @v2.
+@a2 kisses you.
+Never around when required.
+All the lonely people :(
+#
+
+eve
+You hop around like Eve!
+@a2 hops around like Eve!!!
+You bounce onto @v3 lap.
+@a2 bounces onto @v2's lap, hoping desperately that @a5 is Eve.
+@a2 bounces onto your lap and wiggles around.
+Eve doesn't seem to be around right now.
+#
+
+bounce
+BOIINNNNNNGG!
+@a2 bounces around.
+You bounce onto @v3 lap.
+@a2 bounces onto @v2's lap.
+@a2 bounces onto your lap.
+You don't see your plaything.
+You bounce your head like a basketball.
+@a2 plays basketball with @a3 head.
+
+smile
+> 1
+You smile happily.
+@a2 smiles happily.
+You smile at @v4.
+@a2 beams a smile at @v2.
+@a2 smiles at you.
+There's no one by that name around.
+You smile at yourself.
+@a2 smiles at @a4self.
+
+dance
+Feels silly, doesn't it?
+@a2 dances wildly before you!
+You lead @v4 to the dancefloor.
+@a2 sends @v2 across the dancefloor.
+@a2 sends you across the dancefloor.
+Eh, WHO?
+You skip and dance around by yourself.
+@a2 skips a light Fandango.
+
+cackle
+You cackle gleefully.
+@a2 throws back @a3 head and cackles with insane glee!
+You cackle gleefully at @v2
+@a2 cackles gleefully at @v2.
+@a2 cackles gleefully at you.  Better keep your distance from @a4.
+You can't find a friend to cackle with.
+You cackle at yourself.  Now, THAT'S strange!
+@a2 is really crazy now!  @a5 cackles at @a4self.
+
+laugh
+You fall down laughing.
+@a2 falls down laughing.
+You laugh at @v2 mercilessly.
+@a2 laughs at @v2 mercilessly.
+@a2 laughs at you mercilessly.  Hmmmmph.
+You can't find the butt of your joke.
+You laugh at yourself.  I would, too.
+@a2 laughs at @a4self.  Let's all join in!!!
+
+giggle
+You giggle.
+@a2 giggles.
+You giggle in @v3 presence.
+@a2 giggles at @v2's actions.
+@a2 giggles at you.  Hope it's not contagious!
+You giggle by yourself, since you can't find a partner to giggle with.
+You giggle at yourself, which makes you giggle at yourself, which makes you ...
+@a2 giggles at @a4self.  @a5 must be nervous or something.
+
+shake
+You shake your head.
+@a2 shakes @a3 head.
+You shake @v3 hand.
+@a2 shakes @v2's hand.
+@a2 shakes your hand.
+Sorry good buddy, but that person doesn't seem to be here.
+You are shaken by yourself.
+@a2 shakes and quivers like a bowl full of jelly.
+
+puke
+> 2
+You puke...chunks everywhere!!! YUK!
+@a2 pukes.
+You puke on @v4.
+@a2 pukes on @v2.
+@a2 spews vomit and pukes all over your clothing!
+Once again?
+You puke on yourself.
+@a2 pukes on @a3 clothes.
+
+growl
+> 2
+Grrrrrrrrrr...
+@a2 growls.
+Grrrrrrrrrr....take that, @v2!!!
+@a2 growls at @v2.  Better leave the room before the fighting starts.
+@a2 growls at you.  Hey, two can play it that way!
+No one can see you growl that far.
+You growl at yourself.  Boy, do you feel bitter!
+@a2 growls at @a4self.  This could get interesting...
+
+scream
+ARRRRRRRRRRGH!!!!!
+@a2 screams loudly!
+ARRRRRRRRRRGH!!!!!  Yes, it MUST have been @v3 fault!!!
+@a2 screams loudly at @v2.  Better leave before @a2 blames you, too!!!
+@a2 screams at you!  That's not nice!  *sniff*
+Your lungs can't reach that far!
+You scream at yourself.  Yes, that's ONE way of relieving tension!
+@a2 screams loudly at @a4self!  Is there a full moon up?
+
+comfort
+Do you feel uncomfortable?
+$
+You comfort @v4.
+@a2 comforts @v2.
+@a2 comforts you.
+Comfort who?
+You make a vain attempt to comfort yourself.
+@a2 has no one to comfort @a4 but @a4self
+
+sigh
+You sigh.
+@a2 sighs.
+You sigh as you think of @v4.
+@a2 sighs at the sight of @v2.
+@a2 sighs as @a5 thinks of you.  Touching, huh?
+You really sigh, since you don't see your friend.
+You sigh at yourself.  You MUST be lonely.
+@a2 sighs at @a4self.  What a sorry sight.
+
+sulk
+You sulk.
+@a2 sulks in the corner.
+#
+
+hug
+Hug who?
+$
+You hug @v4.
+@a2 hugs @v2.
+@a2 hugs you.
+Sorry, friend, I can't see that person here.
+You hug yourself.
+@a2 hugs @a4self in a vain attempt to get friendship.
+
+snuggle
+Who?
+$
+You snuggle @v4.
+@a2 snuggles up to @v2.
+@a2 snuggles up to you.
+They aren't here.
+You snuggle up, getting ready to sleep.
+@a2 snuggles up, getting ready to sleep.
+
+cuddle
+Who do you feel like cuddling today?
+$
+You cuddle @v4.
+@a2 cuddles @v2.
+@a2 cuddles you.
+They aren't here.
+You must feel very cuddly indeed ... :)
+@a2 cuddles up to @a3 shadow.  What a sorry sight.
+
+nuzzle
+Nuzzle who??
+$
+You nuzzle @v3 neck softly.
+@a2 softly nuzzles @v2's neck.
+@a2 softly nuzzles your neck.
+No.. they aren't here..
+I'm sorry, friend, but that's impossible.
+#
+
+cry
+Waaaaah..
+@a2 bursts into tears.
+You cry on @v3 shoulder.
+@a2 cries on @v2's shoulder.
+@a2 cries on your shoulder.
+Who's that?
+You cry to yourself.
+@a2 sobs quietly to @a4self.
+
+poke
+Poke who??
+$
+You poke @v4 in the ribs.
+@a2 pokes @v2 in the ribs.
+@a2 pokes you in the ribs.
+You can't poke someone who's not here!.
+You poke yourself in the ribs, feeling very silly.
+@a2 pokes @a4self in the ribs, looking very sheepish.
+
+accuse
+You accuse everyone!
+@a2 is in an accusing mood.
+You look accusingly at @v4.
+@a2 looks accusingly at @v2.
+@a2 looks accusingly at you.
+Accuse somebody who's not even there ??
+You accuse yourself.
+@a2 seems to have a bad conscience.
+
+grin
+You grin evilly.
+@a2 grins evilly.
+You grin evilly at @v4.
+@a2 grins evilly at @v2.
+@a2 grins evilly at you.  Hmmm.  Better keep your distance.
+You must be delirious.
+You grin at youself.  You must be getting very bad thoughts.
+@a2 grins at @a4self.  You must wonder what's in @a3 mind.
+
+bow
+> 1
+You bow deeply.
+@a2 bows deeply.
+You bow before @v4.
+@a2 bows before @v2.
+@a2 bows before you.
+Who's that?
+You kiss your toes.
+@a2 folds up like a jacknife and kisses @a3 own toes.
+
+applaud
+> 1
+Clap, clap, clap.
+@a2 gives a round of applause.
+You clap at @v2's actions.
+@a2 claps at @v2's actions.
+@a2 gives you a round of applause.  You MUST'VE done something good!
+You give your imaginary round of applause to your imaginary friend.
+You applaud at yourself.  Boy, are we conceited!
+@a2 applauds at @a4self.  Boy, are we conceited!
+
+blush
+Your cheeks are burning.
+@a2 blushes.
+You get all flustered up seeing @v4.
+@a2 blushes as @a5 sees @v2 here.
+@a2 blushes as @a5 sees you here.  Such an effect on people!
+You blush as you notice that person isn't here.
+You blush at your own folly.
+@a2 blushes as @a5 notices @a3 boo-boo.
+
+burp
+> 2
+You burp loudly.
+@a2 burps loudly.
+You burp loudly to @v4 in response.
+@a2 burps loudly in response to @v2's remark.
+@a2 burps loudly in response to your remark.
+You can't find your victim.
+You burp at yourself.
+@a2 burps at @a4self.  What a sick sight.
+
+chuckle
+You chuckle politely.
+@a2 chuckles politely.
+You chuckle at @v3 joke.
+@a2 chuckles at @v2's joke.
+@a2 chuckles at your joke.
+You can't find a friend to chuckle with.
+You chuckle at your own joke, since no one else would.
+@a2 chuckles at @a3 own joke, since none of you would.
+
+clap
+You clap your hands together.
+@a2 shows @a3 approval by clapping @a3 hands together.
+You clap at @v3 performance.
+@a2 claps at @v2's performance.
+@a2 claps at your performance.
+You clap for nothing.
+You clap at your own performance.
+@a2 claps at @a3 own performance.
+
+cough
+Yuck, try to cover your mouth next time!
+@a2 coughs loudly.
+#
+
+curtsey
+> 1
+You curtsey to your audience.
+@a2 curtseys gracefully.
+You curtsey to @v4.
+@a2 curtseys gracefully to @v2.
+@a2 curtseys gracefully for you.
+You curtsey to no one in particular.
+You curtsey to your audience (yourself).
+@a2 curtseys to @a4self, since no one is paying attention to @a4.
+
+fart
+> 2
+Where are your manners ?
+@a2 lets off a real rip-roarer ... a greenish cloud envelops @a2!
+You fart at @v4.  Boy, you are sick.
+@a2 farts in the direction of @v2.  Better flee before @a5 turns to you!
+@a2 farts in your direction.  You gasp for air.
+You can't hold it that long!
+You fart at yourself.  You deserve it.
+@a2 farts at @a4self.  Better @a4 than you.
+
+flip
+You flip head over heels.
+@a2 flips head over heels.
+You flip @v4 over your shoulder.
+@a2 flips @v2 over @a3 shoulder.
+@a2 flips you over @a3 shoulder.  Hmmmm.
+You can't find the person.
+You tumble all over the room.
+@a2 does some nice tumbling and gymnastics.
+
+fondle
+> 3
+Who needs to be fondled ?
+$
+You fondly fondle @v4.
+@a2 fondly fondles @v2.
+@a2 fondly fondles you.
+You fondly try to fondle someone not in the room, but who cares.
+You fondly fondle yourself, feels funny doesn't it?
+@a2 fondly fondles @a4self - this is going too far!!
+
+frown
+What's bothering you ?
+@a2 frowns.
+You frown at what @v5 did.
+@a2 frowns at what @v5 did.
+@a2 frowns at what you did.
+You don't see any reason to frown.
+You frown at yourself.  Poor baby.
+@a2 frowns at @a4self.  What a sad puppy....
+
+gasp
+You gasp in astonishment.
+@a2 gasps in astonishment.
+You gasp as you realize what @v5 did.
+@a2 gasps as @a5 realizes what @v2 did.
+@a2 gasps as @a5 realizes what you did.
+You need to panic.
+You look at yourself and gasp!
+@a2 takes one look at @a4self and gasps in astonisment!
+
+glare
+You glare at nothing in particular.
+@a2 glares around @a4.
+You glare icily at @v4.
+@a2 glares at @v2.
+@a2 glares icily at you, you feel cold to your bones.
+You try to glare at somebody who is not present.
+You glare icily at your feet, they are suddenly very cold.
+@a2 glares at @a3 feet, what is bothering @a4?
+
+groan
+You groan loudly.
+@a2 groans loudly.
+You groan at the sight of @v4.
+@a2 groans at the sight of @v2.
+@a2 groans at the sight of you.
+You see no reason to groan.
+You groan as you realize what you have done.
+@a2 groans as @a5 realizes what @a5 has done.
+
+grope
+Whom do you wish to grope ??
+$
+Well, what sort of noise do you expect here?
+@a2 gropes @v2.
+@a2 gropes you.
+Try someone who's here.
+You grope yourself - YUCK.
+@a2 gropes @a4self - YUCK.
+
+hiccup
+*HIC*
+@a2 hiccups.
+#
+
+lick
+> 3
+You lick your mouth and smile.
+@a2 licks @a3 mouth and smiles.
+You lick @v4.
+@a2 licks @v2.
+@a2 licks you.
+Lick away, nobody's here with that name.
+You lick yourself.
+@a2 licks @a4self - YUCK.
+
+love
+> 3
+You love the whole world.
+@a2 loves everybody in the world.
+You tell your true feelings to @v2.
+@a2 whispers softly to @v2.
+@a2 whispers to you sweet words of love.
+Alas, your love is not present...
+Well, we already know you love yourself (lucky someone does !)
+@a2 loves @a4self, can you believe it ?
+
+moan
+You start to moan.
+@a2 starts moaning.
+You moan for the loss of @v4.
+@a2 moans for the loss of @v2.
+@a2 moans at the sight of you.  Hmmmm.
+You see no cause to moan.
+You moan at yourself.
+@a2 makes @a4self moan.
+
+nibble
+Nibble on who ?
+$
+You nibble on @v2's ear.
+@a2 nibbles on @v2's ear.
+@a2 nibbles on your ear.
+Sorry, not present.
+You nibble on your OWN ear ???????????????????
+@a2 nibbles on @a3 OWN ear (I wonder how it is done !!).
+
+pout
+Ah, don't take it so hard.
+@a2 pouts.
+#
+
+ruffle
+You've got to ruffle SOMEONE.
+$
+You ruffle @v2's hair playfully.
+@a2 ruffles @v2's hair playfully.
+@a2 ruffles your hair playfully.
+Might be a bit difficult.
+You ruffle your hair, wondering how far you can go before the rest think you're crazy.
+@a2 ruffles @a3 hair - weirdo!
+
+shiver
+You shiver uncomfortably.
+@a2 shivers uncomfortably.
+You shiver at the thought of fighting @v4.
+@a2 shivers at the thought of fighting @v2.
+@a2 shivers at the suicidal thought of fighting you.
+You don't see any reason to shiver.
+You shiver to yourself?
+@a2 scares @a4self to shivers.
+
+shrug
+You shrug.
+@a2 shrugs helplessly.
+You shrug in response to @a3 question.
+@a2 shrugs in response to @v2's question.
+@a2 shrugs in response to your question.
+You shrug to no one in particular.
+You shrug to yourself.
+@a2 shrugs to @a4self.  What a strange person.
+
+sing
+You raise your clear (?) voice towards the sky.
+HEY CLERICS! I COULD USE A HEAL!  @a2 has begun to sing.
+You sing a ballad to @v4.
+@a2 sings a ballad to @v2.
+@a2 sings a ballad to you!  How sweet!
+You see no one to sing to.
+You sing a little ditty to yourself.
+@a2 sings a little ditty to @a4self.
+
+slap
+> 2
+What is the sound of one hand slapping?
+$
+You slap @v2.
+@a2 slaps @v2.
+You are slapped by @a2.
+How about slapping someone in the same room as you ??
+You slap yourself, silly you.
+@a2 slaps @a4self, really strange ...
+
+smirk
+You smirk.
+@a2 smirks.
+You smirk at @v3 saying.
+@a2 smirks at @v2's saying.
+@a2 smirks at your saying.
+You want to smirk to whom?
+You smirk at yourself.  Okay.....
+@a2 smirks at @a3 own 'wisdom'.
+
+snap
+PRONTO ! You snap your fingers.
+@a2 snaps @a3 fingers.
+You snap back at @v4.
+@a2 snaps back at @v2.
+@a2 snaps back at you!
+You must be very agitated.
+You snap yourself to attention.
+@a2 snaps @a4self to attention.
+
+sneeze
+Gesundheit !
+@a2 sneezes.
+#
+
+snicker
+You snicker softly.
+@a2 snickers softly.
+You snicker with @v4 about your shared secret.
+@a2 snickers with @v2 about their shared secret.
+@a2 snickers with you about your shared secret.
+Huh?
+You snicker at your own evil thoughts.
+@a2 snickers at @a3 own evil thoughts.
+
+sniff
+You sniff sadly. *SNIFF*
+@a2 sniffs sadly.
+You sniff sadly at the way @v5 is treating you.
+@a2 sniffs sadly at the way @v2 is treating @a4.
+@a2 sniffs sadly at the way you are treating @a4.
+You see no reason to sniff.
+You sniff sadly at your lost opportunities.
+@a2 sniffs sadly at @a4self.  Something MUST be bothering @a4.
+
+snore
+Zzzzzzzzzzzzzzzzz.
+@a2 snores loudly.
+#
+
+squeeze
+Where, what, how, WHO ???
+$
+You squeeze @v4 fondly.
+@a2 squeezes @v2 fondly.
+@a2 squeezes you fondly.
+Where, what, how, WHO ???
+You squeeze yourself - try to relax a little!
+@a2 squeezes @a4self.
+
+stare
+You stare at the sky.
+@a2 stares at the sky.
+You stare dreamily at @v2, completely lost in @v3 eyes..
+@a2 stares dreamily at @v2.
+@a2 stares dreamily at you, completely lost in your eyes.
+You stare and stare but can't see that person anywhere...
+You stare dreamily at yourself - enough narcissism for now.
+@a2 stares dreamily at @a4self - NARCISSIST!
+
+strut
+Strut your stuff.
+@a2 struts proudly.
+You strut to get @v3 attention.
+@a2 struts, hoping to get @v2's attention.
+@a2 struts, hoping to get your attention.
+You don't see an audience.
+You strut to yourself, lost in your own world.
+@a2 struts to @a4self, lost in @a3 own world.
+
+thank
+> 1
+Thank you too.
+$
+You thank @v2 heartily.
+@a2 thanks @v2 heartily.
+@a2 thanks you heartily.
+No one answers to that name here.
+You thank yourself since nobody else wants to !
+@a2 thanks @a4self since you won't.
+
+twiddle
+You patiently twiddle your thumbs.
+@a2 patiently twiddles @a3 thumbs.
+You twiddle @v3 ears.
+@a2 twiddles @v2's ears.
+@a2 twiddles your ears.
+You don't see the person here.
+You twiddle your ears like Dumbo.
+@a2 twiddles @a3 own ears like Dumbo.
+
+wave
+You wave.
+@a2 waves happily.
+You wave goodbye to @v2.
+@a2 waves goodbye to @v2.
+@a2 waves goodbye to you.  Have a good journey.
+They didn't wait for you to wave goodbye.
+Are you going on adventures as well??
+@a2 waves goodbye to @a4self.
+
+whistle
+You whistle appreciatively.
+@a2 whistles appreciatively.
+You whistle at the sight of @v4.
+@a2 whistles at the sight of @v2.
+@a2 whistles at the sight of you.
+You don't see nothing special to whistle at.
+You whistle a little tune to yourself.
+@a2 whistles a little tune to @a4self.
+
+wiggle
+Your wiggle your bottom.
+@a2 wiggles @a3 bottom.
+You wiggle your bottom toward @v4.
+@a2 wiggles @a3 bottom toward @v2.
+@a2 wiggles @a3 bottom toward you.
+You must be alone.
+You wiggle about like a fish.
+@a2 wiggles about like a fish.
+
+wink
+Have you got something in your eye?
+@a2 winks suggestively.
+You wink suggestively at @v2.
+@a2 winks at @v2.
+@a2 winks suggestively at you.
+No one with that name is present.
+You wink at yourself ?? - what are you up to?
+@a2 winks at @a4self - something strange is going on...
+
+yawn
+You must be tired.
+@a2 yawns.
+#
+
+snowball
+Who do you want to throw a snowball at?
+$
+You throw a snowball in @v2's face.
+@a2 conjures a snowball from the thin air and throws it at @v2.
+@a2 conjures a snowball from the thin air and throws it at you.
+You stand with the snowball in your hand because your victim is not here.
+You conjure a snowball from the thin air and throw it at yourself.
+@a2 conjures a snowball out of the thin air and throws it at @a4self.
+
+french
+> 3
+Kiss whom?
+$
+You give @v2 a long and passionate kiss, it seems to last forever...
+@a2 kisses @v2 passionately.
+@a2 gives you a long and passionate kiss, it seems to last forever...
+Your heart is filled with despair as that person is not here.
+You gather yourself in your arms and try to kiss yourself.
+@a2 makes an attempt at kissing @a4self.
+
+comb
+You comb your hair - perfect.
+@a2 combs @a3 hair, what a dashing specimen !
+You patiently untangle @v2's hair - what a mess !
+@a2 tries patiently to untangle @v2's hair.
+@a2 pulls your hair in an attempt to comb it.
+That person is not here.
+You pull your hair, but it will not be combed.
+@a2 tries to comb @a3 tangled hair.
+
+massage
+Massage what?  Thin air?
+$
+You gently massage @v2's shoulders.
+@a2 massages @v2's shoulders.
+@a2 gently massages your shoulders - Ahhhhhhhhhh...
+You can only massage someone in the same room as you.
+You practice yoga as you try to massage yourself.
+@a2 gives a show on yoga-positions, trying to massage @a4self.
+
+tickle
+Whom do you want to tickle?
+$
+You tickle @v2.
+@a2 tickles @v2.
+@a2 tickles you - hee hee hee.
+Who is that??
+You tickle yourself, how funny!
+@a2 tickles @a4self.
+
+pat
+Pat who?
+$
+You pat @v2 on @v3 head.
+@a2 pats @v2 on @v3 head.
+@a2 pats you on your head.
+Who, where, what?
+You pat yourself on your head, very reassuring.
+@a2 pats @a4self on the head.
+
+curse
+> 2
+You swear loudly for a long time.
+@a2 swears : #@*"*&^*#%@*&! !!!!!
+You swear at @v4.
+@a2 swears at @v2.
+@a2 swears at you!  Where are the manners?
+You can't find the victim of your frustrations.
+You swear at your own mistakes.
+@a2 starts swearing at @a4self.  Why don't you help?
+
+pray
+> 1
+You feel righteous, and maybe a little foolish.
+@a2 begs and grovels to the powers that be.
+You crawl in the dust before @v4.
+@a2 falls down and grovels in the dirt before @v2.
+@a2 kisses the dirt at your feet.
+No such person around; your prayers vanish into the endless voids.
+Talk about narcissism...
+@a2 performs some strange yoga-exercises and mumbles a prayer to @a4self.
+
+beg
+You beg the gods for mercy.
+The gods fall down laughing at @a2's request for mercy.
+You desperately try to squeeze a few coins from @v4.
+@a2 begs you for money. You graciously let @a4 peep at your fortune.
+@a2 begs @v2 for a dime or two - or twenty !
+Your money-lender seems to be out for the moment.
+Begging yourself for money doesn't help.
+#
+
+cringe
+You cringe in terror.
+@a2 cringes in terror!
+You cringe away from @v4.
+@a2 cringes away from @v2 in mortal terror.
+@a2 cringes away from you.
+I don't see anyone by that name here.. what are you afraid of?
+I beg your pardon?
+#
+
+daydream
+You dream of better times.
+@a2 looks absent-minded, his eyes staring into space.
+#
+
+fume
+Take it easy now! count to ten, very slowly.
+@a2 grits @a3 teeth and fumes with rage.
+You stare at @v4, fuming.
+@a2 stares at @v2, fuming with rage.
+@a2 stares at you, fuming with rage!
+Fume away... they ain't here.
+That's right - hate yourself!
+@a2 clenches @a3 fists and stomps his feet, fuming with anger.
+
+grovel
+You grovel in the dirt.
+@a2 grovels in the dirt.
+You grovel before @v4
+@a2 grovels in the dirt before @v2.
+@a2 grovels in the dirt before you.
+Who?
+That seems a little silly to me.
+#
+
+hop
+You hop around like a little kid.
+@a2 hops around like a little kid.
+#
+
+nudge
+Nudge whom?
+$
+You nudge @v4.
+@a2 nudges @v2.
+@a2 nudges you.
+Who?
+You nudge yourself, for some strange reason.
+@a2 nudges @a4self, to keep @a4self awake.
+
+ponder
+You ponder the question.
+@a2 sits down and thinks deeply.
+#
+
+punch
+Punch whom?
+$
+You punch @v4 playfully.
+@a2 punches @v2 playfully.
+@a2 punches you playfully.  OUCH!
+You can't find your boxing partner.
+You punch yourself.  You deserve it.
+@a2 punches @a4self.  Why don't you join in?
+
+snarl
+> 2
+You grizzle your teeth and look mean.
+@a2 snarls angrily.
+You snarl at @v4.
+@a2 snarls at @v2.
+@a2 snarls at you, for some reason.
+No need to snarl!
+You snarl at yourself.
+@a2 snarls at @a4self.
+
+spank
+Spank whom?
+$
+You spank @v4 playfully.
+@a2 spanks @v2 playfully.
+@a2 spanks you playfully.  OUCH!
+Your hand can't find your victim!
+You spank yourself....HMMMMMMM...
+@a2 spanks @a4self....HMMMMMMM...
+
+hand
+Kiss whose hand?
+$
+You kiss @v3 hand.
+@a2 kisses @v2's hand.  How continental!
+@a2 kisses your hand.  How continental!
+You can't find a lady in THIS group.
+You kiss your own hand.
+@a2 kisses @a3 own hand.
+
+yodel
+You think of Julie Andrews and start to yodel.
+@a2 begins to yodel:  HEY!! CLERICS!! I COULD USE A HEAL!!!
+@v2 covers @v3 ears as you begin to yodel.
+@a2 yodels to @v2.
+@a2 yodels to you...you cringe and turn away.
+That person just escaped!
+Well, it's up to you if you want to damage your hearing.
+@a2 yodels to @a4self.  What a sado-masochist.
+
+faint
+You faint.
+@a2 faints.
+You faint into @v3 arms.
+@a2 faints into @v2's open arms.
+@a2 just fainted into YOUR arms.
+You fall on the floor and look stupid--really suave.
+#
+
+pinch
+You pinch the thin air!
+$
+You pinch @v3 tight little buns!
+@a2 pinches @v2's buns.
+@a2 pinches your A*S!
+You'd like to, wouldn't you?
+You pinch yourself to see if you are dreaming!
+@a2 pinches @a4self to see if @a5 is dreaming!
+
+stroke
+Whose thigh would you like to stroke?
+$
+You gently stroke @v3 inner thigh.
+$
+@a2 gently strokes your inner thigh...you get goose bumps!
+Maybe you should practice on yourself first.
+You are about to do something you'd rather not be caught doing.
+#
+
+apologize
+You apologize until you are blue in the face.
+@a2 apologizes profusely.
+You might as well apologize because @v5 sure as hell won't.
+@a2 apologizes to @v2 with a very sincere look on @a3 face.
+@a2 apologizes to you and begs for forgiveness.
+Who's that?
+#
+
+caress
+> 3
+Who do you wish to caress?
+@a2 looks for someone to caress.
+You tenderly caress @v4.
+@a2 tenderly caresses @v2.
+@a2 tenderly caresses your body.
+You're S.O.L., buddy.
+#
+
+stagger
+You stagger blindly around the room.
+@a2 staggers blindly around the room.
+You stagger toward @v2 as the room begins to spin.
+@a2 staggers into @v2.
+@a2 staggers blindly into you.
+Stagger into whom!?!?
+#
+
+snort
+You snort.
+@a2 snorts.
+You snort derisively at @v2.
+@a2 snorts derisively at @v2.
+@a2 snorts at you.
+Snort at whom?
+You snort at your own stupidity.
+@a2 snorts at @a3 own stupidity.
+
+slobber
+You slobber down your front.
+@a2 slobbers all over @a4self.
+You slobber on @v2.
+@a2 slobbers on @v2  **Yuck**
+@a2 slobbers disgustingly on you.
+Slobber on WHOM?
+#
+
+blink
+You bat your eyelashes.
+@a2 blinks innocently.
+You blink innocently at @v2.
+@a2 blinks innocently at @v2.
+@a2 blinks innocently at you.
+Feign innocence for whom?
+You try to convince yourself of your innocence.
+#
+
+tease
+What a tease.   SHEESH.
+@a2 looks around for someone to tease.
+You tease @v2 in a playful way.
+@a2 sticks @a3 tongue out at @v2.
+@a2 sticks @a3 tongue out at you, what a DORK!!
+Tease whom?
+You tease yourself. NYAH NYAH NYAH.
+@a2 teases @a4self.
+
+knee
+> 2
+Be careful, you could hurt someone!!
+@a2 raises @a3 knee up.  UH OH!
+You place your knee in @v3 groin, you'd better get away QUICK!
+@v2 doubles over in pain as @a2 places @a3 knee in @v3 groin.
+@a2 places @a3 knee in your groin - you fall to your knees in agony.
+Whom do you wish to render impotent?
+What ARE you thinking !?!??!?!?!?!
+#
+
+flirt
+> 1
+You flirt outrageously.
+@a2 is an outrageous flirt.
+You flirt with @v2 trying to get @v3 attention.
+@a2 flirts with @v2, hmmm wonder what @a5 wants? *wink*
+@a2 flirts with you.
+Sorry no one here to flirt with. :(
+You flirt with yourself -- what ARE you trying to gain!?!?!?
+@a2 flirts with @a4self, wonder what @a5 is trying to accomplish?
+
+tip
+> 1
+You tip your hat gallantly.
+@a2 gallantly tips @a3 hat.
+You tip your hat to @v2.
+@a2 gallantly tips @a3 hat to @v2.
+@a2 gallantly tips @a3 hat to you.
+But there is no one here to impress?!?!
+#
+
+lust
+> 3
+Your hormones begin to rage.
+@a2 has that look of lust in @a3 eyes --- Get away QUICK!
+You have lust after @v2.
+@a2 looks lustily at @v2.
+@a2 lusts after your delectable body.
+Whom are you trying to lust after?
+Oh, please! You aren't THAT great...
+@a2 lusts after @a4self, lonely eh?
+
+flutter
+You flutter your eyelashes seductively.
+@a2 flutters @a3 eyelashes seductively.
+You flutter your eyelashes at @v2, trying to be seductive.
+@a2 flirts with @v2, flutters @a3 eyelashes at @v4.
+@a2 flutters @a3 eyelashes at you coyly.
+EH? Can't see them here.
+#
+
+bark
+You bark loudly.
+@a2 barks like a dog. GO DAWGS SIC 'EM!!! WOOF! WOOF! WOOF! WOOF!
+You bark at @v2 scaring @v4 silly -- SHAME ON YOU!!
+@a2 barks at @v2 scaring @v4 senseless.
+@a2 barks loudly at you, you back away, because @a5 might bite too!!
+Bark at whom?
+You bark at yourself and jump back in fear.
+@a2 barks at @a4self and cowers in fear.
+
+howl
+You howl at the moon.
+@a2 howls at the moon.
+You howl soulfully at @v2.
+@a2 howls at @v2.
+@a2 howls soulfully at you.
+Who? What? Where?
+#
+
+babble
+You babble endlessly.
+@a2 babbles endlessly, won't @a5 EVER shut up?
+You babble to @v2 for hours on end.
+@a2 babbles to @v2 for what seems an eternity, how can @v2 stand it?
+@a2 babbles at you. You nod mechanically, hoping @a5 will shut up soon.
+Whom do you wish to annoy with your babble?
+You babble on and on to yourself, FINALLY! someone who LISTENS!!
+@a2 babbles quietly to @a4self.
+
+ramble
+You ramble on and on.
+@a2 rambles on about a boring exploit.
+You ramble on to @v2 about your past adventures.
+@a2 blithers on and on to @v2 about something.
+@a2 tells you a rather boring tale, you feign interest.
+??EH??
+#
+
+hush
+SHHHHHHHHHHHHHHHHHHHHHH
+@a2 requests everyone quiet down.  Shhhhhhhhhhh...
+You nicely ask @v2 to be more quiet.
+@a2 nicely asks @v2 to be more quiet.
+@a2 kindly requests that you please quiet down.
+Who needs to be silenced?
+You realize you are loud and obnoxious and try to silence yourself.
+@a2 covers @a3 mouth in an attempt to silence @a4self.
+
+threaten
+> 2
+You threaten everyone with your overwhelming presence.
+You feel threatened in the presence of the great @a2.
+You stand tall as you threaten @v2.
+@a2 threatens @v2 forcefully.
+@a2 threatens you...oooooooh scary *laugh*
+Whom do you wish to intimidate?
+#
+
+roll
+You roll your eyes in disgust.
+@a2 rolls @a3 eyes, disgusted.
+You look at @v2 and roll your eyes in disgust.
+@a2 rolls @a3 eyes in disgust at @v2.
+@a2 rolls @a3 eyes at you.
+You should be disgusted with yourself because you look so foolish.
+At whom do you wish to roll your eyes?
+#
+
+swoon
+You swoon.
+@a2 swoons in absolute ecstasy.
+You look at @v2 and swoon in ecstasy.
+@a2 looks at @v2 and swoons in ecstasy.
+@a2 looks at you and swoons in ecstasy.
+Who?
+#
+
+bird
+You flick a bird...How obscene!
+@a2 flicks a bird at no one in particular.
+You shoot a bird at @v2.
+@a2 gives @v2 the bird.
+@a2 gives you the bird...What an ass!
+Don't you hate to waste a good obscene gesture like that?
+#
+
+eyebrow
+You raise an eyebrow at the notion.
+@a2 raises an eyebrow.
+You raise your eyebrow at @v2.
+@a2 raises an eyebrow at @v2's weird actions.
+@a2 raises an eyebrow at you.
+Forget it.  They aren't here.
+#
+
+serenade
+You raise your voice in a loud serenade to your invisible love.
+@a2 raises @a3 voice to serenade the world.
+You raise your voice in a loving serenade to @v2.
+@a2 raises @a3 voice in a loving serenade to @v2.
+@a2 serenades you, you are swept away by @a3 voice.
+The one that you wish to serenade has left you to sing to yourself.
+You sing a loud serenade to yourself.  What type of person are you?!
+@a2 serenades @a4self.  What an ego!
+
+grimace
+You grimace painfully at the thought.
+@a2 grimaces painfully at the thought.
+You grimace at @v2.
+@a2 grimaces at @a2.
+@a2 grimaces at you.  What could be wrong?
+You grimace at no one in particular.
+You grimace painfully at your thoughts.
+@a2 grimaces painfully to @a4self.
+
+boggle
+You boggle at the concept.
+@a2 boggles at the concept.
+You boggle at @v2.
+@a2 boggles at @a2.
+@a2 boggles at you.
+Boggle away.  They've left.
+You boggle at yourself.  Hmmm...intriguing.
+@a2 boggles quietly to @a4self.
+
+beckon
+You beckon for everyone to follow.
+@a2 beckons for everyone to follow.
+You beckon for @v2 to follow -- sure hope they do!
+@a2 beckons @v2 to follow...hmmm what's going on?
+@a2 beckons for you to follow.
+So sorry, that person has already left.
+You beckon to your shadow to follow.
+@a2 beckons to @a3 shadow to follow.
+
+wonder
+You wonder about how things could have been.
+@a2 gets a blank stare on @a3 face.  What could @a5 be wondering about?
+You look at @v2 and wonder what will happen.
+@a2 looks at @v2 and wonders....
+@a2 looks at you quizzically.
+You wonder what would have happened had they been here.
+You wonder about yourself and your purpose here.
+A blank stare crosses @a2's face.  What could @a5 be wondering about?
+
+worry
+You worry about what's going to happen.
+A troubled look suddenly crosses @a2's face.  Wonder what's wrong?
+You look at @v2 worriedly.
+@a2 looks at @v2 with a troubled gaze.
+@a2 looks at you worriedly.
+Well they obviously aren't worried -- they left!
+You worry about what's going to happen.
+A troubled look suddenly crosses @a2's face.  Wonder what's wrong?
+
+drool
+You drool down the front of your shirt.
+@a2 drools all over @a4self -- making a TERRIBLE mess!
+You drool messily on @v2.
+@a2 drools upon @v2.
+@a2 looks at you lustily and drools.
+Oh fine, make a pool of slobber -- they aren't even here!
+You drool down the front of your shirt.
+@a2 drools all over @a4self -- making a TERRIBLE mess!
+
+nod
+You nod.
+@a2 nods.
+You nod at @v2.
+@a2 nods at @v2.
+@a2 nods at you in agreement.
+Nod your head off -- they aren't here.
+You attempt to nod at yourself and get dizzy instead.
+@a2 nods quietly to @a4self.  What a wacko.
+
+purr
+MMMMMMEEEEEEEEEOOOOOOOOOOOOOWWWWWWWWWWW!!!!!!!!!!!
+@a2 purrs contentedly.
+You rub up against @v2 and purr contentedly.
+@a2 rubs against @v2 and purrs contentedly.
+@a2 rubs up against you and purrs contentedly.
+You silly cat!  They aren't here.
+You purr quietly to yourself.
+@a2 purrs contentedly to @a4self.
+
+point
+You point in every direction.
+@a2 points excitedly!
+You point at @v2.
+@a2 points excitedly at @v2!
+@a2 points at you.  How rude!
+You point at no one in particular.
+You point at yourself, obviously very confused.
+@a2 points at @a4self, obviously very confused.
+
+rub
+You rub your hands together in greedy anticipation.
+@a2 rubs @a3 hands together in greedy anticipation.
+You give @v2 a nice, long, kinky rubdown.
+@a2 gives @v2 a nice long rubdown.
+@a2 gives you a rubdown, running @a3 hands over your tense shoulders...Mmmm...
+Shame to waste those talented hands, but they've already left.
+You rub yourself...lingering a little too long in some places.
+@a2 rubs @a4self...what a creep!
+
+bleed
+You bleed profusely -- making a horrible mess!
+@a2 weakly bleeds all over the floor.
+You bleed on @v2 -- ewww!
+@a2 bleeds on @v2.  Watch out, YOU might be next!
+@a2 bleeds on you -- ewww!  Get away!!
+Bleed on whom?
+You bleed all over yourself.
+@a2 bleeds profusely all over @a4self.
+
+highfive
+> 1
+You jump in the air and give a BIG high five to...umm...absolutely nothing.
+@a2 wildly high fives the air, looking very foolish -- very foolish indeed.
+You jump in the air and give a BIG high five to @v2!
+@a2 enthusiastically high-five's @v2!
+@a2 gives you a BIG high five!  Way to go!!
+Sorry, they have already left.
+You try to give yourself a high five.  What ARE you thinking?
+@a2 tries to high five @a4self, but ends up looking foolish instead.
+
+propose
+You propose to everyone in the room.
+@a2 proposes to everyone in the room.  Very odd.
+You kneel and romantically propose to @v2.
+@a2 gets on one knee and proposes to @v2.
+@a2 gets down on one knee and romantically proposes to you.
+You must be lonely.  They aren't here.
+You are SO full of yourself!
+@a2 proposes to @a4self -- how narcissistic!
+
+peer
+You peer around yourself intently.
+@a2 peers around @a4self intently.
+You peer intently at @v2.
+@a2 peers intently at @v2.
+@a2 peers at you intently.
+They aren't here.
+You get a little cross-eyed with your attempts to stare yourself down.
+@a2 peers at @a4self, crossing @a3 eyes in the process.
+
+bearhug
+Whom do you wish to bearhug?
+$
+You overwhelm @v2 with a great, big, hulking bearhug.
+@a2 encompasses @v2 in an ENORMOUS bearhug!
+@a2 clutches you tightly in an overwhelming bearhug!
+Perhaps you should shower your affections on someone who is here?
+You vainly clutch yourself in a bearhug for consolation.
+@a2 hugs @a4self as tightly as possible.  Looks like @a5 could use a hand.
+
+innocent
+You innocently whistle a tune.
+@a2 looks around and whistles innocently.
+You look at @v2 and bat your eyelashes -- the picture of innocence!
+@a2 bats @a3 eyelashes innocently at @v2.
+@a2 looks at you and innocently bats @a3 eyelashes.
+Don't even TRY -- they've already left.
+#
+
+collapse
+You collapse on the floor from exhaustion.
+@a2 dramatically collapses to the floor from exhaustion.   
+You collapse right into @v2's arms.
+@a2 collapses right into @v2's arms.
+Suddenly, @a2 collapses into your arms from exhaustion.  
+They've already left, just collapse on the floor.
+#
+
+stretch
+You lean back and streeeeeettch your arms and legs.
+@a2 stretches luxuriously.  Kinda makes you want to doesn't it?
+#
+
+spam
+You mutter, 'spam' quietly to yourself again and again.
+@a2 rests in a corner and mutters 'spam' quietly to @a4self.
+You SPAM @v2 mercilessly!
+@a2 spams @v2!
+You've been SPAMMED by @a2!
+Spam away -- they've left.
+#
+
+boast
+You boast loudly of all your amazing accomplishments.
+@a2 boasts loudly in a pigheaded fashion.
+You boast to @v2 of all your great deeds.
+@a2 boasts to @v2.
+Once again, @a2 boasts to you, what a bloated ego!
+Your ego takes a blow.  They've already left.
+You boast to yourself of all your great feats!  Your own biggest fan.
+@a2 boasts to @a4self -- what an ego!
+
+squirm
+You squirm uncontrollably in your consternation.
+@a2 squirms uncontrollably, suddenly looking very uncomfortable.
+You look at @v2 and squirm with delight.              
+@a2 looks at @v2 and squirms with delight.
+@a2 looks at you and squirms with delight.
+#
+
+moo
+You chew your cud and moo plaintively.  Muh-OOOOO!
+@a2 turns cowlike eyes on you, chews @a3 cud, and moos plaintively.
+You focus all your bovine Zen on @v2, and speak your thoughts.  Muh-OOOOO!
+Slowly, @a2 looks at @v2, chews @a3 cud, and muh-OOOOs!
+@a2 moos at you.  What could that possibly mean?
+You'd better find someone else to moo at.
+You settle down into the center of your bovine Zen; the foolish world thinks you're just mooing.
+@a2 is mooing at @a4self again...  You look for an exit...
+
+moon
+> 2
+You drop your drawers and moon everyone in the room!
+@a2 drops @a3 pants and gives you the vertical smile!
+You bend over and moon @v2.
+@a2 drops @a3 pants and rudely moons @v2!
+@a2 bends over and gives you the vertical smile!
+You stand, with your pants around your ankles, looking VERY silly!
+You try to moon yourself, but you can't see your A** that well.
+@a2 nearly goes into convulsions while trying to moon @a4self.
+
+goose
+Who would you like to goose?
+$
+You tenderly goose @v2 on the tush.
+@a2 reaches around @v2's backside and gooses @v4 tenderly.
+@a2 gooses you tenderly!
+You should go hunting for another victim, they left.
+You pinch yourself on the rear, you must be desperate.
+@a2 pinches @a4self on the rear.
+
+wince
+You wince in agony.
+@a2 winces in agony.
+You look at @v2 and wince at @v3 remark.
+@a2 winces at @v2's remark.
+@a2 winces at your remark.
+#
+
+type
+You can't type for crap tonight!  You give up in frustration!
+@a2 throws @a3 hands up in disgust at @a3 lousy typing skills!
+#
+
+brb
+Hope to see you soon!
+@a2 will be right back!
+#
+
+mutter
+You mutter quietly to yourself.
+@a2 mutters something quietly to @a4self.
+You mutter something to @v2.
+@a2 looks at @v2 and mutters something nasty under @a3 breath.                 
+@a2 looks at you and mutters something nasty under @a3 breath.
+There's nothing left for you to say, they've left!
+You mutter quietly to yourself.
+@a2 mutters something quietly to @a4self.
+
+rofl
+You roll on the floor, laughing hysterically.
+@a2 falls to the ground and rolls around laughing hysterically.
+You fall to the floor laughing at @v2's remark.
+@a2 rolls on the floor laughing at @v2's antics!
+@a2 rolls on the floor laughing at your antics!
+#
+
+sob
+You sob quietly to yourself.
+@a2 sobs in misery.
+You sob quietly to yourself because @v2 has hurt your feelings so badly.
+@a2 sobs quietly to @a4self because @v2 was a jerk!
+You feel like a cad because you've made @a2 sob.
+#
+
+pant
+You pant lustily.
+@a2 pants lustily.
+You pant lustily at @v4.
+@a2 looks at @v2 and pants lustily.
+@a2 looks at you and pants lustily...
+#
+
+whine
+You whine to anyone who will listen to you.
+@a2 whines pathetically to anyone who will listen.
+You whine to @v4, hoping desperately that at least @v5 will give a damn.
+@a2 whines pathetically to @v2.
+@a2 whines pathetically to you.  What a loser!
+They really don't care.
+You whine to yourself, probably the only one who will listen.
+@a2 whines to @a4self.  At least @a5 isn't bitching to YOU.
+
+flex
+You flex your muscles proudly!
+@a2 flexes @a3 muscles...what a stud!?!
+You show off to @v2, flexing your muscles proudly.
+@a2 flexes @a3 muscles, in a vain attempt to impress @v2.
+@a2 flexes @a3 muscles in a vain attempt to show off to you.
+#
+
+embrace
+> 1
+Who would you like to embrace?  
+$
+You wrap your arms around @v2 in a warm and loving embrace.
+@a2 wraps @a3 arms around @v2 in a warm and loving embrace.
+@a2 takes you in @a3 arms in a warm and loving embrace.
+Your heart breaks as you realize you are alone.
+You try to console yourself with a loving embrace.
+@a2 tries to console @a4self by wrapping @a3 arms around @a4self.
+
+duck
+DUCK!!!!
+@a2 ducks defensively.
+You duck defensively, anticipating the oncoming swipe from @v2.
+@a2 ducks, anticipating @v2's reaction.
+@a2 ducks, please oh please don't hit @a4!
+#
+
+bonk
+***BONK!!!***
+$
+You bonk @v2 on the head for being such a moron.
+@a2 bonks @v2 on the head for being such an UTTER moron.
+@a2 bonks you on the head for being so foolish.
+***BONK*** they left...
+You bonk yourself, fool that you are.
+@a2 bonks @a4self and grimaces in pain.
+
+squeal
+You squeal with delight!
+@a2 lets out a sudden squeal of delight!
+You look at @v2 and squeal with delight!
+@a2 squeals with delight at @v2.
+@a2 looks at you and squeals with delight!
+#
+
+tackle
+You're going to tackle everyone in the room?!
+$
+You tackle @v2 playfully.
+@a2 playfully tackles @v2.
+@a2 brings you down in a playful tackle!
+#
+
+spit
+> 2
+You spit in utter disgust.
+@a2 spits in utter disgust!
+You spit on @v2...you're gross!
+@a2 spits on @v2.
+@a2 spits on you -- how gross!
+Your victim isn't here.
+You spit on yourself, pretty nasty eh?
+@a2 spits on @a4self...what a sicko!
+
+life
+You try to get a life, and fail.
+@a2 tries to get a life, and fails.
+@v2 needs to get a life!
+@v2 needs to get a life!
+You need to get a life!
+Who needs a life?
+But you have none to give!
+@a2 attempts to give @a4self a life, but has none to spare.
+
+mosh
+You mosh insanely around the room!
+@a2 moshes insanely around the room!
+You mosh sadistically against @v2 ... you WILL be punished.
+@a2 bounces off of @v2 in a vain attempt to mosh... what a LOSER.
+@a2 slams into you, moshing painfully against you.  That REALLY hurts!
+Hmmm...  your victim found a new dance partner.
+Masochist!
+@a2 throws @a4self on the floor, grinding @a4self into a bloody pulp
+
+flinch
+EEEK... You flinch in obvious pain.
+@a2 flinches in obvious pain... you wonder what @a5 did THIS time.
+Don't you wish you could just crawl under a rock and die?
+@a2 sneaks a glance at @v2 and flinches.
+@a2 flinches in response to your cold rebuke.
+Relax, @v5 is gone.
+You can't belive what you've done...
+@a2 twitches violently, shocked at @a3 own behavior.
+
+air
+You grab your air guitar and play for all you're worth.
+@a2 air-guitars like a mad man ... EXCELLENT!!!
+You hope @v5 appreciates your (total lack of) talent.
+@a2 is surrounded by air groupies. 
+@a2 plays a most excellent tune for you on @a3 most excellent air guitar.
+Awww... you have no audience!
+You play softly to yourself.
+#
+
+tweak
+Tweak who?
+$
+You gently tweak @v3 cheek.  Isn't @v5 so CUTE?
+@a2 tweaked @v2's cheek... don't they look so adorable together?
+@a2 lovingly tweaks your cheek.  It reminds you of Grandma... sniff...
+*Sniff*  That cheek seems to be missing.
+You can't DO that.
+#
+
+peck
+Wouldn't you like to do that to a person, or do you prefer air?
+$
+Risking a slap to the face, you give @v2 a peck on the cheek.
+@a2 smiles and gives @v2 a chaste peck on the cheek.
+@a2 pecks you on the cheek, how sweet!
+I guess you scared them away...
+You must REALLY like yourself.
+@a2 tries in vain to wrap @a3 lips around @a3 cheeks.
+
+explode
+You feel the blood boiling in your veins!
+@a2 turns a deep red, fighting to contain @a3 temper...
+You feel your rage explode deep in the pit of your stomach...
+@a2 burns holes through @v2 with his explosive anger!
+@a2 is ANGRY with you... I'd run if I were you!!!
+Temper Temper... they left.
+Your soul burns brightly then fades to nothing.
+@a2 implodes!!!  Only a grease spot remains where @a5 once stood.
+
+raspberry
+You stick your tongue out at ... well, no one.
+@a2 sticks @a3 tongue out, catching a few flies in the process.
+You give @v2 the raspberry... and spit all over yourself.
+@a2 gives @v2 the raspberry... PHBT!  What a mess... Spit EVERYWHERE!
+You are splattered with saliva as @a2 gives you the raspberry... HOW RUDE!
+Hang your tongue out if you like, @a5 isn't here.
+You try to stick your tongue out at yourself... somehow, it isn't the same.
+#
+
+flash
+You grin and strut as you open your coat and show what you've got!
+@a2 rips @a3 clothes off and parades naked around the room!
+Swiftly you jerk open your jacket, trying to get @v4 to notice you.
+Cover your eyes, @a2 is exposing @a4self to @a2!  EWWWW!
+You gasp!  @a2 has just revealed @a3 "equipment" to you!
+Exhibitionist, that person isn't here!
+That's sick.
+PERVERT PRESENT!  @a2 is trying to flash @a4self
+
+strip
+You do a slow strip tease for the people...
+@a2 begins a slow, erotic strip-tease act...
+You start to undress @v2 ... one piece of clothing at a time...
+@a2 runs @a3 hands over @v2s body, slowly stripping away the clothing...
+@a2 has started to strip you... woah BABY!
+Your toy doesn't seem to be here...
+You can't DO that in public!
+#
+
+undress
+> 3
+You start to undress in the shadows, waiting for someone to notice.
+@a2 begins to undress... @a5 is VERY sexy... *Pant* 
+You undress @v4 with your eyes... Kinky.
+You feel the temperature of the room rise as @a2 lusts on @v2...
+Feeling exposed, you sense @a2 undressing you with @a3 eyes...
+They are not here...
+A mirror would work better...
+#
+
+tongue
+> 3
+You slowly give your tongue a nice workout.
+$
+Mmmm... you give @v2 a good working over with your tongue...
+@a2 slides @a3 tongue over @v2's body...
+@a2 wraps @a3 tongue around you, moving it across your young, nubile flesh...
+Never around when required...
+You slowly tongue yourself.
+@a2 slowly tongues @a4self... ICK.
+
+view
+You sit back and watch the world go by.
+@a2 kicks back and enjoys the view.
+#
+
+grumble
+You grumble distractedly to yourself
+@a2 grumbles and growls. You wonder what's wrong...
+You grumble at @v2, disgusted with their presence.
+@a2 seems to be a grumpy bear... @a5 is grumbling at poor @v2.
+@a2 is grumbling at you... what'd you do?
+That person is presently AWOL.
+Why bother?
+#
+
+cheer
+> 1
+You cheer and dance as the joy within you bursts forth!
+@a2 cheers and sings... @a5 is just BURSTING with joy!
+You cheer @v2 on and wish @v4 good luck!
+*Yay!*  Go @v2!!!  @a2 cheers @v4 on.
+You are cheered on by @a2... you feel so loved!
+Who? Huh? Where?  They're not here, that's for sure
+You cheer silently for yourself since nobody else will
+@a2 resorts to cheering for @a4self... how sad.
+
+plead
+You beg and plead to anyone who will listen.
+@a2 pleads @a3 case to anyone who will listen... You ALMOST feel sorry for @a3.
+#
+
+charge
+You charge into the fray!
+@a2 charges into the fray!  All guts, no brains.
+With surprising dexterity, you head-butt @v2!
+@a2 ducks down low, charges forward, and head-butts @v2!
+OOF!  @a2 rammed @a3 head into your stomach!  That HURT.
+Nobody 'round with that name, Mister!
+You run your head into a brick wall.  OUCH!
+#
+
+criticize
+Yes, but who?
+$
+You criticize @v4 with all the warmth of a snake.
+With a nasty grin, @a2 rips apart @v2s efforts.
+@a2 informs you that your attempts need some MAJOR adjustments.
+Where oh where has my victim gone, oh where oh where...
+You criticize yourself profusely.
+@a2 tears @a4self apart, cursing @a3 own stupidity.
+
+run
+You run away in terror and horror!
+@a2 runs away in utter terror!
+You run away from @v2 in complete terror!
+@a2 runs away from @v2 in utter terror and horror!
+@a2 runs from you, fearing for @a3 life!
+No reason to be afraid, they aren't here.
+Are you THAT ugly?
+@a2 looks in the mirror, sees @a3 face, and runs away terrified!
+
+judge
+Yes, but who?
+$
+You judge @a4 on a scale of 1 to 10.
+On a scale from 1 to 10, @a2 thinks @v2 is a complete ZERO!!!
+@a2 judges your actions on a scale of 1 to 10 and comes up with ZERO!!!
+They aren't here right now.
+You don't REALLY want to do that.
+#
+
+insane
+You feel your sanity slipping away...
+Before your eyes, @a2's sanity is slipping away...
+#
+
+cover
+You cover your ears to protect them from the noise.
+@a2 covers @a3 ears to protect them from all the noise.
+You glare at @v2 and cover your ears.
+@a2 glares at @v2 and covers @a3 ears.
+@a2 covers @a3 ears because of you... you are TOO LOUD!
+They aren't here right now.
+No... I don't think so.
+#
+
+flare
+You flare your nostrils disdainfully.
+@a2 flares @a3 nostrils disdainfully.
+You flare your nostrils disdainfully at @v2... HOW RUDE!
+@a2 flares @a3 nostrils disdainfully at @v2 and turns up @a3 snobbish nose.
+@a2 flares @a3 nostrils disdainfully at you... what'd you DO???
+Flare if you wish, but that person isn't here to see it.
+*Sniff*  But you should LOVE yourself!
+#
+
+head
+You toss your head haughtily.
+@a2 tosses @a3 head haughtily.
+You toss your head haughtily at @v2.
+@a2 tosses her head haughtily at @v2... what an ATTITUDE!
+@a2 tossed @a3 head haughtily at you... :(
+That person is AWOL.
+Why would you do that?
+#
+
+pie
+You pick up a pie and toss it around for a bit.
+@a2 picks up a pie and tosses it around for a bit.
+You toss a pie at @v2 and hit @v4 right in the FACE!
+@a2 tosses a pie at @v2 and hits @a4 right in the FACE!
+@a2 tossed a pie in your face... and now you are all covered in GOO!
+That person isn't here...
+You bury your face in the pie... yummmmm!!! :)
+@a2 buries @a3 face in the pie, licking the pan clean.
+
+cower
+You cower in a corner.
+@a2 cowers in a corner and whimpers softly.
+You cower away from @v2 and @v3 harsh words.
+@a2 cowers in a corner, terrified that @v2 will come after @a4.
+You scared poor @a2!  Now @v3 is cowering in a corner, afraid for @a3 life.
+That person is AWOL at the moment.
+You are afraid of your own shadow!
+@a2 cowers in the corner afraid of @a3 own shadow
+
+noogie
+You can't noogie the AIR!  It has no head.
+$
+You grab @v2, get @v4 in a head lock and NOOGIE @v4!
+@a2 grabs @v2 in a head lock and NOOGIES @v4... ARGH!!!
+Oh NO, @a2 grabs you, throws you in a head lock and NOOGIES you!
+That person has gone off to other lands...
+You rub your head and create a static charge...
+@a2 rubs @a3 OWN head and creates a static charge... *ZAP*
+
+yeehaw
+You mount your pony(?) and shout YEEEEEEEHAAAAAAAW!
+@a2 bounces up and down screaming *YEEEEEEHAAAAAAW!*
+#
+
+pissed
+> 2
+You are PISSED!
+@a2 is PISSED so watch out!
+You turn a stoney gaze toward @v2... you are SOOO pissed at @v2!
+@a2 glares at @a2.... @a2 is SOOO PISSED at @a4!
+@a2 is pissed at you now... What do you think @a5'll DO?
+That person is not here...
+You are PISSED at yourself!
+@a2 is so pissed at @a4self.  How could @a5 be so stupid???
+
+passout
+You belch and pass out.
+@a2 is OBVIOUSLY intoxicated... @a5 burps loudly and passes out!
+#
+
+adjust
+You look around, make sure nobody is watching, and you adjust your "Tool."
+@a2 looks around slyly, smiles, then reaches down and "adjusts" @a4self...
+#
+
+scratch
+You scratch yourself contentedly.
+@a2 reaches down and scratches @a4self...  Now @a5 looks VERY happy.
+#
+
+meditate
+You assume a very comfortable position and begin to meditate.
+@a2 rests and begins to meditate... @a5 chants softly to @a4self.
+#
+
+bkiss
+> 1
+You blow kisses to the air.
+@a2 blows kisses at no one in particular.
+You blow a kiss at @v2 and wonder if @v5 will catch it.
+@a2 blows a kiss at @v2 ... isn't @a5 so CUTE?
+@a2 blows a kiss at you and hopes you'll blow one back at @a4.
+You kiss falls to the ground with no one to go to.
+You blow a kiss to yourself... isn't the world beautiful?
+@a2 blows a kiss to @a4self, obviously very in love.
+
+beer
+You pull out a six-pack.
+@a2 starts to juggle a six-pack of beer.
+You toss a bottle of beer at @v2.
+@a2 tosses a bottle of beer at @v2 ... let's just hope @a5'll catch it!
+@a2 tossed you a bottle of beer... I think @a5 wants something...
+The bottle crashes to the floor and shatters.
+You pop off the top and down a beer.
+@a2 pops the top off a bottle of beer and downs it in one gulp.
+
+bcatch
+You reach out and rescue the bottle from its flight.
+@a2 reaches out and grabs the bottle of beer tossed to @a4.
+#
+
+claw
+You tighten your hands into a fist.
+@a2 tightens @a3 hands into a fist, digging @a3 nails into @a3 palm.
+You claw @v3 eyes out... GROSS!
+@a2 buries @a3 nails in @v2's eyes ... OH GOD, THE BLOOD!
+@a2 buries @a3 nails in your eyes and you are blinded by your own blood!
+They aren't here to claw.
+You claw yourself to shreds!
+@a2 rips @a4self to shreds with @a3 fingernails!
+
+rose
+> 1
+Who would you like to give it to?
+$
+You give @v4 a pretty rose.
+@a2 hands @v2 a beautiful rose.
+@a2 hands you a beautiful ---'---,--{@
+They seem to have left.
+You give yourself a rose and feel a little sad...
+@a2 gives @a4self a rose, dont you feel sorry for @a4?
+
+laces
+Whose laces?
+$
+With the greatest of stealth, you tie @v3 shoelaces together.
+@a2 sneaks up to @v2 and ties @v3 shoelaces together.
+You try to take a step, and you hit the world facedown!  Someone must have tied your shoelaces together!
+Whose laces?
+You tie your own shoelaces together, try to walk, and promptly fall.
+@a2 cleverly ties @a3 own shoelaces together, tries to walk, and sprawls flat on the floor.
+
+tag
+Tag whom?
+@a2 casts about for someone to tag.
+From nowhere, you pounce on @v2 and TAG @v4 remorselessly!  BWAHAHA!!!
+@a2 dives from the shadows and TAGS @v2.  @v2 IS IT!
+@a2 pounces on you and >>> TAGS <<< you!  You're IT!
+Who were you going to tag, then? Primus? :)
+Unable to catch anyone else, you do the intelligent thing and tag yourself. You're still IT!
+Unable to catch anyone else, @a2 tags @a4self.  Are you impressed?
+
+tank
+You boldly offer to tank for your everyone else.  Are you sure you know what you're getting into?
+@a2 offers to tank!
+You offer to tank for @v2.
+@a2 offers to tank for @v2.
+@a2 offers to tank for you!
+Tank for whom?
+No one will tank for you, eh?!? WELL, YOU'LL SHOW THEM!  (right?)
+In dazzling chivalry, @a2 offers to tank-- for @a4self!
+
+starve
+You show your prominent ribs and hope that someone will take pity.
+@a2 is withering before your eyes!  Starvation!
+You throw yourself upon @v3 mercy, begging for food.
+@a2 begs @v2 for food.  One would think that magic would have cured hunger by now...
+@a2 is starving before your eyes!  Could you spare some food, please?
+Sorry, but that person isn't around-- looks like you'll starve.
+#
+
+aargh
+AAAAAARRRRRRGGGGGGHHHHHH!!!!!!
+@a2 throws back @a3 head and howls in profound frustration!
+You scream your frustration and grab for @v3 throat with both hands!
+@a2 howls in frustration, and leaps for @v2, trying to throttle @v4!
+@a2 grabs for your throat with two hands, howling in frustration!
+You get even MORE frustrated when you can't find anyone to throttle!
+You scream in frustration at your own stupidity!
+@a2 screams in frustration at @a3 own stupidity!
+
+homework
+Your suddenly remember that you have to defend your thesis today...
+@a2 looks stricken.  Could @a5 have blown off some important homework?
+#
+
+differ
+$
+$
+You glare at @v2 and disagree.
+@a2 shakes @a3 head, disagreeing with @v2.
+@a2 glares at you, obviously disagreeing.
+Disagree with whom?
+You seethe with inner conflict, disagreeing with yourself.
+#
+
+yae
+You sigh, burdened with Yet Another Eeediot.
+@a2 sighs, burdened with Yet Another Eeediot.
+There's Yet Another Eeediot in the room, and you're looking right at @v4.
+@a2 clearly believes that @v2 is an Eeediot! 
+@a2 glares at you, obviously not impressed with your intelligence.
+There are plenty of Eeediots, but that one doesn't seem to be present.
+You bonk yourself for the Eeediot you are!
+@a2 bonks @a4self, HARD, and curses @a4self for the Eeediot @a5 is!
+
+lightbulb
+*Ding!*  Inspiration!
+A light bulb appears above @a2's head!
+#
+
+gratz
+$
+$
+#
+
+#0
+#$

@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE>CthulhuMud Help - Open d100</TITLE>
+<CthulhuMud-Title    Open d100>
+<CthulhuMud-Index    Concepts>
+<CthulhuMud-Keywords open dice roll d100>
+</HEAD>
+<BODY>
+<H3>Open d100</H3>
+<P>This is a way of rolling a 100 sided dice to produce a random number.
+The computer actually uses a pseudo-random number generator (PRN), but the
+effect is the same.</P>
+<P>A 100 sided dice produces a number between 1 and 100.
+The open part of the roll adds the following rules:</P>
+<UL>
+<LI>If the roll is greater than 95, roll again and add the result.
+<LI>If the roll is less than 5, roll again and subtract the result.
+</UL>
+<P>These rules are applied recursively, so very high and very low rolls
+are possible (but unlikely).</P>
+<P>There is about a 1 in 20 chance of rolling unusually high and an
+equal chance of rolling unusually low.
+A second roll in either direction occurs about 1 roll in 400, and a 
+third about 1 in 8000.</P>
+</BODY>
+</HTML> 

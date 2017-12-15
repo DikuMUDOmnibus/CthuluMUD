@@ -1,0 +1,108 @@
+CthulhuMud Driver 5
+-------------------
+
+  Magic
+    Mana costs now based on skill, not level.
+    Mobs subject to normal spell csting limitations (mana, components)
+    Spell casting now requires a 'spell casting' skill.
+      Check made first. If ok, then spell skill roll made.
+    Casting difficulty increases with unwilling targets and encumbrence.
+    Components consumed if the spell casting roll works.
+    Spec_cast_adept enhanced to conserve mana.
+    Stat skill shows spell and affect details.
+    Affect and spells seperated from skills.
+    Some spells (chain lightning) still use old mechanisms.
+    Spells using new mechanism can be parried, dodged and blocked.
+  
+  Skills & Spells
+    No skill display when you're berzerk.
+    Move skill_available into skill.c, lose act_skill.c.
+    Mob skills can now be set
+      Skills command under EDIT MOB
+      No defaults, but guide on total number of points
+      Skills ?? to get a list
+    Learn skill added
+    Teach skill added
+    Split into Skill, Spell and Affect code
+    Removed old 'save skills' routine. 
+    Skill groups introduced - magic, combat, general, modern language,
+      ancient language, mythos language (but no languages yet).    
+
+  Repair
+    'repair all'
+    Rework the messages.
+    Increase costs by 20%.
+    Minimum condition raised to 5% (115% base cost of item). 
+
+  Combat
+    Combat switched over to a challange/resist model
+    Attack Roll: level + weapon skill + open d%
+    Defender must exceed it with a defence roll:
+      level + shield_block + open d%
+      level + parry + open d%
+      level + parry * dual + open d%
+      level + dodge + open d%
+    Armour now serves to reduce damage 
+      damage halved for every 100 points of armour  
+    Kick, Trip, Bash, Dirt, Backstab and Circle use new mechanism
+      Full set of bonuses and penalties
+      Can be dodged, blocked and/or parried.
+    Martial Arts skill replaces bonus from Monk Class 
+      works like enhanced damage, giving a variable bonus. 
+    Ultra damage only checked if enhanced damage check was successful.
+    Enhanced Damage and Ultra damage also work with spells.
+
+  Backup
+    Add a backup script for the backup directory
+      Backs up areas, players, classes, clans and time
+
+  Professions
+    Defined in profs.txt file (in /area)
+    Offline editing only
+    File defines
+      - Skills and levels
+      - Initial stats
+      - Primary stat
+      - Starting equipment
+    Separate professions for Mobs (tieing to spec_cast_xxx code).
+    Online query via prof command
+    Also online changing
+      - 3 practice sessions per change
+      - Must have 3rd level in current profession
+      - Gain all new base skills for the new profession 
+
+  Experience
+    More xps for killing level x
+    Monsters effective level increased by special abilities.
+    Slow growth exponential scale, meaning you need LOTS of xps to
+      go up a level - 1500 at 5th level, 4750 at 30th, over 25,000
+      at 100th level.
+
+  Key Rings
+    Finally
+    Just like containers, but can only hold keys. 
+    Important: Use 'keyring' in the name, not 'key ring'.
+
+  Reconnect
+    Should now work without:
+      - Giving characters 'ghost' posessions
+      - Crashing the MUD
+      - Causing other weird effects
+
+  OLC
+    Skills command to review/set a mobs skills
+    Setprof command to set a mobs skills according to a profession.
+      Works, but results are sort of so-so due to random distribution.
+    Out of OLC, skills works on mobs to see what their skills are.
+
+  Miscellaneous
+    Bank interested calculated with long, limited to 1001 days max.
+    Search message when finding something inside an object.
+    Material bug from Driver 4.
+    Remove incorrect 'there is no keeper' messages.
+    Fix display of open, but still hidden, doors.
+    Add warning message for immortals walking into locked areas.
+    Title restricted to heros and above.
+    Fix 'stat obj' for guns.
+    Fix for lockers losing stuff when left open.
+

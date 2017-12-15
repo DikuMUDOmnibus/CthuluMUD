@@ -1,0 +1,3609 @@
+# Spell File
+#
+# This defines all of the spells that are available.
+#
+# Format:
+#
+# SPELL 'name'
+#
+#	Target	nnnn	// Spells casting target
+#			// 
+#			//   0	- Target	ignored
+#			//   1	- Caster Only
+#			//   2  - Caster/Victim Defensive
+#			//   3  - Victim Offensive
+#			//   4  - Object in Inventory
+#
+#	Mana nnn	// Mana cost to cast at effective skill 100
+#
+#	Diff nnn		// Casting difficulty applied to spell skill
+#
+#  	Dis discipline	// Spell Discipline (no quotes)
+#
+#	Info "info string"	// Info string given to the spell effect process
+#			// "parse" makes the spell accept some kind of additional info
+#
+#	Skill "skill"	// Name of 'spell skill' used to cast the spell
+#			//
+#			// You may specify a second skill, in which case 
+#			// the average of the two is used.
+#
+#	Effect "effect"	// Name of hard-coded effect routine to make
+#			// the spell happen
+#
+#	Comp "name"	// Required spell component
+#
+#	Cond condition	// Defines a condition which has to be satisfied
+#			// before the spell can be cast.
+#
+#	Range "range"	// Spell effect range (room, subarea,...)
+#
+#	Step		// Define a step in the casting process
+#
+#	StepCond cndtn	// Specifies a condition which has to be 
+#			// satisfied for a step to be executed.
+#
+
+#
+# Spell Steps
+#
+# The spell casting process is a sequence of casting steps which happen
+# a few seconds appart.  Each step can do something different.  Some,
+# like Chant and Echo are for show, while others control the mechanics
+# of the spell casting process.
+#
+# Regardless of the threatrics, each spell must start with a Prepare
+# step, and then have a Cast step.  If the spell uses one of the old ROM
+# effects, it the effect step should come after the Cast step.  The mud
+# will automatically add a recovery step to the end of the sequence.
+#
+# Available spell stps are:
+#
+#  n Prepare
+#
+#	This checks that you have the necessary components and mana and
+#	starts the actual casting of the spell.  It's delay is ignored
+#	and forced to 1 second.
+#  
+#  n Chant 'words'
+#
+#	The caster chants these words in Cthonic.  He also pays some of
+#	the mana for casting the spell.
+#
+#  n Yell 'words'
+#
+#	The caster yells these words in Cthonic.  He also pays some of
+#	the mana for casting the spell.
+#
+#  n Echo 'scope' 'focus' 'text_actor' 'text_victim' 'text_others'
+#
+#	The text is put out as an echo (unattributed message) to mobs in
+#	the specified scope.  The scope should be one of:
+#
+#		room
+#		room_plus
+#		subarea
+#		subarea_plus
+#		area
+#		area_plus
+#		zone
+#		universe
+#		group
+#
+#	The focus should be either 'actor' or 'victim'.
+#
+#	You may use @xn codes in the text.
+#
+#	For defensive spells that may be used on the caster or on another,
+#	specify just the message for the victim and nothing for the actors
+#	message.
+#
+#  n Cast
+#
+#	This causes the rolls to be made for the spell casting.  The mana
+#	and material components are consumed.
+#
+#  n Effect 'effect_name'
+#
+#	This specifies the name of one of the standard ROM effect (defined,
+#	in CthulhuMud, in spell.c) that should be aplied.
+#
+#	You should probably be able to chain multiple effects from a single
+#	cast, although the results might be a bit strange.
+#
+#  n Message 'focus' 'text'
+#
+#	Sends the text message to the person nominated as the focus.
+#
+#       The focus should be either 'actor' or 'victim'.
+#
+#  n Abort
+#
+#	Terminates the spell casting sequence.
+#
+#  n Skip offset
+#
+#	Skips over the next 'offset' steps.
+#
+#	Useful for spells with variable effects and casting conditions.
+#
+#  n Damage 'focus' 'desc' 'type' 'block flags' 'damage flags'
+#
+#	This causes damage to the named target.
+#
+#	The focus should be 'actor' or 'victim'.
+#
+#	The attack description appears in the damage message.
+#
+#	The damage type is from the damage type table:
+#
+#	  bash, pierce, slash, fire, cold, lightning, acid,
+#	  poison, negative power, holy power, energy, mental power,
+#	  disease, drowning, light, chaos, harm, shot
+#
+#       The block flags contain blocking values:
+#
+#	  block_shield		Attack can be blocked with a shield
+#	  block_parry		Attack can be parried
+#	  block_dodge		Attack can be dodged
+#	  block_armor		Damage reduction due to armor applies
+#	  block_absorb		Absorb magic can stop the spell
+#	  block_all		Stopped by everything
+#	  block_noparry		Stopped by everything but parry
+#	  block_combat		Stopped be everything except absorb magic
+#	  block_noshield	Parry, Dodge, Armor
+#	  block_ball		Shield, Armor, Absorb
+#	  block_bolt		Shield, Dodge, Armor, Absorb
+#	  block_lightning	Armor, Absorb
+#	  block_light		Shield, Absorb
+#
+#       The damage flags contain damage values:
+#
+#	  dmg_minimum		Minimum damage     (   4% -   4% )
+#	  dmg_low		Low damage         (   9% -   7% )
+#	  dmg_medium_low	Medium low damage  (  19% -  15% )
+#	  dmg_medium		Medium damage	   (  23% -  18% )
+#	  dmg_medium_high	Medium high damage (  29% -  22% )
+#	  dmg_high		High Damage	   (  47% -  37% )
+#	  dmg_fatal		Fatal damage       ( 108% -  88% )
+#	  dmg_overkill          Excessive damage   ( 252% - 212% )
+#
+#	  hit			Hit roll required, can be blocked
+#
+#	  save_half		Defender saves for half damage
+#	  save_none		Defender saves for no damage
+#
+#	A typical spell will have 'hit block_bolt dmg_med_low save_half' and
+#	should cost around 15 mana to cast.  6-7 applications are required
+#	to kill a victim of he casters level if they all hit and are not saved
+#	against.
+#	
+#	Spells which don't require a hit, bypass armor, don't give a save
+#	or do more than medium high damage should be expensive and hard to
+#	cast.  The more dangerous spells should cause feedback damage to
+#	thier caster.
+#
+#	For multi-projectile spells, use multiple low or minimum damage
+#	steps.
+#
+#	block_absorb should be on all spells where magic/energy directly
+#	attacks the victim.  Usage on feedback is optional. 
+#
+#  n Area_Damage 'scope' 'focus' 'target' 'desc' 'type' 'block flags'
+#		 'damage flags'
+#
+#	This causes damage to one or more targets.
+#
+#       The scope gives the range of the effect:
+#
+#	  room
+#	  room_plus      Room plus adjacent rooms
+#	  subarea
+#	  subarea_plus   Subarea plus adjacent rooms
+#	  area
+#	  area_plus      Area plus adjacent rooms
+#	  zone 
+#	  universe
+#	  group		 All rooms containing someone grouped with the caster
+#
+#	The 'focus' determines the center point of the effect:  
+#
+#	  actor   Centered upon the caster
+#	  victim  Centered upon the victim
+#
+#       The 'target' determines who is affected:
+#
+#	  all         Everyone in the target area
+#	  friend      Only those friendly to the focus character
+#	  foe         Only those hostile to the focus character
+#	  not_friend  Only those not friends with the focus character
+#	  not_foe     Only those not foes with the focus character
+#
+#	The attack description appears in the damage message.
+#
+#	The damage type is from the damage type table:
+#
+#	  bash, pierce, slash, fire, cold, lightning, acid,
+#	  poison, negative power, holy power, energy, mental power,
+#	  disease, drowning, light, chaos, harm, shot
+#
+#       The block flags contain blocking values:
+#
+#	  block_shield		Attack can be blocked with a shield
+#	  block_parry		Attack can be parried
+#	  block_dodge		Attack can be dodged
+#	  block_armor		Damage reduction due to armor applies
+#	  block_absorb		Absorb magic can stop the spell
+#	  block_all		Stopped by everything
+#	  block_noparry		Stopped by everything but parry
+#	  block_combat		Stopped be everything except absorb magic
+#	  block_noshield	Parry, Dodge, Armor
+#	  block_ball		Shield, Armor, Absorb
+#	  block_bolt		Shield, Dodge, Armor, Absorb
+#	  block_lightning	Armor, Absorb
+#	  block_light		Shield, Absorb
+#
+#       The damage flags contain damage values:
+#
+#	  dmg_minimum		Minimum damage     (   4% -   4% )
+#	  dmg_low		Low damage         (   9% -   7% )
+#	  dmg_medium_low	Medium low damage  (  19% -  15% )
+#	  dmg_medium		Medium damage	   (  23% -  18% )
+#	  dmg_medium_high	Medium high damage (  29% -  22% )
+#	  dmg_high		High Damage	   (  47% -  37% )
+#	  dmg_fatal		Fatal damage       ( 108% -  88% )
+#	  dmg_overkill          Excessive damage   ( 252% - 212% )
+#
+#	  hit			Hit roll required, can be blocked
+#
+#	  save_half		Defender saves for half damage
+#	  save_none		Defender saves for no damage
+#
+#	A typical spell will have 'hit block_bolt dmg_med_low save_half' and
+#	should cost around 15 mana to cast.  6-7 applications are required
+#	to kill a victim of he casters level if they all hit and are not saved
+#	against.
+#	
+#	Spells which don't require a hit, bypass armor, don't give a save
+#	or do more than medium high damage should be expensive and hard to
+#	cast.  The more dangerous spells should cause feedback damage to
+#	thier caster.
+#
+#	For multi-projectile spells, use multiple low or minimum damage
+#	steps.
+#
+#	block_absorb should be on all spells where magic/energy directly
+#	attacks the victim.  Usage on feedback is optional. 
+#
+#  n Heal 'focus' 'desc' 'heal flags' 'damage flags'
+#
+#	This heals the victim.
+#
+#	The focus should be 'actor' or 'victim'.
+#
+#	The heal description appears in the healing message.
+#
+#       The heal flags contain flag values for the nature of the healing:
+#
+#	  heal_hits		Healing applied to hit points
+#	  heal_mana		Heling applied to mana
+#	  heal_move		Healing applied to move
+#
+#       The damage flags contain flag values for the ammount healed:
+#
+#	  heal_minimum		Lowest damage      (   4% -   4% )
+#	  heal_low		Low damage         (   9% -   7% )
+#	  heal_medium_low	Medium low damage  (  19% -  15% )
+#	  heal_medium		Medium damage	   (  23% -  18% )
+#	  heal_medium_high	Medium high damage (  29% -  22% )
+#	  heal_high		High Damage	   (  47% -  37% )
+#	  heal_fatal		Fatal damage       ( 108% -  88% )
+#	  heal_overkill		Excessive damage   ( 252% - 212% )
+#
+#	The amount healed is based upon the recipients level, not the
+#	casters.  It is adjusted for magic strength.  This means that
+#	a cure light (heal_low) will always cure around 7% of the victims
+#	total hit points, while a heal (heal_fatal) will always restore
+#       90%+ of thier hit points.
+#
+#  n Area_Heal 'scope' 'focus' 'target' 'desc' 'heal flags' 'damage flags'
+#
+#	This heals one or more victims.
+#
+#       The scope gives the range of the effect:
+#
+#	  room
+#	  room_plus      Room plus adjacent rooms
+#	  subarea
+#	  subarea_plus   Subarea plus adjacent rooms
+#	  area
+#	  area_plus      Area plus adjacent rooms
+#	  zone 
+#	  universe
+#	  group		 All rooms containing someone grouped with the caster
+#
+#	The 'focus' determines the center point of the effect:  
+#
+#	  actor   Centered upon the caster
+#	  victim  Centered upon the victim
+#
+#       The 'target' determines who is affected:
+#
+#	  all         Everyone in the target area
+#	  friend      Only those friendly to the focus character
+#	  foe         Only those hostile to the focus character
+#	  not_friend  Only those not friends with the focus character
+#	  not_foe     Only those not foes with the focus character
+#
+#	The heal description appears in the healing message.
+#
+#       The heal flags contain flag values for the nature of the healing:
+#
+#	  heal_hits		Healing applied to hit points
+#	  heal_mana		Heling applied to mana
+#	  heal_move		Healing applied to move
+#
+#       The damage flags contain flag values for the ammount healed:
+#
+#	  heal_minimum		Lowest damage      (   4% -   4% )
+#	  heal_low		Low damage         (   9% -   7% )
+#	  heal_medium_low	Medium low damage  (  19% -  15% )
+#	  heal_medium		Medium damage	   (  23% -  18% )
+#	  heal_medium_high	Medium high damage (  29% -  22% )
+#	  heal_high		High Damage	   (  47% -  37% )
+#	  heal_fatal		Fatal damage       ( 108% -  88% )
+#	  heal_overkill		Excessive damage   ( 252% - 212% )
+#
+#	The amount healed is based upon the recipients level, not the
+#	casters.  It is adjusted for magic strength.  This means that
+#	a cure light (heal_low) will always cure around 7% of the victims
+#	total hit points, while a heal (heal_fatal) will always restore
+#       90%+ of thier hit points.
+#
+# n PowerWord 'word'
+#
+#	This says the specified word with Mana.  Specifically it will
+#	generate a powerword WEV, which can be used to trigger location
+#	specific effects.  If the word is null ('') the whatever the
+#	user types in as the casting target will be said.
+#
+# n Sanity caster victim observer
+#
+#	This lists 3 sanity thresholds.  Each should be either 0, meaning
+#	no check is required or a number greather than 50.  Typically spell
+#	sanity thresholds should be around 75, rising to 100 or 125 for
+#	the more mind bending spells.
+#	
+
+#
+# Conditional Spell Casting
+#
+#	The Cond statement can be used to attach a condition to a spell,
+#	however the only feedback the user gets is a simple message that
+#	the spell cannot be cast.
+#
+#	The StepCond statement can be used to conditionally prohibit the
+#	execution of a step.
+#
+#	The Skip step can be used to bypass a number of steps.
+#
+#	The Message step can be used to send a message to the caster.
+#
+#	The Abort step can be used to terminate spell casting
+#
+#	So....
+#
+#	 SPELL "shield of soloman" 
+#		Target	1
+#		Mana	20
+#		Skill	"shield"
+#		Step	1 'Prepare Spell'
+#		Step	0 'Skip' 2
+#			   StepCond 1 2 'level' 10 -1
+#		Step	0 'Message' 'actor' 'You know not enough of the world.'
+#		Step	0 'Abort'
+#		Step	1 'Chant' 'Power of Solaman protect me!'
+#		Step	1 'Cast Spell'
+#		Step	1 'Echo' 'room' 'actor'
+#				'You are enveloped in the light of soloman!'
+#				''
+#				'@a2 is covered by sheets of white light!'
+#		Step	1 'Effect' 'shield'
+#		Step	1 'Effect' 'sanctuary'
+#			   StepCond 1 2 'level' 40 -1
+#
+#	...is a spell that can only be cast by those of 10th level or
+#	higher which gives the caster a shield effect and, if they are 
+#	40th level or higher, also a sanctuary effect.
+#
+# 	When checking levels, it is better to use casting level (8) rather
+#	than level (2) as this varies with the magical strength.
+#
+
+#
+# Duellant Spell List
+#
+
+SPELL "magical duel"
+               Desc        The clasic way, a mage gets rid of his enemies. It's highly level dependent.~
+               Target      2
+               Mana       30
+               Diff           5
+               Skill          "way of the duellant"
+               Effect       "magical duel"
+               Step          1 'Prepare Spell'
+               Step          1 'Chant'     'I challenge thee! In the name of Sorcery!'
+               Step          1 'Chant'     'Pure in my Thoughts. My Spirit will be my Blade.'
+               Step          1 'Chant'     'To cut my enemys Flesh - to taste my enemys Blood.'
+               Step          0 'Echo' 'room' 'actor'
+                                    'You begin to concentrate and focus your thoughts on your enemy.'
+                                    ''
+                                    ''
+               Step          5 'Cast Spell'
+               Step          1 'Chant'     'Death upon my Enemy!'
+               Step          1 'Chant'     'By the Name of Chaugnar Faugn!'
+               Step     	 1 'Yell'	     'Death! Death! Death!'
+               Step          0 'Echo' 'room' 'actor'
+                                    'You attack @v2 with the power of your thoughts.'
+                                    ''
+                                    '@a2 attacks you with the power of his thoughts.'
+               Step        0 'Effect'  'magical duel'
+
+
+ SPELL "mental shield"
+	Desc	A discipline of defense against mental and other magical attacks.~
+	Target	1
+	Mana	60
+	Diff	15
+	Skill	"way of the duellant"
+	Effect	"absorb magic"
+                Step          1 'Prepare Spell'
+                Step          1 'Chant'     'My Body and my Soul be One.'
+                Step          1 'Chant'     'With Purity in my mind and Strength in my Thoughts!'
+                Step          1 'Chant'     'Power of Imagination manifested in form of a Shield.'
+                Step          0 'Echo' 'room' 'actor'
+                                    'The air around you begins to hum.'
+                                    ''
+                                    'You notice a strange humming sound in the air.'
+                Step          3 'Cast Spell'
+                Step          2 'Chant'     'Globe of Protection, Take Power in the Name of the Forgotten One.'
+                Step          2 'Chant'     'Ia! Zothique! Ia!'
+                Step          0 'Effect' 'absorb magic'
+                Step          0 'Effect' 'hard skin'
+                                    StepCond 1 8 'casting_level' 50 -1
+
+SPELL "mental shockwave"
+               Desc       An area wide mental attack. Everyone is affected.~
+               Mana      100
+               Diff          25
+               Skill        "way of the duellant"
+               Effect     "earthquake"
+               Step        1 'Prepare Spell'
+               Step        1 'Chant'            'Zothique! Cleanse my Thoughts.'
+               Step        1 'Chant'            'Give me Power to get in touch with the Universe.'
+               Step        1 'Chant'            'All Thoughts in my Spirit!'
+               Step        1 'Chant'            'My Thoughts in All!'
+               Step        0 'Echo' 'area' 'actor'
+                                              'You begin to meditate.'
+                                              ''
+                                              'You feel something reaching for your thoughts.'
+               Step        3 'Cast Spell'
+               Step        1 'Chant'             'Now, linked with every being,'
+               Step        1 'Chant'             'I send out the destructive Power of my Mind!'
+               Step        1 'Chant'             'Zothique! Mental Shockwave!'
+               Step        0 'Echo' 'subarea' 'actor' 
+                                              ''
+                                              ''
+                                              'Horrible pain floods through your head!'
+               Step        0 'Area_Damage' 'area' 'actor' 'not_friend' 'Mental Powers' 'mental power'
+		  'block_absorb' 'dmg_minimum'
+
+SPELL "wrath of cthugha"
+               Desc       Creates a delayed blast of fire.~
+               Mana      75
+               Diff          15
+               Skill        "way of the duellant"
+               Effect     "wrath of cthuga"
+               Step        1 'Prepare Spell'
+               Step        1 'Chant'            'Cthugha! Lord of Fire!'
+               Step        1 'Chant'            'Hear my incantation - Listen to my words.'
+               Step        1 'Chant'            'Send me a flame to burn my Foes.'
+               Step        0 'Echo' 'room' 'actor'
+                                              'You open your hands to revieve Cthughas gift..'
+                                              ''
+                                              '@a2 open his hands.'
+               Step        2 'Cast Spell'
+               Step        1 'Chant'             'Burn!'
+               Step        1 'Chant'             'Burn!'
+               Step        1 'Chant'             'Burn!'
+               Step        0 'Effect'  'wrath of cthuga'
+
+
+SPELL "terror of the old"
+               Desc        The mentalist's way to strike his enemies with fear. Purely Illusion.~
+               Target      2
+               Mana       200
+               Diff           20
+               Skill          "way of the duellant"
+               Effect       "fear"
+               Step          1 'Prepare Spell'
+               Step          0 'Echo' 'room' 'actor'
+                                    'You begin to concentrate and focus on the Great Old Ones.'
+                                    ''
+                                    '@a2 begins to meditate.'
+               Step          3 'Chant'     'Ia! Unspeakable One! Ia!'
+               Step          2 'Chant'     'Unspeakable One I know thy hidden Name!'
+               Step          2 'Chant'     'Unspeakable One I call your Powers to slay my Enemies.'
+               Step          0 'Echo' 'room' 'actor'
+                                    'You raise your arms in a meaningless conjuring gesture.'
+                                    ''
+                                    '@a2 raises his arms to call the Old Ones.'
+               Step          3 'Chant'     'I call up to red Aldebaran.'
+               Step          2 'Chant'     'So ride the winds and appear among us.'
+               Step          2 'Chant'     'By the Hidden Name and the Power of the Yellow Sign.'
+               Step          2 'Chant'     'Xastur, Unspeakable One, Appear!'
+               Step          2 'Yell'         'Now!'
+               Step          5 'Cast Spell'
+               Step          0 'Echo' 'room' 'actor'
+                                    'You produce a terrible illusion to frighten your enemies.'
+                                    ''
+                                    'Xastur the Unspeakable One has appeared on Earth.'
+               Step          0 'Echo' 'room' 'actor'
+                                    'You feel terribly exhausted.'
+                                    ''
+                                    'We are all doomed!'
+               Step	0 'Sanity' 50 90 90
+               Step	0 'Effect'	'fear'
+                          
+#
+# Defensive Spells
+#
+	
+ SPELL "armor" 
+	Desc	Protects against all harm!~
+	Target	2
+	Mana	20
+	Skill	"armor"
+	Effect	"armor"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Powers that be! Protect me!'
+	Step	1 'Cast Spell'
+	Step	0 'Echo' 	'room' 'victim'
+ 			'' 
+			'You are surrounded by a white glow!'
+			'@v2 is surrounded with a white glow!'  
+	Step	1 'Effect'	'armor'
+	Step	0 'Echo' 	'room' 'victim'
+ 			'' 
+			'The glow sinks into your skin!'
+			'The glow sinks in @v2s skin!'  
+
+ SPELL "bless" 
+	Desc	Gives bonuses for combat!~
+	Target	2
+	Mana	20
+	Skill	"bless"
+	Effect	"bless"
+
+
+ SPELL "dark blessing" 
+	Desc	Blessing for the undead!~
+	Target	2
+  	Diff	5
+	Mana	45
+	Dis	necromancy
+	Info	"evil"
+	Skill	"bless"
+	Effect	"bless"
+
+
+ SPELL "relax" 
+	Desc	Makes you resistant against horror!~
+	Target	2
+	Mana	35
+	Skill	"body control"
+	Effect	"relax"
+
+ SPELL "protection evil"
+	Desc	Reduces damage from evil beings!~
+	Target	1
+	Mana	20
+	Skill	"protection evil"
+	Effect	"protection evil"
+
+ SPELL "globe of protection"
+	Desc	Creates a globe of protection!~
+	Target	1
+	Mana	130
+                Diff         10
+	Skill	"protective magic"
+	Effect	"globe of protection"
+
+ SPELL "metamorphosis"
+	Desc	Changes you into any object.~
+	Target	1
+	Mana	250
+                Diff         30
+	Skill	"mask self"
+	Effect	"metamorphosis"
+ 
+ SPELL "aura"
+	Desc	Shows an avatars aura!~
+	Target	1
+	Mana	80
+                Diff         5
+	Skill	"aura"
+	Effect	"aura"
+
+ SPELL "blessing of cthugha"
+	Desc	Protects you against fire!~
+	Target	1
+	Mana	65
+                Diff         15
+	Skill	"elemental shield"
+	Effect	"protect fire"
+
+ SPELL "blessing of ithaqua"
+	Desc	Protects you agains frost~
+	Target	1
+	Mana	65
+                Diff         15
+	Skill	"elemental shield"
+	Effect	"protect frost"
+
+ SPELL "blessing of yog"
+	Desc	Protects you agains frost~
+	Target	1
+	Mana	65
+                Diff         15
+	Skill	"elemental shield"
+	Effect	"protect lightning"
+
+ SPELL "sanctuary"
+	Desc	Greatly reduces damage from all attack forms!~
+ 	Target	2
+	Mana	75
+	Diff	25
+	Skill	"protective magic"
+	Effect	"sanctuary"
+	Comp	"alabaster"
+
+ SPELL "dispel magic"
+	Desc	Removes many magical affects from the victim!~
+	Target	2
+	Mana	25
+	Skill	"dispel magic"
+	Effect	"dispel magic"
+
+ 
+ SPELL "shield"
+	Desc	Creates a glittering shield to protect against damage!~
+ 	Target	2
+	Mana	60
+	Diff	20
+	Info	"auto"
+	Skill	"shield"
+	Effect	"shield"
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'Shield from within!'
+	Step	0 'Cast Spell'
+	Step	0 'Echo' 	'room' 'victim'
+ 			'' 
+			'You are surrounded by a glittering force shield!'
+			'@v2 is surrounded by a glittering force shield!'  
+	Step	0 'Effect'	'shield'
+
+
+ SPELL "mana shield"
+	Desc	Creates a mana consuming shield to protect against damage!~
+ 	Target	2
+	Mana	20
+	Info	"mana"
+	Skill	"shield"
+	Effect	"shield"
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'Shield of power!'
+	Step	0 'Cast Spell'
+	Step	0 'Echo' 	'room' 'victim'
+ 			'' 
+			'You are surrounded by a glittering force shield!'
+			'@v2 is surrounded by a glittering force shield!'  
+	Step	0 'Effect'	'shield'
+
+
+ SPELL "armor of ygolonac"
+	Desc	Creates a most powerful protective spell!~
+ 	Target	2
+	Mana	180
+	Skill	"elder magic"
+	Effect	"elder shield"
+	Step	1 'Prepare Spell'
+	Step	2 'Chant' 	'Power of the Old!'
+	Step	2 'Chant' 	'Power of Y Golonac!'
+	Step	2 'Chant' 	'Give me Protection!'
+	Step	2 'Chant' 	'Give me your blessing!'
+	Step	2 'Cast Spell'
+                Step        1 'Yell'                     'Bless me!'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'You are surrounded by an elder force shield!'
+			'@v2 is surrounded by an elder force shield!'  
+	Step	0 'Effect'	'elder shield'
+
+
+ SPELL "bark skin"
+	Desc	Turns you skin to bark to protect against physical damage!~
+	Target	1
+	Mana	40
+	Info	"bark"
+	Skill	"harden skin"
+	Effect	"hard skin"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Skin to bark!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'Your skin turns to bark!'
+			'@v2s skin takes a brown wooden appearance!'  
+	Step	0 'Effect'	'hard skin'
+
+ SPELL "stone skin"
+	Desc	Turns you skin to stone to protect against physical damage!~
+	Target	1
+	Mana	60
+	Diff	20
+	Info	"stone"
+	Skill	"harden skin"
+	Effect	"hard skin"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Rock of ages, shield me!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'Your skin turns to stone!'
+			'@v2s skin takes a dry, dusty appearance!'  
+	Step	0 'Effect'	'hard skin'
+	Step	0 'Sanity'	0	75	60
+	Step	1 'Chant' 	'Ghatanothoa!'
+
+ SPELL "iron skin"
+	Desc	Turns you skin to iron to protect against physical damage!~
+	Target	1
+	Mana	100
+	Diff	40
+	Info	"iron"
+	Skill	"harden skin"
+	Effect	"hard skin"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Iron law! Iron claw!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'Your skin turns to iron!'
+			'@v2s skin takes a red, rusty appearance!'  
+	Step	0 'Effect'	'hard skin'
+	Step	0 'Sanity'	0	75	60
+	Step	1 'Chant' 	'Iron man!'
+
+ SPELL "steel skin"
+	Desc	Turns you skin to steel to protect against physical damage!~
+	Target	1
+	Mana	130
+	Diff	60
+	Skill	"harden skin"
+	Effect	"hard skin"
+        	Info 	"steel"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Steel law! steel claw!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'Your skin turns to steel!'
+			'@v2s skin takes shimmering metallic appearance!'  
+	Step	0 'Effect'	'hard skin'
+	Step	0 'Sanity'	0	75	60
+	Step	1 'Chant' 	'Protection!'
+
+ SPELL "exorcism"
+	Desc	Tries to get rid of evil things!~
+	Target	3
+	Mana	30
+	Skill	"exorcism"
+	Effect	"exorcism"
+
+ SPELL "protection good"
+	Desc	Reduces damage caused by good things!~
+	Target	1
+	Mana	20
+	Skill	"protection good"
+	Effect	"protection good"
+
+ SPELL "dispel good"
+	Desc	Tries to get rid of good things!~
+	Target	3
+	Mana	25
+	Skill	"dispel good"
+	Effect	"dispel good"
+
+ SPELL "fire shield"
+	Desc	Protects with a layer of fire!~
+	Target	1
+	Mana	35
+	Dis	fire
+	Skill	"elemental shield"
+	Effect	"fire shield"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Flames burn about me!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Flames burn my foe!'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'You burst into flames!'
+			'@v2 bursts into flames!'  
+	Step	0 'Effect'	'fire shield'
+	Step	0 'Sanity'	0	90	75
+	Step	1 'Chant' 	'Flames burn me not!'
+
+
+ SPELL "frost shield"
+	Desc	Protects with a layer of frost!~
+	Target	1
+	Mana	35
+	Dis	water
+	Skill	"elemental shield"
+	Effect	"frost shield"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Frost about me!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Frost hurt my foe!'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'Your skin is covered by frost!'
+			'@v2s skin is coverd by frost!'  
+	Step	0 'Effect'	'frost shield'
+	Step	0 'Sanity'	0	90	75
+	Step	1 'Chant' 	'Frost hurt me not!'
+
+
+ SPELL "lightning shield"
+	Desc	Protects with a layer of fire!~
+	Target	1
+	Mana	35
+ 	Dis	air
+	Skill	"elemental shield"
+	Effect	"lightning shield"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Electricity about me!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Electricity shock my foe!'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'You are covered with sparks!'
+			'@v2 is covered with sparks!'  
+	Step	0 'Effect'	'lightning shield'
+	Step	0 'Sanity'	0	90	75
+	Step	1 'Chant' 	'Electricity shock me not!'
+
+
+ SPELL "cancellation"
+	Desc	Remove many spell effects from the recipient.~
+	Target	2
+	Mana	30
+	Skill	"cancellation"
+	Effect	"cancellation"
+
+
+ SPELL "absorb magic"
+	Desc	A magic shield that simply absorbs magical attacks!~
+	Target	1
+	Mana	50
+	Diff	15
+	Skill	"absorb magic"
+	Effect	"absorb magic"
+
+
+ SPELL "true sight"
+	Desc	Shows you the real nature of a person.~
+	Target	2
+                Diff 	10
+	Mana	50
+	Skill	"detect magic"
+	Effect	"true sight"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Reveal your true nature!'
+	Step	0 'Cast Spell'
+	Step	1 'Effect'	'true sight'
+
+#
+# Offensive spells
+#
+
+ SPELL "blindness" 
+	Desc	Causes the victim to become blind!~
+	Target	3
+	Mana	20
+	Skill	"blindness"
+	Effect	"blindness"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Bind your eyes, that you cannot see!'
+	Step	0 'Cast Spell'
+	Step	1 'Effect'	'blindness'
+
+ SPELL "burning hands"
+	Desc	Sends forth a sea of flames from your fingers!~
+	Target	3
+	Mana	20
+	Skill	"burning hands"
+	Effect	"burning hands"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Fingers of Flames!'
+	Step	0 'Cast Spell'
+	Step	0 'Effect'	'burning hands'
+
+ SPELL "charm person"
+	Desc	Enslaves a person to your will!~
+	Target	3
+	Mana	20
+	Diff	10
+	Skill	"charm person"
+	Effect	"charm person"
+	Comp	"roses"
+                Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'Hello big boy!'
+	Step	1 'Chant' 	'I think I like you!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Come with me!'
+	Step	0 'Effect'	'charm person'
+	Step	1 'Chant' 	'And be my mindless slave!'
+
+ SPELL "lesser possession"
+	Desc	Switches into a charmed mob.~
+	Target	2
+	Mana	80
+	Diff	10
+	Skill	"lesser possession"
+	Effect	"lesser possession"
+                Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Listen up, fellow Companion!'
+	Step	1 'Chant' 'Aid me in my Quest.'
+	Step	1 'Chant' 'Lend me your Body, lend me your Senses.'
+	Step	0 'Echo' 	'room' 'actor' 
+			'You touch your follower and begin to meditate.'
+			''
+			'@a2 touches @a3 follower and begins to meditate.'  
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'My Mind in your Body...'
+	Step	1 'Chant' 'Your Mind...'
+	Step	5 'Chant' '... who cares!'
+	Step	0 'Effect'	'lesser possession'
+
+
+ SPELL "greater possession"
+	Desc	Switches into almost any kind of mob.~
+	Target	2
+	Mana	140
+	Diff	10
+	Skill	"greater possession"
+	Effect	"greater possession"
+                Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Listen up, Stranger!'
+	Step	1 'Chant' 'Aid me in my Quest.'
+	Step	1 'Chant' 'Lend me your Body, lend me your Senses.'
+	Step	0 'Echo' 	'room' 'actor' 
+			'You touch @v2 and begin to meditate.'
+			''
+			'@a2 touches @v2 and begins to meditate.'  
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'My Mind in your Body...'
+	Step	1 'Chant' 'Your Mind...'
+	Step	5 'Chant' '... who cares!'
+	Step	0 'Effect'	'greater possession'
+
+
+ SPELL "colour spray"
+	Desc	Dazzles the victim with very bright lights!~
+	Target	3
+	Mana	20
+	Diff	5
+	Skill	"colour spray"
+	Effect	"colour spray"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'A thousand shades of blood and gore!'
+	Step	0 'Cast Spell'
+	Step	0 'Effect'	'colour spray'
+
+
+ SPELL "curse"
+	Desc	Puts a curse upon the victim!~
+	Target	3
+	Mana	20
+	Skill	"curse"
+	Effect	"curse"
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'A plague upon you!'
+	Step	1 'Chant' 	'A thousand troubles!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'A curse upon your poxy life!'
+	Step	1 'Yell' 		'A Curse upon You!'
+	Step	0 'Effect'	'curse'
+	Step	1 'Chant' 	'Suffer for all eternity!'
+
+ SPELL "energy drain"
+	Desc	Steals the victims vitatility and mana!~
+	Target	3
+	Mana	35
+	Diff	10
+	Skill	"energy drain"
+	Effect	"energy drain"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'I take your life!'
+	Step	0 'Cast Spell'
+	Step	0 'Effect'	'energy drain'
+	Step	0 'Sanity'	75	75	0
+
+ SPELL "fireball"
+	Desc	Hurls a burning grenade at the victim!~
+	Target	3
+	Mana	35
+	Skill	"fireball"
+	Effect	"fireball"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'{RFire, Fire, Fireball!{g'
+	Step	0 'Cast Spell'
+	Step	0 'Effect'	'fireball'
+
+ SPELL "heatstrike"
+	Desc	Heats up your enemies weapons!~
+	Target	3
+	Mana	125
+                Diff 	25
+	Skill	"fireball"
+	Effect	"heatstrike"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'{RCthughas Heat upon you{g'
+	Step	0 'Cast Spell'
+	Step	2 'Chant' 	'{RBurn!{g'
+	Step	0 'Effect'	'heatstrike'
+
+
+ SPELL "harm"
+	Desc	Causes great harm to the victim!~
+	Target	3
+	Mana	75
+	Diff	15
+	Skill	"harm"
+	Effect	"harm"
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'Spirits of great power!'
+	Step	1 'Chant' 	'Cthulhu! Shub-Niggurath! Glaki!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Bring great harm unto this fool!'
+	Step	0 'Effect'	'harm'
+	Step	0 'Sanity'	75	75	0
+ 
+
+SPELL "fatigue"
+	Desc	Causes great fatigue to the victim!~
+	Target	3
+	Mana	80
+	Diff	20
+                Comp     "pillow"
+	Skill	"harm"
+	Effect	"fatigue"
+
+
+ SPELL "lightning bolt"
+	Desc	Fires a lightning bolt at the victim!~
+ 	Target	3
+	Mana	35
+	Skill	"lightning bolt"
+	Effect	"lightning bolt"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Power of Lightning Bolt!'
+	Step	0 'Cast Spell'
+	Step	0 'Effect'	'lightning bolt'
+
+#
+# Magic missile, 1 missile per 10 levels to 60th level, minimum damage
+#
+# No hit roll, no save, blocked only by absorb magic
+#
+# Average damage ranges from 4% at low levels to 28% at 60th+ level
+#
+
+ SPELL "magic missile"
+	Desc	Hurls one or more energy bolts at the victim!~
+	Target	3
+	Mana	20
+	Skill	"magic missile"
+	Diff	10
+	Effect	"magic missile"
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'Magic, magic missle!'
+	Step	0 'Cast Spell'
+	Step	0 'Echo' 	'room' 'actor' 
+			'You shoot @v2 with purple magic missles!'
+			'@a2 hits you with bolts of purple energy!'
+			'@a2 fires bolts of purple energy at @v2!'  
+	Step	0 'Damage'	
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_minimum'
+	Step	0 'Damage' 
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_minimum'
+		   StepCond 1 8 'casting_level' 10 -1
+	Step	0 'Damage'
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_minimum'
+		   StepCond 1 8 'casting_level' 20 -1
+	Step	0 'Damage'
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_minimum'
+		   StepCond 1 8 'casting_level' 30 -1
+	Step	0 'Damage' 
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_minimum'
+		   StepCond 1 8 'casting_level' 40 -1
+	Step	0 'Damage' 
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_minimum'
+		   StepCond 1 8 'casting_level' 50 -1
+	Step	0 'Damage' 
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_minimum'
+		   StepCond 1 8 'casting_level' 60 -1
+
+#
+# Zap - fire a single magic missile
+#
+# No hit roll, no save, blocked only by absorb magic
+#
+# Average damage is 4%
+#
+
+ SPELL "zap"
+	Desc	Light weight, single missile version of magic missile!~
+	Target	3
+	Mana	15
+	Skill	"magic missile"
+	Effect	"magic missile"
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'Zip! Zap! Zing!'
+	Step	0 'Cast Spell'
+	Step	0 'Echo' 	'room' 'actor' 
+			'You zap @v2 with a purple magic missle!'
+			'@a2 zaps you with a bolt of purple energy!'
+			'@a2 zaps a bolt of purple energy at @v2!'  
+	Step	0 'Damage' 
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_minimum'
+
+#
+# Super Magic Zapper, 1 missile per 15 levels to 90th level, low damage
+#
+# No hit roll, no save, blocked only by absorb magic
+#
+# Average damage ranges from 9% at low levels to 35% at 60th+ level
+#
+
+ SPELL "magic zapper"
+	Desc	Super heavy version of Magic Missile!~
+	Target	3
+	Mana	30
+	Skill	"magic missile"
+	Diff	20
+	Effect	"magic missile"
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'Super magic zapper!'
+	Step	0 'Cast Spell'
+	Step	0 'Echo' 	'room' 'actor' 
+			'You blast @v2 with throbbing purple magic missles!'
+			'@a2 blasts you with throbbing bolts of purple energy!'
+			'@a2 blasts bolts of throbbing purple energy at @v2!'  
+	Step	0 'Damage'	
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_low'
+	Step	0 'Damage' 
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_low'
+		   StepCond 1 8 'casting_level' 15 -1
+	Step	0 'Damage'
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_low'
+		   StepCond 1 8 'casting_level' 30 -1
+	Step	0 'Damage'
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_low'
+		   StepCond 1 8 'casting_level' 45 -1
+	Step	0 'Damage' 
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_low'
+		   StepCond 1 8 'casting_level' 60 -1
+	Step	0 'Damage' 
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_low'
+		   StepCond 1 8 'casting_level' 75 -1
+	Step	0 'Damage' 
+			'victim'	'magic missile'		'energy'
+			'block_absorb'
+			'dmg_low'
+		   StepCond 1 8 'casting_level' 90 -1
+
+ SPELL "sleep"
+	Desc	Puts the victim to sleep!~
+	Target	3
+	Mana	20
+	Skill	"sleep"
+	Effect	"sleep"
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'Rockabye baby infront of my eyes'
+	Step	1 'Chant' 	'In a cradle shall you shall rock'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'And when the wind blows'
+	Step	0 'Effect'	'sleep'
+	Step	1 'Chant' 	'Ithoqua will feast!'
+
+
+ SPELL "shocking grasp"
+	Desc	Zap the victim with a massive electical shock!~
+	Target	3
+	Mana	20
+	Skill	"shocking grasp"
+	Effect	"shocking grasp"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Power, power come unto me!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Now fry the fool!'
+	Step	0 'Effect'	'shocking grasp'
+
+
+ SPELL "cause light"
+	Desc	Causes a nasty wound to appear upon the victim!~
+	Target	3
+	Mana	20
+	Skill	"cause light"
+	Effect	"cause light"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Power of Glaki smite thee!'
+	Step	0 'Cast Spell'
+	Step	1 'Effect'	'cause light'
+	Step	0 'Sanity'	65	65	0
+
+
+ SPELL "cause serious"
+	Desc	Causes several nasty wounds to appear upon the victim!~
+	Target	3
+	Mana	30
+	Skill	"cause serious"
+	Effect	"cause serious"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Power of Yog-Sothoth smite thee!'
+	Step	0 'Cast Spell'
+	Step	1 'Effect'	'cause serious'
+	Step	0 'Sanity'	65	65	0
+
+
+ SPELL "cause critical"
+	Desc	Causes several very nasty wounds to appear upon the victim!~
+	Target	3
+	Mana	40
+	Skill	"cause critical"
+	Effect	"cause critical"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Power of Cthulhu smite thee!'
+	Step	0 'Cast Spell'
+	Step	1 'Effect'	'cause critical'
+	Step	0 'Sanity'	65	65	0
+
+
+ SPELL "fist of azathoth"
+	Desc	Causes the victim to die!~
+	Target	3
+	Mana	130
+                Diff         30
+     	Dis	necromancy
+	Skill	"necromancy"
+	Effect	"cause death"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Azathoth, show thy Power!'
+	Step	0 'Cast Spell'
+	Step	1 'Effect'	'cause death'
+	Step	0 'Sanity'	75	75	0
+
+
+ SPELL "flamestrike"
+	Desc	Calls down a column of burning flames upon the victim!~
+	Target	3
+	Mana	20
+	Skill	"flamestrike"
+	Effect	"flamestrike"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Power of Azathoth smite thee!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'actor' 
+			'A column of raging flames descends upon @v2!'
+			'A column of raging flames descends upon you!'
+			'A column of raging flames descends upon @v2!'  
+	Step	0 'Sanity'	75	100	75
+	Step	0 'Effect'	'flamestrike'
+
+
+ SPELL "weaken"
+	Desc	Saps the victims strength!~
+	Target	3
+	Mana	20
+	Skill	"weaken"
+	Effect	"weaken"
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'The dark one awaits thee!'
+	Step	1 'Chant' 	'Your strength to take!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Come feed him now!'
+	Step	0 'Sanity'	0	65	0
+	Step	0 'Effect'	'weaken'
+
+
+ SPELL "acid blast"
+	Desc	Hurls a large sphere of acid at the victim!~
+	Target	3
+	Mana	40
+	Diff	15
+	Skill	"acid blast"
+	Effect	"acid blast"
+	Comp	"fresh lemmon"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Acid dissolve skin and bones!'
+	Step	0 'Cast Spell'
+	Step	0 'Effect'	'acid blast'
+
+#
+# faerie fire
+# 
+# Victim outline with a pink glow, making them easier to hit
+#
+
+ SPELL "faerie fire"
+	Desc	Outlines the victim, making them easier to hit!~
+	Target	3
+	Mana	15
+	Skill	"faerie fire"
+	Effect	"faerie fire"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'St. Elmo, be upon this fool!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'And light the way for our blades...'
+	Step	0 'Effect'	'faerie fire'
+
+
+ SPELL "acid breath"
+	Desc	You spit acid all over the victim!~
+	Target	3
+	Mana	25
+	Skill	"acid breath"
+	Effect	"acid breath"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'My breath be acid to dissolve my foes!'
+	Step	0 'Cast Spell'
+	Step	0 'Effect'	'acid breath'
+
+
+ SPELL "fire breath"
+	Desc	You breath a cone of flames at the victim!~
+	Target	3
+	Mana	25
+	Skill	"fire breath"
+	Effect	"fire breath"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'My breath be fire to burn my foes!'
+	Step	0 'Cast Spell'
+	Step	0 'Effect'	'fire breath'
+
+
+ SPELL "frost breath"
+	Desc	You breath a cone of frost at the victim!~
+	Target	3
+	Mana	25
+	Skill	"frost breath"
+	Effect	"frost breath"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'My breath be ice to freeze my foes!'
+	Step	0 'Cast Spell'
+	Step	0 'Effect'	'frost breath'
+
+
+ SPELL "gas breath"
+	Desc	Give you really, really bad hallitosis!~
+	Mana	25
+                Diff         99
+	Skill	"gas breath"
+	Effect	"gas breath"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'My breath be foul to poison my foes!'
+	Step	0 'Cast Spell'
+	Step	0 'Effect'	'gas breath'
+
+
+ SPELL "lightning breath"
+	Desc	You breath a bolt of lightning at the victim!~
+	Target	3
+	Mana	25
+	Skill	"lightning breath"
+	Effect	"lightning breath"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'My breath be power to slay my foes!'
+	Step	0 'Cast Spell'
+	Step	0 'Effect'	'lightning breath'
+
+
+ SPELL "fear"
+	Desc	Makes the victim to afraid to fight!~
+	Target	2
+	Mana	35
+	Skill	"manipulation"
+	Effect	"fear"
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'They lurk in the darkness!'
+	Step	1 'Chant' 	'Monsters all around!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Slavering fangs and dripping poison!'
+	Step	0 'Effect'	'fear'
+	Step	1 'Chant' 	'And you have lost your tiger!'
+	Step	1 'Yell' 		'Fear upon You!'
+
+
+ SPELL "plague"
+	Desc	Infects the victim with a highly contageous plague!~
+	Target	3
+	Mana	20
+	Skill	"plague"
+	Effect	"plague"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Let your death be within you!'
+	Step	0 'Cast Spell'
+	Step	1 'Effect'	'plague'
+
+ SPELL "pestillence"
+	Desc	Infects an area with a highly contageous plague!~
+	Mana	150
+                Diff         25
+	Skill	"plague"
+	Effect	"pestillence"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Let my words bring death upon you!'
+	Step	1 'Chant' 	'Let my voice be foul and stained!'
+	Step	1 'Chant' 	'Let your death be within you!'
+	Step	0 'Cast Spell'
+	Step	1 'Yell' 		'Pestillence!'
+	Step	1 'Effect'	'pestillence'
+
+ SPELL "demonfire"
+	Desc	Summons an demon to dispatch good beings!~
+	Target	3
+	Mana	200
+	Diff	10
+	Skill	"demonfire"
+	Effect	"demonfire"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Demon Fire! Azathoth!'
+	Step	0 'Cast Spell'
+	Step	0 'Sanity'	75	75	75
+	Step	0 'Effect'	'demonfire'
+
+ SPELL "holy word"
+	Desc	Summons an angel to dispatch evil beings!~
+	Mana	200
+	Diff	10
+	Skill	"holy word"
+	Effect	"holy word"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Holy word! Azathoth!'
+	Step	0 'Cast Spell'
+	Step	0 'Sanity'	75	75	75
+	Step	0 'Effect'	'holy word'
+
+ SPELL "mute"
+	Desc	Prevents the victim from being able to speak!~
+	Target	3
+ 	Mana	50
+	Skill	"mute"
+	Effect	"mute"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Be silent fool!'
+	Step	0 'Cast Spell'
+	Step	0 'Sanity'	0	75	0
+	Step	0 'Effect'	'mute'
+
+ SPELL "gnawing hunger"
+	Desc	Makes the victim very hungry!~
+	Target	3
+	Mana	20
+	Diff	10
+	Skill	"body control"	
+	Effect	"gnawing hunger"
+	Comp	"weasel skull" 
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'As my fried gnaws at your guts!'
+	Step	1 'Chant' 	'As aeons empty within you!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'A great and endless hunger be upon you!'
+	Step	0 'Sanity'	0	75	0
+	Step	0 'Effect'	'gnawing hunger'
+
+ SPELL "burning thirst"
+	Desc	Makes the victim very thirsty!~
+	Target	3
+	Mana	20
+	Diff	10
+	Skill	"body control"	
+	Effect	"burning thirst"
+	Comp	"rock salt" 
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'A little salt for your throat?'
+	Step	1 'Chant' 	'A memory of the burning deasert!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'A thousand years without water!'
+	Step	0 'Sanity'	0	75	0
+	Step	0 'Effect'	'burning thirst'
+
+ SPELL "free grog"
+	Desc	Makes the victim drunk.~
+	Target	3
+	Mana	20
+	Skill	"body control"	
+	Effect	"free grog"
+	Comp	"shot of rum" 
+	Step	1 'Prepare Spell'
+	Step	0 'Chant' 	'Spirits arise, spirits of please!'
+	Step	1 'Chant' 	'A drink for my foe, deep and long!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Feel the spirits fill your flesh!'
+	Step	0 'Sanity'	0	75	0
+	Step	0 'Effect'	'free grog'
+	Step	1 'Chant' 	'And forever dull your mind!'
+
+ SPELL "change size"
+	Desc	Changes your size to smaller or larger.~
+	Target	1
+	Mana	60
+ 	Diff 	25
+	Skill	"body control"	
+	Effect	"change size"
+              	Comp     	"magic mushroom"
+        	Info	"parse"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'One pill makes you taller'
+	Step	1 'Chant' 	'One pill makes you smaller'
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 	'And the pill your mother gives you'
+	Step	1 'Chant' 	'Doesnt do anything at all!'
+	Step	1 'Effect'	'change size'
+
+
+ SPELL "asceticism"
+	Desc	Frees you from the need for food and water.~
+	Target	1
+	Mana	85
+ 	Diff 	50
+	Skill	"body control"	
+	Effect	"asceticism"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Free from Hunger.'
+	Step	1 'Chant' 	'Free from Thirst.'
+	Step	1 'Cast Spell'
+	Step	1 'Effect'	'asceticism'
+
+
+ SPELL "burden of blubber"
+	Desc	Causes the victim to gain a LOT of weight.~
+	Target	3
+	Mana	20
+	Diff	10
+	Skill	"body control"	
+	Effect	"burden of blubber"
+	Comp	"whale fat" 
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'A little more?'
+	Step	1 'Chant' 	'Just a little more?'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'A wafer thin chocolate mint?'
+	Step	0 'Sanity'	0	75	0
+	Step	0 'Effect'	'burden of blubber'
+	Step	1 'Chant' 	'Oh dear!'
+
+ SPELL "hallucinate"
+	Desc	Confuses the mind of a victim.~
+	Target	2
+	Mana	70
+	Diff	15
+	Skill	"body control"	
+	Effect	"hallucinate"
+
+ #
+# Mass Offensive spells
+#
+# Earthquake causes lots of damage to the caster, quite a bit to those
+# in the same room and some to everyone in the same sub_area.
+#
+# This spell takes 24 seconds to cast, and the damage happens after 21 seconds
+#
+
+ SPELL "earthquake"
+	Desc	Causes a devastating area wide earthquake!~
+	Mana	200
+	Diff	30
+	Dis 	earth
+	Music 	percussion 50
+	Skill	"earthquake"
+	Effect	"earthquake"
+	Step	2 'Prepare Spell'
+	Step	1 'Chant' 	'Cthulhu! Cthulhu!'
+	Step	1 'Chant' 	'Ia-Ia-Cthulhu!'
+	Step	1 'Echo' 	'area' 'actor' 
+			'You hear a deep rumbling!'
+			''
+			'You hear distant drums!'  
+	Step	1 'Chant' 	'Send your minions to my aid!'
+	Step	1 'Chant' 	'Cthulhu! Cthulhu!'
+	Step	1 'Chant' 	'Ia-Ia-Cthulhu!'
+	Step	1 'Echo' 	'area' 'actor' 
+			'The ground shimmers and trembles!'
+			''
+			'The ground shimmers and trembles!'  
+	Step	1 'Chant' 	'Destroy the World!  Destroy the World!'
+	Step	1 'Chant' 	'Cthulhu! Cthulhu!'
+	Step	1 'Chant' 	'Ia-Ia-Cthulhu!'
+	Step	1 'Echo' 	'area' 'actor' 
+			'The ground shudders and groans!'
+			''
+			'The ground shudders and groans!'  
+	Step	1 'Chant' 	'Ia-Ia-Cthulhu!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Send your minions to my aid!'
+	Step	1 'Chant' 	'Ia-Ia-Cthulhu!'
+	Step	1 'Chant' 	'Cthulhu! Cthulhu!'
+	Step	1 'Chant' 	'Ia-Ia-Cthulhu!'
+	Step	1 'Echo' 	'area' 'actor' 
+			'You hear a might subterranian roar!'
+			''
+			'You hear a might subterranian roar!!'  
+	Step	1 'Chant' 	'Destroy the World!  Destroy the World!'
+	Step	1 'Echo' 	'area' 'actor' 
+			'The ground bucks and twists!'
+			''
+			'The ground bucks and twists!'  
+	Step	0 'Sanity'	125	0	75
+	Step	0 'Effect'	'earthquake'
+	Step	1 'Chant' 	'Cthulhu! Cthulhu!'
+	Step	1 'Chant' 	'Ia-Ia-Cthulhu!'
+	Step	1 'Echo' 	'area' 'actor' 
+			'The dust settles on the wreckage!'
+			''
+			'The dust settles on the wreckage!'  
+
+#
+# Big bolt hits the caster and everyone in the same room, smaller bolts
+# hit everyone in the same sub-area.
+#
+
+ SPELL "call lightning"
+	Desc	Calls down lighting bolts on everyone in the area!~
+	Mana	200
+	Diff	20
+	Dis 	air
+	Skill	"call lightning"
+	Effect	"call lightning"
+	Comp	"quartz crystal"
+	Step	2 'Prepare Spell'
+	Step	1 'Chant' 	'Azathoth! Azathoth!'
+	Step	1 'Chant' 	'Hi-Hi-Azathoth!'
+	Step	1 'Chant' 	'Send your power to my aid!'
+	Step	0 'Echo' 	'area' 'actor' 
+			'The storm clouds roil overhead!'
+			''
+			'The storm clouds roil overhead!'  
+	Step	1 'Chant' 	'Azathoth! Azathoth!'
+	Step	1 'Chant' 	'Hi-Hi-Azathoth!'
+	Step	1 'Chant' 	'Destroy the Liviing!  Destroy the Living!'
+	Step	0 'Echo' 	'area' 'actor' 
+			'Lightning flashes in the sky!'
+			''
+			'Lightning flashes in the sky!'  
+	Step	1 'Chant' 	'Azathoth! Azathoth!'
+	Step	1 'Chant' 	'Hi-Hi-Azathoth!'
+	Step	1 'Chant' 	'Hi-Hi-Azathoth!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Send your power to my aid!'
+	Step	0 'Echo' 	'area' 'actor' 
+			'The storm gathers its power!'
+			''
+			'Everything goes very quiet...'  
+	Step	1 'Chant' 	'Azathoth! Azathoth!'
+	Step	1 'Chant' 	'Hi-Hi-Azathoth!'
+	Step	1 'Chant' 	'Hi-Hi-Azathoth!'
+	Step	1 'Chant' 	'Destroy the Living!  Destroy the Living!'
+	Step	0 'Effect'	'call lightning'
+	Step	0 'Echo' 	'area' 'actor' 
+			'Thunder shakes the world!'
+			''
+			'Thunder shakes the world!'  
+	Step	1 'Chant' 	'Azathoth! Azathoth!'
+	Step	1 'Chant' 	'Hi-Hi-Azathoth!'
+
+#
+# Zaps a lightning bolt that bounces around a bit...
+#
+
+ SPELL "chain lightning"
+	Desc	Bounces a lightning bolt around.~
+	Target	3
+	Mana	25
+	Diff	10
+	Skill	"chain lightning"
+	Effect	"chain lightning"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Lightning Strike! Lightning Dance!'
+	Step	0 'Cast Spell'
+	Step	1 'Effect'	'chain lightning'
+
+#
+# Creating Spells
+#
+
+#
+# create food
+#
+# Creates a single 'food' object, in our case a bunldle of fruit and veg.
+#
+
+ SPELL "create food"
+	Desc	Creates a bundle of fruit and vegetables.~
+	Mana	25
+	Diff	10
+	Skill	"create food"
+	Effect	"create food"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Safeway and Aldi!'
+	Step	0 'Echo' 	'room' 'actor' 
+			'You throw your arms out wide!'
+			''
+			'@a2 throws @a3 arms out wide!'  
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 	'Grant me sustenance!'
+	Step	0 'Effect'	'create food'
+	Step	0 'Echo' 	'room' 'actor' 
+			'A bundle of fruit and vegetables appears before you!'
+			''
+			'A bundle of fruit and vegetables appears before @a4!'  
+
+#
+# create buffet
+#
+# Creates many 'food' objects.
+#
+
+ SPELL "create buffet"
+	Desc	Creates many bundles of fruit and vegetables.~
+	Mana	50
+	Diff	20
+	Skill	"create buffet"
+	Effect	"create buffet"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Safeway and Aldi!'
+	Step	0 'Echo' 	'room' 'actor' 
+			'You throw your arms out wide!'
+			''
+			'@a2 throws @a3 arms out wide!'  
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 	'Grant me and me followers sustenance!'
+	Step	0 'Effect'	'create buffet'
+	Step	1 'Chant' 	'But let there be no turnips!'
+	Step	0 'Echo' 	'room' 'actor' 
+		  'Many bundles of fruit and vegetables appear all around you!'
+		  ''
+		  'Bundles of fruit and vegetables appear all around @a2!'  
+
+ SPELL "create water"
+	Desc	Fills a jug or skin with fresh water.~
+	Target	4
+	Mana	25
+	Diff	10
+	Skill	"create water"
+	Effect	"create water"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Neptune and Titania!'
+	Step	0 'Echo' 	'room' 'actor' 
+			'You hold your @p2 up in the air!'
+			''
+			'@a2 holds @a3 @p2 up in the air!'  
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 	'Grant me your waters!'
+	Step	0 'Effect'	'create water'
+
+ SPELL "create spring"
+	Desc	Creates a spring giving fresh water for all.~
+	Mana	50
+	Diff	20
+	Skill	"create spring"
+	Effect	"create spring"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Zebadee! Cthulhu!'
+	Step	0 'Echo' 	'room' 'actor' 
+			'You starts walking in a circle!'
+			''
+			'@a2 starts walking in a cirlce!'  
+	Step	1 'Chant' 	'Come to me! Come to me!'
+	Step	1 'Cast Spell'
+	Step	0 'Chant' 	'Neptune send your thoughts this way!'
+	Step	1 'Echo' 	'subarea' 'actor' 
+			'The ground starts to tremble!'
+			''
+			'The ground starts to tremble!'  
+	Step	1 'Chant' 	'Cthulhu! Zebadee!' 
+	Step	1 'Effect'	'create spring'
+	Step	0 'Echo' 	'subarea' 'actor' 
+			'You hear a roar from under the ground!'
+			''
+			'You hear a roar from under the ground!'  
+	Step	1 'Chant' 	'Go! Go! Begone! Begone!' 
+	Step	0 'Echo' 	'room' 'actor' 
+			'A spring bubbles up besides you!'
+			''
+			'A spring bubbles up beside @a2!'  
+	Step	1 'Echo' 	'subarea' 'actor' 
+			'{CYou hear a ghostly BOOIIIINNNNGGGG!!!!!!'
+			''
+			'{CYou hear a ghostly BOOIIIINNNNGGGG!!!!!!'  
+
+
+ SPELL "spring of blood"
+	Desc	Creates a spring giving blood for all.~
+	Mana	130
+	Diff	25
+                Info         "blood"
+	Skill	"necromancy"
+	Effect	"create spring"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Zebadee! Cthulhu!'
+	Step	0 'Echo' 	'room' 'actor' 
+			'You starts walking in a circle!'
+			''
+			'@a2 starts walking in a cirlce!'  
+	Step	1 'Chant' 	'Come to me! Come to me!'
+	Step	1 'Cast Spell'
+	Step	0 'Chant' 	'Nosferatu send your thoughts this way!'
+	Step	1 'Echo' 	'subarea' 'actor' 
+			'The ground starts to tremble!'
+			''
+			'The ground starts to tremble!'  
+	Step	1 'Chant' 	'Cthulhu! Zebadee!' 
+	Step	1 'Effect'	'create spring'
+	Step	0 'Echo' 	'subarea' 'actor' 
+			'You hear a roar from under the ground!'
+			''
+			'You hear a roar from under the ground!'  
+	Step	1 'Chant' 	'Go! Go! Begone! Begone!' 
+	Step	0 'Echo' 	'room' 'actor' 
+			'A spring of blood bubbles up besides you!'
+			''
+			'A spring bubbles up beside @a2!'  
+	Step	1 'Echo' 	'subarea' 'actor' 
+			'{CYou hear a ghostly BOOIIIINNNNGGGG!!!!!!'
+			''
+			'{CYou hear a ghostly BOOIIIINNNNGGGG!!!!!!'  
+
+
+ SPELL "lesser creation"
+	Desc	Creates either a {rboat{g, a {rbag{g or a digging {rtool{g.{x~
+	Mana	25
+        	Info	"parse"
+	Skill	"way of the conjurer"
+	Effect	"minor creation"
+
+
+ SPELL "magical campfire"
+	Desc	Creates a magical campfire for you.~
+	Mana	60
+                Diff 	35
+                Info      	"camp"
+	Skill	"spell casting"
+	Effect	"minor creation"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Sphere of light!'
+	Step	1 'Cast Spell'
+	Step	1 'Chant'	'Grant me some rest!'
+	Step	1 'Effect'	'minor creation'
+
+
+ SPELL "mana storage"
+	Desc	Stores mana in a little blue pill~
+	Mana	150
+	Dis	power
+        	Info	"parse"
+	Skill	"brew"
+	Effect	"store mana"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Magic Pill!'
+	Step	1 'Cast Spell'
+	Step	1 'Chant'	'Appear!'
+	Step	1 'Effect'	'store mana'
+
+
+ SPELL "greater creation"
+	Desc	Creates instable scrying {ramber{g, a magic {rchain{g, an {ranvil {gor a field of {rprotection{g.{x~
+	Mana	100
+	Diff	30
+        	Info	"parse"
+	Skill	"way of the conjurer"
+	Effect	"greater creation"
+
+
+ SPELL "create grimoire"
+	Desc	Creates a grimoire for you.~
+	Mana	100
+                Diff 	60
+                Info      	"grimoire"
+	Skill	"spell casting"
+	Effect	"greater creation"
+
+
+ SPELL "summon familier"
+	Desc	Summons an appropriate familier to serve you.~
+	Mana	100
+	Diff	20
+	Skill	"summon familier"
+	Effect	"summon familier"
+	Comp	"silver dollar"
+                Step	1 'Prepare Spell'
+                Step        1 'Chant' 'Helpful Creature I summon Thee!'
+                Step        1 'Chant' 'Come to Thy Master to be His Eyes and His Ears.'
+	Step	1 'Cast Spell'
+                Step	1 'Echo' 	'room' 'actor' 
+			'You throw a silver dollar up in the air.'
+			''
+			'@a2 throws a silver dollar up in the air.'  
+                Step        1 'Chant' 'Creature appear to be Thy Masters Tool.'
+	Step	1 'Effect'	'summon familier'
+
+
+ SPELL "summon spirit"
+	Desc	Summons a spell casting spirit to serve you.~
+	Mana	150
+	Diff	20
+	Skill	"way of the conjurer"
+	Effect	"summon spirit"
+	Comp	"magic lamp"
+                Step	1 'Prepare Spell'
+                Step	1 'Echo' 	'room' 'actor' 
+			'You rub your oil lamp.'
+			''
+			'@a2 rubs an oil lamp.'  
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 'Spirit appear in this Place.'
+	Step	1 'Chant' 'Appear to aid me and do no Harm.'
+	Step	1 'Chant' 'Appar to serve me with Thy Magic.'
+	Step	1 'Chant' 'Manifest in pleasant form and speak with soft voice.'
+	Step	1 'Effect'	'summon spirit'
+
+
+ SPELL "call pet"
+	Desc	Calls your pet to follow you.~
+	Mana	45
+	Skill	"way of the conjurer"
+	Effect	"call pet"
+                Step	1 'Prepare Spell'
+                Step	1 'Echo' 	'room' 'actor' 
+			'You produce a sharp whisteling noise.'
+			''
+			'@a2 produces a sharp whisteling noise.'  
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 'Follower, I need you by my side!'
+	Step	1 'Chant' 'Appear immediately.'
+	Step	1 'Effect'	'call pet'
+
+
+ SPELL "create figurine"
+	Desc	Transforms your pet into a figurine.~
+	Target	2
+	Mana	200
+                Diff         30
+                Comp     "clay figurine"
+	Skill	"way of the conjurer"
+	Effect	"create figurine"
+                Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Steadfast being, hear my call.'
+                Step	1 'Echo' 	'room' 'actor' 
+			'You point at @v2.'
+			''
+			'@a2 points at @v2.'  
+	Step	1 'Chant' 'Leave this world...'
+                Step	1 'Echo' 	'room' 'actor' 
+			'You wave your hands in front of the clay figurine.'
+			''
+			'@a2 waves @a4 hands in front of a clay figurine.'  
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 'But appear when I call thee.'
+	Step	1 'Effect'	'create figurine'
+
+
+
+ SPELL "elder watcher"
+	Desc	Summons an elder watcher who will hurt the first one to enter.~
+	Mana	150
+	Diff         25
+	Skill	"way of the conjurer"
+	Effect	"elder watcher"
+           	Comp	"elder sign"
+                Step	1 'Prepare Spell'
+	Step	1 'Chant' 'In the name of the Elder Gods from the Stars.'
+	Step	1 'Chant' 'I beg for Protection for this very Place.'
+	Step	1 'Chant' 'Protect it from everyone and everything.'
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 'Watcher, who can see everything.'
+	Step	1 'Chant' 'and stays unseen himself:'
+	Step	1 'Yell' 'Wathcher Appear!'
+	Step	0 'Effect'	'elder watcher'
+	Step	0 'Echo' 	'area' 'actor' 
+			''
+			''
+			'A Watcher has been sent by the Elder Gods.'  
+
+
+ SPELL "create potion"
+	Desc	Creates a random magical potion.~
+	Target	1
+	Mana	100
+	Skill	"create potion"	
+	Effect	"create potion"
+
+
+ SPELL "wolfbite"
+	Desc	Creates a werewolf.~
+	Target	2
+	Mana	500
+	Diff          50
+                Info         "wolf"
+                Skill	"way of nature"	
+	Effect	"transformation"
+
+
+ SPELL "drain vitality"
+	Desc	Drains mana from a tree!~
+	Mana	35
+                Diff         25
+	Target	6
+        	Info	"parse"
+	Skill	"way of nature"
+	Effect	"drain vitality"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'In the name of nature!'
+	Step	1 'Echo' 	'room' 'actor' 
+			'You touch the tree!'
+			''
+			'@a2 touches the tree!'  
+	Step	1 'Chant' 'In the name of of my druidic powers!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'I need your vitality!'
+	Step	1 'Chant' 'Lend me your strength!'
+	Step	0 'Effect'	'drain vitality'
+
+
+ SPELL "create seed"
+	Desc	Creates a seed you can plant into the ground.~
+	Mana	85
+	Diff          10
+	Skill	"way of nature"
+	Effect	"create seed"
+                Step	1 'Prepare Spell'
+	Step	1 'Chant' 'I-sh Niggarab!'
+	Step	1 'Chant' 'I-sh Niggarab!'
+	Step	1 'Chant' 'Send me a seed.'
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 'May it grow!'
+	Step	0 'Effect'	'create seed'
+
+
+
+#
+# Curative spells
+#
+
+ SPELL "cure light"
+	Desc	Heals a little damage on the recipient.~
+	Target	2
+	Mana	10
+	Skill	"cure light"
+	Effect	"cure light"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Bloodwort and mangle wurzle'
+	Step	1 'Chant' 	'Stitch it and pack'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'Your wounds are magically healed!'
+			'@v2 is surrounded with a golden glow!'  
+	Step	0 'Heal'	'victim'	'spell'	
+				'heal_hits'	'heal_low'
+	Step	1 'Chant' 	'Should be right now'
+
+
+ SPELL "cure serious"
+	Desc	Heals some damage on the recipient.~
+	Target	2
+	Mana	20
+	Diff	10
+	Skill	"cure serious"
+	Effect	"cure serious"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Bloodwort and mangle wurzle'
+	Step	1 'Chant' 	'Aquavita to clean'
+	Step	1 'Chant' 	'Stitch it and pack'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'Your wounds are magically healed!'
+			'@v2 is surrounded with a golden glow!'  
+	Step	0 'Heal'	'victim'	'spell'	
+				'heal_hits'	'heal_medium'
+	Step	1 'Chant' 	'Should be right now'
+
+
+ SPELL "cure critical"
+	Desc	Heals a lot of damage on the recipient.~
+	Target	2
+	Mana	40
+	Diff	20
+	Skill	"cure critical"
+	Effect	"cure critical"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Bloodwort and mangle wurzle'
+	Step	1 'Chant' 	'Aquavita to clean'
+	Step	1 'Chant' 	'Set the bone with hazel'
+	Step	1 'Chant' 	'Stitch it and pack'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'Your wounds are magically healed!'
+			'@v2 is surrounded with a golden glow!'  
+	Step	0 'Heal'	'victim'	'spell'	
+				'heal_hits'	'heal_high'
+	Step	1 'Chant' 	'Should be right now'
+
+
+ SPELL "heal"
+	Desc	Heal near fatal damage to the recipient.~
+	Target	2
+	Mana	50
+	Diff	20
+	Skill	"heal"
+	Effect	"heal"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Bloodwort and mangle wurzle'
+	Step	1 'Chant' 	'Aquavita to clean'
+	Step	1 'Chant' 	'Set the bone with hazel'
+	Step	1 'Chant' 	'Stitch it and pack'
+	Step	1 'Chant' 	'Azathoth! Clense this mortal!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'Your wounds are magically healed!'
+			'@v2 is surrounded with a bright golden glow!'  
+	Step	0 'Heal'	'victim'	'spell'	
+				'heal_hits'	'heal_fatal'
+	Step	1 'Chant' 	'Should be right now'
+
+
+ SPELL "restore limb"
+	Desc	Heal damaged limbs.~
+	Target	2
+	Mana	150
+	Diff	35
+	Skill	"heal"
+	Effect	"restore limb"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Bloodwort and mangle wurzle'
+	Step	1 'Chant' 	'Aquavita to clean'
+	Step	1 'Chant' 	'Set the bone with hazel'
+	Step	1 'Chant' 	'Stitch it and pack'
+	Step	1 'Chant' 	'Azathoth! Clense this mortal!'
+	Step	1 'Chant' 	'Join, what been chopped off before!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'victim'
+ 			'' 
+			'Your wounds are magically healed!'
+			'@v2 is surrounded with a bright golden glow!'  
+	Step	0 'Effect' 'restore limb'
+	Step	1 'Chant' 	'Should be right now'
+
+
+ SPELL "remove curse"
+	Desc	Attempts to remove all curse affects on the recipient.~
+	Target	2
+	Mana	25
+	Diff	10
+	Skill	"remove curse"
+	Effect	"remove curse"
+ 
+
+ SPELL "cure blindness"
+	Desc	Attempts to restore the victims vision.~
+	Target	2
+	Mana	20
+	Skill	"cure blindness"
+	Effect	"cure blindness"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Open my Eyes.'
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 'Make me see again!'
+	Step	1 'Effect' 'cure blindness'
+
+
+ SPELL "cure poison"
+	Desc	Attempts to remove all poisons from the recipients body.~
+	Target	2
+	Mana	25
+	Diff	10
+	Skill	"cure poison"
+	Effect	"cure poison"
+
+
+ SPELL "step lightly"
+	Desc	Increases the recipients move points.~
+	Target	2
+	Mana	15
+	Skill	"refresh"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Legs be nimble! Legs be strong!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Legs be nimble! Legs be strong!'
+	Step	1 'Heal'	'victim' 'massage' 'heal_move' 'heal_medium'
+
+
+ SPELL "refresh"
+	Desc	Reinvigourates the recipient, removes spell fatigue.~
+	Target	2
+	Mana	20
+	Skill	"refresh"
+	Effect	"refresh"
+
+
+ SPELL "cure disease"
+	Desc	Cures whatever diseases the recipient is afflicted by.~
+	Target	2
+	Mana	20
+	Skill	"cure disease"
+	Effect	"cure disease"
+
+
+ SPELL "word of health"
+	Desc	Cures a disease within a subare.~
+	Target	2
+                Range    "area"
+	Mana	160
+                Diff         15
+	Skill	"cure disease"
+	Effect	"cure disease"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Morphine and Pennizilline!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant'	'Health for everyone!'
+	Step	0 'Effect'	'cure disease'
+
+
+ SPELL "regeneration"
+	Desc	Caused the recipient to heal much faster than normal.~
+	Target	2
+	Mana	50
+	Diff	10
+	Skill	"regeneration"
+	Effect	"regeneration"
+
+
+ SPELL "remove fear"
+	Desc	Stops the victim being afraid.~
+	Target	2
+	Mana	15
+	Skill	"remove fear"
+	Effect	"remove fear"
+
+
+ SPELL "ghastly sobriety"
+	Desc	Makes the victim as sober as a judge.~
+	Target	2
+	Mana	25
+	Diff	15
+	Skill	"body control"
+	Effect	"ghastly sobriety"
+	Comp	"hair of dog" 
+
+
+ SPELL "slender lines"
+	Desc	Cures obesity.~
+	Target	2
+	Mana	20
+	Diff	15
+	Skill	"body control"	
+	Effect	"slender lines"
+	Comp	"yellow leech" 
+
+
+ SPELL "mana transfer"
+	Desc	Transfers mana from you to someone else..~
+	Target	2
+	Mana	50
+	Diff	10
+	Skill	"spell casting"	
+	Effect	"mana transfer"
+
+
+
+#
+# Mass curative spells
+#
+
+ SPELL "mass healing"
+	Desc	Heals all friends within the same area.~
+	Mana	100
+	Diff	30
+	Music	gospel	35
+	Skill	"mass healing"
+	Effect	"mass healing"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Blood and guts!'
+	Step	1 'Chant' 	'Torn muscle, shattered joint'
+	Step	1 'Chant' 	'Foul infections'
+	Step	1 'Chant' 	'All be gone!'
+	Step	1 'Chant' 	'Azathoth! Cleanse these mortals!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'area' 		'actor'
+			'You feel all the wounded around you!'
+ 			'' 
+			'{YYou see a burning image of @a2!{x'  
+	Step	0 'Area_Heal'	'area'		'actor'
+				'friend'	'energy'	
+				'heal_hits'	'heal_medium'
+
+
+ SPELL "calm"
+	Desc	Reduces fear and berserk effects, stops combat!~
+	Mana	30
+	Skill	"calm"
+	Effect	"calm"
+
+
+
+#
+# Detection spells
+#
+
+ SPELL "detect evil"
+	Desc	Lets you see when things are evil!~
+	Target	1
+	Mana	15
+	Skill	"detect evil"
+	Effect	"detect evil"
+
+
+ SPELL "detect invis"
+	Desc	Lets you see invisible things!~
+	Target	1
+	Mana	15
+	Effect	"detect invis"
+	Skill	"detect invis"
+
+
+ SPELL "detect magic"
+	Desc	Lets you see magic!~
+	Target	1
+	Mana	15
+	Effect	"detect magic"
+	Skill	"detect magic"
+
+
+ SPELL "detect poison"
+	Desc	Lets you see when things are poisoned!~
+	Target	4
+	Mana	15
+	Skill	"detect poison"
+	Effect	"detect poison"
+	Comp	"amythyst"
+
+
+ SPELL "dispel evil"
+	Desc	Tries to get rid of evil thing!~
+	Target	3 
+	Mana	15
+	Skill	"dispel evil"
+	Effect	"dispel evil"
+	Comp	"silver needle"
+
+
+ SPELL "detect hidden"
+	Desc	Lets you see hidden things!~
+	Target	1
+	Mana	15
+	Skill	"detect hidden"
+	Effect	"detect hidden"
+
+
+ SPELL "identify"
+	Desc	Gives you lots of information about an object!~
+	Target	4
+	Mana	120
+	Diff	20
+	Skill	"identify"
+	Effect	"identify"
+
+
+ SPELL "know alignment"
+	Desc	Tells you a persons alignment!~
+	Target	2
+	Mana	15
+	Skill	"know alignment"
+	Effect	"know alignment"
+
+
+ SPELL "faerie fog" 
+	Desc	Reveales all hidden or invisible items or mobs in a room!~
+	Mana	20
+	Effect	"faerie fog"
+	Skill	"faerie fog"
+
+
+ SPELL "infravision"
+	Desc	Lets you see in the dark!~
+	Target	2
+	Mana	20
+	Effect	"infravision"
+	Skill	"vision"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Grant me'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'Infravision!'
+	Step	0 'Effect'	'infravision'
+
+
+ SPELL "farsight"
+	Desc	Improves your vision!~
+	Target	2
+	Diff 	10
+	Mana	50
+	Effect	"farsight"
+	Skill	"vision"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Grant me'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'Farsight!'
+	Step	0 'Effect'	'farsight'
+
+
+ SPELL "detect good"
+	Desc	Lets you see when things are good!~
+	Target	1
+	Mana	15
+	Skill	"detect good"
+	Effect	"detect good"
+
+
+
+#
+# Environmental Control
+#
+
+ SPELL "control weather"
+	Desc	Lets you tamper with the weather!~
+	Mana	25
+	Diff	10
+        	Info	"parse"
+	Skill	"control weather"
+	Effect	"control weather"
+
+
+
+#
+# Alteration Spells
+#
+
+ SPELL "recharge"
+	Desc	Recharges a pulsed spell effect!~
+	Target	4
+	Mana	50
+	Diff	5
+	Skill	"taumathurgy"
+	Effect	"recharge"
+
+
+ SPELL "enchant weapon"
+	Desc	Magically improves a weapon!~
+	Target	4
+	Mana	100
+	Diff	15
+	Skill	"enchant weapon"
+	Effect	"enchant weapon"
+
+
+ SPELL "personalize weapon"
+	Desc	Magically personalizes a weapon!~
+	Target	4
+	Mana	75
+	Diff	20
+	Skill	"enchant weapon"
+	Effect	"personalize weapon"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Weapon be true!'
+	Step	1 'Chant' 'Weapon be mine!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'actor' 
+                                                ''
+			'You feel empatic with your weapon.'
+			'@a2s weapon looks somehow different.'
+	Step	0 'Effect'	'personalize weapon'
+
+
+ SPELL "animate weapon"
+	Desc	Magically animates a weapon to return to its owner!~
+	Target	4
+	Mana	135
+	Diff	20
+	Skill	"taumathurgy"
+	Effect	"animate weapon"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Weapon behold me!'
+	Step	1 'Chant' 'Weapon return!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'actor' 
+                                                ''
+			'You feel an invisible bond between you and your weapon.'
+			'@a2s weapon looks somehow different.'
+	Step	0 'Effect'	'animate weapon'
+
+
+ SPELL "blade of fury"
+	Desc	Turns your weapon into a flaming blade!~
+	Target	4
+	Mana	40
+	Diff	35
+	Dis 	enchantment
+	Skill	"frenzy"
+	Effect	"blade affect"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Blade of Fury!'
+	Step	1 'Chant' 'Blade of Rage!'
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 'Eat Flesh!'
+	Step	1 'Chant' 'Drink Blood!'
+	Step	1 'Effect'	'blade affect'
+
+
+ SPELL "giant strength"
+	Desc	Makes the recipient a lot stronger!~
+	Target	2
+	Mana	20
+	Skill	"giant strength"
+	Effect	"giant strength"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Muscles!'
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 'Muscles!'
+	Step	1 'Effect'	'giant strength'
+	Step	1 'Chant' 'Muscles!'
+
+
+ SPELL "fly"
+	Desc	Enables you to fly through the air!~
+	Target	2
+	Mana	30
+	Diff	15
+	Skill	"fly"
+	Effect	"fly"
+
+
+ SPELL "invis"
+	Desc	Makes you invisible!~
+	Target	2
+	Mana	25
+	Diff	10
+	Skill	"invis"
+	Effect	"invis"
+
+
+ SPELL "poison"
+	Desc	Poisons the victim!~
+	Target	3
+	Mana	30
+	Diff	10
+	Skill	"poison"
+	Effect	"poison"
+	Comp	"poison" 
+
+
+ SPELL "ventriloquate"
+	Desc	Lets you cast spells while mute!~
+	Mana	5
+        	Info	"parse"
+	Skill	"ventriloquate"
+	Effect	"ventriloquate"
+
+
+ SPELL "pass door"
+	Desc	Lets you walk through most locked doors!~
+	Target	1
+ 	Dis	air
+	Mana	20
+	Effect	"pass door"
+	Skill	"pass door"
+
+
+ SPELL "change sex"
+	Desc	Changes the recipients sex!~
+	Target	2
+	Mana	20
+	Skill	"chaos magic"
+	Effect	"change sex"
+
+
+ SPELL "youth"
+	Desc	Makes the recipient younger!~
+	Target	2
+ 	Mana	200
+	Diff	40
+	Skill	"youth"
+	Effect	"youth"
+
+
+ SPELL "age"
+	Desc	Makes the victim older!~
+	Target	3
+	Mana	200
+	Diff	35
+	Dis 	curses
+	Skill	"age"
+	Effect	"age"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'My curse upon you!'
+	Step	1 'Chant' 'The curse of old age about you!'
+	Step	1 'Cast Spell'
+	Step	2 'Chant' 'May your Bones break!'
+	Step	1 'Chant' 'May you lose your Hair!'
+	Step	1 'Effect'	'age'
+
+
+ SPELL "haste"
+	Desc	Makes the recipient move faster!~
+	Target	2
+	Mana	30
+	Skill	"haste"
+	Effect	"haste"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Byakhee! Speed my pace!'
+	Step	1 'Chant' 'Xastur, give me haste!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'actor' 
+                                                ''
+			'You get a hurried look!'
+			'@v2 gets a hurried look!'  
+	Step	0 'Effect'	'haste'
+
+
+ SPELL "slow"
+	Desc	Makes the recipient move slower!~
+	Target	3
+                Diff         20
+	Mana	90
+	Skill	"haste"
+	Effect	"slow"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Masters of the Cthonier!'
+	Step	1 'Chant' 'Lords of the Lloigor!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'Weigh my foes down with Lethargy!'
+	Step	1 'Echo' 	'room' 'actor' 
+                                                ''
+			'You get a lethargic look!'
+			'@v2 gets a lethargic look!'  
+	Step	0 'Effect'	'slow'
+
+ 
+SPELL "mortalize"
+	Desc	Makes an immortal vulnerable!~
+	Target	2
+                Diff         40
+	Mana	250
+	Skill	"divine magic"
+	Effect	"mortalize"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Elder Gods!'
+	Step	1 'Chant' 'Old Ones!'
+	Step	1 'Chant' 'I dont fear your power!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'Like Barzai I challenge You!'
+	Step	1 'Chant' 'Hide! Run!'
+	Step	1 'Yell' 'Fear my Wrath!'
+	Step	1 'Echo' 	'universe' 'actor' 
+                                                ''
+			'You feel your power vanishing!'
+			'You feel a the world changing a little bit!'  
+	Step	0 'Effect'	'mortalize'
+
+
+ SPELL "frenzy"
+	Desc	Drives the recipient into a killing frenzy!~
+	Target	2
+	Mana	30
+	Skill	"frenzy"
+	Effect	"frenzy"
+
+
+ SPELL "enchant armor"
+	Desc	Magically improves armour!~
+	Target	4
+	Mana	100
+	Diff	10
+	Skill	"enchant armor"
+	Effect	"enchant armor"
+
+
+ SPELL "brand"
+	Desc	Creates a magical 'power' upon a weapon!~
+	Target	4
+	Mana	100
+	Skill	"brand"
+	Effect	"brand"
+
+
+ SPELL "negate alignment"
+	Desc	Strips alignment specific restrictions from items!~
+	Target	4
+	Mana	50
+	Skill	"negate alignment"
+	Effect	"negate alignment"
+
+
+ SPELL "mask self"
+	Desc	Changes your look to that of someone else!~
+	Target	2 
+	Mana	25
+	Skill	"mask self"
+	Effect	"mask self"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant'	'Nyarlathotep!'
+	Step	1 'Chant'	'Master of Chaos!'
+	Step	1 'Chant'	'Help me to decieve...'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'You reshape your face.' 
+			''
+			'@a2 reshapes @a3 face.'  
+	Step	1 'Chant'	'Help me to walk among the mere mortals!'
+ 	Step	0 'Cast Spell'
+	Step	0 'Effect'	'mask self'
+
+
+ SPELL "incognito"
+	Desc	Changes your look to that of someone else anywhere!~
+	Target	5 
+	Mana	100
+                Diff         15
+	Skill	"mask self"
+	Effect	"incognito"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant'	'Nyarlathotep!'
+	Step	1 'Chant'	'Master of Chaos!'
+	Step	1 'Chant'	'Help me to decieve...'
+	Step	1 'Chant'	'Help me find my victim...'
+	Step	1 'Chant'	'Help me to be silent...'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'You reshape your face.' 
+			''
+			'@a2 reshapes @a3 face.'  
+	Step	1 'Chant'	'Help me to walk among the mere mortals!'
+ 	Step	0 'Cast Spell'
+	Step	1 'Chant'	'Incognito!'
+	Step	0 'Effect'	'incognito'
+
+
+ SPELL "water breathing"
+	Desc	Lets you breath underwater!~
+	Target	2
+	Mana	20
+	Skill	"water breathing"	
+	Effect	"water breathing"
+	Comp	"dried frog" 
+	Step	1 'Prepare Spell'
+	Step	1 'Chant'	'Prepare my Lungs!'
+	Step	1 'Chant'	'Dagon!'
+	Step	1 'Chant'	'Hydra!'
+ 	Step	1 'Cast Spell'
+	Step	1 'Chant'	'Dive among the Deep Ones!'
+	Step	1 'Effect'	'water breathing'
+
+
+
+#
+# Mass alteration spells
+#
+
+ SPELL "mass invis"
+	Desc	Turns many people in the same room invisible.~
+	Mana	30
+	Diff	15
+	Music	chant 40
+	Skill	"mass invis"
+	Effect	"mass invis"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant'	'Hide our faces!'
+	Step	1 'Chant'	'Hide our ways!'
+ 	Step	1 'Cast Spell'
+	Step	1 'Chant'	'Vanish from Sight!'
+	Step	1 'Effect'	'mass invis'
+
+
+
+#
+# Utility Spells
+#
+
+ SPELL "locate object"
+	Desc	Finds a specific object!~
+	Mana	35
+                Diff 	5
+        	Info	"parse"
+	Skill	"locate object"
+	Effect	"locate object"
+
+
+ SPELL "mage light"
+	Desc	Creates a small ball of light!~
+	Mana	20
+	Skill	"continual light"
+	Effect	"mage light"
+	Step	1 'Prepare Spell'
+	Step	1 'Echo' 	'room' 'actor' 
+			'{YYou put your hands togheter!'
+			''
+			'{Y@a2 puts his hands together!'  
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'actor' 
+			'{YYour hands start to glow!'
+			''
+			'{YSomething is brightly glowing inside @a2s hands!'  
+	Step	0 'Effect'	'mage light'
+	Step	1 'Echo' 	'room' 'actor' 
+			'{YYou open your hands to reveal a ball of light!'
+			''
+			'{Y@a2 opens @a3 hands to reveal a ball of light!'  
+
+
+ SPELL "continual light"
+	Desc	Creates a small, long lasting ball of light!~
+	Mana	50
+	Diff	20
+	Skill	"continual light"
+	Effect	"continual light"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Marduk!'
+	Step	1 'Chant' 	'Edison!'
+	Step	0 'Echo' 	'room' 'actor' 
+			'{YYou are surrounded with a glowing light!'
+			''
+			'{Y@a2 is surrounded with a glowing light!'  
+	Step	1 'Chant' 	'Phillips!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Photo luminescense!'
+	Step	0 'Echo' 	'room' 'actor' 
+			'{YYour glow is really bright!'
+			''
+			'{YSomething is brightly glowing inside @a2!'  
+	Step	1 'Chant' 	'Smile please for St.Elmo!'
+	Step	0 'Effect'	'continual light'
+	Step	0 'Echo' 	'room' 'actor' 
+			'{YYour glow condenses into a ball of light!'
+			''
+			'{Y@a2s glow condenses into a ball of light!'  
+
+
+ SPELL "remove invis"
+	Desc	Makes the invisible visible!~
+	Target	4
+	Mana	40
+	Skill	"remove invis"
+	Effect	"remove invis"
+
+
+ SPELL "vocalize"
+	Desc	Enables you to cast spells when muted!~
+	Target	2
+	Mana	50
+	Skill	"vocalize"
+	Effect	"vocalize"
+
+
+ SPELL "universality"
+	Desc	Stops objects evaporating when removed from their home zone!~
+	Target	4
+	Mana	50
+	Diff	10
+	Skill	"taumathurgy"	
+	Effect	"universality"
+	Comp	"yusefs dust" 
+
+
+ SPELL "permanence"
+	Desc	Makes a {ymagic{x object virtually indestructible.~
+	Target	4
+	Mana	150
+	Diff	15
+	Skill	"taumathurgy"	
+	Effect	"permanence"
+	Comp	"mithril shard" 
+
+
+ SPELL "consistence"
+	Desc	Makes an object not rot after your death..~
+	Target	4
+	Mana	100
+	Diff	15
+	Skill	"taumathurgy"	
+	Effect	"consistence"
+	Comp	"mithril shard" 
+
+
+ SPELL "power word"
+	Desc	Says a word or phrase with magic power behind it!~
+	Mana	40
+	Diff	10
+	Info	"parse"
+	Skill	"spell casting"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Hmmmm. Now let me see...'
+	Step	0 'Cast Spell'
+	Step	1 'PowerWord'	''	
+
+
+
+#
+# Transportation Spells
+#
+
+ SPELL "teleport" 
+	Desc	Teleports the recipient to a random location!~
+	Target	2
+	Mana	35
+	Diff	10
+	Skill	"teleport"
+	Effect	"teleport"
+
+
+ SPELL "word of recall"
+	Desc	Teleoprts you to a recall location!~
+	Target	1
+	Mana	25
+	Skill	"word of recall"
+	Effect	"word of recall"
+
+
+ SPELL "summon"
+	Desc	Teleports a specific mob/player to you!~
+                Target    5
+	Mana	50
+	Diff	30
+	Skill	"summon"
+	Effect	"summon"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Time and Space!'
+	Step	1 'Chant' 'Fold as I Command.'
+	Step	1 'Echo' 	'room' 'actor' 
+			'You wave your hands in the air!'
+			''
+			'@a2 waves @a4 hands in the air!'  
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'Open a Passage through Space & Time.'
+	Step	1 'Chant' 'And bring it to me!'
+	Step	0 'Effect'	'summon'
+
+
+ SPELL "summon old"
+	Desc	Teleports a specific immortal to you!~
+                Info         'immortal'
+                Target    5
+	Mana	250
+	Diff	35
+	Skill	"divine magic"
+	Effect	"summon"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Time and Space!'
+	Step	1 'Chant' 'Fold as I Command.'
+	Step	1 'Chant' 'For I am the Bearer of the Power of Gods.'
+	Step	1 'Echo' 	'room' 'actor' 
+			'You wave your hands in the air!'
+			''
+			'@a2 waves @a4 hands in the air!'  
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'Open a Passage through Space & Time.'
+	Step	1 'Chant' 'And bring it to me!'
+	Step	0 'Effect'	'summon'
+
+
+ SPELL "gate"
+	Desc	Teleports you to a specific mob!~
+	Mana	80
+	Diff	30
+        	Info	"parse"
+	Skill	"gate"
+	Effect	"gate"
+	Comp	"obsidian"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Time and Space!'
+	Step	1 'Chant' 'Take me!'
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 'Where I want to be!'
+	Step	1 'Effect'	'gate'
+
+
+ SPELL "portal"
+	Desc	Creates a magical portal to the victims location!~
+	Mana	100
+        	Info	"parse"
+	Dis	transdimensional
+	Skill	"portal"
+	Effect	"portal"
+	Comp	"obsidian"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Yog Sothoth - Keeper of the gate...'
+	Step	1 'Echo' 	'room' 'actor' 
+			'You wave your hands in the air!'
+			''
+			'@a2 waves @a4 hands in the air!'  
+	Step	0 'Cast Spell'
+	Step	1 'Chant' '... open a Passage through Space & Time!'
+	Step	1 'Echo' 	'room' 'actor' 
+			'A shape forms in the air!'
+			''
+			'A shape forms in the air!'  
+	Step	0 'Effect'	'portal'
+	Step	1 'Echo' 	'room' 'actor' 
+			'The portal swings open!'
+			''
+			'The portal swings open!'  
+
+
+ SPELL "personalize portal"
+	Desc	Locks a portal for all others!~
+	Mana	25
+                Diff         25
+	Target	6
+	Skill	"portal"
+	Effect	"personalize portal"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Portal, I call you!'
+	Step	1 'Echo' 	'room' 'actor' 
+			'You point at the portal!'
+			''
+			'@a2 points at the portal!'  
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'Come alive and obey your master!!'
+	Step	0 'Effect'	'personalize portal'
+
+
+ SPELL "destroy portal"
+	Desc	Destroys a portal!~
+	Mana	60
+                Diff         10
+	Target	6
+	Skill	"portal"
+	Effect	"destroy portal"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Portal, I call you!'
+	Step	1 'Echo' 	'room' 'actor' 
+			'You point at the portal!'
+			''
+			'@a2 points at the portal!'  
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'Shut and never show again!'
+	Step	0 'Effect'	'destroy portal'
+
+
+ SPELL "dispel portals"
+	Desc	Destroys all portals in a room!~
+      	Range	"room"
+	Mana	100
+                Diff         20
+	Target	6
+	Skill	"portal"
+	Effect	"destroy portal"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'Portals, I call you!'
+	Step	1 'Echo' 	'room' 'actor' 
+			'You point at all portals!'
+			''
+			'@a2 points at all portals!'  
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'Shut and never show again!'
+	Step	1 'Chant' 'All of you, hear my command!'
+	Step	0 'Effect'	'destroy portal'
+
+
+ SPELL "bestow blessing"
+	Desc	Bestows a blessing on a fountain or source!~
+	Mana	160
+                Diff         10
+	Target	6
+	Skill	"bless"
+	Effect	"bestow blessing"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 'By the Power of Marduk.'
+	Step	1 'Chant' 'Protector of Mankind.'
+	Step	1 'Echo' 	'room' 'actor' 
+			'You dip your finger in the cold water.'
+			''
+			'@a2 dips @a3 finger in the cold water. !'  
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 'Water be blessed!'
+	Step	0 'Effect'	'bestow blessing'
+
+
+
+#
+# Necromantic Spells
+#
+
+ SPELL "animate dead"
+	Desc	Animates a corpse as an undead servant!~
+	Mana	100
+	Diff	15
+	Music 	blues 0
+	Skill	"necromancy"
+	Effect	"animate dead"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant'	'Dead flesh!'
+	Step	1 'Chant'	'Listen to me!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant'	'I am your master and you are my servant!'
+	Step	1 'Chant'	'Come back to terrorize the world!'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'Slowly the corpse begins to raise!' 
+			''
+			'Slowly the corpse begins to raise!'  
+	Step	0 'Effect'	'animate dead'
+	Step	0 'Sanity'	50 0 0
+
+
+ SPELL "mummify"
+	Desc	Animates a corpse as an mummy!~
+	Mana	100
+	Diff	25
+        	Info	"parse"
+	Dis	necromancy
+	Skill	"necromancy"
+	Effect	"mummify"
+	Comp	"styrax resin"
+	Step	1 'Prepare Spell'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'Carefully you mummify the corpse.' 
+			''
+			'Carefully @a2 mummifies the corpse.'  
+	Step	5 'Chant'	'Mysteries from the Realm at the Nile!'
+	Step	1 'Chant'	'Blood of the Pharaos!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant'	'I am your master and you are my servant!'
+	Step	1 'Chant'	'Come back to terrorize the world!'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'Slowly the mummy begins to raise!' 
+			''
+			'Slowly the mummy begins to raise!'  
+	Step	0 'Effect'	'mummify'
+	Step	0 'Sanity'	50 0 0
+
+
+ SPELL "doppelganger"
+	Desc	Creates an undead replica of yourself!~
+	Mana	140
+	Diff	25
+	Dis	necromancy
+	Skill	"necromancy"
+	Comp	"magic mirror"
+	Effect	"doppelganger"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant'	'Mirror!'
+	Step	1 'Chant'	'Listen to me!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant'	'Duplicate thy Master!'
+	Step	1 'Chant'	'Double Trouble!'
+	Step	0 'Effect'	'doppelganger'
+	Step	0 'Sanity'	60 0 0
+
+
+ SPELL "lich"
+	Desc	Turns yourself into a greater undead!~
+	Mana	300
+	Diff	35
+	Music 	blues 35
+	Target	1
+	Dis	necromancy
+	Skill	"necromancy"
+	Effect	"lich"
+	Comp	"demon skull"
+	Step	1 'Prepare Spell'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'Slowly you prepare for your last moment alive.' 
+			''
+			'@a2 begins to hum softly.'  
+	Step	1 'Chant'	'Oh honored Dead!'
+	Step	1 'Chant'	'I am here to join you!'
+	Step	1 'Chant'	'Creatures of the Night!'
+	Step	1 'Chant'	'I am here to join you!'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'You gesticulate dramatically!' 
+			''
+			'@a2 gesticulates dramatically!'  
+ 	Step	0 'Cast Spell'
+	Step	1 'Yell'	'Ready to die, I spit in Deaths bony face!'
+	Step	1 'Yell'	'Never will come the day I die!'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'Screaming, you drop to the ground...' 
+			''
+			'Screaming @a2 drops to the ground...'  
+	Step	0 'Effect'	'lich'
+	Step	0 'Sanity'	120 0 0
+
+
+ SPELL "soul blade"
+	Desc	Creates an enchanted sword!~
+	Mana	35
+	Diff	10
+        	Info	"parse"
+	Skill	"necromancy"
+	Effect	"soul blade"
+
+
+ SPELL "chill touch"
+	Desc	Chills the victim and drains their strength!~
+	Target	3
+	Mana	20
+	Skill	"chill touch"
+	Effect	"chill touch"
+
+
+
+#
+# Psyonic Spells
+#
+
+ SPELL "psi twister"
+	Desc	Psyonic attack spell!~
+	Mana	35
+                Diff         5
+	Skill	"way of the duellant"
+	Effect	"psi twister"
+
+
+ SPELL "chaos"
+	Desc	Psyonic attack spell!~
+	Target	3
+ 	Mana	30
+	Diff	10
+	Skill	"chaos magic"
+	Effect	"chaos"
+
+
+ SPELL "mind meld"
+	Desc	Creates a psyonic link that calms the victim!~
+	Target	3
+	Mana	35
+	Diff	15
+	Skill	"mental magic"
+	Effect	"mind meld"
+
+
+ SPELL "psychic anchor"
+	Desc	Lets you set a temporary recall location!~
+	Mana	30
+	Skill	"psychic anchor"
+	Effect	"psychic anchor"
+
+
+ SPELL "material anchor"
+	Desc	Creates an anchor object for you.~
+	Mana	120
+                Diff 	25
+                Info      	"focus"
+	Skill	"psychic anchor"
+	Effect	"greater creation"
+
+
+ SPELL "entropy"
+	Desc	Highly random psyonic attack spell!~
+	Target	3
+	Mana	30
+                Diff         10
+	Skill	"chaos magic"
+	Effect	"entropy"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant'	'Nyarlathotep!'
+	Step	1 'Chant'	'Master of Chaos!'
+	Step	1 'Chant'	'Give me the destructive Power...'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'You giggle in insane glee.' 
+			''
+			'@a2 giggles in insane glee.'  
+	Step	1 'Chant'	'... of Chaos!'
+ 	Step	0 'Cast Spell'
+	Step	0 'Effect'	'entropy'
+
+
+
+#
+# Dream Spells
+#
+	
+ SPELL "true dreaming"
+	Desc	Pulls a drem walker completely into the dream world!~
+	Target	2
+	Mana	30
+	Diff	10
+	Skill	"dream magic"	
+	Effect	"true dreaming"
+	Comp	"dream catcher" 
+
+
+ SPELL "trance"
+	Desc	Improves dreaming!~
+	Target	1
+	Mana	35
+	Skill	"dream magic"	
+	Effect	"trance"
+
+
+ SPELL "rude awakening"
+	Desc	Expells a dream walker from the dream world!~
+	Target	3
+	Mana	30
+	Diff	10
+	Skill	"dream magic"	
+	Effect	"rude awakening"
+	Comp	"silver bell" 
+
+
+ SPELL "recurring dream"
+	Desc	Returns an awakened dreamer to the point they awoke from!~
+	Target	2
+	Mana	20
+	Diff	10
+	Skill	"dream magic"	
+	Effect	"recurring dream"
+	Comp	"brass pendent" 
+
+
+ SPELL "enchanted sleep"
+	Desc	Sends some to sleep and then into the dream world!~
+	Target	3
+	Mana	20
+	Diff	10
+	Skill	"dream magic"	
+	Effect	"enchanted sleep"
+	Comp	"silver sand" 
+
+
+ SPELL "consecrate doll"
+	Desc	Consecratesa voodoo doll to a certain person.~
+	Target	5
+	Mana	150
+	Diff	25
+	Dis	curses
+	Skill	"voodoo"	
+	Effect	"consecrate doll"
+	Comp	"voodoo doll" 
+	Step	1 'Prepare Spell'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'Carefully you put the hair on your voodoo doll.' 
+			''
+			'@a2 carefully puts the hair on the voodoo doll.'  
+	Step	1 'Chant'	'Nyarlathotep!'
+	Step	1 'Chant'	'Master of sinister Arts!'
+	Step	1 'Chant'	'See! This is my Foe!'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'You wave with the doll.' 
+			''
+			'@a2 waves with the doll.'  
+	Step	1 'Chant'	'Give me the Power to scare him!'
+	Step	1 'Chant'	'Give me the Power to harm him!'
+	Step	1 'Chant'	'Give me the Power to kill him!'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'You throw the doll up in the air.' 
+			''
+			'@a2 throws the doll up in the air.'  
+ 	Step	0 'Cast Spell'
+	Step	1 'Chant'	'Now be ready to feel my wrath!'
+	Step	0 'Effect'	'consecrate doll'
+
+
+ SPELL "curse of the mummy"
+	Desc	A terrible version of the normal curse.~
+	Target	5
+	Mana	80
+	Diff	20
+	Dis	curses
+	Skill	"curse"	
+	Effect	"curse of the mummy"
+	Comp	"scarab" 
+	Step	1 'Prepare Spell'
+	Step	1 'Echo' 	'area' 'actor'
+ 			'' 
+			'You feel the anger of the Mummy!'
+			'Cold shivers run down your spine.'  
+	Step	1 'Chant'	'Nyarlathotep!'
+	Step	1 'Chant'	'Dark ruler of Egypt!'
+ 	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'You point in no special direction.' 
+			''
+			'@a2 points somewhere.'  
+	Step	1 'Chant' 'A plague upon you!'
+	Step	1 'Chant' 'A thousand troubles!'
+	Step	1 'Chant' 'A curse upon your poxy life!'
+	Step	1 'Chant' 'Suffer for all eternity!'
+	Step	0 'Effect'	'curse of the mummy'
+
+
+ SPELL "agony"
+	Desc	Harms a victim anywhere in your zone.~
+	Target	5
+	Mana	135
+	Diff	15
+	Dis	curses
+	Skill	"manipulation"	
+	Effect	"agony"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant'	'Feel my Power!'
+	Step	1 'Chant'	'Feel my Wrath!'
+ 	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'You point in no special direction.' 
+			''
+			'@a2 points somewhere.'  
+	Step	1 'Chant' 'Terror upon you!'
+	Step	1 'Chant' 'Agony upon you!'
+	Step	0 'Effect'	'agony'
+
+
+ SPELL "silence"
+	Desc	Mute on a whole room!~
+                Diff         15
+ 	Mana	90
+	Skill	"mute"
+	Effect	"silence"
+
+
+ SPELL "darkness"
+	Desc	Turn a room dark for a while!~
+                Diff         5
+ 	Mana	30
+	Skill	"necromancy"
+	Effect	"darkness"
+
+
+ SPELL "enclosure"
+	Desc	Creates a magic enclosure around the room.~
+                Diff         5
+ 	Mana	70
+	Skill	"summon"
+	Effect	"enclosure"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Lock tight!'
+	Step	1 'Chant' 	'Lock shut!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'No way to escape!'
+	Step	0 'Effect'	'enclosure'
+
+
+ SPELL "cause riot"
+	Desc	Causes mobs to run amok!~
+	Mana	95
+	Diff	25
+	Skill	"chaos magic"
+	Effect	"cause riot"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Chaos upon all of you!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'You are all doomed!'
+	Step	0 'Effect'	'cause riot'
+
+
+ SPELL "telekinesis"
+	Desc	Moves an object from an adjacent room!~
+	Mana	140
+	Diff	15
+        	Info	"parse"
+	Skill	"way of the duellant"
+	Effect	"telekinesis"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Fingers of Force!'
+	Step	1 'Chant' 	'Powers unseen'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Obey my Will!'
+	Step	1 'Chant' 	'Defeat Gravitation!'
+	Step	0 'Effect'	'telekinesis'
+
+
+ SPELL "confuse hunters"
+	Desc	Shakes off all mobs hunting you..~
+	Mana	65
+	Diff	10
+	Skill	"invis"
+	Effect	"confuse hunters"
+                Step	1 'Prepare Spell'
+	Step	1 'Cast Spell'
+	Step	1 'Chant' 'Now I am Here...'
+	Step	1 'Chant' '... now I am Gone!'
+	Step	1 'Effect'	'confuse hunters'
+
+
+ SPELL "astral walk"
+	Desc	Transfers you into your astral body.~
+	Mana	180
+	Skill	"mental magic"
+	Effect	"astral walk"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Mind and Body!'
+	Step	1 'Chant' 	'Split!'
+	Step	1 'Chant' 	'Astral Body, help me travel!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Free my thoughts!'
+	Step	0 'Effect'	'astral walk'
+
+
+ SPELL "astral blast"
+	Desc	Destroys astral beings.~
+	Target  	3
+	Mana	75
+	Diff	35
+	Skill	"mental magic"
+	Effect	"astral blast"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Astral Sphere!'
+	Step	1 'Chant' 	'Unrest!'
+	Step	1 'Chant' 	'Move!'
+	Step	0 'Cast Spell'
+	Step	1 'Chant' 	'Destoy!'
+	Step	0 'Effect'	'astral blast'
+
+
+ SPELL "lesser oracle"
+	Desc	Creates a lesser oracle.~
+	Mana	150
+	Skill	"clairvoyance"
+	Effect	"oracle"
+	Step	1 'Prepare Spell'
+	Step	1 'Chant' 	'Let me see the future!'
+	Step	1 'Chant' 	'Give me a sign!'
+	Step	1 'Chant' 	'Astral Body, help me travel!'
+	Step	0 'Cast Spell'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'You feel an oracle coming.' 
+			''
+			''  
+	Step	1 'Chant' 	'Tell the truth!'
+	Step	1 'Echo' 	'room' 'actor'
+ 			'A message from the gods forms in your mind.' 
+			''
+			''  
+	Step	0 'Effect'	'oracle'
+
+#
+# End of file
+#
+	
+End
+

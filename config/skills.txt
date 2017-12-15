@@ -1,0 +1,1220 @@
+# Skill File
+#
+# This defines the skills a character can possess
+#
+# Format:
+#
+#  SKILL name~                  // Name of the skill
+#       Learn nnn               // Adjustment for learning:
+#                               //       50     Twice gain
+#                               //      100     Normal gain
+#                               //      200     Half gain
+#                               //      400     Quarter gain
+#       Group nnn               // Skill group:
+#                               //       1      Magic
+#                               //       2      Combat
+#                               //       4      Knowledge
+#                               //       8      Modern language
+#                               //      16      Anchient language
+#                               //      32      Cthonic language
+#                               //      64      Academic
+#                               //     128      Production
+#       Stats nn nn             // Bases stat(s) for the skill:
+#                               //      -1      No stat
+#                               //       0      Strength
+#                               //       1      Inteligence
+#                               //       2      Wisdom
+#                               //       3      Dexterity
+#                               //       4      Constitution
+#       Unlearnable             // The skill cannot be learnt or practiced,
+#                               // but can only be increaased through usage.
+#       Beats nnn               // The number of pulses you have to wait
+#                               // after using the skill.  Default 12, but
+#                               // not all skills use it.
+#                               // 1 pulse is a quarter of a second.
+#       MinPos n                // Minimum position to use the skill.
+#                               //      0       Dead
+#                               //      1       Mortally Wounded
+#                               //      2       Incapacatated
+#                               //      3       Stunned
+#                               //      4       Sleeping
+#                               //      5       Resting (Default)
+#                               //      6       Sitting
+#                               //      7       Fighting
+#                               //      8       Standing
+#       PreCond condition       // This specifies a condition that must be
+#                               // stisfied before the skill can be
+#                               // learnt. Conditions are:
+#                               //      1 'skill_name' low high
+#                               //      2 'level' low high
+#                               //      3 'race_name' 0 0
+#                               //      4 'prof_name' low high
+#                               //      5 'light' low high
+#                               //      6 'align' low high
+#                               //      7 'moon' low high
+#                               //      8 'clan_name' low high
+#                               //      9 'time' low high
+#                               //      10 'month' low high
+#                               //      11 'gender' g1 g2
+#
+# Note: The entry names are case sensative.
+#
+# Note: Spells must also be defined in spells.txt
+#
+
+# Basics
+
+SKILL education~
+        Group 64
+
+SKILL spell casting~
+        Group 5
+        
+SKILL ritual mastery~
+        Group 5
+        Learn 200
+        PreCond 1 1 'spell casting' 60 -1
+        Undebate
+
+SKILL dreaming~
+        Group 5
+	Learn 120
+
+
+
+# Spells
+
+SKILL absorb magic~
+        Group 1
+        Beats 4
+
+SKILL acid blast~
+        Group 1
+
+SKILL acid breath~
+        Group 1
+        Beats 4
+
+SKILL age~
+        Group 1
+        Unlearnable
+        Undebate
+
+SKILL aura~
+        Group 1
+        Learn 200
+        Unlearnable
+        Undebate
+
+SKILL armor~
+        Group 1
+
+SKILL bless~
+        Group 1
+
+SKILL blindness~
+        Group 1
+
+SKILL body control~
+        Group 1
+        Learn 300
+        Beats 12
+        Undebate
+
+SKILL burning hands~
+        Group 1
+
+SKILL call lightning~
+        Group 1
+
+SKILL calm~
+        Group 1
+
+SKILL cancellation~
+        Group 1
+
+SKILL chain lightning~
+        Group 1
+
+SKILL charm person~
+        Group 1
+
+SKILL chill touch~
+        Group 1
+
+SKILL clairvoyance~
+        Group 1
+        Unlearnable
+        Undebate
+
+SKILL colour spray~
+        Group 1
+
+SKILL control weather~
+        Group 1
+
+SKILL create spring~
+        Group 1
+
+SKILL cure blindness~
+        Group 1
+
+SKILL cure critical~
+        Group 1
+
+SKILL cure light~
+        Group 1
+
+SKILL cure serious~
+        Group 1
+
+SKILL cause light~
+        Group 1
+
+SKILL cause critical~
+        Group 1
+
+SKILL cause serious~
+        Group 1
+
+SKILL chaos magic~
+        Group 1
+        Learn 300
+        Beats 16
+        Undebate
+
+SKILL cure disease~
+        Group 1
+
+SKILL cure poison~
+        Group 1
+
+SKILL curse~
+        Group 1
+
+SKILL demonfire~
+        Group 1
+
+SKILL detect hidden~
+        Group 1
+
+SKILL detect evil~
+        Group 1
+
+SKILL detect good~
+        Group 1
+
+SKILL detect invis~
+        Group 1
+
+SKILL detect magic~
+        Group 1
+
+SKILL detect poison~
+        Group 1
+
+SKILL divine magic~
+        Group 1
+        Beats 15
+        Learn 500
+        PreCond 1 1 'spell casting' 100 -1
+        Unlearnable
+        Undebate
+
+SKILL dispel evil~
+        Group 1
+
+SKILL dispel good~
+        Group 1
+
+SKILL dispel magic~
+        Group 1
+
+SKILL dream magic~
+        Group 1
+        Beats 12
+        Learn 250
+        PreCond 1 1 'dreaming' 40 -1
+        Undebate
+
+SKILL earthquake~
+        Group 1
+
+SKILL elder magic~
+        Group 1
+        Beats 15
+        Learn 500
+        PreCond 1 1 'spell casting' 100 -1
+        PreCond 1 1 'ritual mastery' 100 -1
+        Unlearnable
+        Undebate
+
+SKILL elemental shield~
+        Group 1
+        Learn 400
+
+SKILL energy drain~
+        Group 1
+
+SKILL exorcism~
+        Group 1
+
+SKILL faerie fire~
+        Group 1
+
+SKILL faerie fog~
+        Group 1
+
+SKILL manipulation~
+        Group 1
+
+SKILL fireball~
+        Group 1
+
+SKILL fire breath~
+        Group 1
+        Beats 4
+
+SKILL flamestrike~
+        Group 1
+
+SKILL fly~
+        Group 1
+        Beats 18
+
+SKILL frenzy~
+        Group 1
+        Beats 24
+        Unlearnable
+        Undebate
+
+SKILL frost breath~
+        Group 1
+        Beats 4
+
+SKILL gas breath~
+        Group 1
+        Beats 4
+
+SKILL gate~
+        Group 1
+
+SKILL giant strength~
+        Group 1
+
+SKILL harm~
+        Group 1
+        Learn 200
+
+SKILL haste~
+        Group 1
+
+SKILL heal~
+        Group 1
+        Learn 150
+
+SKILL holy word~
+        Group 1
+        Beats 24
+        Undebate
+
+SKILL identify~
+        Group 1
+        Beats 24
+
+SKILL vision~
+        Group 1
+        Learn 150
+
+SKILL invis~
+        Group 1
+
+SKILL know alignment~
+        Group 1
+
+SKILL lesser possession~
+        Group 1
+
+SKILL greater possession~
+        Group 1
+        Learn 150
+        PreCond 1 1 'lesser possession' 40 -1
+        Undebate
+
+SKILL lightning bolt~
+        Group 1
+
+SKILL lightning breath~
+        Group 1
+        Beats 4
+
+SKILL locate object~
+        Group 1
+        Beats 4
+
+SKILL magic missile~
+        Group 1
+
+SKILL mask self~
+        Group 1
+        Undebate
+
+SKILL mass healing~
+        Group 1
+        Beats 36
+        Undebate
+
+SKILL mass invis~
+        Group 1
+        Beats 24
+        Undebate
+
+SKILL mental magic~
+        Group 1
+        Beats 24
+
+SKILL mute~
+        Group 1
+
+SKILL necromancy~
+        Group 1
+        Learn 200
+        Beats 15
+        PreCond 1 1 'spell casting' 60 -1
+        Unlearnable
+        Undebate
+
+SKILL negate alignment~
+        Group 1
+
+SKILL pass door~
+        Group 1
+
+SKILL plague~
+        Group 1
+
+SKILL poison~
+        Group 1
+
+SKILL portal~
+        Group 1
+        Beats 16
+        Undebate
+
+SKILL protection evil~
+        Group 1
+
+SKILL protection good~
+        Group 1
+
+SKILL protective magic~
+        Group 1
+        Learn 250
+
+SKILL psychic anchor~
+        Group 1
+
+SKILL refresh~
+        Group 1
+        Beats 18
+
+SKILL regeneration~
+        Group 1
+
+SKILL remove curse~
+        Group 1
+        Undebate
+
+SKILL remove fear~
+        Group 1
+
+SKILL remove invis~
+        Group 1
+
+SKILL shield~
+        Group 1
+        Beats 18
+
+SKILL shocking grasp~
+        Group 1
+
+SKILL sleep~
+        Group 1
+
+SKILL summon~
+        Group 1
+
+SKILL summon familier~
+        Group 1
+        Beats 15
+
+SKILL harden skin~
+        Group 1
+        Beats 18
+     	Learn 300
+
+SKILL teleport~
+        Group 1
+
+SKILL ventriloquate~
+        Group 1
+
+SKILL vocalize~
+        Group 1
+
+SKILL voodoo~
+        Group 1
+        Learn 200
+        Beats 15
+        PreCond 1 1 'spell casting' 60 -1
+        Unlearnable
+        Undebate
+
+SKILL water breathing~
+        Group 1
+        Beats 12
+
+SKILL way of the conjurer~
+        Group 1
+        Beats 15
+        Learn 200
+        PreCond 1 1 'spell casting' 70 -1
+        Undebate
+
+SKILL way of the duellant~
+        Group 5
+        Learn 400
+        Undebate
+
+SKILL way of nature~
+        Group 1
+        Beats 15
+        Learn 200
+        PreCond 1 1 'spell casting' 70 -1
+        Unlearnable
+        Undebate
+
+SKILL weaken~
+        Group 1
+
+SKILL word of recall~
+        Group 1
+
+SKILL youth~
+        Group 1
+        Beats 24
+        Unlearnable
+        Undebate
+
+
+
+# Artifact production/enhancement skills
+
+SKILL brand~
+        Group 129
+        Beats 24
+
+SKILL brew~
+        Group 129
+        Beats 12
+        Learn 125
+
+SKILL continual light~
+        Group 129
+
+SKILL create water~
+        Group 129
+
+SKILL create food~
+        Group 129
+
+SKILL create buffet~
+        Group 129
+        PreCond 1 1 'create food' 60 -1
+
+SKILL create potion~
+        Group 129
+        Beats 24
+
+SKILL enchant armor~
+        Group 129
+        Beats 24
+
+SKILL enchant weapon~
+        Group 129
+        Beats 24
+        PreCond 1 1 'brand' 60 -1
+
+SKILL scribe~
+        Group 129
+        Beats 12
+        Learn 125
+
+SKILL taumathurgy~
+        Group 129
+        Beats 18
+        Learn 400
+        Undebate
+
+
+
+
+# Weapon Skills
+
+SKILL axe~
+        Group 2
+
+SKILL axe master~
+        Group 2
+        Learn 125
+        PreCond 1 1 'axe' 80 -1
+
+SKILL dagger~
+        Group 2
+
+SKILL dagger master~
+        Group 2
+        Learn 125
+        PreCond 1 1 'dagger' 80 -1
+
+SKILL flail~
+        Group 2
+
+SKILL flail master~
+        Group 2
+        Learn 125
+        PreCond 1 1 'flail' 80 -1
+
+SKILL mace~
+        Group 2
+
+SKILL mace master~
+        Group 2
+        Learn 125
+        PreCond 1 1 'mace' 80 -1
+
+SKILL polearm~
+        Group 2
+
+SKILL polearm master~
+        Group 2
+        Learn 125
+        PreCond 1 1 'polearm' 80 -1
+
+SKILL spear~
+        Group 2
+
+SKILL spear master~
+        Group 2
+        Learn 125
+        PreCond 1 1 'spear' 80 -1
+
+SKILL sword~
+        Group 2
+
+SKILL sword master~
+        Group 2
+        Learn 125
+        PreCond 1 1 'sword' 80 -1
+
+SKILL whip~
+        Group 2
+
+SKILL whip master~
+        Group 2
+        Learn 125
+        PreCond 1 1 'whip' 80 -1
+
+
+
+# Unarmed combat...
+
+SKILL hand to hand~
+        Group 2
+
+SKILL martial arts~
+        Group 2
+        Learn 125
+        PreCond 1 1 'hand to hand' 40 -1
+        Amateur
+
+SKILL black belt~
+        Group 2
+        Learn 150
+        PreCond 1 1 'martial arts' 80 -1
+
+
+
+# Gun skills...
+
+SKILL handgun~
+        Group 2
+
+SKILL gun~
+        Group 2
+        PreCond 1 1 'handgun' 60 -1
+
+SKILL submachinegun~
+        Group 2
+        PreCond 1 1 'gun' 60 -1
+
+SKILL marksman~
+        Group 2
+        Learn 125
+        PreCond 1 1 'gun' 60 -1
+
+SKILL bow~
+        Group 2
+	Amateur
+
+SKILL master archer~
+        Group 2
+        Learn 125
+        PreCond 1 1 'bow' 60 -1
+
+# Assorted combat manouvers...
+
+SKILL backstab~
+        Group 2
+        Beats 24
+	Undebate
+
+SKILL assassinate~
+        Group 2
+        Beats 24
+        Learn 200
+        PreCond 1 1 'backstab' 60 -1
+	Undebate
+
+SKILL bash~
+        Group 2
+        Beats 24
+	Undebate
+
+SKILL blackjack~
+        Group 2
+        Beats 24
+        Learn 200
+        PreCond 1 1 'backstab' 60 -1
+	Undebate
+
+SKILL berserk~
+        Group 2
+        Beats 24
+	Undebate
+
+SKILL circle~
+        Group 2
+        Beats 24
+	Undebate
+
+SKILL crush~
+        Group 2
+	Learn 125
+        Beats 24
+	Undebate
+
+SKILL dirt kicking~
+        Group 2
+        Beats 24
+	Undebate
+
+SKILL disarm~
+        Group 2
+        Learn 125
+        Beats 24
+	Undebate
+
+SKILL envenom~
+        Group 2
+        Beats 36
+
+SKILL kick~
+        Group 2
+        Beats 12
+	Undebate
+
+SKILL rescue~
+        Group 2
+        Beats 12
+	Undebate
+
+SKILL riding~
+        Group 2
+        Beats 12
+	Undebate
+	Amateur
+
+SKILL rotate~
+        Group 2
+        Beats 8
+	Undebate
+
+SKILL sharpen~
+        Group 2
+        Beats 16
+	Undebate
+
+SKILL strangle~
+        Group 2
+        Beats 12
+	Undebate
+
+SKILL strong grip~
+        Group 2
+        Learn 300
+	Undebate
+
+SKILL tactics~
+        Group 2
+        Learn 250
+        Beats 28
+        Undebate          
+
+SKILL tail~
+        Group 2
+	Learn 125
+        Beats 24
+	Undebate
+       
+SKILL tame~
+        Group 2
+        Beats 36
+	Amateur
+
+SKILL trip~
+        Group 2
+        Beats 18
+	Undebate
+
+
+
+# General defense...
+
+SKILL dodge~
+        Group 2
+
+SKILL parry~
+        Group 2
+
+SKILL shield block~
+        Group 2
+
+
+
+# General attack enhancement...
+
+SKILL dual~
+        Group 2
+        Learn 125
+
+SKILL second attack~
+        Group 2
+        Learn 125
+
+SKILL third attack~
+        Group 2
+        Learn 150
+        PreCond 1 1 'second attack' 60 -1
+
+SKILL fourth attack~
+        Group 2
+        Learn 200
+        PreCond 1 1 'third attack' 80 -1
+
+
+
+
+# General damage enhancement...
+
+SKILL enhanced damage~
+        Group 2
+        Learn 125
+
+SKILL ultra damage~
+        Group 2
+        Learn 150
+        PreCond 1 1 'enhanced damage' 60 -1
+
+SKILL lethal damage~
+        Group 2
+        Learn 200
+        PreCond 1 1 'ultra damage' 80 -1
+        Unlearnable
+
+
+
+# General skills
+
+SKILL climb~
+        Group 4
+	Amateur
+
+SKILL explosives~
+        Group 4
+	Learn 250
+        Beats 36
+
+SKILL fast healing~
+        Group 4
+
+SKILL forging~
+        Group 4
+	Learn 200
+
+SKILL haggle~
+        Group 4
+	Amateur
+
+SKILL hide~
+        Group 4
+        Beats 12
+
+SKILL leadership~
+        Group 4
+        Learn 250
+
+SKILL lore~
+        Group 4
+        Beats 18
+        Learn 125
+
+SKILL master dreamer~
+        Group 5
+	Learn 120
+        PreCond 1 1 'dreaming' 70 -1 
+        Unlearnable
+        Undebate
+
+SKILL meditation~
+        Group 4
+
+SKILL natural magic~
+        Group 5
+
+SKILL peek~
+        Group 4
+
+SKILL pick lock~
+        Group 4
+        Beats 12
+
+SKILL recall~
+        Group 4
+        Beats 12
+
+SKILL recruit~
+        Group 4
+
+SKILL scrolls~
+        Group 4
+        Beats 24
+
+SKILL scrying~
+        Group 5
+	Learn 150
+
+SKILL search~
+        Group 4
+
+SKILL sneak~
+        Group 4
+
+SKILL streetwise~
+        Group 4
+
+SKILL swim~
+        Group 4
+	Amateur
+
+SKILL staves~
+        Group 4
+
+SKILL staff~
+        Group 4
+
+SKILL staff master~
+        Group 4
+        Learn 125
+        PreCond 1 1 'staff' 80 -1
+
+SKILL steal~
+        Group 4
+        Beats 24
+
+SKILL tailor~
+        Group 4
+	Learn 200
+
+SKILL teach~
+        Group 4
+        Beats 24
+
+SKILL tracking~
+        Group 4
+
+SKILL traps~
+        Group 4
+	Learn 150
+        Beats 36
+
+SKILL wands~
+        Group 4
+
+
+
+# Music
+
+SKILL music~
+        Group 4
+        Amateur
+
+SKILL singing~
+        Group 4
+	Learn 125
+        PreCond 1 1 music 45 -1
+        Undebate
+
+SKILL percussion~
+        Group 4
+        PreCond 1 1 music 75 -1
+        Undebate
+
+SKILL strings~
+        Group 4
+	Learn 125
+        PreCond 1 1 music 40 -1
+        Undebate
+
+SKILL flute~
+        Group 4
+	Learn 125
+        PreCond 1 1 music 70 -1
+        Undebate
+
+SKILL brass~
+        Group 4
+	Learn 125
+        PreCond 1 1 music 80 -1
+        Undebate
+
+SKILL piano~
+        Group 4
+	Learn 125
+        PreCond 1 1 music 35 -1
+        Undebate
+
+SKILL organ~
+        Group 4
+	Learn 175
+        PreCond 1 1 music 75 -1
+        PreCond 1 1 piano 50 -1
+        Undebate
+
+SKILL sound crystal~
+        Group 4
+	Learn 225
+        PreCond 1 1 music 45 -1
+        PreCond 1 1 'ritual mastery' 40 -1
+        Undebate
+
+
+
+# Modern Languages
+
+SKILL chinese~
+        Group 8
+        Learn 150
+
+SKILL english~
+        Group 8
+
+SKILL french~
+        Group 8
+	Amateur
+
+SKILL gaelic~
+        Group 8
+
+SKILL german~
+        Group 8
+	Amateur
+
+SKILL italian~
+        Group 8
+	Amateur
+
+SKILL japanese~
+        Group 8
+        Learn 150
+
+SKILL polish~
+        Group 8
+
+SKILL spanish~
+        Group 8
+	Amateur
+
+
+
+
+# Ancient languages
+
+SKILL arabic~
+        Group 24
+        Learn 125
+
+SKILL greek~
+        Group 24
+	Amateur
+
+SKILL hebrew~
+        Group 24
+
+SKILL heiroglyphics~
+        Group 16
+        Learn 150
+
+SKILL latin~
+        Group 16
+	Amateur
+
+SKILL mayan~
+        Group 16
+        Learn 200
+
+SKILL old english~
+        Group 16
+	Amateur
+
+SKILL romany~
+        Group 16
+
+
+
+
+
+# Cthonian languages
+
+SKILL atlantean~
+        Group 32
+
+SKILL cthonic~
+        Group 32
+
+SKILL stygian~
+        Group 32
+
+
+
+
+# Academic Skills
+
+SKILL accounting~
+        Group 64
+
+SKILL anthrapology~
+        Group 64
+
+SKILL astronomy~
+        Group 64
+	Amateur
+
+SKILL biology~
+        Group 64
+	Amateur
+
+SKILL bandage~
+	Group 64
+        Beats 64
+        PreCond 1 1 biology 30 -1
+
+SKILL chemistry~
+        Group 64
+	Amateur
+
+SKILL debating~
+	Group 64
+        PreCond 1 1 education 30 -1
+
+SKILL detection~
+        Group 64
+
+SKILL dissertation~
+        Group 64
+        Undebate
+
+SKILL geology~
+        Group 64
+
+SKILL world geography~
+        Group 64
+	Amateur
+
+SKILL ancient geography~
+        Group 64
+	Amateur
+
+SKILL modern history~
+        Group 64
+	Amateur
+
+SKILL ancient history~
+        Group 64
+	Amateur
+
+SKILL interrogate~
+	Group 64
+        PreCond 1 1 debating 30 -1
+
+SKILL intimidate~
+	Group 64
+        PreCond 1 1 debating 30 -1
+
+SKILL physics~
+        Group 64
+	Amateur
+
+SKILL psychology~
+	Group 64
+        Beats 128
+        PreCond 1 1 debating 30 -1
+
+SKILL occult~
+        Group 64
+	Amateur
+
+SKILL survival~
+        Group 64
+        Learn 125
+        Amateur
+
+SKILL theology~
+        Group 64
+	Amateur
+
+SKILL world affairs~
+        Group 64
+
+SKILL arkham~
+	Group 64
+
+SKILL ulthar~
+	Group 64
+
+SKILL dreamlands~
+	Group 64
+
+SKILL innsmouth~
+	Group 64
+
+SKILL yuggoth~
+	Group 64
+
+
+
+# There must be an 'End' at the end.
+
+End
+
+

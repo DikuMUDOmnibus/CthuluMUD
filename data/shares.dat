@@ -1,0 +1,40 @@
+SHARE 'general electric'
+\n\r~
+Ok YES
+Emission 1551
+Npc 273
+Raw 50
+Balance -1 -1 -1 1 1 0 0 -5 1 0 -3 3 0 0 1 1 3 3 -3 0 0 -3 1 3 -1 1 0 0 5 3 1 3 
+SHARE 'virginia coal and iron'
+\n\r~
+Ok YES
+Emission 1637
+Npc 333
+Raw 70
+Balance 1 -1 -1 -1 1 0 0 1 -1 0 -1 -1 0 0 -1 1 -1 -1 -1 0 0 3 -1 -1 1 -3 0 0 1 -1 1 3 
+SHARE 'the floating vagabond'
+The Floating Vagabond is mainly own by the partners Arithon Beuregarde
+Kinkade and Hawk A.  Luger.  The Floating Vagabond is a company that
+supplies almost any form of entertainment and excitement for those willing
+to pay for it.  The services rendered spans the range from a simple bash on
+the town to a travel to far of and unchartered places.  Seeing a bright
+future in entertainment wither if is travel, leisure, movies, radio, books
+and so on The Floating Vagabond has gone public in a bid to give the people
+of the world a chance to get on the entertainment bandwagon.  Making it
+possible for The Floating Vagabond to provide a wide range of entertainment
+to suit the individual customers needs.
+~
+Owner 'Arithon'
+Ok YES
+Emission 20
+Npc 5
+Raw 55
+Balance -1 -1 1 0 0 0 0 1 0 0 3 -1 0 0 1 -2 1 0 1 0 0 0 0 -3 0 1 0 0 -1 3 0 0 
+SHARE 'ford motor company'
+(null)~
+Ok NO
+Emission 2899
+Npc 560
+Raw 51
+Balance -1 -1 1 -1 -1 0 0 -3 1 0 1 -3 0 0 -1 3 1 -1 -3 0 0 -1 3 1 1 -3 0 0 -1 -3 1 3 
+END

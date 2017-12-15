@@ -1,0 +1,204 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; I) [Netscape]">
+   <title>The Resets Content</title>
+</head>
+<body text="#C0C0C0" bgcolor="#FFFFFF" link="#0000FF" vlink="#000080" alink="#996633" background="paper.jpg">
+&nbsp;
+<center>
+<p><b><font face="Arial"><font color="#006600"><font size=+2>Introduction</font></font></font></b></center>
+
+<p><br>
+<br>
+<p><font face="Arial"><font color="#000000"><font size=+0>Resets are required
+if your area is to restore itself after players have come through, slaughtered
+all the poor mobiles and hauled off every object not nailed down. A series
+of resets lets the area re-load the mobiles and objects you want in it
+every time the area "resets" itself. The frequency of this action depends
+on whether there are players present in the area. Areas reset much faster
+without players present, as presumably the players will leave an area once
+they cleaned it out. The delayed reset while players are present is to
+prevent them from becoming overwhelmed by a continually regenerating army
+of mobiles. Note: If you want an ever regenering horde of mobiles, simply
+add MOBprograms that load up copies of the mobs each time they die. Otherwise
+you will have to be satisfied that your mobiles and objects will only be
+present once for each reset defined until the area resets itself.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="resetsorder"></a><b><font face="Arial"><font color="#006600"><font size=+1>Order
+of Resets</font></font></font></b></center>
+
+<p><font face="Arial"><font color="#000000"><font size=+0>The order of
+your resets must follow a logical progression, especially if you plan on
+equiping mobiles with items or having containers reset with items inside
+them. Object resets intended for a mobile to wear or carry need to be set
+directly after the reset for the mobile. The same applies for objects reseting
+inside container objects. First define the reset for the container object
+in the room or on a mob (with the mobile reset defined first). Then define
+the resets for the objects to be placed inside the container object. To
+view the current order of resets in a room, simply use the <tt>RESETS</tt>
+command.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="resetsmob"></a><b><font face="Arial"><font color="#006600"><font size=+1>Mobile
+Resets</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>MRESET [VNUM]
+[MAX #]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0><b>[MAX #]</b>
+is the maximum number of mobiles allowed and will default to 1 if no value
+is specified. This regulator works, even if mobs wander off.</font></font></font>
+<br><font face="Arial"><font size=+0></font></font>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="resetsobj"></a><b><font face="Arial"><font color="#006600"><font size=+1>Object
+Resets</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>ORESET [VNUM]
+[MAX #]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>ORESET [VNUM]
+[MAX #] [IN_OBJECT NAME]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>ORESET [VNUM]
+[MAX #] [ON_MOB NAME] [WEAR LOCATION]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0><b>[MAX]</b>
+should be set to 1 unless the mobile will carry two of the same item (it
+wears two rings for example, but each ring will require a separate reset).</font></font></font>
+<br><font face="Arial"><font color="#000000"><font size=+0><b>[LOCATION
+ON BODY]</b> loads the object with the mobile wearing the item in that
+equipment slot. <tt>None</tt> loads the object in the mobile's inventory.
+The list of locations is:</font></font></font>
+<br><font color="#000000"></font>&nbsp;
+<br><font color="#000000"></font>&nbsp;
+<table COLS=4 WIDTH="100%" >
+<tr>
+<td><font color="#000000">none</font></td>
+
+<td><font color="#000000">light</font></td>
+
+<td><font color="#000000">lfinger</font></td>
+
+<td><font color="#000000">rfinger</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">neck1</font></td>
+
+<td><font color="#000000">neck2</font></td>
+
+<td><font color="#000000">body</font></td>
+
+<td><font color="#000000">head</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">legs</font></td>
+
+<td><font color="#000000">feet</font></td>
+
+<td><font color="#000000">hands</font></td>
+
+<td><font color="#000000">arms</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">shield</font></td>
+
+<td><font color="#000000">about</font></td>
+
+<td><font color="#000000">waist</font></td>
+
+<td><font color="#000000">lwrist</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">rwrist</font></td>
+
+<td><font color="#000000">wiended</font></td>
+
+<td><font color="#000000">hold</font></td>
+
+<td><font color="#000000">pride</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">ears</font></td>
+
+<td><font color="#000000">float</font></td>
+
+<td><font color="#000000">face</font></td>
+
+<td><font color="#000000">eyes</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">back</font></td>
+
+<td><font color="#000000">tattoo</font></td>
+
+<td><font color="#000000"></font></td>
+
+<td><font color="#000000"></font></td>
+</tr>
+
+<tr>
+<td><font color="#000000"></font></td>
+
+<td><font color="#000000"></font></td>
+
+<td><font color="#000000"></font></td>
+
+<td><font color="#000000"></font></td>
+</tr>
+
+<tr>
+<td><font color="#000000"></font></td>
+
+<td><font color="#000000"></font></td>
+
+<td><font color="#000000"></font></td>
+
+<td><font color="#000000"></font></td>
+</tr>
+</table>
+<font color="#000000"></font>
+<p><br>
+<br>
+<BR><font face="Arial"><font size=+0></font></font>
+<center>
+<p><a NAME="resetsshop"></a><b><font face="Arial"><font color="#006600"><font size=+1>Shop
+Resets</font></font></font></b></center>
+
+<p><font face="Arial"><font color="#000000"><font size=+0>Items to be sold
+in shops are added to the shopkeeper flagged mobile with resets in the
+same way regular mobiles are equipped. You must specify the location as
+<b><tt>None</tt></b>. The maximum number may be disregarded as the reset
+strips this value on a shopkeeper mobile. Note, however, that a shopkeeper
+does not need to have shop types defined to sell items--they are only required
+if the shopkeeper is intended to buy specific types of items. Selling items
+merely requires that all the objects to be sold are defined with resets
+in the shopkeeper's inventory.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<center>
+<p><a NAME="resetsdel"></a><b><font face="Arial"><font color="#006600"><font size=+1>Deleting
+Resets</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>RESET [#]
+DELETE</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Nothing more
+to it. These are all the commands you will require to succesfully establish
+resets within your area.</font></font></font>
+<br>&nbsp;
+</body>
+</html>

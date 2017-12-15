@@ -1,0 +1,212 @@
+CthulhuMud Driver 3
+-------------------
+   Specials (special.c)
+     Extended teleTracker and TeleHunter to behave differently for flying
+       Mobs.  They won't go inside and print fly messages rather than 
+       teleport messages.
+
+   XP hiding (act_info.c, fight.c, act_comm.c)
+     Score - Blurred xps to next level(few/some/lots) , hid total xps.
+     Report - Removed xp total.
+     Worth - removed xp total and xps to next level.
+     Group - removed xp column.
+     Fighting - Blurred xps gained (none/few/some/lots).
+              - Flee loss dropped to 5, removed from message.
+     Gods can still see xps through stat.
+
+   Show command (act_info.c, interp.c, interp.h)
+     Shows selected object to all other characters in the room.
+
+   Examine command (act_info.c)
+     Now shows:
+       Long description
+       All extra descriptions matching the first name word
+       Attribues (invis, glowing, humming, auras etc...)
+       Condition
+     Shared subroutine with show. 
+     Preparation for skill filtering of the extra descriptions.
+     Improved message for containers and corpses.
+
+   Look command (act_info.c)
+     Will show all extra_descriptions matching the keyword, not
+       just the first one.
+     Preparation for skill filtering of the extra descriptions.
+     
+   STAT hiding (statdesc.h, act_info.c, comm.c)
+     Stats shown as VLow/Low/Poor/Average/Good/High/VHigh.
+     Same for initial roll.
+     Stats on initial roll now include class and race bonuses. 
+     Stat roll changed from 5d4 to:
+           Prime stat: 13 + 2d4  15 / 18   / 21
+           Int & Wis :  8 + 3d4  11 / 15.5 / 20
+           Other     :  4 + 4d4   8 / 14   / 20
+       - Should get a playable character.
+       - Prime stat used to always be +2. 
+       - Race modifiers included, but only PC race is human.
+       - Might help cut down on the number of rerolls.
+       - The masking helps quite a lot as well.
+     Gods can still see stats through stat.
+
+   Practice (update.c, act_info.c)
+     Number of practices gained determine by average is WIS and the
+       classes prime stat.  This means you can be a warrior with average
+       WIS and high STR and get 3 practices rather than 2.
+     Skill gain from practice determined by average of INT and the
+       classes primary stat.  This means you can be a warrior with
+       average INT and high STR get +7% per practice rather than +5%.
+       The value is also fuzzed by +/- 1 (25%/50%/25%).   
+     The top of the skill gain table has also be made more linear.
+       Maximum gain ((INT+xxx)/2 = 25) is now 17%. It was 21%.
+       The effect is only noticable when (INT+xxx)/2 is over 22.
+     Hopefully these changes will pull the average practices per level
+       towards 3 or 4, and the averge gain per practice towards 7 or 8%. 
+       It will help the stupid and foolish, while not hurting the cleaver
+       and wise.
+
+   OLC (old_act.c)
+     Modified ed to handle multiple keyword descriptions.
+       The add subcommand takes all following words as keywords.
+       Added a change subcommand to change keywords for a description.
+       Room editor now shows them delimited like the object editor does. 
+       Changes for both the room and objects versions of the ed command.
+     Modified sector so it also sets the inside and dark flags.
+       Sector underground -> inside, dark
+       Sector inside      -> inside, light
+       Sector xxxx        -> outside, light
+ 
+   Mobs (db.c, merc.h, bit.c)
+     Added an ACT_RAND_KIT flag.  The mob will only get random equipment
+       if it is set.
+
+   Spells (magic.c, magic.h, db.c, const.c)
+     Added a 'create_potion' spell that makes a random potion.
+
+   Look/Examine (act_info.c)
+     Objects now show their condition if it isn't perfect.
+     Characters do so as well.
+     Objects show if they are closed. 
+
+   Terrain (const.c, merc.h, bit.c, act_move.c)
+     Added Swamp, Moor and Space.
+     Added Misty room attribute (stops scan).
+     Added hostile sector types:
+        space      - 3d4 drowning damage, 4d6 cold damage
+        underwater - 3d4 drowning damage 
+        small fire - 3d4 fire damage
+        fire       - 5d6 fire damage
+        big fire   - 7d8 fire damage 
+        cold       - 4d6 cold damage 
+        acid       - 2d6 acid damage 
+        lightning  - 8d10 lightning damage, chance = level
+        holy       - 5d10 holy damage, scaled by alignment
+        evil       - 5d10 negative damage, scaled by alignment
+     Added Environment pulse, so fires once every 10 seconds.
+
+   Guns (const.c, db.c, merc.h, fight.c, bit.c, handler.c, act_obj.c
+         act_info.c)
+     Added two kills - gun and handgun
+     Added three weapon types - WEAPON_GUN, WEAPON_HANDGUN & WEAPON_SMG
+     Added new damage type - DAM_SHOT
+     Added immunity - IMM_BULLETS, RES_BULLETS, VULN_BULLETS
+     Added new weapon damage type - shot
+     Added new mob damage type - shot
+     Guns go BANG! (when they work)
+     Guns go Click! (when empty)
+     Guns are silent (when jammed)
+     Guns can have 1, 2, 6, 12, 36 or 108 shots
+     Removing and rewield/dualing a gun reloads it and clears any jams
+     Dual guns (probably handguns - guns and smgs should be 2 handed) work 
+
+   Locker support (locker.c, merc.h, act_info.c, act_move.c, db.c, db2.c
+                   act_obj.c, handler.c, magic.c, bit.c, olc_act.c)
+     Added locker.c to save and restore lockers.
+     Added ITEM_LOCKER, ITEM_LOCKER_KEY and ITEM_CLAN_LOCKER.
+     You need a locker key to open any locker (they are pick proof).
+     Unlimited capacity.
+     Lockers are saved to disk once every 60 seconds when open.
+       - only open lockers saved
+       - save uses temp file, just in case...
+     Personal lockers use file '../player/name.locker.gz'
+     Clan lockers use file '../player/clan.n.locker.gz'
+     Mechanism to ensure that the same locker is only open in one place.
+       - big consistency problems if this is done otherwise.
+
+   Banks (bank.c, merc.h, wiz_act.c, act_obj.c, db.c)
+     Bank commands available everywhere.
+       - Only work in a room with a bank taller.
+     Bank teller is a shop_keeper with no buy items.
+     Commands are balance, deposit and withdraw.
+     Interest is 0.1%, calculated daily (3%/month, 42%/year).
+     Complete bank data saved after every transaction.
+     Bank data stored in file /clan/banks.txt.
+     Accounts with 0 gold are not saved.
+
+   Area Locking (merc.h, bit.c)
+     Set via OLE
+     Disables:
+       - teleporting into the area
+       - portals to someone in the area
+       - Non IMMORTALS walking into them
+     Note that this is saved in the area file 
+       - Save after setting it
+       - Save after clearing it
+     This lets us keep development areas locked to avoid nasty teleport 
+       accidents.  
+
+   Recovery (update.c)
+     Fix recvery of hits and mana
+       - Result rounded up on the divide by 6.
+     Double rate of mana recovery.
+       - So mages won't have to wait around on full hits and half mana
+         for as long.
+     Neutralize the effct of Haste on mana recovery
+       - It used to halve it.
+
+   Player Divinity (update.c, db.c, act_info.c, act_magic.c, save.c)
+     3 Player levels - Newbie, Regular and Hero
+     5 God levels - Creator, Lesser, God, Greater, Implementor
+     Assoreted macros defined.
+     Loaded as value for Divinity
+     Shows on Stat and Score
+     Used for some checks
+     Automatically set when the player is loaded
+     Player levels updated with level gain/loss
+     Changed the trust command to change the god levels dynamically
+       - Trust now seems to be unused.
+     Raise limits on level advancement (now set to MAX_LEVEL)
+ 
+   Mythos Races (const.c)
+     Deep-one
+     Snake person
+     Mi-go
+     Ghoul
+     Ghast
+     Shambler
+
+   Miscellaneous (comm.c, bit.c, act_info.c, interp.c)
+     Added a 'Please enter your name:' prompt to the login sequence.
+       It always appears, regardless of what happens to the greeting.
+     Fixed a few on the constants imbedded in bit.c
+     Changed thresholds for armour descriptions.  
+       This means AC 0 now says your armour is ok.
+     Fixed wizhelp format, reformatted for divinities.
+     Changed clans to write out via temporary file and rename.
+       - Better recovery charicteristics.
+     Flags for FreeBSD compilation.
+     Added a message board for immortals.
+     Fixed bug where link dead characters were not being extracted
+       properly.  This caused a mud crash whenever someone else tried
+       to enter or leave the room.
+     Fixed the weather so that people other than gods get to see it.
+       The AH had it on NOTIFY_WEATHER, but it was off by default and
+       the notify command is level 56, so noone could turn it on!  
+     Initialise each characters learned array to 0s.
+     Practice colour coded.
+       - normal is grey, adept (65%) is cyan, mastered (100%) is white.
+     Found (and maybe fixed) a strange bug concerned with skills and
+       page_to_char.  What's strange is that the fix seemed to take a 
+       while (a few compiles) to have any effect.  I was still working
+       on it and the problem just went away. It might have been part of
+       the system having gotten messed up by a unchecked string free
+       in page_to_char (might have been freeing string at address 0).
+

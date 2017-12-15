@@ -1,0 +1,90 @@
+CULT 'Marduk'
+Marduk is the god of light and goodness.  Although the race turned aside
+from his Worship his followers recognise that we now need him.  The followers
+of Marduk may be all that stands between the human race and the alien hoards
+that encroach upon our planet.
+~
+Number 1
+Align 750
+Power 50000
+
+CULT 'Tsathoggua'
+The members of this cult worship the distant god known as Tsathoggua.
+In return for occasional sacrifices and loyalty they sometimes 
+receive guidance, special items and occasionally instructions. Many
+followers are wizards and priests.
+~
+Number 2
+Align -500
+Power 627
+
+CULT 'Yog'
+Yog Sothoth is an alien diety from between the dimensions of the universe.
+Worshipped by wizards and and those seeking power, he amply rewards them
+in return for appropriate sacrificies.
+~
+Number 3
+Align -750
+Power 47796
+
+CULT 'Shub'
+Shub Niggurath, the black goat of the woods with a thousand young, is
+thought to be a perverse fertility diety.  The children tend to gather
+in hidden places, open to the night sky, and hold disgusting rituals to
+invoke her power.  She if often giving living human sacrifices.
+~
+Number 4
+Align -1000
+Power 1910
+
+CULT 'Bast'
+Cult of Bast~
+Number 5
+Align 350
+Power 50000
+
+CULT 'Dagon'
+This cult is found around the ocean edges and follows the dieties of
+the Deep Ones - Dagon and Hydra.  They will quite often interact with
+Deep Ones - mainly at rituals where unsavory  acts of worship are 
+performed.  The cult is one of the main breeding ground for the hideous
+human/deep one halfbreeds.  Members of the cult often have strange 
+pieces of Deep Ones jewellery in their posesison.
+~
+Number 6
+Align -450
+Power 50000
+
+CULT 'Azathoth'
+Cult of Azathoth~
+Number 7
+Align -1000
+Power 41852
+
+CULT 'Nyarlathotep'
+Cult of Nyarlathotep~
+Number 8
+Align -900
+Power 50000
+
+CULT 'Tiamat'
+Cult of Tiamat~
+Number 9
+Align -100
+Power 45478
+
+CULT 'Cthugha'
+Cult of Cthugha~
+Number 10
+Align -100
+Power 44592
+
+CULT 'Abhoth'
+The long-dead father of shuggoths still has his own cult but nobody
+knows where all the sacrifices of its worshippers go.
+~
+Number 11
+Align 0
+Power 21351
+
+End

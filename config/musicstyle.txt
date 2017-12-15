@@ -1,0 +1,68 @@
+# Music Styles File
+#
+# STYLE	Name
+# Title~
+# Diff	Difficulty (0-100)
+# Vol	Volume (0-100)
+# Inst Voice | Percussion | Strings | Flute | Brass | Piano
+
+
+STYLE	Tribal
+Tribal sounds~
+Diff	0
+Vol	75
+Inst	-X--X---
+
+STYLE	Percussion
+Percussion rhythm~
+Diff	10
+Vol	35
+Inst	-X------
+
+STYLE	Blues
+the Blues~
+Diff	15
+Vol	25
+Inst	X-X-XX--
+
+STYLE	Jazz
+Jazzy tunes~
+Diff	30
+Vol	45
+Inst	X-XXXX--
+
+STYLE	Gospel
+a Gospel~
+Diff	30
+Vol	60
+Inst	X-----X-
+
+STYLE	Chorus
+a Chorus~
+Diff	25
+Vol	45
+Inst	X-----X-
+
+STYLE	Chant
+a ritual Chant~
+Diff	10
+Vol	50
+Inst	X-------
+
+STYLE	Spherical
+a spherical Melodies~
+Diff	35
+Vol	10
+Inst	-------X
+
+STYLE	Improvise
+an improvised melody~
+Diff	0
+Vol	30
+Inst	-XXXXXXX
+
+# There must be an 'End' at the end.
+
+End
+
+

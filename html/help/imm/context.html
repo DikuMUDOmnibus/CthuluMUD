@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<TITLE>CthulhuMud - Contexts</TITLE>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080" BACKGROUND="paper.jpg">
+<CENTER>
+<HR>
+<H1>CthulhuMud - Contexts</H1>
+<HR>
+[ <A HREF="index.html">Index</A> ]
+<HR>
+</CENTER>
+<P>A context is an internal data structure that is used to describe a situation
+that has occured within the mud.
+Contexts are mainly used in <A HREF="events.html">events</A>, but they also
+turn up in a few other situations where <A HREF="conds.html">conditions</A>
+must be evaluated.</P>
+<P>Note that contexts do not tell you what has happened, they simply contain 
+details about the mobs, objects, and other details that are involved.</P>
+<HR>
+<H2>Information Contained in a Context</H2>
+<P>Each context can contain the following:</P>
+<DL>
+<DT><B>observer</B> (mob)
+<DD>This is the mob who is observing the situation.
+The mob who is watching.
+It is different for each observer.
+<DT><B>actor</B> (mob)
+<DD>This is the mob that is the active party in the situation.
+The mob that is doing.
+<DT><B>victim</B> (mob)
+<DD>This is the mob that is the target of the actors action.
+The mob that is being done to.
+<DT><B>primary object</B> (object)
+<DD>This is the main object that the actor is manuiplating.
+The object that is being done with.
+<DT><B>secondary object</B> (object)
+<DD>This is the ancilliary object that the actor is involving.
+The object that is being done to.
+<DT><B>location</B> (room)
+<DD>This is the room where the action is happening.
+If the observer, actor and victim are in the same room, then it is that
+room.
+If they are in different rooms, then which room it is depends upon the 
+situation.
+<DT><B>number</B> (int)
+<DD>This is a number associated with the situation.
+It is used in several different ways, depending upon the situation.
+<DT><B>text</B> (string)
+<DD>This is a test string associated with the situation.
+Again, there are several different ways it is used, depending upon the 
+situation.
+<DT><B>wev</B> (event)
+<DD>If the context is generated as a part of an event, then this will be
+a pointer to that event.
+The event also has a pointer to the context.
+This allows conditions which are evaluated against the context to reference 
+data from the event.
+</DL>
+<HR>
+<H2>Sample Contexts</H2>
+<H3>Situation - Leaving a Room</H3>
+<P>When a character walks out of a room, the following information is put into
+the context:
+<UL>
+<LI>The observer (each person in or <A HREF="monitor.html">monitoring</A> 
+the room, including the actor)
+<LI>The actor (the person leaving the room)
+<LI>The room (that is being left)
+<LI>The number (of the direction they left in)
+<LI>The text (long name of the direction they left in)
+<LI>The wev (for the DEPART_WALK event)
+</UL>
+<H3>Situation - Hitting Someone</H3>
+<P>When one mob hits another mob, the following information is put into the 
+context:</P>
+<UL>
+<LI>The observer (each person in or <A HREF="monitor.html">monitoring</A> 
+the room, including the actor and the victim)
+<LI>The actor (the person doing the hitting)
+<LI>The victim (the person being hit)
+<LI>The room (where the fight is occuring)
+<LI>The number (of hps of damage caused)
+<LI>The wev (for the DAMAGE_BLOW event)
+</UL>
+<H3>Situation - Putting a Sword into a Chest</H3>
+<P>When one mob puts an object inside another one, the following information
+is put into the context:</P>
+<UL>
+<LI>The observer (each person in or <A HREF="monitor.html">monitoring</A>
+the room, including the actor)
+<LI>The actor (the person doing the putting)
+<LI>The primary object (the one that is being put)
+<LI>The secondary object (the one that the primary object is being put into)
+<LI>The room (where the putting is occuring)
+<LI>The wev (for the PUT_ITEM_INTO event)
+</UL>
+<P>For details about the contexts provided for events that occur within the
+mud, see the <I>events</I> command which is available within OLC.</P>
+<HR>
+[ <A HREF="index.html">Index</A> ]
+</BODY>
+</HTML>
+

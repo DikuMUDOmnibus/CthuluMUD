@@ -1,0 +1,85 @@
+CthulhuMud Driver 2
+-------------------
+
+  Aliases
+    Fixed problem with parms 6 theu 9
+    Reworked alias/parm scanning to be more efficient.
+
+  Makefile
+    Fixed so it has all the .h dependencies.
+
+  Specials
+    Added spec_hunter
+      This causes a mob to remember who it is fighting and then to attack
+      them the next time it sees them.  The prey field introduced will
+      also be used by the tracking routines. 
+    Added spec_teleTracker
+      This causes a mob, once its prey has been set, to teleport into
+      whichever room the prey is in.
+    Added spec_teleHunter
+      A combination of Hunter and TeleTracker.  The mob will teleport into
+      the room and, about 3 seconds later, attack their prey.  This gives 
+      the prey a small chance to run away (but they have to keep running!).
+    Added spec_hound
+      This is an extension of spec_teleHunter.  If the mob does not have
+      any prey, it will go to room 30000 and commit suicide. 
+
+  Gods
+    Changed admins to Marduk, Nodens, Dagon
+    Changed lots of Zatans to Marduks
+
+  Races
+    Removed Azer
+    Added highlander
+    Renamed Centaurs to Scorpionmen
+    Only player race is human 
+
+  Stats
+    Changed WIS bonuses to be a little higher
+    
+  Classes
+    Rename the standard classes
+      Mage -> Occultist
+      Avenger -> Priest
+      Thief -> Archaeologist
+      Soldier -> Warrior
+      Chaosmage and Defiler unchanged
+
+  Levels and Equipment
+    Modified checks to allow usage of equipment of up to level+10
+      Wield/wear code 
+      Buy code
+      Dual code (bug in current code alows any level weapon in off hand)
+      Potions 
+      Portals
+    Disabled recall if level > 10
+
+  Player killer
+    Added seperate flag
+    Update whois information 
+
+  Anti-trigger
+    Added traps for Search, Pick and Quaff 
+      system.are file added to hold related items.
+      Quaff
+        2 in 1 second means you spill the second potion
+      Search
+        2 in 1 second gives 1% cumulative chance of finding a Hound
+               of Tindalos in a dark corner.  It will appear and kill
+               you.  If you run it will teleport after you and kill you.
+      Pick
+        2 in 1 second gives a 1% cumulative change of being transported
+               into the 'Halls of Doors'.  This is a large maze of
+               some 15 no-recall rooms.  All links have locked doors.
+               There's an exit in one of the rooms, food and water in
+               another.  No mobs. 
+
+  Miscellaneous
+    Changed welcome message to say CthulhuMud
+    Allowed summon in a few more situations
+    Disable the spam detection code
+    Cthonified the spells a bit
+
+  Oddities
+    We have a declare for spell_summon_minion, but no code.
+

@@ -1,0 +1,1760 @@
+# Professions File
+#
+# This defines the professions a character can possess
+#
+# Format:
+#
+#  PROFESSION 'name' 		// Name of the profession
+#
+#	Desc			// Short description of the profession
+#  description~			// 
+#
+#	Skill	name level	// Level when the skill is gained
+#				//   0 means you start with it as a
+#				//     base skill (value 42).
+#
+#	Kit	vnum		// The vnum of a piece of equipment
+#				// that a character with the profession
+#				// receives.  Given at initial outfit,
+#				// outfit command and career change.
+#				// Object will be modified to have value 0.
+#				//
+#				//	47	Passport
+#				//	56	Mace
+#				//	57	Dagger
+#				//	58	Sword (bowie knife)
+#				//	59	Vest
+#				//	60	Shield
+#				//	61	Lantern
+#				//
+#
+#	Stats	str int wis dex con
+#				// This lists the number of d4 to be 
+#				// rolled to generate the stats for a
+#				// character who begins play in this
+#				// profession.  A full rool is 5 dice,
+#				// and omitted dice are counted as 4s.
+#				// At least one dice must be rolled.
+#
+#	Prime	stat		// This identifies the 'prime stat' for 
+#				// the profession which is figured into
+#				// some training and advancement rolls.
+#				//	0	STR
+#				//	1	INT
+#				//	2	WIS
+#				//	3	DEX
+#				//	4	CON
+#
+#	PC	Yes | No	// Y means available to PCs, N otherwise.
+#
+#	Initial Yes | No	// Y means available to new PCs, N means
+#				// only available to experienced PCs.
+#
+#	Start	vnum		// Vnum of the room where a member of the
+#				// profession initially enters the mud.
+#
+#	Cond	condition	// This specifies a condition that must be
+#				// stisfied before the profession can be
+#				// learnt. Conditions are:
+#				// 	1 'skill_name' low high
+#				//	2 'level' low high
+#				//	3 'race_name' 0 0
+#				//	4 'prof_name' low high
+#				//	5 'light' low high
+#				//	6 'align' low high
+#				//	7 'moon' low high
+#				//	8 'clan_name' low high
+#				//	9 'time' low high
+#				//	10 'month' low high
+#				//	11 'gender' g1 g2
+#				//	19 'deed' deed 1 
+#
+#	ICond	condition	// Specifies a condition that has to be
+#				// met for the character to be created
+#				// in the profession.  Normally just using
+#				// race, gender and alignment.
+
+
+
+PROFESSION 'scholar'
+        Desc
+Scholar
+~
+	Prime	1
+	Stats	1	3	3	2	2	2	2
+	PC	Yes
+	Initial Yes
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'dagger'		 	0
+	Skill	'english'		 	0
+	Skill	'german'		 	0
+	Skill	'arkham'		 	0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'kick'			2
+	Skill	'french'		 	3
+	Skill	'modern history'	 	4
+	Skill	'world geography'	 	4
+	Skill	'spanish'		 	5
+	Skill	'italian'		 	5
+	Skill	'biology'		 	6
+	Skill	'world affairs'		6
+	Skill   	'rescue'		 	7
+	Skill	'chemistry'		7
+	Skill	'physics'		 	7
+	Skill	'latin'			8
+	Skill	'scrolls'		 	9
+	Skill	'occult'		 	9
+	Skill	'hide'			10
+                Skill         'riding'               		12
+                Skill         'debating'               	15
+                Kit 57
+                Kit 59
+                Kit 61
+
+
+PROFESSION 'novice'
+        Desc
+Novice
+~
+	Prime	2
+	Stats	1	2	3	2	2	3	2
+	PC	Yes
+	Initial Yes
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'mace'			0
+	Skill	'english'		 	0
+	Skill	'arkham'		 	0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'latin'			2
+	Skill	'german'		 	3
+	Skill	'french'		 	3
+	Skill	'theology'		4
+	Skill	'modern history'	 	5
+	Skill   	'world geography'	 	5
+	Skill	'meditation'		6
+	Skill	'old english'		6
+	Skill	'greek'			7
+	Skill	'scrolls'		 	7
+	Skill	'occult'		 	8
+	Skill	'astronomy'		8
+	Skill	'ancient history'	 	9
+	Skill	'ancient geography'	9
+	Skill	'wands'			10
+	Skill	'staves'			10
+                Skill         'debating'               	15
+                Kit 56
+                Kit 59
+                Kit 61
+
+
+PROFESSION 'apprentice'
+        Desc
+Apprentice
+~
+	Prime	3
+	Stats	3	1	2	3	3	2	2
+	PC	Yes
+	Initial Yes
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'shield block'		0
+	Skill	'mace'			0
+	Skill	'english'		 	0
+	Skill	'arkham'		 	0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'haggle'		 	3
+	Skill	'hide'			3
+	Skill	'search'		 	4
+	Skill	'climb'			4
+	Skill	'accounting'		5
+	Skill   	'sneak'			5
+	Skill	'swim'			6
+	Skill	'german'		 	6
+	Skill	'world affairs'		7
+	Skill   	'detection'		7
+	Skill	'pick lock'		8
+	Skill	'physics'		 	9
+	Skill	'chemistry'		10
+                Skill         'forging'                 		13
+                Kit 56
+                Kit 59
+                Kit 61
+
+
+PROFESSION 'initiate'
+        Desc
+Initiate
+~
+	Prime	2
+	Stats	1	3	3	2	1	3	2
+	PC	Yes
+	Initial Yes
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'mace'			0
+	Skill	'english'		 	0
+	Skill	'arkham'		 	0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'latin'			2
+	Skill	'spanish'		 	3
+	Skill	'french'		 	3
+	Skill	'theology'		4
+	Skill   	'spear'			4
+	Skill	'meditation'		5
+	Skill	'greek'			5
+	Skill	'scrolls'		 	6
+	Skill	'occult'		 	7
+	Skill	'astronomy'		8
+	Skill	'ancient history'	 	9
+	Skill	'ancient geography'	9
+	Skill	'wands'			10
+	Skill	'staves'			10
+                Skill         'debating'               	15 
+                Kit 56
+                Kit 59
+                Kit 61
+
+
+PROFESSION 'urchin'
+        Desc
+Urchin
+~
+	Prime	0
+	Stats	3	1	2	3	3	1	2
+	PC	Yes
+	Initial Yes
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'dagger'		 	0
+	Skill	'english'		 	0
+	Skill	'arkham'		 	0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'haggle'		 	2
+	Skill	'climb'			2
+	Skill	'swim'			3
+	Skill	'hide'			3
+	Skill	'mace'			4
+	Skill	'kick'			4
+	Skill	'steal'			5
+	Skill	'search'		 	5
+	Skill	'spanish'		 	6
+	Skill	'sneak'			6
+	Skill   	'spear'			7
+	Skill	'parry'			7
+	Skill	'backstab'		8
+	Skill	'dirt kicking'		8
+	Skill	'second attack'		9
+	Skill	'circle'			10
+	Skill   	'detection'		12
+	Skill   	'tame'			14
+	Skill	'strangle'			15
+                Kit 57
+                Kit 59
+                Kit 61
+
+
+PROFESSION 'squire'
+        Desc
+Squire
+~
+	Prime	4
+	Stats	3	2	1	2	3	1	2
+	PC	Yes
+	Initial Yes
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'shield block'		0
+	Skill	'mace'			0
+	Skill	'english'		 	0
+	Skill	'arkham'		 	0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'dodge'			2
+	Skill	'swim'			2
+	Skill	'search'		 	3
+	Skill	'dagger'		 	3
+	Skill	'martial arts'		4
+	Skill	'kick'			4
+	Skill	'hide'			5
+	Skill   	'spear'			5
+	Skill	'climb'			5
+	Skill	'spanish'		 	6
+	Skill	'sneak'			6
+	Skill	'parry'			7
+	Skill	'sword'			7
+	Skill	'trip'			8
+	Skill	'second attack'		8
+	Skill	'disarm'		 	9
+	Skill	'enhanced damage'	10
+                Skill         'riding'               		12
+                Skill         'forging'                                 15
+                Skill         'strong grip'                        	18
+                Kit 56
+                Kit 60
+                Kit 61
+
+
+PROFESSION 'dark squire'
+        Desc
+Dark Squire
+~
+	Prime	4
+	Stats	3	2	1	2	3	2	1
+	PC	Yes
+	Initial Yes
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'shield block'		0
+	Skill	'mace'			0
+	Skill	'english'		 	0
+	Skill	'arkham'		 	0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'dodge'			2
+	Skill	'swim'			2
+	Skill	'search'		 	3
+	Skill	'dagger'		 	3
+	Skill	'martial arts'		4
+	Skill	'kick'			4
+	Skill	'hide'			5
+	Skill         'whip'			5
+	Skill	'climb'			5
+	Skill	'spanish'		 	6
+	Skill	'sneak'			6
+	Skill	'parry'			7
+	Skill	'sword'			7
+	Skill	'trip'			8
+	Skill	'second attack'		8
+	Skill	'circle'		 	9
+	Skill	'enhanced damage'	10
+                Skill         'riding'               		12
+                Skill         'forging'                                 15
+                Skill         'backstab'                             	18
+                Kit 56
+                Kit 60
+                Kit 61
+
+
+#-------------------------------------------------------------------------
+#	Intermediate professions
+#-------------------------------------------------------------------------
+
+
+PROFESSION 'journeyman'
+        Desc
+Journeyman
+~
+	Prime	3
+	Stats	2	2	2	4	3	2	2
+	PC	Yes
+	Initial No
+	Cond	1  1 'streetwise' 30 -1
+	Cond	1  1 'education'  30 -1
+	Skill	'haggle'		 	1
+	Skill	'hide'			1
+	Skill	'search'		 	1
+	Skill	'climb'			1
+	Skill	'accounting'		1
+	Skill   	'sneak'			1
+	Skill	'swim'			2
+	Skill	'german'		 	2
+	Skill	'world affairs'		2
+	Skill   	'detection'		2
+                Skill   	'forging'                        	2
+	Skill	'pick lock'		3
+	Skill	'physics'		 	3
+	Skill	'chemistry'		3
+	Skill	'biology'		 	4
+	Skill	'parry'			4
+	Skill	'occult'		 	5
+	Skill	'dagger'		 	5
+	Skill	'greek'			6
+	Skill	'latin'			7
+	Skill	'world affairs'		7
+	Skill	'meditation'		8
+	Skill	'world geography'	 	8
+	Skill	'spell casting'		9
+	Skill	'hebrew'		 	9
+	Skill	'armor'			9
+	Skill	'sleep'			10
+	Skill	'ancient geography'	10
+	Skill	'refresh'			11
+	Skill	'spear'			11
+	Skill	'detect magic'		12
+	Skill	'brand'			13
+	Skill	'detect poison'		14
+	Skill	'ancient history'		14
+	Skill	'continual light'		15
+	Skill	'detect hidden'		16
+	Skill	'identify'			17
+	Skill	'atlantean'		17
+	Skill	'pass door'		18
+	Skill	'poison'			19
+	Skill	'enchant weapon'		20
+	Skill	'enchant armor'		22
+                Skill         'taumathurgy'        	25 
+
+
+PROFESSION 'warrior'
+        Desc
+Warrior
+~
+	Prime	0
+	Stats	4	1	2	3	3	2	2
+	PC	Yes
+	Initial No
+	Cond	1  1 'streetwise' 60 -1
+	Skill	'parry'			1
+	Skill	'dodge'			1
+	Skill	'shield block'		1
+	Skill	'swim'			1
+	Skill	'search'		 	1
+	Skill	'martial arts'		1
+	Skill	'kick'			1
+	Skill	'hide'			1
+	Skill	'dagger'		 	1
+                Skill         'strong grip'                           1
+	Skill	'spanish'		 	2
+	Skill	'sneak'			2
+	Skill	'trip'			2
+	Skill   	'spear'			2
+	Skill	'sword'			2
+	Skill	'second attack'		3
+	Skill   	'detection'		3
+	Skill	'climb'			4
+	Skill	'disarm'		 	4
+	Skill	'enhanced damage'	4
+	Skill	'axe'			5
+                Skill         'riding'               		5
+	Skill	'bash'			6
+	Skill	'tracking'		 	7
+	Skill	'fast healing'		8
+	Skill	'flail'			9
+	Skill	'dual'			10
+	Skill	'rescue'			11
+	Skill	'circle'			12
+	Skill   	'forging'                       	12
+                Skill   	'polearm'			13
+	Skill   	'whip'			14
+	Skill	'rotate'			15
+	Skill	'backstab'		16
+	Skill	'sharpen'			18
+	Skill	'ultra damage'		20
+	Skill	'third attack'		22
+	Skill	'strangle'			24
+                Skill         'sword master'                       26
+                Skill         'bow'                    		28
+
+
+PROFESSION 'scout'
+        Desc
+Scout
+~
+	Prime	5
+	Stats	2	2	3	3	3	3	1
+	PC	Yes
+	Initial No
+	Cond	1  1 'streetwise'   40 -1
+	Cond	1  1 'education'    20 -1
+	Cond	1  1 'sneak'        30 -1
+	Cond	1  1 'hide'         30 -1
+	Skill	'haggle'		 	1
+	Skill	'climb'			1
+	Skill	'swim'			1
+	Skill	'search'		 	1
+	Skill	'mace'			1
+	Skill	'dagger'		 	1
+	Skill	'kick'			1
+	Skill	'steal'			1
+	Skill	'dirt kicking'		1
+	Skill	'hide'			1
+	Skill	'spanish'		 	2
+	Skill	'sneak'			2
+	Skill	'backstab'		2
+	Skill	'parry'			2
+	Skill	'second attack'		3
+	Skill	'circle'		 	3
+	Skill	'pick lock'		3
+	Skill	'tracking'		 	4
+	Skill	'spear'			4
+	Skill	'rotate'		 	5
+	Skill	'detection'		5
+	Skill	'tame'		 	6
+	Skill	'italian'		 	6
+	Skill	'sword'			6
+	Skill	'martial arts'		7
+	Skill	'romany'		 	8
+	Skill	'peek'			8
+	Skill	'enhanced damage'	9
+                Skill         'bow'                    		10
+	Skill	'polish'			10
+	Skill	'fast healing'		11
+	Skill	'accounting'		12
+	Skill	'traps'			13
+	Skill	'third attack'		14
+	Skill	'greek'			15
+	Skill	'occult'			16
+	Skill	'ultra damage'		17
+	Skill	'latin'			18
+	Skill	'meditation'		19
+	Skill	'lore'			20
+                Skill         'riding'               		22
+	Skill	'blackjack'		27
+
+
+PROFESSION 'mage'
+        Desc
+Mage
+~
+	Prime	1
+	Stats	2	4	3	2	1	2	2
+	PC	Yes
+	Initial No
+	Cond	1  1 'education' 60 -1
+	Cond	1  1 'occult'    30 -1
+	Skill	'latin'			1
+	Skill	'spanish'		 	1
+	Skill	'french'		 	1
+	Skill	'theology'		1
+	Skill   	'dagger'		 	1
+	Skill	'meditation'		2
+	Skill	'old english'		2
+	Skill	'greek'			2
+	Skill	'scrolls'		 	2
+	Skill	'spear'			2
+	Skill	'astronomy'		3
+	Skill	'ancient history'	 	3
+	Skill	'ancient geography'	3
+	Skill	'spell casting'		3
+                Skill	'wands'			4
+	Skill	'staves'		 	4
+	Skill	'armor'			4
+	Skill	'hebrew'		 	5
+	Skill	'faerie fire'		6
+	Skill	'ventriloquate'		6
+	Skill	'detect magic'		7
+	Skill	'magic missile'		7
+	Skill	'faerie fog'		8
+	Skill	'detect invis'		8
+	Skill	'invis'			9
+	Skill	'mute'			9
+	Skill	'remove invis'		10
+	Skill	'dispel magic'		10
+	Skill	'continual light'		11
+	Skill	'detect hidden'		11
+	Skill	'create food'		12
+	Skill	'sleep'			13
+	Skill	'giant strength'		13
+	Skill	'cancellation'		14
+	Skill	'manipulation'			14
+	Skill	'charm person'		15
+	Skill	'enchant armor'		15
+                Skill        'debating'                                15
+	Skill	'identify'			16
+	Skill	'burning hands'		16
+	Skill	'brand'			17
+	Skill	'enchant weapon'		18
+	Skill	'lesser possession'               19
+	Skill	'shield'			19
+	Skill	'fly'			20
+	Skill	'lore'			20
+                Skill         'climb'        		22
+                Skill         'scribe'      		23
+                Skill         'swim'        		25 
+                Skill         'taumathurgy'        	28 
+
+
+PROFESSION 'necromancer'
+        Desc
+Necromancer
+~
+	Prime	1
+	Stats	1	4	2	3	2	2	1
+	PC	Yes
+	Initial No
+	Cond	1  1 'education' 40 -1
+	Cond	1  1 'occult'    60 -1
+                Cond      1   6 'align' -1000 -500
+	Skill	'latin'			1
+	Skill	'spanish'		 	1
+	Skill	'french'		 	1
+	Skill	'theology'		1
+	Skill        'whip'		 	1
+	Skill	'meditation'		2
+	Skill	'old english'		2
+	Skill	'greek'			2
+	Skill	'scrolls'		 	2
+	Skill	'spear'			2
+	Skill	'astronomy'		3
+	Skill	'ancient history'	 	3
+	Skill	'ancient geography'	3
+	Skill	'wands'			4
+	Skill	'staves'		 	4
+	Skill	'spell casting'		3
+	Skill	'armor'			4
+	Skill	'hebrew'		 	5
+	Skill	'faerie fire'		6
+	Skill	'cthonic'		 	6
+	Skill	'detect magic'		7
+	Skill	'magic missile'		7
+	Skill	'poison'		 	8
+	Skill	'blindness'		8
+	Skill	'mute'			9
+	Skill	'weaken'			10
+	Skill	'chill touch'		10
+	Skill	'continual light'		11
+	Skill	'invis'			11
+	Skill	'sleep'			13
+	Skill	'giant strength'		13
+	Skill	'cancellation'		14
+	Skill	'manipulation'			14
+	Skill	'curse'			15
+	Skill	'frenzy'			15
+	Skill	'plague'			16
+	Skill	'burning hands'		16
+	Skill	'energy drain'		17
+	Skill	'necromancy'		18
+	Skill	'plague'			19
+	Skill	'acid blast'              	20
+	Skill	'lore'			20
+                Skill         'scribe'                      	22
+
+
+
+#-------------------------------------------------------------------------
+#	Master professions
+#-------------------------------------------------------------------------
+
+PROFESSION 'paladin'
+        Desc
+Paladin
+~
+	Prime	6
+	Stats	3	2	3	2	2	3	4
+	PC	Yes
+	Initial No
+	Cond      1 2 'level' 30 -1
+	Cond	1  1 'education' 50 -1
+	Cond      1  1 'sword'  80 -1
+                Cond      1  1 'polearm' 60 -1
+                Cond      1  6 'align' 200 1000
+	Skill 	'shield block'        		1
+                Skill         'riding'               		1
+                Skill 	'parry'                    		1
+                Skill 	'second attack'     		1
+                Skill 	'old english'          		1
+                Skill 	'polish'                   		1
+                Skill 	'enhanced damage'    	2
+                Skill 	'ancient history'          	2
+                Skill 	'dual'                      		2
+                Skill 	'gaelic'                   		2
+                Skill 	'spell casting'      		3
+                Skill 	'rescue'                 		3
+                Skill 	'create food'         		4
+                Skill 	'create water'        		4
+                Skill 	'fast healing'         		5
+                Skill 	'word of recall'      		5
+                Skill 	'latin'                      		6
+                Skill 	'armor'                    		7
+                Skill 	'greek'                    		8             
+                Skill 	'cure light'             		9
+                Skill 	'ultra damage'     		10
+                Skill 	'bless'                   		10
+                Skill 	'detect evil'          		11
+                Skill 	'cthonic'               		12
+                Skill 	'recruit'                 		13
+                Skill 	'protection evil'   		13
+                Skill 	'know alignment'      	14
+                Skill 	'dispel evil'          		15
+                Skill 	'third attack'        		15
+                Skill 	'cure serious'      		17
+                Skill 	'sword master'    		18
+                Skill 	'refresh'                		19
+                Skill 	'atlantean'            		20
+                Skill 	'remove curse'     		22
+                Skill 	'polearm master'    	23
+                Skill 	'frenzy'                 		24
+                Skill 	'manipulation'                     		25
+                Skill 	'giant strength'   		26
+                Skill 	'lore'                     		27 
+                Skill 	'holy word'          		29
+                Skill 	'stygian'               		30
+                Skill	'intimidate'            		32
+                Skill 	'enchant weapon'        	35
+                Skill 	'protective magic'           	40
+
+
+
+PROFESSION 'arms master'
+        Desc
+Arms Master
+~
+	Prime	0
+	Stats	4	1	2	3	3	2	2
+	PC	Yes
+	Initial No
+	Cond      1 2 'level' 30 -1
+	Cond	1  1 'streetwise' 50 -1
+	Cond      1  1 'sword'  80 -1
+                Cond      1  1 'axe' 80 -1
+	Skill 	'shield block'        		1
+                Skill 	'parry'                    		1
+                Skill 	'second attack'     		1
+                Skill 	'enhanced damage'          	1
+                Skill 	'rescue'                   	1
+                Skill 	'mace'                     		1
+                Skill 	'forging'                 		1
+                Skill         'strong grip'                      	1
+                Skill 	'fast healing'    		2
+                Skill 	'martial arts'          		2
+                Skill 	'dual'                      		2
+                Skill 	'disarm'                   	2
+                Skill 	'flail'                        		2
+                Skill 	'spear'      		3
+                Skill 	'third attack'         		4
+                Skill 	'dagger'        		4
+                Skill 	'recruit'         		5
+                Skill 	'climb'      		5
+                Skill         'riding'               		6
+                Skill 	'ultra damage'                      	6
+	Skill 	'strangle'			7
+                Skill 	'swim'                    		7
+                Skill 	'whip'                    		8             
+                Skill         'bow'               		9
+                Skill 	'polearm'     		10
+                Skill 	'hide'                   		10
+                Skill 	'sword master'               	12
+                Skill 	'black belt'      		14
+                Skill 	'fourth attack'          	15
+                Skill 	'axe master'        		15
+                Skill 	'sneak'      		17
+                Skill 	'mace master'    		18
+                Skill 	'lethal damage'            	20
+                Skill 	'flail master'     		22
+                Skill 	'peek'    			23
+                Skill 	'sharpen'                     	25
+                Skill 	'spear master'   		26
+                Skill 	'dagger master'                     	27 
+                Skill 	'lore'               		30
+                Skill 	'tracking'        		35
+                
+
+PROFESSION 'ranger'
+        Desc
+Ranger
+~
+	Prime	3
+	Stats	3	1	2	4	3	2	2
+	PC	Yes
+	Initial No
+	Cond      1 2 'level' 30 -1
+	Cond	1  1 'education' 40 -1
+	Cond      1  1 'axe'  85 -1
+                Cond      1  19 'deed'  84 1 
+                Cond	1  1 'ulthar'     60 -1
+                Cond      1  1 'dreaming' 0 5
+                Skill         'bow'               		1
+                Skill 	'french'                  		1
+                Skill 	'dodge'                    	1
+                Skill 	'second attack'     		1
+                Skill 	'gaelic'                   		1
+                Skill 	'world geography'          	1
+	Skill	'traps'			1
+                Skill 	'swim'                       	2
+                Skill 	'cthonic'                  	2
+                Skill 	'dual'                       	2
+                Skill 	'hebrew'                  	2
+	Skill 	'strangle'                		2
+                Skill 	'climb'                     		3
+                Skill 	'spear'                   		3
+                Skill         'riding'               		3
+                Skill 	'hide'                      		4
+                Skill 	'fast healing'         		5
+                Skill 	'tracking'               		5
+	Skill	'tame'              		5
+                Skill 	'biology'                 	6
+                Skill 	'sneak'                     	7
+                Skill 	'martial arts'           		8             
+                Skill 	'whip'                     		9
+                Skill 	'detection'             		9
+                Skill 	'third attack'          		10
+                Skill 	'forging'                 		10
+                Skill 	'peek'                       	11
+                Skill 	'circle'                     		12
+                Skill 	'sword'                  		13                
+                Skill 	'axe master'           		14
+                Skill 	'spell casting'      		15
+                Skill 	'frenzy'                  		15
+                Skill 	'lore'                      		15
+                Skill 	'create food'        		16
+                Skill 	'create spring'     		17
+                Skill 	'cure light'           		17
+                Skill 	'control weather'     	19
+                Skill 	'old english'            	20
+                Skill 	'ultra damage'         	21
+	Skill	'body control'  		22
+                Skill         'master archer'               	23
+                Skill 	'water breathing'       	24
+                Skill 	'call lightning'              	25
+                Skill 	'faerie fire'   		26
+                Skill 	'fly'                     		27 
+                Skill 	'detect hidden'          	29
+                Skill 	'stygian'               		30
+                Skill 	'summon familier'      	34
+                Skill 	'fourth attack'           	38
+                Skill 	'haste'           		40
+
+
+
+PROFESSION 'wizard'
+        Desc
+Wizard
+~
+	Prime	1
+	Stats	2	4	3	2	2	2	3
+	PC	Yes
+	Initial No
+	Cond      1 2 'level' 30 -1
+	Cond	1  1 'education' 90 -1
+	Cond	1  1 'occult'    80 -1
+                Cond      	1  1 'spell casting'   80 -1
+                Skill	'cthonic'	                      	1
+                Skill         'mask self'                    	1
+	Skill         'fast healing'                	1
+                Skill         'blindness'                    	2
+                Skill         'create food'                 	2
+                Skill         'old english'                 	3
+                Skill         'sword'                          	3
+                Skill         'lesser possession'     	3
+                Skill         'create spring'              	3
+                Skill         'second attack'            	4
+                Skill         'cancellation'               	4
+                Skill         'scrying'                       	4
+                Skill         'teach'                           	5 	 
+                Skill         'stygian'                       	6
+                Skill         'debating'                     	7
+                Skill         'harden skin'                   	8
+                Skill         'scribe'                          	9
+                Skill         'negate alignment'       	9 
+                Skill         'call lightning'             	10
+                Skill         'calm'                            	12
+                Skill         'mass invis'                 	13
+                Skill         'fireball'                        	14
+                Skill         'summon familier'       	16
+                Skill         'demonfire'                  	17
+                Skill         'dagger master'          	18
+                Skill         'haste'                         	19
+                Skill         'pass door'                 	21   
+                Skill         'absorb magic'           	22
+                Skill         'acid breath'               	26
+                Skill         'chaos magic'                        29
+                Skill         'summon'                   	30
+                Skill         'gas breath'               	31
+                Skill         'portal'                        	32
+                Skill         'youth'                       	35
+           
+
+PROFESSION 'druid'
+        Desc
+Druid
+~
+	Prime	2
+	Stats	1	3	4	3	2	3	2
+	PC	Yes
+	Initial No
+	Cond      1 2 'level' 30 -1
+	Cond	1  1 'education' 30 -1
+	Cond	1  1 'spell casting'  20 -1
+	Skill	'stygian'			1
+	Skill  	'natural magic'               	1
+                Skill	'mace'		 	1
+	Skill         'whip'		 	1
+	Skill	'meditation'		2
+	Skill	'old english'		2
+	Skill         'create spring'           	2
+                Skill	'greek'			2
+	Skill	'scrolls'		 	2
+	Skill	'astronomy'		2
+	Skill	'ancient history'		3
+	Skill	'ancient geography'	3
+                Skill         'parry'                                     4
+	Skill	'wands'			4
+	Skill	'staves'			4
+	Skill	'control weather'		4
+	Skill	'climb'		 	5
+	Skill	'tame'		 	5
+                Skill	'faerie fire'		6
+	Skill	'detect poison'		6
+	Skill	'detect magic'		7
+	Skill	'call lightning'		7
+	Skill         'enhanced damage'              8
+                Skill	'faerie fog'		8
+	Skill	'detect invis'		8
+	Skill	'search'			9
+	Skill	'cure poison'		9
+	Skill	'swim'			10
+	Skill	'dispel magic'		10
+	Skill         'create buffet'                        10
+                Skill	'continual light'		11
+	Skill	'detect hidden'		11
+	Skill	'frenzy'			12
+	Skill	'sleep'			13
+	Skill	'giant strength'		13
+	Skill	'dual'			14
+	Skill	'manipulation'			14
+	Skill	'water breathing'		15
+	Skill	'harden skin'		15
+	Skill	'identify'			16
+	Skill	'burning hands'		16
+	Skill	'lightning bolt'		17
+	Skill	'summon familier'		18
+                Skill         'riding'                    	18
+	Skill	'armor'			19
+	Skill         'scribe'                    	19
+                Skill	'fly'			20
+	Skill	'tracking'			20
+                Skill         'brew'                         	22
+                Skill         'whip master'             	24
+                Skill         'chain lightning'        	26 
+                Skill         'lightning breath'      	30
+
+
+#-------------------------------------------------------------------------
+#	Old professions
+#-------------------------------------------------------------------------
+
+
+PROFESSION 'npc scholar'
+       Desc
+NPC Scholar
+This is a NPC profession.
+~
+	Prime	1
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'dagger'		 	0
+	Skill	'english'		 	0
+	Skill	'german'		 	0
+	Skill	'arkham'		 	0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'kick'			2
+	Skill	'french'		 	3
+	Skill	'modern history'	 	4
+	Skill	'world geography'	 	4
+	Skill	'spanish'		 	5
+	Skill	'italian'		 	5
+	Skill	'biology'		 	6
+	Skill	'world affairs'		6
+	Skill   	'rescue'		 	7
+	Skill	'chemistry'		7
+	Skill	'physics'		 	7
+	Skill	'latin'			8
+	Skill	'scrolls'		 	9
+	Skill	'occult'		 	9
+	Skill	'hide'			10
+                Skill	'dissertation'		11
+	Skill	'spanish'		 	12
+	Skill         'debating'               	12
+                Skill	'old english'		14
+	Skill	'hebrew'		 	15
+	Skill	'polish'		 	16
+	Skill	'romany'		 	18
+	Skill	'fast healing'		18
+	Skill	'ancient history'	 	19
+	Skill	'ancient geography'	20
+	Skill	'accounting'		20
+	Skill	'greek'			21
+	Skill	'gaelic'			21
+	Skill	'sword'			22
+	Skill	'parry'			22
+	Skill	'arabic'			23
+	Skill	'geology'		24
+	Skill	'astronomy'		25
+	Skill	'anthrapology'		26
+	Skill	'chinese'			27
+	Skill	'japanese'		28
+	Skill	'disarm'			30
+	Skill	'heiroglyphics'		31
+                Skill	'atlantean'		31
+	Skill         'stygian'                                 31
+                Skill         'lore'                        	32
+                Skill	'spell casting'		33
+                Skill	'teach'		 	35
+	Skill        'enhanced damage'         	35
+                Skill	'dream magic'		36
+	Skill	'cthonic'		 	37
+	Skill        'second attack'        	40
+                Skill	'meditation'    	 	41
+	Skill	'word of recall'         	44
+	Skill         'scribe'                     	44
+	Skill	'know alignment'	 	47
+                Skill         'brew'                       	47
+	Skill	'locate object'		48
+	Skill        'scrying'                       	52
+                Skill	'exorcism'	     	55
+
+
+PROFESSION 'dreamlands houri'
+        Desc
+A woman who has dedicated their life to giving pleasure to others
+and thus gaining the power to control and manipulate them.
+A profession focusing on physical and occult skills.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Cond	1 11 'gender' 2 -1	
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'dagger'		 	0
+	Skill	'wands'			0
+	Skill	'english'		 	0
+	Skill	'dreamlands'		0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'haggle'		 	2	 
+	Skill	'peek'			3
+	Skill	'fast healing'		4
+	Skill	'whip'			4
+	Skill	'staves'		 	5
+	Skill	'martial arts'		6
+	Skill	'steal'			7
+	Skill	'lore'			8
+	Skill	'trip'			8
+	Skill	'hide'			9
+	Skill	'scrolls'			10
+	Skill	'pick lock'		12
+	Skill	'backstab'		15
+	Skill	'recruit'			18
+	Skill	'spell casting'		21
+	Skill	'charm person'		21
+	Skill	'cure disease'		21
+	Skill	'calm'			23
+	Skill	'shocking grasp'		25
+	Skill	'sleep'			27
+	Skill	'poison'			29
+	Skill	'refresh'			31
+	Skill	'weaken'			33
+	Skill	'cure light'		35
+	Skill	'burning hands'		37
+	Skill	'create spring'		39
+	Skill	'chill touch'		41
+	Skill	'energy drain'		43
+	Skill	'youth'			45
+	Skill	'age'			47
+
+
+PROFESSION 'npc soldier'
+        Desc
+A man or woman who has dedicated their life to the arts of combat.
+A profession focusing on combat skills.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'shield block'		0
+	Skill	'handgun' 	 	0
+	Skill	'english'		 	0
+	Skill	'dagger'		 	1
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'sword'			3
+	Skill	'kick'			3
+	Skill	'gun'			4
+	Skill	'trip'			4
+	Skill	'mace'			5
+	Skill	'parry'			5
+	Skill	'rescue'        	 	6
+	Skill	'polearm' 		8
+	Skill	'dodge'			8
+	Skill	'dirt kicking'		9
+	Skill	'enhanced damage'	10
+	Skill	'second attack'		14
+	Skill	'bash'			15
+	Skill	'dual'			15
+	Skill	'fast healing'		16
+                Skill         'riding'                    	17
+	Skill	'berserk'			17
+	Skill	'disarm'			18
+	Skill	'rotate'			20
+	Skill	'submachinegun'		22
+                Skill         'sharpen'		23
+                Skill         'strong grip'                           24
+	Skill	'third attack'		25
+                Skill         'marksman'                      	28
+	Skill	'strangle'		         	29
+	Skill         'black belt'                             30
+	Skill	'traps'		 	33
+                Skill	'ultra damage'		35
+                Skill         'fourth attack'                        40
+                Skill	'intimidate'              	45
+                Skill         'lethal damage'                      50
+
+
+
+PROFESSION 'dreamlands warrior'
+        Desc
+A man or woman who has dedicated their life to the arts of combat.
+A profession focusing on combat skills.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'shield block'		0
+	Skill	'sword'			0
+	Skill	'english'		 	0
+	Skill	'dreamlands'		0
+	Skill	'dagger'		 	1
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'axe'			3
+	Skill	'kick'			3
+	Skill	'spear'			4
+	Skill	'trip'			4
+	Skill	'mace'			5
+	Skill	'parry'			5
+	Skill	'flail'			6
+	Skill	'rescue'        	 	6
+	Skill	'whip'			7
+                Skill         'riding'                    	7
+	Skill	'polearm' 		8
+	Skill	'dodge'			8
+	Skill	'dirt kicking'		9
+                Skill         'strong grip'                          	10
+	Skill	'enhanced damage'	10
+	Skill	'scrolls'			11
+	Skill	'staves'			12
+	Skill	'wands'			13
+	Skill	'second attack'		14
+	Skill	'bash'			15
+	Skill	'dual'			15
+                Skill        'forging'                  		16
+	Skill	'fast healing'		16
+	Skill	'berserk'			17
+	Skill	'disarm'			18
+	Skill	'rotate'			20
+                Skill         'bow'                    		20
+	Skill	'sharpen'			23
+	Skill	'third attack'		25
+	Skill	'strangle'		               	26
+                Skill         'sword master'                      	28
+	Skill         'black belt'                             	30
+                Skill	'ultra damage'		35
+                Skill         'fourth attack'                        40
+                Skill         'lethal damage'                      50
+
+
+
+PROFESSION 'dreamlands monk'
+        Desc
+A man or woman who has dedicated their life to a diety and the
+arts of unarmed combat.
+A profession focusing on combat skills.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0 
+	Skill	'martial arts'		0
+	Skill	'dodge'			0
+	Skill	'english'		 	0
+	Skill	'dreamlands'		0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'kick'			2
+	Skill	'parry'			3
+	Skill	'trip'			4
+	Skill	'rescue'		 	6
+	Skill	'whip'			7
+	Skill	'polearm'		 	8
+	Skill	'dirt kicking'		9 
+	Skill	'strangle'			10
+	Skill	'enhanced damage'	10
+	Skill	'scrolls'			11
+	Skill	'staves'			12
+	Skill	'wands'			13
+	Skill	'japanese'		14
+	Skill	'second attack'		15
+	Skill	'bash'			16
+	Skill	'fast healing'		17
+	Skill	'berserk'			18
+	Skill	'disarm'			19
+	Skill	'rotate'			20
+	Skill	'third attack'		25
+                Skill         'black belt'                             26
+	Skill	'lore'			30
+	Skill	'ultra damage'		35
+                Skill         'fourth attack'                        40
+                Skill         'lethal damage'                      50
+
+
+
+PROFESSION 'dreamlands mage'
+        Desc
+A man or woman who has dedicated their life to the occult arts.
+A profession focusing on occult skills.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'dagger'		 	0
+	Skill	'spell casting'		0
+	Skill	'armor'			0
+	Skill	'english'		 	0
+	Skill	'dreamlands'		0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'magic missile'		2
+	Skill	'ventriloquate'		2
+	Skill	'faerie fire'		3
+	Skill	'detect magic'		4
+	Skill	'burning hands'		4
+	Skill	'continual light'	 	5
+	Skill	'detect invis'		5
+	Skill	'scrolls'		 	5
+	Skill	'staves'		 	5
+	Skill	'wands'			5
+	Skill	'create food'		6
+	Skill	'invis'			7
+	Skill	'fly'			8
+	Skill	'detect hidden'		8
+	Skill	'faerie fog'		9
+	Skill	'giant strength'	 	9
+	Skill	'colour spray'		10
+	Skill	'lightning bolt'		10
+	Skill	'greek'			10
+	Skill	'locate object'		11
+	Skill	'sleep'			11
+	Skill	'dispel magic'		12
+	Skill	'identify'			12
+	Skill	'cancellation'		13
+	Skill	'manipulation'			14
+	Skill	'poison'			14
+	Skill	'charm person'		15
+	Skill	'enchant armor'		15
+	Skill	'lore'			15
+	Skill	'meditation'		15
+	Skill	'mask self'		16
+	Skill	'enchant weapon'		16
+	Skill	'shield'			17
+	Skill	'haste'			18
+	Skill	'fireball'			19
+	Skill	'latin'			20
+	Skill	'vocalize'			21
+	Skill	'summon'		22
+	Skill	'mute'			23
+	Skill	'gate'			23
+	Skill	'pass door'		23
+	Skill	'harden skin'		23
+	Skill	'absorb magic'		24
+	Skill	'acid blast'		25
+                Skill         'taumathurgy'                       	26 
+	Skill	'necromancy'		27
+	Skill	'remove invis'		28
+	Skill	'chain lightning'		29
+	Skill	'frenzy'			34
+	Skill	'dirt kicking'		35
+	Skill	'brand'			38
+	Skill	'mass invis'		38
+	Skill	'fire breath'		41
+                Skill	'acid breath'		44
+	Skill	'portal'			45
+	Skill	'gas breath'		45
+	Skill	'frost breath'		46
+	Skill	'lightning breath'		47
+                
+
+
+PROFESSION 'dreamlands thief'
+        Desc
+A man or woman who has dedicated their life to relieving others
+of the burden of their wealth.
+A profession focusing on stealth and combat skills.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'recall'		 	0
+	Skill	'dagger'		 	0
+	Skill	'dodge'			0
+	Skill	'hand to hand'		0
+	Skill	'english'		 	0
+	Skill	'dreamlands'		0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'steal'			2
+	Skill	'whip'			3
+	Skill	'hide'			4
+	Skill	'trip'			5
+	Skill	'dirt kicking'		6
+	Skill	'scrolls'		 	7
+	Skill	'staves'		 	7
+	Skill	'wands'			7
+	Skill	'sneak'			8
+	Skill	'parry'			9
+                Skill         'forging'                                 10
+	Skill	'backstab'		10
+	Skill	'shield block'		11
+	Skill	'lore'			11
+	Skill	'pick lock'		12
+	Skill	'fast healing'		14
+	Skill	'kick'			15
+	Skill	'disarm'			16
+	Skill	'envenom'		17
+	Skill	'second attack'		18
+	Skill	'peek'			19
+	Skill	'enhanced damage'	23
+	Skill	'circle'			25
+	Skill	'recruit'			35
+                Skill         'third attack'          		45
+                Skill         'assassinate'          	50
+
+
+
+PROFESSION 'dreamlands good priest'
+        Desc
+A man or woman who has dedicated their life to a diety and the
+furtherance of that dietis influence through force of arms.
+A profession focusing on occult and combat skills.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'shield block'		0
+	Skill	'mace'			0
+	Skill	'spell casting'		0
+	Skill	'armor'			0
+	Skill	'english'		 	0
+	Skill	'dreamlands'		0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'flail'			2
+	Skill	'cure light'		2
+	Skill	'create water'		3
+	Skill	'create food'		4
+	Skill	'detect evil'		4
+	Skill	'bless'			5
+	Skill	'cure blindness'	 	5
+	Skill	'scrolls'	 	 	5
+	Skill	'staves'		 	5
+	Skill	'wands'			5
+	Skill	'remove fear'		6
+	Skill	'refresh'		 	6
+	Skill	'blindness'		8
+	Skill	'cure serious'		9
+	Skill	'protection evil'	 	9	
+	Skill	'meditation'		9
+	Skill	'detect poison'		10
+	Skill	'latin'			10
+	Skill	'cure disease'		11
+	Skill	'earthquake'		11
+	Skill	'detect magic'		12
+	Skill	'word of recall'		12
+	Skill	'create buffet'		13
+	Skill	'cure critical'		13
+	Skill	'cure poison'		14
+	Skill	'regeneration'		14
+	Skill	'cancellation'		15
+	Skill	'dispel evil'		15
+	Skill	'teleport'			15
+	Skill	'calm'			16
+	Skill	'flamestrike'		16
+	Skill	'create spring'		17
+	Skill	'lore'			17
+	Skill	'call lightning'		18
+	Skill	'know alignment'		18
+	Skill	'remove curse'		18
+	Skill	'dodge'			18
+	Skill	'psychic anchor'		19
+	Skill	'control weather'		19
+	Skill	'fast healing'		19
+	Skill	'dispel magic'		20
+	Skill	'second attack'		23
+	Skill	'plague'			25
+	Skill	'exorcism'		26
+	Skill	'enchant armor'		27
+	Skill	'rescue'			28
+	Skill	'frenzy'			29
+	Skill	'negate alignment'		30
+	Skill	'protective magic'		30
+	Skill	'gate'			33
+	Skill	'holy word'		33
+	Skill	'locate object'		33
+	Skill	'recruit'			35
+	Skill	'heal'			39
+	Skill	'mass healing'		45
+	Skill	'youth'			47
+
+
+
+PROFESSION 'dreamlands chaosmage'
+        Desc
+A man or woman who has dedicated their life to the study of the
+occult and the influences of chaos upon it.
+A profession focusing on occult skills.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'dagger'		 	0
+	Skill	'spell casting'		0
+	Skill	'burning hands'		0
+	Skill	'english'		 	0
+	Skill	'dreamlands'		0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'shield'		 	2
+	Skill	'giant strength'	 	4
+	Skill	'scrolls'		 	5
+	Skill	'staves'		 	5
+	Skill	'wands'			5
+	Skill	'haste'			6
+	Skill	'detect magic'		7
+	Skill	'lightning bolt'	 	8
+	Skill	'invis'		 	9
+	Skill	'teleport'			10
+	Skill	'control weather'		11
+	Skill	'giant strength'		12
+	Skill	'meditation'		13
+	Skill	'lore'			15
+	Skill	'call lightning'		16
+	Skill	'absorb magic'		20
+	Skill	'cancellation'		23
+	Skill	'berserk'			25
+	Skill	'dirt kicking'		29
+	Skill	'chaos magic'		32
+	Skill	'frenzy'			39
+	Skill	'gate'			42
+                Skill         'voodoo'                       	45
+
+
+
+PROFESSION 'dreamlands evil priest'
+        Desc
+A man or woman who has dedicated their life to advancing the cause
+of a dark god.
+A profession focusing on combat skills.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'recall'		 	0
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'mace'			0
+	Skill	'spell casting'		0
+	Skill	'armor'			0
+	Skill	'english'		 	0
+	Skill	'dreamlands'		0
+	Skill	'education'		1
+	Skill	'streetwise'		1
+	Skill	'weaken'		 	2
+	Skill	'flail'			2
+	Skill	'word of recall'	 	3
+	Skill	'cause light'		4
+	Skill	'detect good'	 	4
+	Skill	'scrolls'		 	5
+	Skill	'staves'		 	6
+	Skill	'wands'			6
+	Skill	'cure light'		7
+	Skill	'bless'			8
+	Skill	'blindness'		8
+	Skill	'cause serious'		9
+	Skill	'protection good'	 	9
+	Skill	'meditation'		10
+	Skill	'remove fear'		11
+	Skill	'detect poison'		11
+	Skill	'earthquake'		12
+	Skill	'detect magic'		13
+	Skill	'curse'			14
+	Skill	'cause critical'		14
+	Skill	'cancellation'		15
+	Skill	'refresh'			16
+	Skill	'regeneration'		16
+	Skill	'teleport'			17
+	Skill	'dispel good'		17
+	Skill	'flamestrike'		18
+	Skill	'manipulation'			18
+	Skill	'call lightning'		20
+	Skill	'know alignment'		20
+	Skill	'psychic anchor'		21
+	Skill	'control weather'		21
+	Skill	'remove curse'		22
+	Skill	'fast healing'		23
+	Skill	'dispel magic'		24
+	Skill	'plague'			25
+	Skill	'necromancy'		25
+	Skill	'shield block'		26
+	Skill	'create spring'		26
+	Skill	'second attack'		27
+	Skill	'lore'			27
+	Skill	'chill touch'		28
+	Skill	'demonfire'		28
+	Skill	'envenom'		29
+	Skill	'enchant armor'		29
+	Skill	'energy drain'		30
+	Skill	'harm'			31
+	Skill	'frenzy'			32
+	Skill	'negate alignment'		33
+	Skill	'protective magic'      	34
+	Skill	'locate object'		35
+	Skill	'gate'			38
+	Skill	'youth'			48
+	Skill	'age'			49
+
+
+
+PROFESSION 'mob mage'
+        Desc
+Spell casting for the standard special_cast_mage.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'dagger'		 	0
+	Skill	'spell casting'		0
+	Skill	'blindness'		0
+	Skill	'chill touch'		3
+	Skill	'weaken'		 	7
+	Skill	'teleport'		 	8
+	Skill	'meditation'		10
+	Skill	'colour spray'		11
+	Skill	'energy drain'		13
+	Skill	'fireball'			15
+	Skill	'plague'			20
+	Skill	'acid blast'		20
+
+
+PROFESSION 'mob good priest'
+        Desc
+Spell casting for the standard special_cast_priest.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'hand to hand'		0
+	Skill	'shield block'		0
+	Skill	'mace'			0
+	Skill	'spell casting'		0
+	Skill	'blindness'		0
+	Skill	'cause serious'		3
+	Skill	'earthquake'		7
+	Skill	'dispel evil'		10
+	Skill	'meditation'		10
+	Skill	'curse'			12
+	Skill	'flamestrike'		13
+	Skill	'cure critical'		13
+	Skill	'harm'			15
+	Skill	'plague'			15
+	Skill	'dispel magic'		16
+	Skill	'exorcism'		34
+
+
+
+PROFESSION 'mob evil priest'
+        Desc
+Spell casting for the standard special_cast_priest.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'hand to hand'		0
+	Skill	'shield block'		0
+	Skill	'mace'			0
+	Skill	'spell casting'		0
+	Skill	'blindness'		0
+	Skill	'cause serious'		3
+	Skill	'earthquake'		7
+	Skill	'dispel good'		10
+	Skill	'meditation'		10
+	Skill	'curse'			12
+	Skill	'flamestrike'		13
+	Skill	'cure critical'		13
+	Skill	'harm'			15
+	Skill	'plague'			15
+	Skill	'dispel magic'		16
+	Skill	'demonfire'		34
+
+
+
+PROFESSION 'mob monster'
+        Desc
+Skills for a monster.
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'kick'			2
+	Skill	'trip'			4
+	Skill	'fast healing'		8
+	Skill	'dirt kicking'		9
+	Skill	'disarm'			10
+	Skill	'second attack'		11
+	Skill	'bash'			13
+	Skill	'enhanced damage'	14
+	Skill	'berserk'			15
+	Skill	'rotate'			18
+	Skill	'third attack'		20
+	Skill	'parry'			20
+	Skill	'rescue'        		25
+	Skill	'ultra damage'		30
+                Skill         'lethal damage'                      40
+	Skill         'fourth attack'                        45
+                Skill	'martial arts'		50
+                Skill         'black belt'                              60
+
+
+
+PROFESSION 'mob undead'
+        Desc
+Skills for an undead monster (special_cast_undead).
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'spell casting'		0
+	Skill	'curse'			0
+	Skill	'weaken'		 	3
+	Skill	'chill touch'		6
+	Skill         'enhanced damage'              8
+                Skill	'blindness'		9
+	Skill	'meditation'		10
+	Skill	'poison'			12
+                Skill         'trip'                         	13
+	Skill	'energy drain'		15
+	Skill	'harm'			18
+	Skill         'ultra damage'                        19
+                Skill	'plague'			20
+	Skill	'teleport'			21
+                Skill         'lethal damage'      	25
+
+
+
+PROFESSION 'mob adept'
+        Desc
+Skills for an adept (special_cast_adept).
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'spell casting'		0
+	Skill	'armor'			0
+	Skill	'meditation'		0
+	Skill	'bless'			1
+	Skill	'cure blindness'	 	2
+	Skill	'cure light'		3
+	Skill	'cure poison'		4
+	Skill	'refresh'		 	5
+	Skill	'fast healing'		6
+	Skill	'martial arts'		7
+	Skill	'enhanced damage'	14
+	Skill	'ultra damage'		21
+
+
+
+PROFESSION 'mob clan healer'
+        Desc
+Skills for an clan healer (special_clanhealer).
+This is a NPC profession.
+~
+	Prime	0
+	Stats	2	2	2	2	2	2	2
+	PC	No
+	Initial No
+	Skill	'hand to hand'		0
+	Skill	'dodge'			0
+	Skill	'spell casting'		0
+	Skill	'armor'			0
+	Skill	'meditation'		0
+	Skill	'bless'			1
+	Skill	'cure blindness'	 	2
+	Skill	'cure light'		3
+	Skill	'cure poison'		4
+	Skill	'refresh'		 	5
+	Skill	'fast healing'		6
+	Skill	'martial arts'		7
+	Skill	'faerie fire'		8
+	Skill	'curse'			9
+	Skill	'cause light'		10
+	Skill	'blindness'		11
+	Skill	'poison'			12
+	Skill	'weaken'			13
+	Skill	'enhanced damage'	16
+	Skill	'ultra damage'		21
+
+
+#
+# There must be an 'End' at the end...
+#
+
+End
+

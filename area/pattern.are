@@ -1,0 +1,487 @@
+#AREADATA
+Name        [{r System{g] Building Patterns ~
+Copyright   None~
+Zone        0
+Builders    Cthulhumud~
+Map         None~
+VNUMs       100 299
+Security    9
+Recall      0
+Respawn     0
+Morgue      0
+Dream       0
+Mare       0
+Prison     0
+Climate     0
+Version     1
+MAX_CURRENCY    5
+Currency -1 -1 -1 -1 -1
+End
+
+
+
+#MOBILES
+#105
+shopkeeper~
+Shopkeeper~
+A shopkeeper is looking greedily at your goods.
+~
+~
+human~
+ABc 0 0 0
+51 0 0d0+0 0d0+0 0d0+0 'none' 'none'
+0 0 0 0
+FK 0 0 0
+'standing' 'standing' 'random' 1000
+AHMV ABCDEFGHIJK 'medium' 'unknown'
+X
+Nature 0
+End
+#107
+miner mine worker~
+Miner~
+A mine worker is searching for valuable ores.
+~
+~
+human~
+ABCc Z 0 0
+51 0 0d0+0 0d0+0 0d0+0 'none' 'none'
+0 0 0 0
+FK 0 0 0
+'standing' 'standing' 'random' 0
+AHMV ABCDEFGHIJK 'medium' 'unknown'
+X
+Nature 1
+End
+#111
+owner man~
+Owner~
+The owner of the boarding house is here, ready to recieve payment.
+~
+~
+human~
+AB Z 0 0
+15 0 0d0+0 0d0+0 0d0+0 'none' 'none'
+0 0 0 0
+FK 0 0 0
+'standing' 'standing' 'random' 0
+ADHMV ABCDEFGHIJK 'medium' 'skin'
+X
+Nature 0
+End
+#0
+
+
+
+#NEWOBJECTS
+#101
+cottage home house~
+a cottage~
+An inviting small cottage is here.~
+stone~
+'portal' OR 0
+BCFG 0 BCFG 0 A
+0 0 0 P
+R 100
+#102
+key~
+the key to your cottage~
+A key for a cottage lies here.~
+iron~
+'key' T A
+0 0 0 0 0
+0 1 0 P
+R 100
+#105
+shop~
+a shop~
+A small shop is here, it might offer useful stuff.~
+stone~
+'portal' OR 0
+ADFG 0 0 0 A
+0 0 0 P
+R 100
+#107
+mine entrance hole shaft~
+a mine entrance~
+There is a dark gaping hole leading deep into the mountain.~
+stone~
+'portal' OR 0
+ABDFG 0 0 0 A
+0 0 0 P
+R 100
+#111
+rooming house roominghouse~
+a rooming house~
+A pretty little rooming house is here, offering bed & breakfast.~
+stone~
+'portal' R 0
+ABCDFG 0 0 0 A
+0 0 0 P
+R 100
+#112
+bed~
+a comfortable bed~
+A comfortable bed is the only furniture here.~
+wood~
+'furniture' R 0
+ABC BCEH 0 0 0
+0 50 0 P
+R 100
+#299
+roadster automobile~
+a roadster~
+An expensive white roadster is driving here.~
+steel~
+'portal' OR A
+ABDFI 0 0 0 AB
+55 100 450000 P
+R 100
+#0
+
+
+
+#ROOMS
+#100
+home~
+~
+0 2097156 1
+E
+cost~
+1000000
+~
+X
+End
+S
+#101
+Bedroom~
+Smaller, and set off from the study, the bedroom is furnished with a
+single, well cushioned bed, with a table and lamp beside it, and a large oak
+dresser set with a tall mirror on the wall behind it.  All of the basic
+comforts are amply provided for.  Through an archway in the cherry paneled
+southern wall, a small adjoining hallway leads to the study.
+~
+0 8 0
+E
+well cushioned bed~
+A single bed with a tarnished brass frame is set against one of the wall,
+draped in a thick white throw blanket and sporting a well fluffed goose
+feather pillow.
+~
+E
+table~
+A small oak end table is placed next to the bed to give a convenient
+surface to lay any number of items while asleep or resting.
+~
+E
+lamp~
+A medium sized lamp sporting an off white or cream colored shade lies atop
+of the table, its single incandescent bulb illuminating the room with a
+bright white light.
+~
+E
+large oak dresser~
+Set with a number of drawers and side shelves, it gives more than ample
+room for clothing and any number of personal affects to be stored.  It is
+carved in a style reminiscent of that common just before the turn of the
+century.
+~
+E
+tall mirror~
+The mirror is actually built into the wall rather than being part of the
+dresser that has been placed before it, and is built from a single piece of
+highly polished, cold, silvered glass that reflects the image of the room
+behind you in the bright light of the room's single lamp.
+~
+D2
+~
+~
+0 0 102
+X
+End
+S
+#102
+Study~
+Trodding upon the thick persian carpet that dullens your footfalls on the
+wooden floorboards, you scan the comfortable sitting room that surrounds you
+with a light hint of leather from book bindings, and perhaps a trace of
+tobacco still lingering on the air.  The walls are a deep stained cherry,
+but little of it shows for the bookshelves, several hanging paintings and
+framed photographs that have been hung.  While hardly a large room, the
+padded furniture and cozy atmosphere make it attractive to say the very
+least.  In one of the corners of the room, a small door is ajar which has
+been set in flush with the wooden panels of the walls so as to normally
+blend in, while through a small corridor north stands another room.
+~
+0 8 0
+E
+thick persian carpet~
+The carpet is woven of a thick, but soft fabric that brightens and centers
+the room on its dazzling array of brilliantly colored geometric designs and
+patterns that march across its surface.
+~
+E
+bookshelves~
+Several reinforced bookshelves stand along the walls, supporting a mass of
+books, ledgers, loose papers, and bundled maps.
+~
+E
+hanging paintings~
+Among those paintings that hang on, and contrast the darker wood panels of
+the walls are several landscapes, a still-life of some yellow and blue
+flowers, and a running red fox skillfully evading a pack of hounds with
+horsemen close behind.
+~
+E
+small door~
+While it currently stands slightly ajar, it can be closed to be flush with
+the walls, and can be easily overlooked by someone who might not already be
+aware of its existance.
+~
+D0
+~
+~
+0 0 101
+D5
+~
+~
+1 -1 103
+X
+End
+S
+#103
+Basement~
+A small flight of spiral stairs descends down into the darkness below the
+study, a myriad of musty, earthy smells rising up to greet you with each
+step.  At the bottom of the stairs, you turn on the lights by flipping a
+switch on the wall, and can see the storage racks, cabinets, and boxes that
+contain a whole host of items still packed up and not on display, for
+reasons best known to yourself, in the upper rooms.  While still a bit musty
+from being underground, the room would provide an excellent place for
+storage, or a laboratory or practice chamber.
+~
+0 9 11
+E
+storage racks cabinets boxes~
+Spread out along the walls of the room, you can't quite make out what they
+contain with the light being a bit dim near the edges of the room, and the
+shadows cast by the rafters drifting down across them to play amongst the
+shapes you can make out only adding to your uncertainly.
+~
+D4
+~
+~
+1 -1 102
+X
+End
+S
+#104
+shop~
+~
+0 2097156 1
+E
+cost~
+1000000
+~
+X
+End
+S
+#105
+A small Shop~
+This is a really tiny shop and from all you can see, it hasn't got to many
+different wares to offer.  But still it might be worth to check the price
+list, maybe you find something really rare on the cramped small shelves.
+~
+0 12 0
+X
+End
+S
+#106
+mine~
+~
+0 2097156 5
+E
+cost~
+2000000
+~
+X
+End
+S
+#107
+Mine Entrance~
+Thick wooden support beams brace the entrance of the mine which has been
+either carved, or more likely, blasted out of the rock.  Little light
+penetrates the gloom which obscures the descending passageway after only a
+few feet, and a small trickle of water flows from the entrance, a dirty
+brown of leeched minerals from the ore within.
+A small wooden sign hangs above the entrance, fixed to the overhead support.
+~
+0 9 11
+E
+small wooden sign~
+A small sign, made from a broken board has been nailed to the overhead
+support beam and painted over with crude lettering that reads, "Descend at
+own risk!  Falling rocks!"
+~
+D5
+~
+~
+0 0 108
+X
+End
+S
+#108
+Dark Mine Shaft~
+The roughly hewn, ragged walls of the mine shaft descend downward into the
+bowels of the earth.  Loose rocks and gravel fall in small streams at random
+from the ceiling as the supports settle, and the deeper you go the air
+becomes hotter and stale.  No light from the entrance reaches this deeply
+into the mine, and you fear that if your light failed you might become
+trapped in the depths.  But the richness of the minerals in these rocks
+makes any risk worth it.
+~
+0 9 11
+D4
+~
+~
+0 0 107
+D5
+~
+~
+0 0 109
+X
+End
+S
+#109
+Dark Mine Shaft~
+The bottom level of the mine is a warren of half excavated passages, blind
+corners, dead ends, and piles of blasted ore waiting to be brought back up
+to the surface for processing, whether by smelting or chemical chelation. 
+Despite the risks of tunnel collapse, volatile gas pockets, and the heat and
+humidity, the rock is visibly rich with veins of valuable metals.
+~
+0 9 11
+D4
+~
+~
+0 0 108
+X
+End
+S
+#110
+boardinghouse~
+~
+0 2097156 1
+E
+cost~
+2500000
+~
+X
+End
+S
+#111
+Boarding House Reception~
+The scent of fresh paint still lingering on the air greets your nose and
+mixes with the smell of potted flowers and antique wood.  A large reception
+counter is set into the north side of the room, fully stocked with a row of
+keys for the boarding house's rooms, a number of hanging coats and the ever
+present log book to keep track of boarders, and their rent.  A large hearth
+stands west, the fireplace only filled with ashes, but on cold nights
+perhaps a roaring fire, while several comfortable chairs are arranged in a
+semicircle around it.  A carpeted stairwell heads up to the second story,
+and a your room, highlighted by the large plate glass windows at the
+stairwell's first landing that illuminate the stairs and this room itself.
+~
+0 8 0
+D4
+~
+~
+0 0 112
+X
+End
+S
+#112
+Cheap Room~
+Though rather spartan for what you paid, it does have a certain quaint
+charm to it.  A single window overlooks the front lawn and the facing
+street, antique style white curtains and a window box giving it an added
+beauty.  The room contains a single bed and a wall mirror, and you would
+guess a single bath somewhere down the hall for use by all the rooms on this
+floor.  And so while not extravagent, it certainly isn't uncomfortable by
+any means whatsoever.
+~
+0 72 0
+D5
+~
+~
+0 0 111
+X
+End
+S
+#299
+Interior~
+Snug in the bossom of luxury, and resplindant in leather and mahogany, the
+interior of this brand new top of the line automotive glows with status and
+the very essence of virility.  It's passengers craddled in pig skin
+buckboard seats that hold them like a mothers palm, arrive in style and are
+the envy of all who behold them.  Seatbelts having been added, along with an
+odometer this car is befitted with all of the newest safety features.  It
+smells faintly of linseed and bagbalm.
+~
+0 4202508 0
+E
+seat belt seatbelt~
+A new invention guaranteed to prevent spillage and overthrow the
+restaining belt would cross a person lap theorhetically,..  Unfortunately
+there only seems to be half of what should be a matched set in place at this
+time.
+~
+E
+odometer~
+Hard cast steel and tanted glass the odometer,..  Bolted firmly to the
+dash board is an extra feature new to the market, created for the saftey
+conscious.  It will measure speeds as high as the teeth rattling velocity of
+28 miles per hour,..  But only a reckless maniac or constable would ever
+wish to go that fast.  Unfortunately it does not appear at the moment to be
+going,..  So you must judge your speed like normal by the force with which
+various debris make contact with your face.  One of the joys of travel.
+~
+E
+armor~
+2
+~
+X
+End
+S
+#0
+
+
+
+#SPECIALS
+M 105 spec_playershop Load to: Shopkeeper
+M 107 spec_miner Load to: Miner
+M 111 spec_playershop Load to: Owner
+S
+
+
+
+#RESETS
+D 0 102 5 1
+D 0 103 4 1
+M 0 105 1 105 Load Shopkeeper
+M 0 107 1 109 Load Miner
+O 0 112 1 112 A comfortable bed loaded to Cheap Room
+M 0 111 1 112 Load Owner
+S
+
+
+
+#SHOPS
+105 0 0 0 0 0 100 100 0 23 -1 0
+107 0 0 0 0 0 100 100 0 23 -1 0
+111 998 0 0 0 0 100 100 0 23 -1 0
+0
+
+
+
+#$

@@ -1,0 +1,163 @@
+# Profile File
+#
+# This defines global runtime constants and initization parameters
+#
+# Format:
+#
+#  MUD 'name'			// The name of the MUD
+#
+#  Port port			// The port it listens on
+#
+#  WizLock YES|NO		// YES - The mud boots in wizlock mode
+#				// NO  - The mud boots normally
+#
+#  NewLock YES|NO		// YES - The mud boots in newlock mode
+#				// NO  - The mud boots normally
+#
+#  PermaPK YES|NO		// YES - PK causes parrmadeath
+#				// NO  - No penalty for PK
+#
+#  AutoOLC YES|NO		// YES - Automatic OLC saving ON
+#				// NO  - Automatic OLC saving OFF
+#
+#  Cron YES|NO			// YES - The mud will write out a run.inf file which stops all startup scripts
+#				//       Therefore you should setup a cron entry deleting it in regular intervals
+#                               //       eg. 5 minutes
+#                               // NO  - If you don't know what i'm talking about
+#
+#  Recover YES|NO		// YES - The mud will try to emergency-save all player files and recover upon
+#				//       crash
+#                    		//       NEVER set it when there are frequent crashes or a lot of scarcely tested
+#				// 	 code is freshly implemented - this could cause unpredictable damage to
+#				//	 your player files.
+#                               // NO  - A crash will bring the mud down until restarted manually or by script
+#
+#  Recall vnum			// Sets the global default room for recall
+#  Respawn vnum			// Sets the global default room for respawn
+#  Morgue vnum			// Sets the global default room for morgue
+#				//  0 means corpses are left where they fall
+#
+#  Start vnum			// Room that newbies start in
+#  Dream vnum			// Room you goto when you dream
+#				//  0 means no dream walking
+#
+#  Zone id 'name' recall respawn morgue dream flags 
+#
+# 				// Sets zone attributes
+#				//   id is from 0 to 31 
+#				//   name is what you want to call it
+#				//   recall, respawn and morgue are as above
+#				//   so is dream
+#				//   flags are:
+#				//       1  Secret
+#				//	 2  No magic
+#				//	 4  Low magic
+#				//	 8  High magic
+#				//	16  Super Magic
+#
+# Note: The entry names are case sensative.
+#
+
+# MUD Name
+
+ MUD 'Cthulhumud' 
+
+# Port to listen on
+
+ Port 9999
+
+# MUD URL - where to lookup helps & others
+
+ URL	http://
+
+# Failsave Autorestart using scripts & CRON
+ 
+ Cron NO
+
+# WizLock means only immortals can login
+ 
+ WizLock NO
+
+# NewLock means you cannot create new characters
+
+ NewLock NO
+
+# PermaPK means permadeath mode for player killers
+
+ PermaPK NO
+ PKTimer 15
+
+# PermaDeath means everyone only has one life
+ 
+ PermaDeath NO
+ 
+# EffectiveXPs means effective level used for XPs
+ 
+ EffectiveXPs NO
+
+# Enable/Disable OLC autosaving
+ 
+ AutoOLC YES
+
+# Enable Crash Recovery
+ 
+ Recover YES
+
+# Maintainance Reboot Time
+ 
+ Reboot	12
+
+# Approval Time (0 => Approval unnescessary)
+ 
+ Approval 3
+
+# Mud Difficulty (easy, balanced, hard)
+ 
+ Diff balanced
+
+# Start, Recall, Respawn, Morgue, Dream & Monitor entries
+
+ Start    3001
+ Recall	  3001
+ Respawn  3001
+ Morgue   3001
+ Dream    8600
+ Monitor    20
+ Mare     13001
+ Home	  3001
+ Map      None
+
+# Room boundaries for buildings
+
+ Pattern      100    299
+ Buildings   13400   13699
+
+# Global Currency Defaults
+
+ Currency 100 300 1000 150 -1
+
+
+# Zone definitions
+
+#    id  Name                          Rcall  Rspwn  Mrgue  Dream  Flags     Map
+#    --  ----------------------------  -----  -----  -----  -----  -----   ------
+Zone  0 'Default'                          0      0      0      0      0   'None'
+Zone  1 'North America, 1920'              0      0      0      0      0   'None'
+Zone  2 'Arabia, 1920'                     0      0      0      0      0   'None'
+Zone  3 'South America, 1920'              0      0      0      0      0   'None'
+Zone  4 'Europe, 1920'                     0      0      0      0      0   'None'
+Zone  5 'Asia, 1920'                       0      0      0      0      0   'None'
+Zone  6 'Africa, 1920'                     0      0      0      0      0   'None'
+Zone  7 'Antartica, 1920'                  0      0      0      0      0   'None'
+Zone  8 'Space'                            0      0      0      0      0   'None'
+Zone  9 'Aldebaran'                        0      0      0      0      0   'None'
+Zone 10 'Dreamlands I'                     0      0      0      0      0   'None'
+Zone 11 'Dreamlands II'                    0      0      0      0      0   'None'
+Zone 12 'High Seas'                        0      0      0      0      0   'None'
+
+
+# There must be an 'End' at the end.
+
+End
+
+

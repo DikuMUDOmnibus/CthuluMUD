@@ -1,0 +1,71 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="jh">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; I) [Netscape]">
+   <title>Eliza Chat</title>
+</head>
+<body background="paper.jpg">
+
+<center><b><font size=+2>ELIZA Chat</font></b>.</center>
+
+<p><br>
+<br>
+<p>There are several "operators" available:
+<br>&nbsp; pattern matching:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+or
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+and
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+and-not
+<br>&nbsp; special pattern matching:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+match start
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+exact match
+<br>&nbsp; pass 1 scan operators:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+remark
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+output to stderr
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+output to stdout
+<br>&nbsp; response operators:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-9&nbsp;&nbsp;&nbsp;&nbsp;
+weights are the numerals.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; %&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+include the rest of the response.
+<br>&nbsp;
+<br>Some special notes:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #,',",weights, and the first
+( must be in column one.
+<p>Syntax of a simple pattern match:
+<p>( A | B &amp; C ~ ( D | E | F))
+<p>The above would mean if A or B and C and-not D or E or F was in the
+<br>sentence then pick one of the responses.
+<p>The responses take on the form:
+<p>9this is most likely
+<br>4somewhat likely
+<br>1least likely
+<p>However, when a response is triggered, its weight is decreased by one.
+<br>&nbsp;
+<p>Since the above makes little sense, an example will illustrate the use
+of
+<br>Chat databases better.
+<p>#!/usr/bin/chat
+<br>#change the above line if the chat executable is in a different place.
+<br>#an example of a "Chat" database
+<br>"this will be printed to stderr
+<br>'this will be printed to stdout
+<p>(apple &amp; ( orange | lemon ) ~ pine cones)
+<br>9You must have a citrus fruit and an apple.
+<br>3you do not have a pine cone but you have an apple.
+<br>2what was % suppose to mean?
+<p>(=your sentence matches this one exactly)
+<br>2you are unimaginative.
+<br>9you lack imagination.
+<br>&nbsp;
+</body>
+</html>

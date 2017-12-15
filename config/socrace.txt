@@ -1,0 +1,804 @@
+#
+# Racial Societies
+#
+# There should be one society for each race.
+#
+# Society 'society name'	Starts the definition of a society.
+#
+# Id society_id			Gives the unique integer identifier for the
+#				society.
+#
+# Type type			Gives the type of the society
+#				
+#				    1 Player Clan
+#				    2 Race
+#				    3 Policital organization
+#				    4 Cult
+#
+#				A negative values means that the society
+#				is a secret society.
+#
+# Desc
+# description			Gives a short description of the society.
+# ~
+#
+# Profession 'name'		Names the profession associated with 
+#				membership.
+#
+# Advance level condition	Gives a condition for advancing to that level 
+#				within the society.
+#
+# Membership condition		Gives a condition for joining the society. 
+#				Stored as advance to level 0.
+#
+# Expulsion condition		Gives a condition for being expelled from the
+#				society if not met.
+#				Stored as advance to level -1.
+#
+# Hint: Define the societies in reverse sequence number so they turn up
+#       the right way around on the 'society list' display.  Levels should
+#       also be 'backwards'.
+#
+
+#
+#-----------------------------------------------------------------------------
+# Races
+#
+# Id is 100 + race number from const.c
+#
+# Players are automatically joined to thier race when they are converted.
+#
+
+
+#
+# Ghost
+#
+
+Society 'Ghost'
+	Id		152
+	Type		2
+	Desc
+A restless soul.
+~
+
+
+#
+# Insect
+#
+
+Society 'Insect'
+	Id		151
+	Type		2
+	Desc
+Insect
+~
+
+#
+# Tcho Tcho
+#
+
+Society 'Tcho Tcho'
+	Id		150
+	Type		-2
+	Desc
+The Tcho Tcho are some mysterious human race, living in the remote
+regions of the Himalayan mountains.
+~
+
+
+#
+# Gug
+#
+
+Society 'Gug'
+	Id		149
+	Type		-2
+	Desc
+Gugs are the giant dwellers of Zin. They live in complete darkness
+and fear the light of day.
+~
+
+
+#
+# Plant
+#
+
+Society 'Plant'
+	Id		148
+	Type		2
+	Desc
+Plant
+~
+
+
+#
+# Yithian
+#
+
+Society 'Yithian'
+	Id		147
+	Type		2
+	Desc
+They are enormous, iridescent cones, about ten feet high and ten
+feet wide at the base, and made up of some ridgy, scaly,
+semi-elastic matter. From their apexes projected four flexible,
+cylindrical members, each a foot thick, and of a ridgy substance
+like that of the cones themselves. 
+They travel time, looking for knowledge.
+~
+
+#
+# Old One
+#
+
+Society 'Old One'
+	Id		146
+	Type		-2
+	Desc
+The Old Ones were the firs inhabitants on the world and the entire
+universe. Figting among themselves they started a war and the
+defeated group got banned into the deepest dungeons, whereas
+the victorious party departed from earth to the outer emptyness.
+~
+
+#
+# Zoog
+#
+
+Society 'Zoog'
+	Id		145
+	Type		-2
+	Desc
+Zoogs are native inhabitants of the dreamlands, small blue humanoids
+with mouths full of sharp teeth.  They are renown for thier boisterous
+behaviour and sometimes cruel practical jokes.  There are legends that
+bad childern who die in their sleep become zoogs.  The zoogs certainly
+do a good job of racing around as hyper active little brats.
+~
+
+#
+# Fish
+#
+
+Society 'Fish'
+	Id		144
+	Type		2
+	Desc
+The creatures come in a variety of different sizes and shapes and almost
+all of them taste very nice if caught and fried.  They live in water and
+are, for the most part, fairly harmless.
+~
+
+#
+# Dragon
+#
+
+Society 'Dragon'
+	Id		143
+	Type		2
+	Desc
+These large flying creatures dwell amongst the lonely parts of the world.
+Where they come from is uncertain, but they are intelligent and can be well
+educated.  Typically they are around 100' long and have a liking for
+seclusion, but they are also rumoured to be able to change their shape.
+~
+
+#
+# Byakhee
+#
+
+Society 'Byakhee'
+	Id		142
+	Type		-2
+	Desc
+These strange, flying creatues come from beyond the stars.  They are often
+summoned and enslaved by conjourers as mounts and erred runners.  Typically
+they stand 9' tall, with a 12' wing span.
+~
+
+#
+# Shambler
+#
+
+Society 'Dimensional Shambler'
+	Id		141
+	Type		-2
+	Desc
+These strange creatures come from another dimension and have the ability
+to step between dimensions more or less at will.  While certain rituals
+will summon them to this world and enslave them to the conjourers will
+they are not happy here and will leave at the first opportunity.
+~
+
+#
+# Ghast
+#
+
+Society 'Ghast'
+	Id		140
+	Type		-2
+	Desc
+Ghasts seem to be more powerful versions of Ghouls, in terms both physical
+and magical.  There were probably the more depraved and knowledgeable
+humans who became ghouls.
+~
+
+#
+# Ghoul
+#
+
+Society 'Ghoul'
+	Id		139
+	Type		-2
+	Desc
+Ghouls are related to humans, possably another result of the dabblings
+of the Great Race.  They are shorted and thinner, being nocturnal by 
+nature and consumers of carrion - especially dead humans.  They haunt
+graveyards and labyrinthine tunnels that they build under many towns
+and cities.  it is said their their eerie piping voices can trigger
+a transformation in any human, causing them to devolve into one of these
+savage, canabilistic monstrosities.
+~
+
+#
+# Mi-Go
+#
+
+Society 'Mi-Go'
+	Id		138
+	Type		2
+	Desc
+The Mi-Go, also known as the Fungi from Yoggoth, are an interstellar
+species.  They travel the universe seeking rare and precious minerals
+that they can mine and ship back to Yoggoth.  Their largest base in our
+system is on Pluto, although they seem to have an outpost or two on
+earth as well.  They are great engineers and scientists and have 
+perfected many medial procedures.  There are reports of them shipping
+living human brains back to Pluto, presumable to work as slaves in
+their mines.
+~
+
+#
+# Snake People
+#
+
+Society 'Snake People'
+	Id		137
+	Type		2
+	Desc
+In the time of the sauropods, there emerged those who were small and 
+nimble and intelligent.  What thanks they owed to the Great Race for 
+this is unknown.  They build great cities of black basalt and worshipped
+the sun, for they derived their sustenance from its warmth.  As the 
+world changed, and the ice covered it, they retreated deep underground,
+to found cities bathed by the heat of the magma deep within the earth and
+their worship turned to dark gods and darker practices.
+~
+
+#
+# Deep One
+#
+
+Society 'Deep One' 
+	Id		136
+	Type		2
+	Desc
+Many aeons ago, the Great Race held the world and required human slaves that
+could work beneath the waves.  With elements of frog, shark and anonemie
+they fashion the Deep Ones, humanoid creatures adapted to living and working
+in the depths of the ocean.  In the years since the Great Race left they
+have evolved their own culture and raised their own dieties - Father Dagon
+and Mother Hydra.  A few humans have established contact with these distant
+kin and participate in their blood thirsty rituals.  A few tales of cross 
+breeds have also surfaced.
+~
+
+#
+# Avatar
+#
+
+Society 'Avatar'
+	Id		135
+	Type		-2
+	Desc
+Occasionally (very occasionally) a diety will wish to manifest its will
+upon the earth.  When they do so they create a special body - their Avatar.
+This is a direct representative of the diety upon the earth.  Each dieties
+Avatar will be different although some dieties have a few particular ones
+that the like to reuse.
+~
+
+#
+# Demon
+#
+
+Society 'Demon'
+	Id		134
+	Type		2
+	Desc
+It is rare that creatues from other worlds will visit this one.  When they
+do and the unknowing see them, they are invariable hideous and assumed
+to be evil.  Together all of these strange, alien creatures are referred
+to as demons.  Most human religions regard them as evil and in this they
+may well be right.
+~
+
+#
+# Undead
+#
+
+Society 'Undead'
+	Id		133
+	Type		2
+	Desc
+Undeath is more a state of being that a particular race.  When a living
+creature dies, all life is extinguished from its body.  There are, however,
+unspeakable necromatical rites and ritual that can be performed, that will,
+with the assistance of a dark god, return a shambling, mindless semblence 
+of life to the rotting body that once held it and enslave the resulting
+abomination to the wizard casting the spells.
+~
+
+#
+# Wyvern
+#
+
+Society 'Wyvern'
+	Id		132
+	Type		2
+	Desc
+A mythical race of reptilian creatures the size of large elephants 
+with wings and tails that were able to fly and breate fire.  They 
+had large relatives known as dragons.  There is little evidence of
+such creatures and, if they do exist, they are not of this world.
+~
+
+#
+# Wolf
+#
+
+Society 'Wolf'
+	Id		131
+	Type		2
+	Desc
+Large, wild preditors that are distant relatives of dogs.  Generally
+they live in packs and stay in the wildernes away from men.  There
+are many associations between wolves and wild, uncultured behavior.
+There have also been cases of human children being raised amongst 
+wolves.  Children who can never return to the confines of human
+civilization.
+~
+
+#
+# Water Fowl
+#
+
+Society 'Water Fowl'
+	Id		130
+	Type		2
+	Desc
+Birds that live on (or near) water.   
+~
+
+#
+# Troll
+#
+
+Society 'Troll'
+	Id		129
+	Type		-2
+	Desc
+Trolls are strange, unnatural creatures.  Descriptions vary, but they 
+are all generally humanoid and normally quite viscious and nasty.
+Although made of flesh and blood, they are hard to kill because their
+bodies keep repairing themselves.  The shape and appearance of trolls
+seems to be affected by their diet.  Dimly aware of this, they relish
+human flesh.  They also seem to have a provarication for living under
+bridges.  They may be some distant relative of Shoggoths or the
+Formless Spawn of Tsathoggua.
+~
+
+#
+# Bird
+#
+
+Society 'Bird'
+	Id		128
+	Type		2
+	Desc
+Birds range from small sparrows and robins up to falcons and eagles.
+There are tales of enormous birds called Rocs that hunt Elephants.
+Some birds are known for their amazing migrational journies.
+~
+
+#
+# Snake
+#
+
+Society 'Snake'
+	Id		127
+	Type		2
+	Desc
+Limbless reptiles that range in size from a few inches to over 50 feet
+long.  Many of them have a poisonous bite or are able to kill by
+constrictiong their pray.  There are a number of cults that worship
+snakes and there is felt to be some kinship between them and the 
+snake people.  The diety Yig is described as the half human father of
+serpents.
+~
+
+#
+# Monster
+#
+
+Society 'Monster'
+	Id		126
+	Type		-2
+	Desc	
+These are a variety of creatures within the newbie school that are
+typically meant to be easy to kill.
+~
+
+#
+# Rabbit
+#
+
+Society 'Rabbit'
+	Id		125
+	Type		2
+	Desc	
+Typically a few pounds in weight and maybe 2 or 3 feet long, rabbits are
+a natural food source that breeds very quickly.
+~
+
+#
+# Cattle
+#
+
+Society 'Cattle'
+	Id		124
+	Type		2
+	Desc	
+These animals range in size from about 2' at the shoulder to those that
+stand over 8' high.  The smaller aminals can be domesticated and make
+good eating.  The larger run wild in the forests of the world,
+providing a danger to all who enter.  Humans have all but hunted the
+larger species to extinction. 
+~
+
+#
+# Orc
+#
+
+Society 'Orc'
+	Id		123
+	Type		-2
+	Desc	
+Amongst the Elves of the Unseelie court there arose a cult that worshipped
+the darkest gods and indulged in strange, unnatural rites.  Eventually these
+degenerates were discovered and banished from both courts.  They wander
+the worlds now, still worshipping their dark gods and sacrificing those
+unfortunate enough to fall into their grasp.  In appearance they are much
+like humans, but with pig like snouts, coarse hair and tusks.  They can
+generally be found where ever there are wars, as the revel in the 
+destruction and mayhem.
+~
+#
+# Modron
+#
+
+Society 'Modron'
+	Id		122
+	Type		2
+	Desc	
+These creatures exist in dimensions beyond ours, being representative of
+pure, abstract ideas.  One the few occasions that humans do encounter
+them, they appear as perfect geometrical shapes.  It is possible that
+Plato may have been involved with them.
+~
+
+#
+# Lizard
+#
+
+Society 'Lizard'
+	Id		121
+	Type		2
+	Desc	
+These reptilian creatures are found in many of the warmer parts of the
+world.  By day they bask in the warmth of the sun, by night they sleep.
+There are rumours of giant lizards, throwbacks to the days of the long
+gone days when dinoosaurs walked the earth.
+~
+
+#
+# Kobold
+#
+
+Society 'Kobold'
+	Id		120
+	Type		-2
+	Desc	
+In times past, those who came before men, the serpernt people, dwelt in
+great cities.  As time passed their race fades, their cities were burried
+and their degenerate descendents now live reclusively in the dark depths
+of the earth, worshipping their ancient dieties.
+~
+
+#
+# Hobgoblin
+#
+
+Society 'Hobgoblin'
+	Id		119
+	Type		-2
+	Desc	
+Occasionally there will emerge one amogst the goblins who is of a generally
+tougher and more intelligent nature.  These Hobgoblins know more of weapons,
+traps, spells and magic that their obnoxious bretheren.  There is some 
+suggestion that rather than being throwbacks to the goblins more human 
+ancestors, they may be the steps towards the evolutionary goal that the
+elder gods are pushing the goblins towards.
+~
+
+#
+# Goblin
+#
+
+Society 'Goblin'
+	Id		118
+	Type		-2
+	Desc	
+In places where there has been darkness and evil, where things are hidden
+from the sight of the sun, these evil creatures may abound.  Generally they
+are shorter than most humans, standing only 4 feet or so tall and they are
+typically hideously ugly.  Most are insane and many beligerant.  There is
+some speculation that they may be the degererate offspring of humans who
+have dealt with the older gods.
+~
+
+#
+# Fox
+#
+
+Society 'Fox'
+	Id		117
+	Type		2
+	Desc	
+Foxes are nocturnal scavengers and hunters.  They lurk in the thickets
+and bushes of the countryside, waiting for an opportunity to get an
+easy meal.
+~
+
+#
+# Rat
+#
+
+Society 'Rat'
+	Id		116
+	Type		-2
+	Desc	
+Rat
+~
+
+#
+# Doll
+#
+
+Society 'Doll'
+	Id		115
+	Type		-2
+	Desc	
+Created from ceramics and wood, dolls are magically animated creatures.
+Sometimes they may appear human, but they are not.  Animation is acheived
+through powerful spells.  There are occasional reports of dolls with mind,
+evil creatures, praying on humans and feeding off of their life forces.
+~
+
+#
+# Dog
+#
+
+Society 'Dog'
+	Id		114
+	Type		2
+	Desc	
+A mammal which comes in a variety of shapes and sizes, and is most often
+found as a domesticated animal.  Domestic dogs come in all shapes and sizes
+and may be trined for specific tasks.  Wild dogs live mainly by scavanging
+and almost every continent has its own variety.  In ancient Aegypt wild
+dogs (jackals) were associated with Anubis, the god of death.
+~
+
+#
+# Centipede
+#
+
+Society 'Centipede'
+	Id		113
+	Type		2
+	Desc	
+An insect with lots of legs and, occasionally, a poisonous bite.  There are
+rumours of giant centipedes in equetorial lands, some of which produce a
+natural halucagenic substance which can be consumed if the centipede is dried
+and smoked.
+~
+
+#
+# Cat
+#
+
+Society 'Cat'
+	Id		112
+	Type		2
+	Desc	
+Small preditors that have been sort of domesticated and share the world
+with humans.  In the absence of humans, they revet to their wild forms
+quite frequently.  Cats are said to have strange occult powers at times
+and in Aegypt they were worshipped as avatars of the goddess Bast.
+~
+
+#
+# Bear
+#
+
+Society 'Bear'
+	Id		111
+	Type		2
+	Desc	
+Big omniverous preditors, bears live in the more remote areas of the modern
+world.  They can be very dangerous in a fight.
+~
+
+#
+# Bat
+#
+
+Society 'Bat'
+	Id		110
+	Type		2
+	Desc	
+A small nocturnal flying mammal that navigates through the darkest night by
+sound alone.  Rumous abound of vampire bats and giant bats, although no
+specimens have ever been caught.
+~
+
+#
+# Giant
+#
+
+Society 'Giant'
+	Id		109
+	Type		-2
+	Desc	
+Big, hairy and uncivilised, giants are thought to be extinct.  There is some
+speculation that they were a failed experiment by the great race who created
+then as big, stupid workers and spare bodies.
+~
+
+#
+# Highlander
+#
+
+Society 'Highlander'
+	Id		108
+	Type		-2
+	Desc	
+Highlanders are a devient breed of humans.  Although immortal unless slain
+they are driven by an urge to try and kill each other.  Legend says that
+the last one will be a great champion who will rule the world.  As there is
+some suspision the Narlyhotep created the first highlanders, this may not
+be a good thing.
+{RNO CODE SUPPORT{x
+~
+
+#
+# Dwarf
+#
+
+Society 'Dwarf'
+	Id		107
+	Type		-2
+	Desc	
+Short, squat and ugly, dwarves are thought to be more civilized versions of
+the trolls that abounded within Scandinavia during the middle ages.  Dwarves
+seem to have as much adaptability as humans and, as they are able to 
+interbreed to some extent, are being slowly assimulated into the human
+population.  A few isolated groups do exist in the hidden places of the
+world.
+~
+
+#
+# Elf
+#
+
+Society 'Elf'
+	Id		106
+	Type		-2
+	Desc	
+There seem to be as many kinds of elves as there are humans.  Generally it 
+is accepted that they are beings from other plains, who acquire magical
+abilities when they enter this world.  Although each is aligned with either
+the Seelie (light) or the Unseelie (dark) Court they are all dangerous to
+humans, who are often trapped and tricked by their cleaver words.
+~
+
+#
+# Gargoyle
+#
+
+Society 'Gargoyle'
+	Id		105
+	Type		-2
+	Desc	
+These ugly creatures are supernatural preditors that have moved into many of
+our cities and towns.  Perching on buildings they look like stoney statues,
+but by night they stalk the streets looking for the unwary.
+~
+
+#
+# Satyr
+#
+
+Society 'Satyr'
+	Id		104
+	Type		-2
+	Desc	
+These mythical beings are said to be a man with the legs and horns of a goat.
+According to legends they liked to run around in the country side playing
+pipes, drinking wine and forcing their attentions on women.  It is suspected
+that they may have some connection with Shub-niggurath.
+~
+
+#
+# Scorpianmen
+#
+
+Society 'Scorpianmen'
+	Id		103
+	Type		-2
+	Desc	
+Anyone know what one of these is?
+~
+
+#
+# Spider
+#
+
+Society 'Spider'
+	Id		102
+	Type		-2
+	Desc	
+Spider
+~
+
+#
+# Human
+#
+
+Society 'Human'
+	Id		101
+	Type		2
+	Desc	
+Descended from apes, this race foolishly thinks it is the rightful owner of
+the planet is calls Earth.  It's even proud of the miniscule advances it has
+made in its technology.
+~
+
+#
+# Unique
+#
+
+Society 'Unique'
+	Id		100
+	Type		-2
+	Desc	
+This is a bucket for anything that doesn't fit elsewhere.
+~
+
+#
+# There must be an End at the end.
+#
+
+End
+

@@ -1,0 +1,105 @@
+MORGUE 1200
+#O
+Vnum 3135
+Nest 0
+Size   6
+Wear -1
+Cost 0
+Cond 90
+Val  0 0 0 0 -1
+ValOrig  0 0 0 0 -1
+ZMask 0
+End
+
+MORGUE 1499
+#O
+Vnum 1402
+Nest 0
+Size   6
+Wear -1
+Cost 0
+Cond 100
+Val  500 5 0 100 100
+ValOrig  500 5 0 100 100
+ZMask 0
+End
+
+MORGUE 2032
+#O
+Vnum 2007
+Nest 0
+Size   6
+Wear -1
+Cost 0
+Cond 100
+Val  15 15 2006 100 100
+ValOrig  15 15 2006 100 100
+ZMask 0
+End
+
+MORGUE 7903
+#O
+Vnum 7909
+Nest 0
+Size   6
+Wear -1
+Cost 0
+Cond 100
+Val  -100 0 0 0 0
+ValOrig  -100 0 0 0 0
+ZMask 0
+End
+
+MORGUE 7908
+#O
+Vnum 6013
+Nest 0
+Size   6
+Wear -1
+Cost 20
+Cond 100
+Val  256 256 0 0 0
+ValOrig  256 256 0 0 0
+ZMask 0
+End
+
+MORGUE 7910
+#O
+Vnum 7910
+Nest 0
+Size   6
+Wear -1
+Cost 100
+Cond 100
+Val  100 15 7911 100 100
+ValOrig  100 15 7911 100 100
+ZMask 0
+End
+
+MORGUE 8912
+#O
+Vnum 8901
+Nest 0
+Size   6
+Wear -1
+Cost 0
+Cond 100
+Val  100 1 0 100 100
+ValOrig  100 1 0 100 100
+ZMask 0
+End
+
+MORGUE 8914
+#O
+Vnum 8901
+Nest 0
+Size   6
+Wear -1
+Cost 0
+Cond 100
+Val  100 1 0 100 100
+ValOrig  100 1 0 100 100
+ZMask 0
+End
+
+END

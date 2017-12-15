@@ -1,0 +1,2241 @@
+Driver 6
+--------
+
+  File Structure
+  --------------
+
+    /area    - area files (RW)
+
+      area.lst    - main include
+      help.are    - online help
+      limbo.are   - ROM base area (vnums 1-65) 
+      system.are  - CthulhuMud base area (vnums 20000-20099) 
+
+    /config  - persistent configuration files (R)
+
+      skills.txt  - skill definitions
+      profs.txt   - profession definitions
+      profile.txt - runtime parameters
+      society.txt - society definitions
+      socrace.txt - racial society definitions 
+      social.txt  - 'social action' definitions
+      spells.txt  - spell definitions (added by driver 7)
+      races.txt   - race definitions
+
+    /data    - runtime generated data files (RW)
+
+      disable.dat - disabled commands
+      time.dat    - current mud time
+      banks.dat   - bank accounts and balances  
+      socmemb.dat - society membership information
+
+    /player  - player files (RW)
+
+    /gods    - god logs (W)
+
+    /log     - other log files (W)
+
+      sdown.txt   - shutdown records
+      bugs.txt    - bugs
+      typo.txt    - typos
+
+    /msgbase - messages on notice boards (RW)
+
+    /clan    - old clan database (RW)
+
+    /README  - copyright and license info 
+
+    /docs    - some (old) documentation
+
+    /drv6    - code source and executables (X)
+
+ 
+  Profile
+  -------
+    The profile file (config/profile.txt) contains paramters which the mud
+    loads at boot time and affect how it runs.  See the comments at the
+    top of the sample for details.  Supported paramerters are:
+
+      mud name - for Who and Time
+      port     - for listening on
+      wizlock  - boot in wizlock mode
+      newlock  - boot in newlock mode
+      start    - room new players start in
+      recall   - default recall room
+      respawn  - default respawn room
+      morgue   - default morgue room
+     
+    You can also define zones.
+
+  Zones
+  -----
+    Zones are defined in the profile.
+
+    Zone represet discrete parts of the mud, and each is made up of many
+    areas.  Transportation, especially magical transportation, between
+    zones is impossible.  This affects Gate, Teleport, Summon, Portal and
+    recall.  If it possible to walk between zones and to use permanent
+    portals to move between them.
+
+    Zones can specify recall, respawn and morgue rooms.  If specified (non
+    zero) they are checked after the areas rooms are checked.
+
+    The command zlist shows which zones are defined in the profile. There
+    is a limit of 32 zones (numbered 0 thru 31). Zone 0 should always be
+    defined.
+
+    The alist command has be refurbished and takes an optional parameter
+    of a zone id.  This restricts it to showing just the areas in that zone.
+    See also ainfo for immortals.
+
+    Eventually there may be zone attributes, affect magic and maybe some
+    other things.
+
+    Objects can have a list of zones associated with them.  If an object is
+    removed from those zones it will 'evaporate' (but should return when
+    the player returns to a zone in its list). By default objects exist in
+    all zones.  When an object is loaded its zone attributes will be reset
+    to those of its proptype, unless is has been made univeral.
+
+    Commands zcopy and zclear have been added to provide global manipulation
+    of zone data.  zcopy will copy object settngs for one zone onto another.
+    This is useful when you add a zone that should be similer to an already
+    existing zone.  zclear removes a zone from all object.  Both commands
+    change all areas in memory and should be followed by an asave world.
+
+    Added a new spell:
+
+	Universality
+	------------
+	Component: yusefs dust
+	Effect:	The targetted object is changed so that it can exist in all
+		zones of the mud, instead of the set it is normally limited
+		to.
+
+  Recall, Respawn, Morgue and Dream
+  ---------------------------------
+ 
+    Recall is where you go when you recall (or Word of Recall)
+
+    Respawn is where you are put when you die
+
+    Morgue is where your body is put when you die
+
+    Dream is where you go when you dream
+
+    All values can be set:
+
+      Muddally - in the profile
+
+      Zoneally - in the profile under the zone definition
+
+      Areally  - through AEDIT
+
+      Roomally - through REDIT
+
+    Checking sequence is always room/area/zone/mud 
+
+    Gods should use caution when changing these values.  Consider the following
+    rules:
+
+      Recall should always be somewhere safe, with food and water. Consider
+        recall a sort of 'reset' for the player within the zone/area.
+
+      Respawn should also be somewhere safe, maybe with a healer or a
+        fastheal room.
+
+      Morgue should be either 0 (your corpse is left where you died) or
+        somewhere that can be easily reached from the respawn room.  Some
+        sort of directions in the respawn room might be nice.
+
+      Dream should be an entry point into either a dreamlands area or a
+        waking world area.
+
+    Changing these values allows th creations of areas that players stay in
+    when they die.  For example a player on a ship cannot get off it simply
+    by dieing or recalling.  Generally the rooms should be within the same
+    zone as the one with the setting.
+
+  Dreaming
+  --------
+
+    Added a new command - dream.  Only usable when you are asleep.
+
+      Dream
+
+	Issues a random dreaming message
+
+      Dream ?
+
+	Display help for the command
+
+      Dream walk
+
+	Enter the world of dreams corresponding to your location. A skill
+	check is required.
+
+      Dream awaken
+
+	Return to the real world. A skill check is required.
+
+      Dream resume
+
+	Attempt to return to a previous dream.  Can only be attempted once.
+	A skill check is required.
+
+      Dream [of person] say/whisper/shout/yell/scream <message>
+
+	Sends a message to one or more other dreamers.  A skill check is
+	required to deliver a private dream message.
+
+      Dream [of person] emote
+
+	Sends an emote action to one or more other dreamers.  Again, a skill
+        check is required to deliver a private emote.
+
+      Dream [of person] cast
+
+	Sends an echo (text with no indication of its source) to one or more
+	dreamers.  Sending one requires a skill check, making it private
+	requires another.      
+
+    Added a new skill - dreaming.  Everybody starts with 1%, used for the
+    dream command and some dream releated spells.  May be the basis for
+    Dream Magic at some point.  Currently the dream skill boosts all of
+    your other skills when you are dreming.
+
+    Added four new spells:
+
+	True Dreaming
+	-------------
+	Component: dream catcher
+	Effect: This makes someone who is only present in dream, present in
+		reality.  This means that they cannot awaken and get back
+		to the real world.  They are now a permanent part of the 
+		dream world.
+
+	Rude Awakening
+	--------------
+	Component: silver bell
+	Effect:	This hurls a dreamer out of the world of dreams and returns
+		them to the room they entered the world of dreams from.
+
+	Recurring Dream
+	---------------
+	Component: brass pendent
+	Effect: This returns the victim to the world of dreams, resuming
+		thier previous dream.  This uses the casters dreaming skill
+		rather than the victims.
+
+	Enchanted Sleep
+	---------------
+	Component: silver sand
+	Effect:	The victim goes to sleep and, if there is a dream location
+		associated witht he current room, enters the world of dreams.
+		This spell uses the casters dreaming skill, not the victims.
+
+  If a character dies while dreaming, they get to make a dreaming check.  
+  Success means they get respawned in the world of dreams (and their body
+  goes to the world of dreams morgue). Failure means they (and their corpse)
+  are put in the room the entered the dream world from.
+
+  Area Edit Lock
+  --------------
+
+    When set it prevents all OLC activity in the area.  It can be set and
+    unset through the edit area dialog.  When set, the area can only be
+    saved by an asave area from inside the area or an asave force.
+
+    It is designed to be used to freeze an area while changes are made
+    to it offline. 
+
+  Area Manipulation
+  -----------------
+
+    A few commands to make it easier to rearrange areas.  Currently only
+    available to implementors.  You should probably do an 'asave world' 
+    after using any of them.  Take a backup before hand and check a few of
+    the changes manually before saving.  If these commands go wrong they
+    can screw up your ALL of your area files.
+
+    asplit area_vnum split_vnum
+
+      This chops the area into two areas, the latter being a copy of the
+      first except for the file name.
+
+    amerge low_area_vnum high_area_vnum
+ 
+      This takes two contiguous areas and merges them into a single area.
+      For this to work the areas must be next to each other, so that the
+      low vnum of the high area is one more than the high vnum of the 
+      low area.  The low area will be expanded to contain the high area,
+      the high area will be emptied.
+
+    revnum new_vnum
+
+      This works from inside OLC for rooms, mobs and objects.  It changes
+      the rooms, mobs or objects vnum.  It can be used to shift things
+      between areas.
+
+      When used the following adjustments are made automatically:
+
+	rooms	All exits pointing to the room
+		All condition destinations pointing to the room
+		All portals pointing to the room
+
+	objects	All resets in all rooms
+		All paired portals
+		Keys on all room exits
+		Keys on all containers and key rings
+
+	mobiles	All resets in all rooms       
+
+      Note that there is no automatic updating of scripts and triggers.
+
+      Additionally the changes only update the master objects, not the play
+      ones, so it will be necessary to reboot the mud to pick up such changes.
+
+      If an object is renumbered, any instances of it in player save files 
+      or lockers will be destroyed.  This will also happen with pets and
+      charmed monsters.
+
+    arebase area_vnum new_low_vnum
+
+      This uses repeated calls to the revnum routines to move a complete
+      area to another range of vnums.  It takes a little while.  Note the
+      above problems with changing object vnums.
+
+    asuck area_vnum
+
+      This steps through all of the rooms in an area and each of their
+      resets.  If it finds a reset for a mob or an object that is from
+      another area, it will rebase it into the area. Useful for a post
+      split tidy up where the objects and mobs were not aligned with the
+      rooms.
+
+  Newbies
+  -------
+    Newbies enter play at level 3 - Avg 50 hits, 11 practices.
+      This gives them a fairly good change of killing 1st and 2nd level mobs
+    They remain newbies until they reach level 8.
+
+  Magical Areas
+  -------------
+
+    Areas and zones may be flagged as more or less magical than usual.
+
+	No Magic	Spells cannot be cast
+	Low Magic	Mana costs doubled, level reduced, difficulty doubled
+	Normal		Mana cost standard, level same as casters
+	High Magic	Mana cost reduced 20%, level increased, difficulty/2
+	Super Maigc	Mana cost halved, level increased a lot, difficult/3
+
+    Note that effects are cumulative, so a super magic area in a super
+    magic zone is very, very magical - quarter mana costs, big level boosts.
+
+    If either area or zone is marked non magical, spells will not work.
+
+  Master Spell Components
+  -----------------------
+
+    These can be placed anywhere in the mud:
+
+    20020 - Silver dollar	Summon Familier
+    20021 - Dream catcher	True Dreaming
+    20022 - Silver bell		Rude Awakening
+    20023 - Brass pendent	Recurring Dream
+    20024 - Silver sand		Enchanted Sleep
+    20025 - Yusefs dust		Universality
+    20026 - Poison		Poison
+    20027 - Alabaster		Sanctuary
+    20028 - Obsidian		Gate
+    20029 - Dried frog 		Water breathing
+    20030 - Weasel skull	Gnawing hunger
+    20031 - Rock salt		Burning thirst
+    20032 - Shot of rum		Free grog
+    20033 - Hair of dog		Ghastly soberity
+    20034 - Whale fat		Burden of blubber
+    20035 - yellow leech	Slender lines
+    20036 - silver needle	Dispel evil
+    20037 - brass gong		Earthquake
+    20038 - quartz crystal	Call lightning
+   
+    Table retired - see spells.txt 
+
+  Chat
+  ----
+
+    Mobs can now have chat matrixies defined.  Each matrix row represents
+    a 'state' in the mobs behaviour, and the cells indicate the script
+    the mob should execute (0 for no script) and the new state it should
+    have after having execute the cell.  The chance of a chat happening
+    is specified for each row, and the chat that happens will be randomly
+    selected from the 8 possible script/state pairs in the row.
+
+    All mobs start in chat state 0.  If a mob is in chat state 0 and it
+    enters combat, it is put into state 1.  If it is in state 1 at the
+    end of combat it is put into state 0.
+
+    Normally the @ax variables are available for substitution, but when the
+    mob is fighting, the @vx variables are also available.  If you want a 
+    non fighting mob to pick on a pc, you need to use the MPSELECT command
+    from the triggers script and react to the selection event.
+
+    Chat is checked once every 3 seconds if the mob is active.
+
+    For example, the combat chat for a pyromancer might be:
+
+      Script 1 - 10 0 0 cast 'fireball' @vt
+
+      Script 2 - 10 0 0 cast 'burning hands' @vt
+
+      Script 3 - 10 0 0 cast 'curse' @vt
+
+      Script 4 - 10 0 0 cast 'giant stength' self
+
+      Script 5 - 10 0 0 cast 'faerie fire' @vt
+
+      Chat 1 120  1 1  2 1  1 1  2 1  3 1  4 1  5 1  2 1 
+
+    This gives him a high chance of doing something (120 in 128).  When he
+    does something, he will attack thus:
+
+        37% burning hands
+        25% fireball
+        12% curse
+        12% giant strength (on himself)
+        12% faerie fire
+
+    It is of course possible to build more complex combat chat sequences,
+    which use one state for casting defensive spells and another one or 
+    two for offensive spells.  The caster could also react to injury messages
+    to switch into a defensive/healing/evasive mode. 
+
+    A sequence of chats like this:
+
+      Chat 1 120  4 2  4 2  4 2  4 2  4 2  4 2  4 2  4 2
+      Chat 2 120  3 2  3 3  3 2  3 3  5 3  5 2  5 3  5 2
+      Chat 3 120  1 3  1 3  1 3  1 2  2 3  2 3  2 3  2 2 
+
+    Would cause him first to cast 'giant strength' upon himself and then
+    to alternate between trying to cast 'curse' and 'faerie fire' upon
+    you and using 'burning hands'  and 'fireball' to fry you.  After trying
+    one of the non burning spells he would have a 50% chance of switching
+    to full offense, but only a 25% chance of going back to the hampering
+    spells.
+
+    Note also that ther is no logic to make him retry a spell that fails or
+    to prevent him recasting spells that will have no effect (because you
+    are already affected by them).
+
+  MPCHAT
+  ------
+
+    A mob command for manipulating chat states.
+
+    Without any parms it causes the mob to undergo a normal chat check.
+
+    With a parameter, a single number, it directly updates the mobs chat 
+    state.
+
+  Hunger and Thirst
+  -----------------
+
+    Players are able to survive without water for 2 days and without food for
+    5 days before they start suffering bad effects.  The effects are cumulative
+    and will, eventually, kill them (or, more likely, make them weak enough
+    for something else to kill them).  
+
+    Food and drink consumption is higher in dry and/or hostile environments
+    than in civilized environments.
+
+    Added some food related spells:
+
+	Gnawing Hunger
+	--------------
+	Component: weasel skull
+	Effect: This consumes the victims food resources, possably inducuing
+		starvation effects.
+
+	Burning Thirst
+	--------------
+	Component: rock salt
+	Effect: This consumes the victims drink resources, possably inducuing
+		dehydration effects.
+
+	Free Grog
+	---------
+	Component: shot of rum
+	Effect: This create alcohol directly within the victim blood.  Used
+		enough and the victim will become drunk.
+
+	Ghastly Sobriety
+	----------------
+	Component: hair of dog
+	Effect: This removes all alcohol from the victims body, probably 
+		leaving them with a hangover.
+
+	Burden of Blubbler
+	------------------
+	Component: whale fat
+	Effect: This causes the victim to become fatter, inducing obesoty 
+		effects.
+
+	Slender Lines
+	-------------
+	Component: yellow leech
+	Effect: This removes fat, and thus obesity effects, from the victim.
+
+  Books
+  -----
+    v0 - language skill
+    v1 - Skill rating
+    v2 - skill
+    v3 - skill
+    v4 - skill
+
+    Books can be read and studied. 
+
+    Reading (or examining or looking)
+      Show book description
+      Show book language
+      Show if book contains studyable skills
+      Switch on language skill * books condition
+       <  10 : You can't read it
+       <  50 : Show extra_desc for "read_poor"
+       < 100 : Show extra_descr for "read"
+
+    Studying
+      Calculate effective rating - language * condition * rating
+        < 10 : You can't study it
+      For each skill,
+        If less than effective rating,
+          gain 2d6 points
+        Else
+          have a chance of improving it
+      Costs 1 practice session
+  
+  Extra Descriptions
+  ------------------
+    Extended to use conditions.
+      Allows different text depending upon the reader.
+    Ed now has list, show and cond options.
+      Works by index number, not keyword.
+    Rooms
+      Literal "room" when looking at the room.
+    Objects
+      Uses the objects name when examining it.
+
+  Extra Senses
+  ------------
+    Commands smell and listen implemented.
+    Use extra descriptions with 'smell' and 'listen' as keywords.
+    For rooms, 'room' keyword is also used - smell room.
+
+  Conditions
+  ----------
+    Each condition has a subject. Possible subjects are:
+
+      actor
+        - The mob who is taking the action
+      victim
+        - The mob that is being acted upon
+      observer
+        - The mob the condition is being evaluated for
+        - Can be the same as actor or victim
+      random
+        - A random character in the same room.
+        - Never the observer
+      lactor
+      lvictim
+      lobserver
+      lrandom 
+        - The leader f the indicated characters group, or the character
+          if they do not have a leader.
+    Not all subjects are valid in all contexts.  If a subject is not
+      valid, all conditions upon it are unsatisfied.    
+  
+    The following types of condition are available...
+ 
+      World Conditions: 
+
+        moon low high
+	  Check on the phase of the moon, from 0 New to 4 Full
+          The moon follows a standard 28 day cycle.
+
+        random low high
+          Checks on a random number in the range 0..1023
+
+        hour_of_day low high
+          Check against time of day (0..23)  
+          1 hour gametime is 30 seconds real time.
+
+        hour_of_day_mod div low high
+          Check against hour of day modulus div (0..(div-1))
+          Good divs: 2, 3, 4, 6, 8, 12
+
+        day_of_month low high
+          Checks against the day of the month (0..32)
+          1 Month gametime is 6 hours, 24 minutes realtime. 
+
+        day_of_month_mod div low high
+          Checks against day of month modulus div (0..(div-1))
+          Good divs: 2, 4, 8, 16
+
+        day_of_year low high
+          Checks against the day of the year (0..383)
+          1 Year gametime is 3 days, 4 hours and 48 minutes.
+
+        day_of_year_mod div low high
+          Checks against day of year modulus div (0..(div-1))
+          Good divs: 2, 3, 4, 6, 8, 12, 16, 24, 32, 48, 64, 96, 128, 192
+
+        week_of_year low high
+          Checks against the week of the year (0..47)
+          1 week gametime is 1 hour, 36 minutes
+
+        week_of_year_mod div low high
+          Checks against week of year modulus div (0..(div-1))
+          Good divs: 2, 3, 4, 6, 8, 12, 16, 24
+
+        month_of_year low high
+          Checks against the month of the year (0..11)
+          1 month gametime is 6 hours, 24 minutes
+ 
+        month_of_year_mod div low high
+          Checks against month of the year modulus div (0..(div-1))
+          Good divs: 2, 3, 4, 6
+
+        mob_in_room room low high
+	  Checks a mob with a vnum in the range is in the room
+
+	player_in_room
+	  Checks to see if any players are in the room
+
+	room_empty_mob
+	  Checks there are no mobiles or players in the room
+
+	obj_in_room
+	  Checks if an object with a vnum in the range is in the room
+
+	room_empty_obj
+	  Checks there are no objects in the room
+
+      Mob/Character conditions:
+
+        skill 'skill' low high
+          Checks the mobs skill (0..200)
+ 
+        race 'race'
+          Checks the mobs race
+          All characters are currently human. 
+
+        level low high
+          Checks the mobs level (1..100)
+
+        sanity low high
+          Checks the mobs level (1..100)
+
+        casting level low high
+          Checks the mobs current spell casting level (1..100)
+
+        align low high
+          Checks the mobs alignment (-1000..1000) 
+
+        prof 'profession' low high
+          Checks the characters profession and profession levels
+
+        hits low high
+          Checks the characters current hit point total
+
+        mana low high
+          Checks the mobs current mana point total
+
+        move low high 
+          Checks the mobs current move point total
+
+        hits_percent
+          Checks the percentage of max hits the mob is on
+
+        mana_percent
+          Checks the percentage of max mana the mob is on
+ 
+        move_percent
+          Checks the percentage of max move the mob is on
+
+        gender sex1 sex2
+          Checks the mobs gender
+
+        soc_rank template
+          Checks rank within a socielty accoring to a bit template.
+          1) invited 2) member 4) council 8) leader
+
+        soc_level low high
+          Checks level within a society
+
+        soc_auth template
+          Checks authority within a society using a bit template.
+          See society.h for the SOC_AUTH_xxx values. 
+
+        conv conv_id subj_id state
+          Checks for a particular state in a conversation
+
+        carrying vnum1 vnum2
+          Checks if an object with either vnum1 or vnum2 is carried or worn
+
+        wearing vnum1 vnum2
+          Checks if an object with either vnum1 or vnum2 is worn
+
+        vnum low high
+          Checks if the mobs vnum falls within the range given
+          Does not work on characters
+
+        in_room low high
+          Checks if the mob is in a room with a vnum within the range given
+
+        in_subarea low high
+          Checks if the mob is in a room with a subarea within the range given
+
+        deed deed_id flag
+          Checks if the deed has been done (1) or has not been done (0)
+
+        quest quest_id low high
+          Checks if the state of the quest is within the given range.
+          Generally 0 for starting through to 9999 for completed.
+
+        memory memory_slot_number
+          Checks if there is something rmembered in the specified slot.
+
+        memory_value memory_slot_number low high
+          Checks if the value of the string in the slot is within the
+          specified range.
+
+        affected affect
+          Checks is the mob is affected with a particular spell effect.
+          This uses the affect list, not the affect bits which can be
+          checked through an 'is' condition.  How the character acquires
+          the affect can alter how you have to check for it. 
+
+        is state
+          Checks if the mob is in the specified state
+
+        is_not state
+          Checks if the mob is not in the specified state
+
+        The states is and is_not can detect are:
+
+          hungry thirsy drunk
+          full refreshed sober
+          standing fighting sitting resting awake
+          sleeping stunned dieing dead
+          blind invisible seeing_evil seeing_invisible seeing_magic
+          seeing_hidden mind_melded sanctuary faerie_fire seeing_infrared
+          cursed scared poisoned protected_from_good protected_from_evil
+          sneaking charmed flying pass_door hasted calmed plauge_ridden
+          weakened seeing_in_darkness berserk swimming regenerating
+          polymorphed absorbing_magic fleeing dreaming
+ 
+
+      Object conditions:
+
+        level low high
+          Checks if the objects level is within this range
+
+        type low high
+          Checks if the objects 'item type' is within this range
+
+        vnum low high
+          Checks if the objects vnum is within this range 
+
+        value number low high
+          Checks the object v0..v4 flags
+
+        contains 
+          Checks object contents, depends on object type
+
+          Container, Locker, Keyring
+            contains vnum vnum
+            Satisfied if an object with either vnum is present
+
+          Scroll, Potion or Pill
+            contains spell_num spell_num 
+            Satisfied is both spells are contained. High may be -1.
+
+          Light
+            contains hours
+            Satisfied if light hours left are >= value.
+
+          Wand, Staff
+            contains spell_num charges 
+            Satisfied is at least 1 charge of spell_num remains
+
+          Fountain
+            contains liquid
+            Satisfied is the fountain contains the specified liquid. 
+
+          Drink ontainer
+            contains liquid drinks
+            Satisfied if the container hold that many or more drinks of
+              the liquid
+
+     Event conditions:
+
+        type low high
+          Checks if the events type is within this range
+
+        subtype low high
+          Checks if the events subtype is within this range
+
+        number low high
+          Checks if the number on the event is within this range
+ 
+        number_mod mod low high
+          Checks if the number on the event is within this range subject
+          to modulo arithmetic.
+ 
+        am_actor
+          Checks if the observer is the same as the actor.
+          This is often true when the event is not being evaluated by a mob. 
+          This is also true if it is the mob doing something.
+
+        am_victim
+          Checks if the oberser is the victim.
+          This is true if something is being done to the mob. 
+ 
+        local
+          Checks if the event originated in the oberserves room.
+ 
+        actor_grouped
+          Checks if the actor is in the same group as the observer.
+ 
+        victim_grouped
+          Checks if the victim is in the same group as the observer.
+ 
+        actor_remembered slot
+          Checks if the actor (true name or player name) is remebered in the
+          indicated memory slots on the observer.
+ 
+        victim_remembered slot
+          Checks if the victim (true name or player name) is remebered in the
+          indicated memory slots on the observer.
+ 
+        actor_friend
+          Checks if the actor is a friend of the observer.
+ 
+        actor_foe
+          Checks if the actor is a foe of the observer.
+ 
+        victim_foe
+          Checks if the victim is a foe of the observer.
+ 
+        actor_visible
+          Checks if the actor is a visible to the observer.
+ 
+        victim_visible
+          Checks if the victim is a visible to the observer.
+ 
+    Multiple conditions are combined with AND logic  
+
+    Used for:
+      Extra descriptions - rooms and objects (obs = act)
+      Skill prerequisits (obs = act)
+      Profession prerequisits (obs = act)    
+      Door visability (obs = act)
+      Door destinations (obs = act)
+      Conversations (obs, act)
+      Triggers (obs, act, vict)
+
+  Scripts
+  -------
+
+    Built onto mobs.
+    Each script has a unique id.
+    Scripts are made of lines.
+    Each line has:
+      - sequence number
+      - delay from start of script
+      - identifier for schedulded commands
+      - A command to be scheduled
+
+    When a script is run, all of its commands are scheduled against the
+      executing mob at their indicated time.  Paramerter substitution
+      occurs when the script is schedulded.
+
+    MPSCRIPT command added to allow one script to either schedule another 
+      script or to cancel commands schedulded by another sript.
+
+      MPSCRIPT RUN script_id
+      MPSCRIPT RUN script_id mobile
+      MPSCRIPT CANCEL cmd_id
+      MPSCRIPT CANCEL cmd_id mobile
+
+    Example:
+  
+      Script 1
+        10 0 0 smile
+        20 0 0 emote takes @p2
+        30 1 0 smile @a1
+        40 2 0 emote tries to eat @p2
+        50 4 0 frown
+        60 5 0 drop @p1
+        70 5 0 emote throws @p2 away in disgust! 
+
+  Rewards
+  -------
+
+   MPREWARD command added to let mobs give players xps directly (hopefully
+   in response to the player having done something helpful to the mob).
+
+     MPREWARD pc ammount
+
+   Mainly for use in quests.
+
+   Rewards given to group members are automatically split between all members
+   of the group that are present.
+
+  Causing Damage
+  --------------
+
+   MPHURT can be used by mobs to cause damage to players without initiating
+   a combat sequence.  Syntax is:
+
+     MPHURT player d_hit s_hits d_mana s_mana d_move s_move
+
+   This specifies the name of the player and the number and type of dice to
+   be rolled for damage to hits, mana and move.  This interface lets mobs
+   drain mana and movement points as well as causing physical damage.
+
+   Players have no protection against any of the damage, although only physical
+   damage taking them below 0 hit points will kill them.
+
+   You should normally output the message telling the player about the 
+   damage before the MPHURT command.  Beware of large physical damage values
+   as it is very easy to kill players.  Movement loss in a hostile environment
+   can also be fatal.  
+
+   Example: 
+
+     This script might be triggered in a conversation, where the player has 
+     agreed to undertake a quest for the wizard.
+
+       10 0 0 say So! That is good.
+       20 0 0 smile
+       30 1 0 say I shall send you to Smarkand!
+       40 1 0 emote starts making some mystical passes.
+       50 2 0 MPECHO A whirling vortex surrounds @a2!
+       60 2 0 MPHURT @a1 0 0 0 0 20 20
+       70 3 0 MPTRANSFER @a1 7835 
+
+     This should transfer the player to the far end at the cost over 20d20
+     move points (averaging around 210). 
+
+  Conversations
+  -------------
+
+   Conversations are a group of discussion subjects.  Within each subject
+     of a conversation there is a state.  This means that the conversation
+     does not have to follow a linear path.  
+   Each mob can have a conversation, some subjects and some state 
+     transformations within those subjects coded.  Conversations can be
+     coded over multiple mobs.
+   State machine for subjects run from the conversations initial state
+     through whatever other states the author wants to use.
+
+   Example:
+     Conv 2000, subject: weather
+     In 0 Out 1: say It's cold today.
+     In 1 Out 0: say It's going to snow later.
+
+   Conversations tie to the converse command (aliases of ask and talk).
+
+   Example:
+     >talk tourist weather 
+     Tourist says 'It's cold today.'
+     >talk tourist weather
+     Tourist says 'It's going to snow later.'
+
+   Mobs are able to set conversational status directly with the MPCONV command:
+
+     MPCONV pc conv_id subject_id new_state
+
+   This can be used to make new areas of a conversation available to the
+   player once some subject has been broached or an act has been performed.
+
+  Deeds
+  -----
+
+   Deeds are a simple mechanism for recording that a character has done
+   something.  It can be something good or something bad and can be public
+   knowledge or unknown even to the character.
+
+   Each deed has an id (this should be a vnum within the areas range).
+
+   Each deed also has a type:
+
+      Private, neurtal	:   0
+      Secret		:  +1
+      Publc		:  +2
+      Good		:  +4
+      Bad               :  +8
+
+  Deeds also have titles.
+
+  Deeds can be awared to characters when they do certain, significant things
+  and can be used for control flow through a deed condition check. Thus a
+  deed can influence how people view the world and how mobs react to someone.
+
+  Example deeds might be:
+
+      Slayer of the Hobarth Vampire (Public, Good)
+      Visitor to Formault (Private, Neutral)
+      Killer of Mrs. Whistlewaiths puddy tat (Secret, Bad) 
+
+  Mobs can give (and remove) deeds through the MPDEED command:
+
+      MPDEED player add id type title
+      MPDEED player remove id
+  
+  These add and remove deeds from a players records.  It is recomended that
+  good and neutral deeds are rarely, if ever, removed, while bad deeds can
+  be removed upon the making of appropriate recompense.
+
+  Deeds can be used to implement mini-quests and should be used to restrict
+  rewards that are not given as a part of a quest (ie set a deed when you
+  give the reward and check that the deed hasn't been done before you give
+  it).
+
+  Calandar
+  --------
+ 
+   A lot of the conditions now support modulo arithmetic upon the calander.
+   This lets you set up cycles of things repeating at regular intervals.
+
+   To accomodate this the calandar is a little different:
+
+     12 Months each of 4 weeks of 8 days.
+
+   This gives a year with 384 days and 48 weeks.
+   The following repeat cycles are good as they fit completely:
+
+     Hour of day: 2, 3, 4, 6, 8, 12
+     Days of month: 2, 4, 8, 16
+     Days of year: 2, 3, 4, 6, 8, 12, 16, 24, 32, 48, 64, 96, 128, 192
+     Weeks of year: 2, 3, 4, 6, 8, 12, 16, 24
+     Months of year: 2, 3, 4, 6
+
+   This would, for instance let you schedule a ship thus:
+
+     Week of year Mod 4:  0 - Arkham port
+                          1 - Sailing Arkham to Cairo
+                          2 - Cairo port
+                          3 - Sailing Cairo to Arkham
+
+     This is a real time journey of about 96 minutes each way (so they 
+     probably need something to do on the ship and we should probably
+     have two ships running the line, so there's an access window every
+     3 hours or so real time).  Alternatively a shorter 16 day of year cycle
+     might be better (if somewhat unrealistic - the fastest transatlantic
+     journey in the real world is 5 days - and that's just to Liverpool, so
+     even cutting the journey to Cairo to 8 days is pushing it).
+
+   For trains you could probably use a four hour cycle, with 2 trains.  This
+   would leave the character on the train for 30 seconds and give them 30
+   seconds to hop on and off at each end. 
+
+  Real Time
+  ---------
+
+     4 pulses per second, 120 pulses make 1 game hour.
+
+     So: 
+
+	1 game minute	 	=  1/2 second
+	1 game hour		=   30 seconds
+	1 game day		=   12 minutes
+	1 game week		=   96 minutes
+				=    1 hour, 36 minutes
+	1 game month		=  384 minutes
+				=    6 hours, 24 minutes
+	1 game year		= 4608 minutes
+				=   76 hours, 48 minutes
+				=    3 days, 4 hours, 48 minutes
+       
+    WARNING: UPDATE IN DRIVER 7             
+
+  Invisible Doors and Multiple Exits
+  ----------------------------------
+
+   Visability conditions
+
+     - Control when a door will be visible
+     - Cannot be used (or even found) when it is invisible
+     - Created with target location as usual
+
+     - used for trains, boats, planes, occasional doors, mazes
+
+     [direction] vis condition
+
+   Multiple Destination
+
+     - Chain of destination/condition pairs
+     - Sorted and evaluated in sequence
+     - Lets you change where doors go when you walk through them
+     - Door should be set up normally with the default location
+     - Not considered for door visability
+
+     - used for quests, day/night, magical doorways, teleporters, mazes 
+
+     [direction] listcd
+     [direction] addcd seq dest_vnum name 
+     [direction] setcdcond seq condition
+     [direction] removecd seq
+
+  Events
+  ------
+
+   Used for internal programming.
+     Input for triggers.
+     Context.
+     Descriptive codes.
+     Messages for actor, victim and observers
+
+   Distributed by rooms.
+
+   Message substitutions: @xn
+
+	x  Meaning
+	-  ----------------
+        a  actor
+        v  victim
+	o  observer
+	p  primary object
+   	s  secondary object
+	t  text
+	n  number  
+        r  room                 
+        c  random character
+	m  text from observers memory slot n
+        
+        n  Character	Object		Text/Number	Room
+	-  -----------	-------------	-----------	-------
+	0  a/an		a/an		text/number	vnum
+	1  name		name		garbled text	name
+	2  short desc   short desc
+	3  his/her/its	
+	4  him/her/it
+	5  he/she/it
+        6  man/woman/thing
+        7  Sir/Lady/Thing
+        8  Lad/Lass/Thingy
+        9  Sir/Madam/Thing
+        r  vnum of room
+        t  true name
+        l  level        level
+
+   Use @@ for a single @.		
+
+   Use the 'EVENTS' command to look up details online.
+
+  True Names
+  ----------
+
+   A true name is a unique text string that identifies a mob.
+   Currently its only use is to locate a character in a room.
+   It is intended to be used by mobs, as locating characters by name is
+     inaccurate if there are similarly named mobs in the room.
+
+   True names are dynamically allocated with a mob or player is created
+   and are not saved.  The format of the true name is:
+
+     @t0xpointer 
+
+      t is the type of mob - m for mobs, p for players.
+      pointer is the address of the mobs char_data structure.
+
+   This is guarenteed to be unique and to remain unique as long as the 
+   mob is instantiated within the mud.
+
+   Driver 7 - the true name for players is extended with the players name.
+              This is to avoid problems with players logging off and soemone
+              else logging on and getting the same char_data.  If a mob had
+              the char_data memorized it could end up harassing the new
+              player, instead of the old one.
+
+  Fountains
+  ---------
+  
+   Completed liquid implementation.
+   Fountains can be of any of the defined liquids.
+   Fountains can also be poisoned.
+     Filling a poisoned container gives a poisoned drink and may poison 
+       the fountain.
+     Filling an unpoisoned contained in a poisoned fountain may unpoison
+       the fountain.  
+
+  Gadgets
+  -------
+
+   Gadgets are pseudo-objects, permanently attached to a room.  They
+   can be manuiplated in a limited fashion and act like multi-state 
+   switches.
+
+   Each gadget has a state and for each action/state combination you
+   can speify what it's new state should be.  You can also attach 
+   conditions to the state changes, allowing the construction of puzzels
+   where multiple gadgets must be correctly aligned before anything
+   happens.
+
+   Gadget manipulation commands are: push, pull, turn, turnback, twist
+                                     move, lift and press.
+
+   Gadgets can be edited through OLC:
+
+     gadget list
+     gadget show [id]
+     gadget add [id] [names]
+     gadget addt [id] [seq] [action] [in] [out] message
+     gadget addtc [id] [seq] [condition]
+     gadget delete [id]
+     gadget deletet [id] [seq]
+     gadget renum [id]
+   
+  Mob Nature
+  ----------
+
+   Hitdice, Damdice, manadice and AC no longer set directly.
+
+   All are calculated from the mobs level using default formula.
+   Stats are also generated more realisticly.
+
+   Nature field introduced to modify stats and combat values:
+ 
+     strong/feeble       STR, CON
+     smart/dumb          INT, WIS
+     agile/lumbering     DEX, STR/INT
+     sly/gullible        WIS, INT
+     robust/sickly       CON, STR
+     sturdy/fragile      Hit points
+     magical/mundain     Mana points, AC Exotic
+     viscious/harmless   Damage
+     armoured/exposed    AC
+     monsterous          STR, CON, DEX, Hits, Mana, Damage, AC
+  
+  Triggers
+  --------
+
+   Triggers drive scripts in response to events.
+
+   OLC command 'triggers' to add and remove triggers.
+
+   Event types and subtypes for trigger are:
+
+	Type		Subtypes
+	------------	-------------- 
+	give		gold
+			item
+
+	get		gold
+			item
+
+	put		item
+
+	drop		gold
+			item 
+
+	poison		food
+			weapon
+			fountain
+
+	fill		fountain 
+
+	drink		fountain_ok
+			fountain_bad
+			item_ok
+			item_bad
+
+	eat		food_ok
+			food_bad
+			pill 
+
+	sacrifice	pc_corpse
+			corpse
+			trash
+			treasure
+			item
+
+	gadget		gadget_ok
+			gadget_bad
+
+	search		item
+			room 
+			find_item
+			find_mob
+			find_door
+			find_hound
+
+	depart		walk
+			sneak
+			fly
+			swim 
+			sail
+			portal
+			magic
+			current
+			fleeing
+
+	arrive		walk
+			sneak
+			fly
+			swim 
+			sail
+			portal
+			magic
+			current
+			fleeing
+
+	pulse		1_sec
+			3_sec
+			4_sec
+			5_sec
+			10_sec
+			30_sec
+			area
+
+	time		hour
+			day
+			sunrise
+			sunset 
+			dawn
+			dusk
+
+	control		login
+			logout
+			to_void
+			from_void 
+
+	mob		stop
+			select
+			echo
+
+	death		slain
+
+	attack		kill
+			kick
+			trip
+			bash
+			dirt
+			backstab
+			disarm
+			circle
+			rotate
+			murder
+
+	combat		miss
+			hit
+			block
+			parry
+			dodge
+			absorb
+			immune
+
+	damage		injured
+			hurt
+			dirt
+			trip
+			bash
+			env
+
+	oocc		beep
+			gossip
+			music
+			immtalk
+			question
+			answer
+			tell
+			gtell
+
+	icc		tell
+			say
+			shout
+			scream
+			yell
+			mtell
+
+	social		emote
+			fsoul
+			nsoul
+			hsoul
+
+	idol		hold
+			pray
+			object
+			gold
+
+	lock		d_open
+			i_open
+			d_close
+			i_close
+			d_lock
+			i_lock
+			d_unlock
+			i_unlock
+			d_pick
+			i_pick
+
+	society		invite
+			join
+			advance
+			resign
+			expel
+			demote
+			test
+			foe
+			pardon
+
+	dream		walk
+			awaken
+			say
+			psay
+			emote
+			pemote
+			cast
+			pcast
+
+  There are two types of triggers - challange and reaction.
+
+  Challange Triggers
+	
+	When an action is about to be taken, a challange form of many
+	events will be issued.  Challange triggers are used to react
+	to this challange event (ie to someone attempting to do something).
+	If a challange trigger is satisfied the action does not occur and
+	the mob should provide information about why it did not happen.
+
+	The MPSTOP command is designed to be used here.
+
+  Reaction Triggers
+
+	These are invoked for an event after that event has happened.
+	They enable to mob to react to completed actions that others have
+	taken.	
+
+  There is a chain of triggers for each event type, sorted by sequence.  The
+  triggers for each even are compared in the order of the sequence and the
+  first one that matches will be used.
+
+  Text Triggers
+  -------------
+
+  Any trigger may have a text condition specified upon it.  Generally this
+  only makes sense for a reaction trigger, as mobs don't know what the
+  character is going to say until they have said it. 
+
+  Text triggers should be used selectively.  Very selectively.  They are
+  considerably more expensive to evaluate than conditional triggers.
+
+  Text triggers are specified as: 
+
+   string1.1&string1.1|string2.1&string2.2&string2.3|string3.1
+
+  This translates as:
+
+   (string1.1 & string1.2) | (string2.1 & string 2.2 & string 2.3) | string 3.1
+
+  This is the only format that is supported.  The strings may contain imbedded
+  spaces and quotes, but may not contain '&','|' or '~' characters.  
+
+  Each string is checked for as a substring of the string being tested.  There
+  is no consideration given to sequence:
+
+    give&money matches 'give me your money' 
+                   and 'I have some money to give you'
+
+  Spaces are significant and all comparisons are in lower case.
+
+  Text comparisons are made AFTER a successful conditional comparison (which
+  can act to reduce the number of evaluations).  You may have multiple 
+  triggers with the same text pattern but different conditions.  These will
+  be checked in the order of the triggers sequence numbers.
+
+  Trapping 'flee' events
+  ----------------------
+
+  When a character moves because they are fleeing, the subtype depends upon
+  their movement mode.  Only the walk subtype is replaced with the fleeing
+  subtype.  The is fleeing condition will be true for characters at this point
+  in time though, regardless of how they are moving.
+
+  Time Events
+  -----------
+
+   Pulses - 1, 3, 4, 5, 10, 30, AREA
+   Times  - hour, day, dawn, sunrise, dusk, sunset
+
+   OLC command 'timesub' to select event flows  
+
+  Stopping Actions
+  ----------------
+
+  The MPSTOP command is added to simplify the issuing of error message.
+
+  Syntax: MPSTOP player_name action_description
+
+  An example, of a script and a trigger to stop someone going north unless
+  they are wearing an id badge (vnum 5600).
+
+	script 1
+	10 0 0 MPSTOP @a1 going north.
+	20 1 0 say You can't go in there.  You don't have a badge.
+
+	trigger depart
+	10 none 1
+	actor->not->carrying 5600 -1
+	event->number 0
+
+  The first condition is true if they are not carrying the badge.
+  The second checks if they are trying to move north (by any means).
+
+  Given a player called 'Howard' and a Mob called 'a security guard' the
+  output would be:
+
+  >look
+  Mansion Gates (city)
+  You stand before the gates of the mansion.
+  [Exits: north west]
+  A security guard is standing here.
+  >north
+  A security guard stops you from going north.
+  >
+  A security guard says 'You can't go in there.  You don't have a badge.'
+  >look
+  Mansion Gates (city)
+  You stand before the gates of the mansion.
+  [Exits: north west]
+  A security guard is standing here.
+  >
+
+  Diagonal Exits
+  --------------
+
+  Exit directions are now:
+
+	 0	North
+	 1	East
+	 2	South
+	 3	West
+	 4	Up
+	 5	Down
+	 6	Northeast
+	 7	Southeast
+	 8	Southwest
+	 9	Northeast
+	10	Here (*)
+	11	Other (*)
+ 
+  * Not valid for room exits.
+
+  Resets
+  ------
+
+  Reset mechanisms have been reworked a little to make them more predictable.
+
+  Resets are:
+
+    MRESET mob_vnum count 
+
+      M 0 mob_vnum count room_vnum
+
+      This puts the listed number of mobs into the current room.
+      Count is a world limit and if the mobs wander off they will not be 
+        replaced until they are killed.
+
+    ORESET obj_vnum count
+
+      O 0 obj_vnum count room_vnum
+
+      This puts count instances of the object into the current room.
+      Count is room specific and if some objects are removed they will
+        be replaced.
+
+    ORESET obj_vnum count cont_name
+ 
+      P 0 obj_vnum count  
+
+      This puts count instances of the object into the each of the objects.
+      This should be a container or a keyring.  
+      Count is container specific and objects will be replenished if removed.
+
+    ORESET obj_vnum count mob_name none
+
+      G 0 obj_vnum count
+
+      This puts count instances of the object into each of the mobs instances.
+      For ship keepers, a count of -1 should be specified for their inventory
+      items.  They will be able to sell unlimited quantities of them.
+
+    ORESET obj_vnum 1 mob_name wear_loc
+
+      E 0 obj_vnum 1 wear_loc 
+
+      This puts 1 instance of the object into each of the mobs inventories
+      and then makes then wear it in the specified location.
+      If count is specified as a value other than one, this will be ignore.
+
+  Reset Examples:
+
+    A mob (1000) with a sword (2000) and a shield (2001)
+
+      MRESET 1000 1
+      ORESET 2000 1 knight wielded
+      ORESET 2001 1 knight lwrist
+
+    A shopkeeper (3000) with two potions (4000, 4001) to sell
+
+      MRESET 3000 1
+      ORESET 4000 -1 keeper none
+      ORESET 4001 -1 keeper none
+
+    A box (5000) containing two gems (5001) and a map (5002)
+
+      ORESET 5000 1
+      ORESET 5001 2 box
+      ORESET 5002 1 box
+
+  Note that you cannot, yet, put objects into objects carried by mobs.
+
+  The RESET command can be used to review the resets that are established (it
+  uses the M, O, P, G, E notation) and to delete resets.  It should not be
+  used to add new resets.
+
+  Currents
+  --------
+
+  Currents are flows which can capture players and force them to take a
+  particular exit from a room.  Examples might be river currents, gravity
+  and strong gusts of wind.  Each current can have conditions specified to
+  restrict to whom it applies.
+
+  Example
+
+    current add 10 2 'a gust of wind' 'blows' 'down the street'
+    current cond 10 actor is flying
+
+    >> A gust of wind blows Herman down the street!
+
+    This creates a current which will force any flying character (or mob)
+    to leave through the rooms southern (direction 2) exit.
+
+  Example
+
+    current add 10 5 'gravity' 'pulls' 'down onto the rocks'
+    current cond 10 actor not is flying
+
+    >> Gravity pulls Herman down onto the rocks!
+
+    This creates a current which simulates gravity and causes any non-flying
+    character (or mob) to move downwards (dir 5). 
+
+  Example
+
+    current add 10 1 'the river' 'sweeps' 'along'
+    current cond 10 actor skill swim 0 50
+    current cond 10 actor not is flying
+
+    >> The river sweeps Herman along!
+
+    This creates a river current which will push anyone with a swimming skill
+    of less than 51 who isn't flying to the east (dir 1).  The assumption
+    here is that those who are flying won't be in the river.
+
+  Notes
+
+    Currents cannot cause damage (although they can push you into rooms with
+    hostile environments or mobs).
+
+    Gods can avoid currents by using GOTO to enter a room.
+
+    All currents run at the same speed, which is very fast.  Mortals may,
+    on occasion, be able to move fast enough to avoid them.
+ 
+    Currents and conditional exits can also be combined to make portal like
+    affairs. Set the vis condition for exit to the same as the current 
+    condition, then anyone matching the condition gets swept through the exit.
+    No one else is aware that the exit exists. 
+
+    Useful for trapdoors.
+
+      current add 10 5 'a gaping hole in the floor' 'swallows' 'up' 
+      current cond 10 actor not is flying
+
+      >> A gaping hole in the floor swallow Herman up!
+
+  Languages
+  ---------
+
+  The code and the skill file are enabled for the following languages:
+
+	english		spanish		french		german
+	gaelic		polish		italien		chinese
+	japanese	hebrew		arabic		greek
+	latin		heiroglyphics	old english	romany
+	stygian		atlantean	cthonic
+
+  Others can be added fairly easily.
+
+  All out of character communication is in english.
+
+  In character communication (say, tell, shout, yell, scream) uses a language
+  set be the character using the speak command.  You must have a skill of 10
+  or better to attempt to speak a language.
+
+  If either the listener of the speaker have skills of less than 50 in the 
+  language, then it will be put through a garbling routine before presentation
+  to the listner.  The ammount of garble is related to the ammount of language
+  skill.  Language skills higher than 50 are usful for reading obscure 
+  documents and may be required by some societies. 
+
+  Some of the In Character (IC) communication commands are changed:
+
+	tell	Whispered if in the same room, ooc if not
+	say	Heard by all in the room
+	shout	Heard by all in the room and all potentially adjacent rooms
+	yell	Heard by all in the same subarea
+	scream	Heard by all in the same subarea and all potentially
+		adjacent rooms
+
+  Potentially adjacenty means there is either an exit going there, or there
+  is a conditional destination on an exit going there.
+
+  Out Of Character (OOC) communication costs a little mana everytime it is
+  used.  The loulder forms of IC communication use a few movement points.
+
+  SubAreas
+  --------
+
+  Subareas are a simple, numerical, mechanism for dividng an area into smaller
+  areas.  Typically a subarea would be used to represet a building or a 
+  closely connected set of locations.
+
+  If can be used in conditions and provides a scope for the yell and scream
+  communication commands.  These provide a fairly good guide for defining the
+  subarea.  Yells can be heard through out, as can screams which can also be
+  heard in adjacent rooms.  If a subarea is the inside of a warehouse, yells
+  can be heard inside, while screams can be heard standing outside the front
+  door.
+ 
+  Subareas are set with the REDIT subarea command.
+
+  An additional ACT flag - stay-subarea - has been added.  Its effect is to
+  stop wandering mobs from leaving thier subarea.  This can be used to 
+  restrict mobs to a particular part of an area.
+
+  Societies
+  ---------
+
+  A society is a like minded group of individuals with a common purpose.
+  Societies as implemented in driver 6.4.1 as a replacement for the older
+  Clan function, but without many of the limitations.
+
+   Membership - invited, member, council, leader
+
+   A society members must invit a new member to join.  They then choose to
+   join the socity, becoming a member.  Members can be promoted to the 
+   council and then to leadersip or demoted.  Unruly members can be expelled,
+   while unhappy members may resign.
+
+   The leaders determine who can do what by authorizing aother members.  
+   Higher ranks do not confer authority, it must be granted. 
+  
+   Society Authorizations:
+
+     invite  - invite someone to joint he society
+     expel   - force someone out of the society
+     bank    - access the societies bank account
+     auth    - authorize other society members to do things
+     promote - raise someones rank within the society 
+     demote  - reduce someones rank within the society
+     test    - see how a member measures up against the societies goals
+     foe     - declare someone an enemy of the society
+     pardon  - undo a previous foeing
+
+   Societies use normal bank functions, and receive interest on their funds.
+
+   Additionally a profession can be linked to a society, with criteria set
+   to advance 'levels' within it.  A member can be tested by another member,
+   and this may result in them advancing to a higher level within this 
+   profession.  Alternatively it may result is a reduction to a lower level
+   or even expulsion from the whole society.
+
+   Foes
+ 
+   A society may declare someone to be a foe.  At the moment this will just
+   notify their members when they examine him, but it will eventually permit
+   more actions (such as PKill).
+
+   Society Tell
+
+   This sends a message to all other members of the society who are currently
+   logged on.  It costs 5 move points to use it.
+  
+
+  Spell: Summon Familier
+  ----------------------
+
+  This conjours a magical familier who is a few levels lower than the caster.
+  The creature behaves as a normal pet.
+  The type of creature the character receives is dependent upon their 
+  alignment.
+  Matrial Component: Silver Dollar
+
+  Flee, Wimpy and Wander
+  ----------------------
+
+  Wander is added as an alias for Flee, and both commands work when you are
+  not fighting, but only flee works when you are fighting.  There is no 
+  penalty for fleeing or wandering when you are not fighting.
+
+  Flee (and wander) now takes a parameter which is the preferred direction to
+  run in.  If this direction isn't available, one will be picked at random.
+
+  Wimpy now accepts a second parameter which is a direction.  This is the 
+  default direction that you will try to flee in.  Setting it to an invalid
+  direction means you flee in a random direction.  If the direction isn't
+  available, it will pick one at random.
+
+  Flee will pick a direction you appear to be able to move in (visible exit,
+  valid destination, if there's a door, it must be open).  It is possible that
+  a challange trigger on the movement could prevent the move from happening 
+  (ie trying to run through a passage that a mob is guarding).   
+
+  Idols
+  -----
+
+  Idols are objects that can be prayed to and to which offerings can be made.
+
+  The commands to do so are:
+
+    pray 'idol' prayer
+
+    offer 'idol' 'object'
+    offer 'idol' nnn 'gold'
+
+  They both result in an 'idol event' being sent to each of the rooms lists
+  in the idols values.  The gods are expected to be a mob within one of those
+  rooms who may react to the event.  If an item is offered it moves into the
+  room who's vnum is in the idols v0 slot.  Offered gold is simply destroyed.
+
+  Note: If there are multiple idols in the same room, then idol events
+  will be sent to all of them, but the primary object will indicate the idol
+  that the event was generated for.
+
+  If an idol is being held (worn), it will generate en event once every 60
+  seconds telling its gods who has it.  The gods may react as they wish.
+
+  Idols are expected to be big immoble cunks of stone (altars) or small,
+  hand held figurines.  Inventive players may well add other types.
+
+  Corpse Values
+  -------------
+
+  For those who want to offer corpses to idols, some details about the 
+  corpses previous existance are now stored in its value slots.
+
+    v0 - vnum or 0
+    v1 - alignment
+    v2 - level
+    v3 - gender
+    v4 - 1 Senitent, 2 Undead, 3 Sentient Undead 
+
+  These can be used for, say, punishing mortals who sacrifice the corpses
+  of evil creatures to evil gods, or intelligent creatures to good gods.
+
+  MPSELECT
+  --------
+
+  This command can be used to let mobs pick randomly selected characters
+  and objects from a particular room.
+
+  Syntax: 
+ 
+    MPSELECT mob_sel mob_sel obj_sel obj_sel number text
+
+    mob_sel - a mob selector. 
+
+	mob_none	No mob is selected.
+	mob_me		The mob issuing the MPSELECT is selected.
+	mob_any		Any mob in the room is selected.
+	mob_npc		Any non player mob in the room is selected.
+	mob_pc		Any player mob in the room is selected.
+	mob_pc_mortal	Any player mob who is not an immortal in the room 
+			is selected.
+        name            The mob with this name is selected, as long as
+                        it is neither the selecting mob nor the actor. 
+
+      The first selector is for the actor, the second is for the victim.
+      The mob driving the MPSELECT can only be selected through the mob_me
+        selector.
+      The same mob will not be selected as both actor and victim.
+ 
+      mob_sel may be prefixed with a selection modifier:
+
+	highest.	Finds the highest level mob that matches
+	lowest.		Finds the lowest level mob that matches    
+
+      The default selection is 'random.', which finds any mob. 
+
+      For exaple:
+
+	highest.mob_pc_mortal
+
+      will find the highest level non-immortal player controlled mob in the
+      room.
+
+    obj_sel - an object selector
+
+	obj_none	No object selected.
+	obj_any		Any object in the room can be selected.
+	obj_any_actor	Any object the actor is carrying/wearing.
+	obj_any_victim	Any object the victim is carrying/wearing.
+	obj_any_mine	Any object the mob is carrying/wearing.
+
+      The first selector is for the primary object, the second for the
+        secondary object.
+      The same object will not be selected as both primary and secondary.
+
+    number - a number, taken as is.
+
+    text - taken as is.
+
+  Once the various bits have been selected an event (mob, select) is generated
+  and passed to the mob that issued the MPSELECT command.  That is the only
+  mob that gets to see the event.	
+ 
+  Echos
+  -----
+
+  Echos are a mechanism for implementing 'open spaces' within the mud.
+
+  Echos allow players in one room to see and/or hear what is occuring in
+  a neighbouring room.  There needs to be an exit between the rooms, but
+  the exit does not have to be visible to the players doing the listening.
+
+  Echoed events are prefixed with the direction that they came from.
+
+  To create an exit you need:
+
+    Two rooms connected with a bidirectional exit.  Echos are sent to
+      rooms linked through conditional destinations, but the base exit
+      in the conditional room must point back to the echoing room.
+
+    The exit needs flagging as echo_all, echo_sound or echo_vision.  This
+      actually enables echoes to flow in both directions.
+
+    In rooms whose messages are to be echoed the rooms echo flag should be
+      set.  For bidirectional echos, the echo flags in both rooms must be
+      set.
+
+  Echos would typically be used for:
+
+    Open spaces such as public squares or large rooms which have been 
+      subdivided into multiple rooms.
+
+    Rooms with multiple locations such as balconies and windows.
+
+    Spy holes and secret rooms from where a public area can be observed.
+      This normally uses a mono-directional echo.
+
+    Cut scenes which are to be remotely viewed, but which 'vanish' when the
+      player enters them.  This requires a link between the two rooms and
+      a conditional destination that transports the player to the 'player
+      enters scene' room.
+
+  MPALIGN
+  -------
+
+  This is designed for use with idols and deeds, so as to cause a mobs  
+  alignment to change in response to its actions.
+
+  Syntax:  MPALIGN mob target_alignment
+
+  It effect to to calculate the difference between the mobs current alignment
+  and the target alignment and then to change the mobs alignment by 10% of
+  this ammount.  
+
+  When using the command, use 1000 for good, 0 for neutral and -1000 for evil.
+
+  MPECHO
+  ------
+
+  Sends an unattributed text message to one or more rooms.
+
+  Syntax: MPECHO <scope> message
+
+  The default, if scope is not recognised, is to send it to the mobs current
+  room.
+
+  Valid scopes are:
+
+    _room		The mobs current room
+    _room_plus		The mobs current room and all adjacent ones
+    _subarea		All rooms in the mobs current subarea
+    _subarea_plus	All rooms in the mobs current subarea and all adjacent
+			rooms.
+    _area		All rooms in the mobs current area
+    _area_plus          All rooms in the mobs current area and all adjacent
+                        rooms.
+    _zone		All rooms in the mobs current zone
+    _universe           All rooms in the mud
+    _group		All rooms containing one or more members of the mobs
+			group.
+
+  Note that echoing is done on a room by room basis, regardless of who or what
+  is in those rooms.  Scopes larger than _room_plus or _subarea_plus with 
+  previously defined subareas should be used with caution as they can incur
+  significant CPU overheads.
+
+  Echos sent to _group may be useful for coordinating mobs in different rooms,
+  but be aware that the messages will be visible to players in those rooms as
+  well.
+
+  MPRELEV
+  -------
+
+  This mob command allows a mobile to change its level.
+
+  Syntax: MPRELEV base_level delta
+
+  Base and delta are added together to work out the level the mob changes to.
+
+  This enables mobs to change their challange factor in response to both
+  players and actions.
+
+  Examples
+
+    In reaction to an EAT FOOD event, where the mob is the actor:
+ 
+    MPRELEV @al 1 
+
+    This will cause the mobs level to increase by 1 whenever it eats soemthing.
+    (But watch out for the random level variation).
+
+    In reaction to a player entering a room:
+
+    MPSELECT highest.mob_pc_mortal mob_none obj_none obj_none 1 
+
+    ...and in reaction to the SELECT event...
+
+    MPRELEV @al -1
+
+    This will cause the mob to change its level to be one lower than the
+    level of the highest level player in the room.  This can be useful for
+    adaptive areas which change with the players level.
+
+  The mob should be created at the lowest level it is likely to want to 
+  achieve, as that is the level its equipment will be created at.
+
+  Random level variation still occurs. This modifies the resultant level by
+  up to 1 level for every 10 levels that the mob has.  The code fragment is:
+
+       if (mob->level >= 10) {
+         mob->level += dice(1, mob->level/10);
+         mob->level -= dice(1, mob->level/10);
+       }
+
+  This means a mob that is meant to be 53rd level, could end up anywhere 
+  from 49th to 57th level, but will average around 53rd.
+
+	49	1 in 25	   4%	1,5
+	50	2 in 25	   8%	1,4 2,5
+	51	3 in 25	  12%	1,3 2,4 3,5
+	52	4 in 25	  16%	1,2 2,3 3,4 4,5
+	53	5 in 25	  20%	1,1 2,2 3,3 4,4 5,5
+	54	4 in 25	  16%	2,1 3,2 4,3 5,4
+	55	3 in 25	  12%	3,1 4,2 5,3
+	56	2 in 25	   8%	4,1 5,2
+	57	1 in 25	   4%	5,1
+
+  The primary aim of level variation is to make areas somewhat less
+  predictable.  What a player can kill one day they may not be able to kill
+  the next.
+
+  Changing a mobs level altes its hit points, mana points, movement points 
+  and armor class.  Damage ratios are preserved, however, so if a 20th level
+  mob with 400 maximum hits and 300 current hits is changed to 10th level
+  where it rolls 160 maximum hits, its current hits will be reduced to 120.
+
+  Recall, Respawn and Morgue
+  --------------------------
+
+  You are now able to set these values for each area.  Thier roll is:
+
+    Recall - Where the character goes when they recall
+    Respawn - Where the character goes when they die
+    Morgue - Where their corpse goes when they die (default is to leave it
+             in the room they die in).
+
+  This lets gods construct 'sealed' areas and prevents the player from 
+  getting 'sucked' back to the main area when the recall or die.  Gods
+  should ensure that they do not create inescapable areas, especially for
+  low level newbies with any special skills.
+
+  Miscellaneous
+  -------------
+
+   Fix bug in exp calculations - wasn't using effective level.
+   Change score to show % of xps for next level.
+   Remove DB boot checking for asymetrical doors.
+   Fix bug with using exotic weapons.
+   Fix bug with Advance.
+   Another attempt at fixing the reconnect problems.  
+   Fix bug with keys.
+   Fix bug with mob skills ??.
+   Score armor reworked to make it a little more compact.
+   Examining weapons shows the skill needed to use them.
+   Examining armor and clothing shows how it may be worn.
+   GOTO brings pets and followers along.
+
+ 6.3.4
+ -----
+   Added Idols, pray and offer
+   Added corpse details
+   Fixed messages for environmental damage
+
+ 6.3.5
+ -----
+   Fixed closed corpse problem
+   Fixed room visability problem with scan 
+     It was showing rooms you were not allowed to go into
+   Fixed problem inserting a script line infront of the first one
+     Hopefully this fixed a problem with deleteing a line looping
+   Events for locks and doors/containers (WEV_LOCK)
+   Known problem with fags on multi-destination doors
+
+ 6.3.6
+ -----
+   Fix stray debug messages
+   Fix memory leak from opening doors
+   Convert socials to use WEVs
+
+ 6.3.7
+ -----
+   Fix bug with asave reintroducing social.are
+   Fix loop in script line delete
+   Add MPSELECT command
+
+ 6.3.8
+ -----
+   Fix misspelling of random in score
+   Change highlighting for wimpy and direction
+   Enforce minimum skill of 51% in English for all
+   Add MPSELECT targets obj_any_actor, obj_any_victim, obj_any_mine
+   Allow MPSELECT to take a name as an argument 
+   Add source for events - OOC for OOC communications.
+   Reenable reply
+   Add echos
+   Add MPALIGN
+   Add extra routing options to MPECHO
+   Bank interest changed to 1% per month, max 36 months.
+  
+ 6.3.9
+ -----
+   Fix abend when a mob kills a player
+   Fix loop when a first level mob tries to flee (or otherwise loses xps)
+   Fix problem with max level for Advance
+   Fix problems with Remove_Curse (hopefully) 
+
+ 6.3.10
+ ------
+
+   Add true names to fix problems with mobs getting the wrong target
+   Fix score so it works for NPCs
+   Try to fix switch/return - permitted for lesser gods. 
+   Fix problems with equipment display for eyes
+   Fix problem with subarea scopes
+   Fix problem with door saves (mainly echos)
+   Restrict clone (because it don't work) 
+   Fix for PCs not getting kicked off when linkdead
+
+ 6.4.1
+ -----
+   Completed phase 1 of the society implementation
+   Add @xl for mob/object level access
+   Remove MPSTAT
+   Add MPRELEV
+   Add selection modifiers for MPSELECT
+   Who and Examine show memberships based on new socities  
+
+ 6.4.2
+ -----
+   Add parns for Tundaras new compiler
+   Fix problem with flying over water
+   Give NPCs swim skill
+   Fix problem in spell lookup for affects
+   Remove clan from score
+   Fix recall so it brings pets along
+   Fix who so secret societies are always red
+   Add recall, respawn and morgue values for areas
+   Added society tell
+   Fix society members for immortals
+   Add ACT_STAY_SUBAREA
+   Fix telepop for subareas
+   Make unused displays a bit more compact
+   Tidy up group display for those with lots of hits
+
+ 6.5.1
+ -----
+   Restructure directories and rebuild after system reinstall
+   Fix telepop (broken by 6.4.2)
+   Add copyright string for area files 
+   Add profile file
+   Make alist use page_to_char, not send_to_char
+   Fix problem with newlock and wizlock being uninitialized
+   Impose zone restrictions for gate, portal, summon, teleport, recall
+   Fix alist to display zones
+   Rework alist completely
+   Add zone definitions and zlist
+   Add Start, Recall, Respawn and Morgue into the profile.
+   Complete zone implementation with zcopy, zclear and spell universality
+   Added dreaming -
+	dream command
+	dreaming skill
+	spells: true dreaming, rude awakening, enchanted sleep,
+                recurring dream
+   Added sector types Jungle, Path, Road and Plain
+
+ 6.5.2
+ -----
+   Added new world econds for probing rooms
+   Added low and strong magic zones
+   Added ainfo command for vnum/file information
+   Added area manipulation commands
+   Added revnum commands
+   Fix problems with base buffer size in used and unused
+   Fixed really silly abend in redit_mshow and redit_oshow
+   Fixed bug that hid bad resets
+   Fixed problems with pShop->keeper
+
+ 6.5.3
+ -----
+   Added hunger and thirst
+   Fixed problem with affects making you drop things when you lost the 
+     strength to wield them
+   Fixed problem with spell casting in low magic areas
+   Added asuck command to pull objects into an area
+   Fix alarm clock so it only triggers if physically injured
+   Added mob multi-state chatter
+   Various other minor fixes
+  
+ 6.5.4
+ -----
+   Fix zone recall problem with recall and word of recall 
+   Stop shutdown and reboot from deleting all notify settings
+   Reenable recall for characters over 10th level
+   Adjust food and drink warnings
+   Make it easier to lose weight
+   Added a few food and drink spells
+
+ 6.5.5
+ -----
+   Fix rather nasty bug in update changes from zone support.
+     When a timed object expired, it messed your inventory up.
+

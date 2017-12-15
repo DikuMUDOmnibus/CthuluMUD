@@ -1,0 +1,944 @@
+Estimated Similarity to Merc 2.2 : < 5%
+
+Driver 8.0.0
+---------------
+
+Spells:
+* Pestillence
+
+Skills:
+
+Commands:
+* Dream SCARE, Dream WATCH subcommands for dream natives
+* Drive direction, beep, refuel, repair
+ 
+Types:
+* Spec mechanic
+
+Concepts:
+* Nightmare Driver
+* Real Vehicles
+* WEV through portals
+* Real time obj, vehicle repair
+
+
+Real time:
+-------------------
+More and more shop commands use the real time system. That means the object
+manipulation cost is set as a new cost, and you can buy the object back after
+manipulation (eg. repair). Of course the cost is reset to normal after.
+
+
+
+
+Driver 8.0.1
+---------------
+
+Spells:
+* Word of Health
+* Destroy Portal
+
+Skills:
+* Tailor
+* Bite
+
+Commands:
+* Shop Dump
+* Skin 
+* Vampire Majesty, Mesmerize
+ 
+Types:
+* Some new materials
+* Some new races
+* File ../data/shop.dat
+
+Concepts:
+* Range flag for spell effects
+* Saving Shops
+* Store part of dead mobs values in corpse (used for skin command)
+* Cannibalizing Corpses for Deep Ones
+
+
+
+
+Driver 8.0.2
+---------------
+
+Spells:
+* Bestow Blessing
+* Metamorphosis
+
+Skills:
+
+Commands:
+* Remember
+* Incarnate ImmCommand
+* Telepathy
+ 
+Types:
+* Room Flags: No_Flee
+* Affect MORF, INCARNATED
+* Mob IS_ALONE Econd
+* Comm IMMACCESS
+
+Concepts:
+* Oprogs Part I: Anchors
+* Full morph-to-obj
+* Distribute xp to weapons
+
+
+Morf to Object:
+-------------------
+remember <obj>
+cast 'metamorphosis'
+...
+vis
+
+
+Incarnation:
+-------------------
+Incarnating makes an imm lose most of his powers and make him killable -
+good for RP interaction.
+
+
+Anchors:
+-------------------
+Anchors are one-side flexible monitors. They always lead from an object to
+a) a room (all mobs in room get it)
+b) a mob (only the mob gets it)
+c) an object (all mobs in object's room get it)
+Don't forget you can restrict anchors to distribute only one type of events.
+In a way, anchors are a more general form of idols.
+
+
+
+
+
+Driver 8.0.3
+---------------
+
+Spells:
+* Mortalize
+* Incognito
+
+Skills:
+
+Commands:
+* Mindtransfer
+* Yith adapt, Yith abduct
+* Lease
+* Checklease
+ 
+Types:
+* File ../data/morgue.dat
+* Race Yithian
+* IMM Mask
+
+Concepts:
+* Saving global, zonal & area morgues (30% decay/reboot)
+* Xp sharing for yithians and their hosts
+* Reactivation of the Lease concept
+
+
+Lease Concept:
+-------------------
+Room needs to be flagged RENT
+rent value got to be set - 5000 by default
+Use checklease command to investigate a rooms settings.
+
+
+Yithians:
+-------------------
+With mindtransfer, Yithians got a possession command.
+With YITH ADAPT <skill> they can get skills from their host, while
+possessing.
+A fast way home is YITH ABDUCT.
+
+
+
+
+
+Driver 8.0.4
+---------------
+
+Spells:
+* Create Seed
+
+Skills:
+
+Commands:
+* Plant
+* Vampire Mistform
+ 
+Types:
+* File ../data/tree.dat
+* Shop BANK, HOTEL
+* Item TREE
+* AFFECT Mist
+
+Concepts:
+* Vehicle combat
+* Grenades through portals
+* Skill info
+* Armor forging
+* Timed Reboot
+* Modified SPRINTF => sprintf_to_char, sprintf_to_room, sprintf_to_world
+* SECONDARY_LONGs
+
+
+Secondary Longs:
+-------------------
+There are objects with longs that look good, as long at it's there where it resets.
+But in any other room it really looks crappy. Now you can see an alternative long
+that gets activated, when the object is taken for the first time.
+
+
+
+
+Driver 8.0.5
+---------------
+
+Spells:
+* Destroy Magic
+* Spring of Blood
+
+Skills:
+
+Commands:
+* Photograph
+ 
+Types:
+* Item CAMERA, PHOTOGRAPH
+
+Concepts:
+* Helps moved out of the Mud database
+* Photography
+* Language Characteristics (for Latin & Old English)
+* Socials OLE
+* Spell flag INFO (for detailed differences between similar spells)
+
+
+
+
+
+Driver 8.1.0
+---------------
+
+Spells:
+* Call Pet
+* Curse of the Mummy
+
+Skills:
+* Ritual mastery
+* Staff
+* Staff master
+
+Commands:
+* Mposet
+* Mpmset
+* Research
+* Play
+ 
+Types:
+
+Concepts:
+* MERC 2 compatibility
+* Room regen rates
+* Adaption of the ROM'ish jukebox to WEVs
+* Ritual magic
+
+
+
+
+Driver 8.1.1
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Bank Transfer
+* Destroy
+* Rebuild
+ 
+Types:
+* Off Stun
+* App Resistance
+
+Concepts:
+
+
+
+
+Driver 8.1.2
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Were growl
+ 
+Types:
+
+Concepts:
+* Racial startup cults
+* Improvised Help reader
+
+
+
+
+Driver 8.1.3
+---------------
+
+Spells:
+* Enceasement
+
+Skills:
+
+Commands:
+* deed list, add, remove
+* mpstate conv, chat
+ 
+Types:
+* RAFF Enceased
+* obj_room_container Condition
+* spec cast_nature, cast_power
+
+Concepts:
+* Flexible WERE race handling
+* Linked Gadgets
+* Cult.txt file
+* Colored Online file
+
+
+
+
+Driver 8.1.4
+---------------
+
+Spells:
+* Recharge
+
+Skills:
+
+Commands:
+* BANK share, change
+* Store
+* Fetch
+ 
+Types:
+* Area mare variable
+* Room mare variable
+* EXTRA Burn_proof, Artifact
+* Apply EFFECT
+* Item Figurine
+
+Concepts:
+* Stock Market
+* Elemental damage to obj
+* Recharging obj effects
+* Artifact system
+* Pet to Obj, Obj to Pet conversion
+
+
+Apply Effect:
+-------------------
+In EDIT OBJ:
+ADDEFFECT <spell effect name> <recharge speed (1-9)>
+
+When IN_ZONE the object reloads, when worn it triggers when it reaches 100%.
+
+
+
+
+Driver 8.1.5
+---------------
+
+Spells:
+* Create Figurine
+* Shield of Ygolonac
+
+Skills:
+* Leadership
+
+Commands:
+* Redit_delete, Oedit_delete, Medit_delete
+
+Types:
+* Addmax stat
+* Room dump
+* Aff elder_shield
+* Raff fatigue, destructive
+* Art necronomicon, ring_eibon
+
+Concepts:
+* OLC based social editor (complete)
+* long long affect bit FIX
+* Stats theoretically expanded to 111
+
+
+
+
+Driver 8.1.6
+---------------
+
+Spells:
+* Summon Old
+* Telekinesis
+
+Skills:
+
+Commands:
+* SOC revolt, vote, tax
+
+Types:
+* Act Watcher
+
+Concepts:
+* Act expanded to long long
+
+
+
+
+Driver 8.2.0
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Version, Connect
+* MUDversion, MUDreply, MUDwhois, MUDwho, MUDgossip, MUDbug
+
+Types:
+* Divinity MUD
+
+Concepts:
+* Partner Handler: Connect, Smart login with version check, request-reply-system
+
+
+
+
+
+Driver 8.2.1
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* MUDnoteprepare, MUDnotetopic, MUDnoteline, MUDnotestop
+* MUDplayerexits, MUDreturn
+* Gag modification of nochannels
+
+Types:
+* Style Ninjitsu
+* Style Touch Mastery
+
+Concepts:
+* Partner Handler: Network wide check for char-name, Global board
+* Char native string - to identify where a char is originally from
+* Connection redirect
+* Commands substructure
+* Global Board
+
+
+
+
+Driver 8.2.2
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+
+Types:
+* Item Pool, Grimoire
+
+Concepts:
+* Email Board
+* Disciplines of Magic
+* GSN, GAFN Macros
+
+
+
+
+Driver 8.2.3
+---------------
+
+Spells:
+* Magical Duel
+
+Skills:
+
+Commands:
+* Herotalk
+* MUDhero
+* MPemergency
+
+Types:
+* COMM_NOHERO
+* Area Prison
+* AREA-Flag Newbie, Law
+
+Concepts:
+* Hero Channel
+* Magical Duels
+* PK Timer
+* Prayer => Channel
+* Key Uses variable
+
+
+
+
+Driver 8.3.0
+---------------
+
+Spells:
+* Heatstrike
+* Agony
+
+Skills:
+* Manipulation
+
+Commands:
+* MPpay
+
+Types:
+* Trap Scare
+* Master Keys
+
+Concepts:
+* Modified BAN system
+* Container Traps
+* Editor update
+* Player max counter
+* Socials on Gossip
+
+
+
+
+
+Driver 8.3.1
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Feed
+
+Types:
+* Act Protected
+* Plr Feed
+
+Concepts:
+* Idoltalk
+* Event based photography
+
+
+
+
+
+Driver 8.4.0
+---------------
+
+Spells:
+* True Sight
+* Dispel Portals
+* Drain Vitality
+
+Skills:
+* Tactics
+
+Commands:
+* Distract
+* Society Cleanup
+
+Types:
+* Off Distract
+
+Concepts:
+* Currency System (copper, dollar, gold, crown, <free>)
+* Currency flag for (exceptional) shops
+* Allow & handle AFF_POLY as perm affect => mask_hide
+
+
+mask_long:
+-------------------
+If you want to customize the long_descr of a perma - masked player, add a mask_long ED to the mask object.
+
+
+
+
+Driver 8.4.1
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Guard Law
+* Guard Criminals
+* Light, Extinguish
+
+Types:
+* Econd Attribute
+* Auth Law
+* Act Martial
+
+Concepts:
+* Obj wear_cond
+* New law enforcement system
+* New Light system, throwing light sources
+* Auxiliary Weapons (aux_weapon)
+* Scheduled reboots
+
+
+aux_weapon:
+-------------------
+The aux_weapon ED contains the lookup VNUM of the auxiliary weapon.
+
+
+
+
+Driver 8.4.2
+---------------
+
+Spells:
+* Dark Blessing
+* Confuse Hunters
+
+Skills:
+
+Commands:
+* Lich Regenerate
+* Mpwound
+* Bounty Bribe
+
+Types:
+* Spell Step Yell
+* Item Light_refill
+* Extra Vanish
+
+Concepts:
+* Customized ACT-based channels
+* Improved target_name handling: Info "parse"
+* Wimpy Direction 'last'
+* Expand helps by context
+* Show light status
+* Obj extra to Long Long
+
+
+
+
+Driver 8.4.3
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Land
+* Launch
+* Society Subscribe
+
+Types:
+* Spec_social
+
+Concepts:
+* Light max refill value
+* Hero level changed to 61
+* Deliver Missions
+* Multiple Wear locations for one object
+
+
+
+
+Driver 8.4.4
+---------------
+
+Spells:
+* Farsight
+* Change Size
+
+Skills:
+
+Commands:
+* Home Desc
+* Map
+* Refresh
+
+Types:
+* Aff Farsight
+* Off Mercy
+
+Concepts:
+* wear cond checks on quaff, zap, recite & brandish
+* Mapping (first attempts...)
+* CopyOver Implementation
+
+
+
+
+Driver 8.4.5
+---------------
+
+Spells:
+* Material Anchor
+* Astral Walk
+* Bark Skin
+* Steel Skin
+* Astral Blast
+* Lesser Oracle
+
+Skills:
+
+Commands:
+* Ignore
+* Authorize
+
+Types:
+* Item Focus
+* Apply Magic, Alignment
+* Trap Poly, Rust
+
+Concepts:
+* Imm Authority
+* Random Portals
+* Amateur Skills (Humans only)
+* Rumors
+
+
+
+Driver 8.4.6
+---------------
+
+Spells:
+* Doppelganger
+* Mana Shield
+
+Skills:
+
+Commands:
+
+Types:
+* Room Nomagic
+* Form Noweapon
+
+Concepts:
+* New haggle system
+* Saving Mob eq
+
+
+
+
+Driver 8.5.0
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Muddelete
+* Muddescriptor
+* Mudhome
+* Mpnote
+
+Types:
+* Exit Random
+
+Concepts:
+* CURL added
+* First successful pFile transfer
+* Slip Descriptor system
+* Falling objects
+
+
+How to set up a partner Mud:
+-------------------------------
+1) Install curl, compile it and add a symbolic link to your sbin directory. If you don't have the rights to do so
+ask you SYSADMIN to.
+2) Put the partner mud in your ../config/partners.txt
+3) Create a character named like the partner and set its divinity to MUD (using the trust command)
+4) Vice versa on the partner mud. 
+
+
+
+Driver 8.5.1
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Combine
+* Cr ImmCommand
+
+Types:
+* Stat Luck, Charisma
+* Nature lucky, unlucky, charismatic, disgusting
+* Apply Luck, Charisma, Max_Luck, Max_Charisma
+* Item Combination_Protocol
+
+Concepts:
+
+
+
+
+Driver 8.5.2
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Mppassport add, remove
+
+Types:
+* Item Decoration, Passport
+* WEV Show
+* EC IS_PASSPORT, OWNER, CRIME_RATING
+
+Concepts:
+* Transfer lockers
+* Show modified to use WEVs
+* Unread Notes Prompt, xp Prompt
+* Container Capacity-meter
+
+
+
+
+Driver 8.5.3
+---------------
+
+Spells:
+* Magical Campfire
+* Mana Storage
+* Blade of Fury
+
+Skills:
+
+Commands:
+* MPpeace
+* Chunk ImmCommand
+
+Types:
+* Cconds for DAMAGE events
+
+Concepts:
+* Exit transit description
+* Colored EC lists
+
+
+
+
+Driver 8.5.4
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Guard imprison
+
+Types:
+
+Concepts:
+* Newbie name approval
+
+
+
+
+Driver 8.5.5
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Sing
+* Guard pardon
+
+Types:
+* Item Instrument
+* DAM SOUND
+* ATT Screech
+
+Concepts:
+* Music based magic
+
+
+
+
+Driver 8.6.0
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Investigatortalk
+
+Types:
+* DIV_INVESTIGATOR
+
+Concepts:
+* Level upgrade to 300
+
+
+
+
+Driver 8.6.1
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Mpanswer
+* Mppktimer
+
+Types:
+* ENV_IMMUNITY
+
+Concepts:
+* Emergency recovery system (Refresh on crash)
+* Eliza chat
+
+
+
+
+Driver 8.6.2
+---------------
+
+Spells:
+
+Skills:
+
+Commands:
+* Chat
+
+Types:
+
+Concepts:
+* Chat System
+
+

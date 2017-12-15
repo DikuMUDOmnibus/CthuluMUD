@@ -1,0 +1,590 @@
+#
+# Societies
+#
+# Society 'society name'	Starts the definition of a society.
+#
+# Id society_id			Gives the unique integer identifier for the
+#				society.
+#
+# Type type			Gives the type of the society
+#				
+#				    1 Player Clan
+#				    2 Race
+#				    3 Policital organization
+#				    4 Cult
+#
+#				A negative values means that the society
+#				is a secret society.
+#
+# Desc
+# description			Gives a short description of the society.
+# ~
+#
+# Profession 'name'		Names the profession associated with 
+#				membership.
+#
+# Advance level condition	Gives a condition for advancing to that level 
+#				within the society.
+#
+# Membership condition		Gives a condition for joining the society. 
+#				Stored as advance to level 0.
+#
+# Expulsion condition		Gives a condition for being expelled from the
+#				society if not met.
+#				Stored as advance to level -1.
+#
+# Hint: Define the societies in reverse sequence number so they turn up
+#       the right way around on the 'society list' display.  Levels should
+#       also be 'backwards'.
+#
+
+#
+#-----------------------------------------------------------------------------
+# Religion Cults
+#
+# Id is 1000+ 
+#
+
+#
+# Followers of Tsathoggua
+#
+
+Society 'Followers of Tsathoggua'
+	Id		1104
+	Type		-4
+	Desc
+The members of this cult worship the distant god known as Tsathoggua.
+In return for occasional sacrifices and loyalty they sometimes 
+receive guidance, special items and occasionally instructions. Many
+followers are wizards and priests.
+~
+
+#
+# Worshipers of the Deep
+#
+
+Society 'Worshipers of the Deep'
+	Id		1103
+	Type		-4
+	Desc
+This cult is found around the ocean edges and follows the dieties of
+the Deep Ones - Dagon and Hydra.  They will quite often interact with
+Deep Ones - mainly at rituals where unsavory  acts of worship are 
+performed.  The cult is one of the main breeding ground for the hideous
+human/deep one halfbreeds.  Members of the cult often have strange 
+pieces of Deep Ones jewellery in their posesison.
+~
+
+#
+# Children of Shub Niggurath
+#
+
+Society 'Children of Shub Niggurath'
+	Id		1102
+	Type		-4
+	Desc
+Shub Niggurath, the black goat of the woods with a thousand young, is
+thought to be a perverse fertility diety.  The children tend to gather
+in hidden places, open to the night sky, and hold disgusting rituals to
+invoke her power.  She if often giving living human sacrifices.
+~
+
+#
+# Worshipers of Yog Sothoth
+#
+
+Society 'Worshipers of Yog Sothoth'
+	Id		1101
+	Type		-4
+	Desc
+Yog Sothoth is an alien diety from between the dimensions of the universe.
+Worshipped by wizards and and those seeking power, he amply rewards them
+in return for appropriate sacrificies.
+~
+
+#
+# Worshippers of Baal
+#
+
+Society 'Worshipers of Baal'
+	Id		1100
+	Type		-4
+	Desc
+Baal is the dark god of flames and power.  When he arises to take over the
+world his trusted followers will be given positions of great power. In the
+mean time he can help those who follow him - and who are prepared to help
+themselves.
+~
+
+#
+# Worshipers of the Spirits
+#
+
+Society 'Worshipers of the Spirits'
+	Id		1004
+	Type		4
+	Desc
+The world is full of spirits. Every object, every place, every animal,
+every human has  spirit.  They should all be venerated and worshiped.
+In return for prayer and respect for the spirits of the world, the 
+worshiper receives long life, good health and respect for thier spirit.
+~
+
+#
+# Followers of the One God
+#
+
+Society 'Followers of the One God'
+	Id		1003
+	Type		4
+	Desc
+There is only one god and he is merciful and blessed.  Followers should
+pray regularly and obay his behavioural restrictions.  In return they 
+receive good fortune and a place in the gardens of plenty.  They should
+seek to be merciful and forgiving.  This cult also has a lot of internal
+sects and some of them differ from the above.
+~
+
+#
+# Followers of the Child
+#
+
+Society 'Followers of the Child'
+	Id		1002
+	Type		4
+	Desc
+Originally a heritacal cult within the followers of Yehova, this cult has
+become established independently.  True to its fractional nature it has
+split into hundreads of different sub cults, mainly arguing about matters
+of doctorine.  In general a variety of behavioural restrictions and worship
+are required, in return for good fortune and a place in the gardens of
+plenty at the end of the world when everyone will be ressurected.  This cult
+denounces the existance of all other cults, including all splinter factions
+within itself.
+~
+
+#
+# Followers of Yehova
+#
+
+Society 'Followers of Yehova'
+	Id		1001
+	Type		4
+	Desc
+Yehova is a rather secretive and vengeful god.  He rewards his followers
+well, asking only regular prayer and some behavioural restrictions in 
+return for a long life and good health.  About 40,000 of his most devoted
+followers will be ressurected into the gardens of plenty when the worlds
+ends.  Although both gods are on the side of humanity, he has had a 
+long running feud with Marduk since the fall of Babylon.
+~
+
+#
+# Followers of Marduk
+#
+
+Society 'Followers of Marduk'
+	Id		1001
+	Type		4
+	Desc
+Marduk is the god of light and goodness.  Although the race turned aside
+from his Worship his followers recognise that we now need him.  The followers
+of Marduk may be all that stands between the human race and the alien hoards
+that encroach upon our planet.
+~
+
+#
+#-----------------------------------------------------------------------------
+# Political organizations
+#
+# Id is 200+ 
+#
+
+
+#
+# Bounty Hunters Guild
+#
+
+
+Society 'Bounty Hunters Guild'
+	Id		206
+	Type		-3
+        Membership      1 19 'deed' 10565 1           
+                Desc
+The bounty hunters of Dylath Leen are a rough bunch of warriors, former
+pirates and all other kinds of cutthroats.
+~
+T1 Hunter~
+T2 Hunter~
+T3 Guildmaster~
+
+
+#
+# Citizens of Ulthar
+#
+
+
+Society 'Citizens of Ulthar'
+	Id		205
+	Type		3
+        Bank Treasury~
+                Desc
+They are the peaceful and friendly people of Ulthar. They love cats
+and worship Bast as their highest Goddess. They know about the
+dreamers visiting their realm and are always interested in stories
+about the other world as they call it.
+~
+T1 Citizen~
+T2 Council~
+T3 Mayor~
+
+
+Society 'Student Counsellors'
+	Id		204
+	Type		3
+        Expulsion	   1 6 'align' -1000 -800
+	Membership	   1 2 'level' 8 -1
+	Membership         1 1 'arkham' 40 -1 
+                Desc
+They are exactly those people who are there to help you, when you're
+new to Miskatonic University and you've no clue what to do.
+~
+
+#
+# Temple Guards of Ulthar
+#
+
+Society 'Ultharian Temple Guards'
+	Id		203
+	Type		5
+        Expulsion	   1 6 'align' -1000 -200
+	Expulsion          1 19 'deed' 9000 1
+        Membership	   1 2 'level' 8 -1
+	Membership         1 1 'ulthar' 40 -1
+        Membership         1 19 'deed' 9000 0           
+        Desc
+The Themple Guards of Ulthar protect the temple, the students and of 
+course all the cats in Ulthar. They are there to help, so ask, if you're
+feeling confused.
+~
+
+#
+# Arkham PD
+#
+
+Society 'Arkham Police Department'
+	Id		202
+	Type		5
+        Expulsion	   1 6 'align' 0 1000
+	Membership	   1 6 'align' 200 1000
+	Membership	   1 2 'level' 10 -1
+	Desc
+Their main goal is to maintain Law & Order in Arkham and the rural regions
+close to town.
+~
+
+#
+# Citizens of Arkham
+#
+
+Society 'Citizens of Arkham'
+	Id		201
+	Type		3
+	Desc
+Many fine and upstanding people live in the town of Arkham and spend their
+lives in quiet ignorance of the alien beings that dwell on the borders of
+our world.  Like humans through the centuries they band together for 
+mutual protection.
+~
+T1 Citizen~
+T2 Council~
+T3 Mayor~
+
+
+#
+# Miskatonic University
+#
+# Note that players will be automatically joined to this society when they
+# are converted
+#
+
+Society 'Miskatonic University'
+	Id		200
+	Type		3
+	Desc
+The university is located in Arkham, on the banks of the Miskatonic
+river.  It teaches many young students, and has a large collection of
+anthropological and archeological items.  Of special note is its 'black
+library', a collection of banned and repressed books that is available 
+to scholors with the right credentials.
+~
+
+#
+#-----------------------------------------------------------------------------
+#    Player Clans
+#
+# Ids for secret societies start at 50 to avoid holes.
+#
+
+#
+# The Watchers
+#
+
+Society 'The Watchers'
+	Id		56
+	Type		-1
+	Expulsion          1 2 'level' 1 14
+        Membership	   1 2 'level' 15 -1
+	Desc
+A dedicated group of concerned Yithians who take their positions as 
+guardians of time.  Throughout the Aeons these few have secured the flow of 
+time and fended off invaders from out-of-space through the acquisition of 
+knowledge by other races.
+~
+
+
+#
+# Yuggoth Invasion Force
+#
+
+Society 'Yuggoth Invasion Force'
+	Id		55
+	Type		-1
+	Expulsion          1 6 'align' 800 1000
+        Membership         1 6 'align' -1000 600
+        Membership	   1 2 'level' 15 -1
+	Membership         1 1 'yuggoth' 60 -1 
+	Desc
+The Yuggoth Invasion Force (Y.I.F.) was banded to gather information and
+invade the earth. Founded by Ragnarok the Mi-Go's super soldier, the
+clan is ever gaining information for the one fatefull day of the invasion.
+With his right hand fungus Xixchil (sent with Ragnarok originally) they
+thrive in their enviroment.
+~
+Sign
+You spread your wings wide then throw your fist to your chest in a roman salute.~
+@a2 spreads his wings wide then throws his fist to his chest in a roman salute.~
+T1 Brain Hunter~
+T2 Explorer~
+T3 Master Brain~
+
+
+#
+# The Syndicate
+#
+
+Society 'The Syndicate'
+	Id		54
+	Type		-1
+	Expulsion          1 6 'align' 200 1000
+        Expulsion          1 4 'policeman' 1 -1
+        Membership         1 6 'align' -1000 100
+        Membership	   1 2 'level' 15 -1
+	Desc
+The Syndicate is an organization based in a variety of criminal activities. 
+It prefers to think of itself as a business rather than a clan.  The
+Syndicate has it's origins in the Italian and East European mafias.  It is
+open to everyone with criminal intentions.
+~
+T1 Thug~
+T2 Don~
+T3 Godfather~
+
+
+#
+# The Hidden
+#
+
+Society 'The Hidden'
+	Id		53
+	Type		-1
+	Expulsion          1 6 'align' 500 1000
+        Membership         1 6 'align' -1000 250
+        Membership         1 19 'deed' 59 1
+        Membership         1 19 'deed' 9040 1
+        Membership	   1 2 'level' 15 -1
+	Desc
+We are The Hidden.  Our aim is to free our brethren from the oppression
+of the civilized races.  We refuse to conform to the arbitrary laws and 
+principles of those who would control us.  Our forefathers were weak and
+ineffective.  Unlike them, we will not shirk from using force when
+necessary.  We will not fear... war.
+~
+
+#
+# Sons of Ulfang
+#
+
+Society 'Sons of Ulfang'
+	Id		52
+	Type		-1
+	Expulsion	   1 6 'align' -1000 250
+	Membership	   1 6 'align' -1000 0
+	Membership	   1 2 'level' 15 -1
+	Desc
+The Sons are an ancient order, whose origins are lost in the mists of time.
+They worship dark and vengeful dieties, including Shub Niggurath and Abhoth.
+Few outsiders know of their organization, and those who do seldom speak of it
+for fear of their lives.  It is known that they are dedicated to amassing
+power and wealth for their own uses.
+~
+
+#
+# Illuminati
+#
+
+Society 'Illuminati'
+	Id		51
+	Type		-1
+	Expulsion	   1 6 'align' -1000 250
+	Membership	   1 6 'align' -1000 0
+	Membership	   1 2 'level' 10 -1
+	Desc
+The Illuminati are one of the most secretive societies.  They are believed
+to worship Yog-Sothoth and to seek world domination, but their methods are
+obscure and their actions veiled.  There are as many madmen claiming to be
+members as there are real members, so hard facts about this small but powerful
+clan are difficult to find.
+~
+
+#
+# Ulthar Arcanuum
+#
+
+Society 'Ulthar Arcanuum'
+	Id		6
+	Type		1
+	Expulsion          1 6 'align' -1000 -950
+        Membership         1 19 'deed' 59 1
+        Membership         1 1 'spell casting' 40 -1
+        Membership	   1 2 'level' 10 -1
+	Desc
+The goals of the Arcanuum are that of the acquisition and retention of
+magical knowledge and experimentation in the Dreamlands.  They are a group
+bent towards uniting the various types of magical energies that constantly
+flow in wane and flux from the Earth dimension.Those that have been
+awakened to the true magic are welcome to join the clan once they have
+chosen a profession akin to our beliefs.
+~
+T1 Mage~
+T2 Wizard~
+T3 Archmage~
+
+#
+# Arkham Masonic Lodge
+#
+
+Society 'Arkham Masonic Lodge'
+	Id		5
+	Type		1
+	Expulsion	   1 6 'align' -750 750
+	Membership	   1 6 'align' -500 500
+	Membership	   1 2 'level' 10 -1
+	Desc
+The Arkham Masonic Lodge is a society mainly interested in the extension of
+power and influence in the New England region. All means that takes you
+closer to sucess are appororiate means and there is only one goal: Getting
+in control of every aspect in social, cultural and above all financial life.
+~
+Sign
+You make a very complicated sign with the left hand.~
+@a2 makes a very complicated sign with the left hand.~
+
+
+#
+# Renders of the Veil
+#
+
+Society 'Renders of the Veil'
+	Id		4
+	Type		1
+	Expulsion	   1 6 'align' -900 500
+	Membership	   1 6 'align' -600 400
+	Membership	   1 2 'level' 10 -1
+	Desc
+There are to many things hidden, to many charletons and frauds, to many secret
+preditors who lie in wait for the unwary.  People should be free and safe to
+live their lives, as they want to.  All forms of entrapment and deception
+must be fought, from the dark gods and evil humans who plot to control us all
+to the holier than thou moralists who would have everyone live a life of
+divine contemplation.  The future is yours, make the best of it that you can.
+~
+
+#
+# US Marines
+#
+
+Society 'US Marines'
+	Id		3
+	Type		1
+	Expulsion	   1 6 'align' -500 1000
+	Membership	   1 6 'align' -250 1000
+	Membership	   1 2 'level' 10 -1
+	Desc
+Men, strong and true, dedicated to upholding the law and the rationality
+of science.  Armed with the latest and greatest technology we have been able
+to make they provide the firepower, leadership and moral certainty we need
+to uphold the values that make our society what it is.  Let the creatues of
+darkness, and their followers, tremble with dread when a US Marine walks past.
+~
+T1 Corporal~
+T2 Lieutenant~
+T3 Colonel~
+Sign
+You snap your hand to your forehead.~
+@a2 snaps @a3 hand to @a3 forehead.~
+
+
+#
+# Esoteric Order of Dagon
+#
+
+Society 'Esoteric Order of Dagon'
+	Id		2
+	Type		1
+	Expulsion	   1 6 'align' -1000 250
+	Membership	   1 6 'align' -1000 0
+	Membership	   1 2 'level' 10 -1
+	Desc
+The Esoteric Order of Dagon, a mysterious following centered in the
+decaying port city of Innsmouth. Originally imported by the trading
+ships of Obed Marsh, strange rumors abound about its true nature. 
+Strange rumors involving the inbreeding between the cult members and
+a demonic race of aquatic creatures called the Deep Ones. Rumors of 
+blasphemous rituals by members of the cult seen swimming late at 
+night to Devil reef off of Innsmouth, and strange inhuman shapes 
+seen participating with them.... The origin of their name, and its
+connection to the ancient God of the ocean, Dagon, worshiped by the 
+biblical Philistines can only be speculated upon... But they are 
+wholly evil in nature and wait for their part when Great Cthulhu 
+rises again and the dark spawn of the sea rise from Y'ha-nethlei to 
+reclaim the world....
+~
+
+#
+# Warriors of Light
+#
+
+Society 'Warriors of Light'
+	Id		1
+	Type		1
+	Expulsion	   1 6 'align' -250 1000
+	Membership	   1 6 'align' 0 1000
+	Membership	   1 2 'level' 10 -1
+	Desc
+Since the creation these Holy warriors have worked to keep the forces of evil
+at bay. Following Marduk's example in slaying Tiamat, they work toward the
+day when Great Cthulhu shall rise from his slumber so they can destroy him,
+and end his evil influence. You can identify these virtuous people by the
+sigel of Marduk they wear over thier hearts.
+~
+T1 Warrior~
+T2 Knight~
+T3 Paladin~
+
+#
+# There must be an End at the end.
+#
+
+End
+

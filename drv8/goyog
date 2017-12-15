@@ -1,0 +1,13 @@
+#!/bin/bash 
+#
+# Set the port number
+
+declare port=9999
+
+# Start the muds minder...
+
+/home/cthulhu/mud/drv8/startyog $port &
+
+# All done
+
+exit 0

@@ -1,0 +1,604 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; I) [Netscape]">
+   <title>CthulhuMud - Mob Commands</title>
+</head>
+<body link="#0000FF" vlink="#800080" background="paper.jpg">
+
+<center>
+<hr></center>
+
+<center>
+<h1>
+CthulhuMud - Mob Commands</h1></center>
+
+<center>
+<hr>[ <a href="index.html">Index</a> ]
+<hr></center>
+
+<p>Mob Commands are a set of commands that are provided to allow <a href="character.html">non-player
+mobiles</a> to perform actions that would either be impossible for normal
+players or which affect the game state rather than the world state.
+<p>Mob Commands are normally coded in scripts and use substitution parameters
+to obtain details of victims from the <a href="events.html">event</a> that
+triggered the script. When extracting targets from an event, it is better
+to use the victims true name (@_t) than its first name (@_1). This is because
+the true name uniquely identifies the mob, while the first name may match
+mobs other than the correct target.
+<br>
+<hr>
+<h2>
+Mob Commands - Index</h2>
+
+<ul>
+<li>
+<a href="#mpalign">MPALIGN</a> (Change a players alignment)</li>
+
+<li>
+<a href="#mpanswer">MPANSWER</a> (Initializes an ELIZA chat)</li>
+
+<li>
+<a href="#mpartifact">MPARTIFACT</a> (Makes the mob report about artifact
+locations)</li>
+
+<li>
+<a href="#mpat">MPAT</a> (Do soemthing in anothe room)</li>
+
+<li>
+<a href="#mpchat">MPCHAT</a> (Manipulating chat states)</li>
+
+<li>
+<a href="#mpconv">MPCONV</a> (Update conversation status)</li>
+
+<li>
+<a href="#mpdeed_add">MPDEED</a> (Add/remove deed records)</li>
+
+<li>
+<a href="#mpecho">MPECHO</a> (Output plain text messages)</li>
+
+<li>
+<a href="#mpechoat">MPECHOAT</a> (Send a plain text message to a particular
+mob)</li>
+
+<li>
+<a href="#mpeffect">MPEFFECT</a> (Quick Casting)</li>
+
+<li>
+<a href="#mpemergency">MPEMERGENCY</a> (Calls in the guards)</li>
+
+<li>
+<a href="#mpfame">MPFAME</a> (Reward fame points)</li>
+
+<li>
+<a href="#mpforce">MPFORCE</a> (Force another mob to do something)</li>
+
+<li>
+<a href="#mpgoto">MPGOTO</a> (Goto to specific room)</li>
+
+<li>
+<a href="#mphunt">MPHUNT</a> (Engage Mob Hunting)</li>
+
+<li>
+<a href="#mphurt">MPHURT</a> (Cause damage to a mobile)</li>
+
+<li>
+<a href="#mpjunk">MPJUNK</a> (Destroy an object from inventory)</li>
+
+<li>
+<a href="#mpkill">MPKILL</a> (Attack another mob)</li>
+
+<li>
+<a href="#mpinvasion">MPINVASION</a> (Schedules an invasion)</li>
+
+<li>
+<a href="#mpmemory">MPMEMORY</a> (Mob Memory Management)</li>
+
+<li>
+<a href="#mpmload">MPMLOAD</a> (Create a mobile)</li>
+
+<li>
+<a href="#mpmset">MPMSET</a> (Sets a mobile stat)</li>
+
+<li>
+<a href="#mpnote">MPNOTE</a> (Makes a mob write a note on the boards)</li>
+
+<li>
+<a href="#mpoload">MPOLOAD</a> (Create an object)</li>
+
+<li>
+<a href="#mposet">MPOSET</a> (Sets an object stat)</li>
+
+<li>
+<a href="#mppassport">MPPASSPORT</a> (Modifies passport entries)</li>
+
+<li>
+<a href="#mppay">MPPAY</a> (Initiates a transaction)</li>
+
+<li>
+<a href="#mppeace">MPPEACE</a> (Stops combat)</li>
+
+<li>
+<a href="#mppet">MPPET</a> (Causes the mob to join a player)</li>
+
+<li>
+<a href="#mppktimer">MPPKTIMER</a> (Sets a players PK timer)</li>
+
+<li>
+<a href="#mppurge">MPPURGE</a> (Destroy an object or a mobile)</li>
+
+<li>
+<a href="#mpquest">MPQUEST</a> (Sets a Quest state)</li>
+
+<li>
+<a href="#mprelev">MPRELEV</a> (Change a mobs level)</li>
+
+<li>
+<a href="#mpreset">MPRESET</a> (Resets an area or a part of one)</li>
+
+<li>
+<a href="#mpreward">MPREWARD</a> (Give a mobile xps)</li>
+
+<li>
+<a href="#mpsanity">MPSANITY</a> (Sanity Management)</li>
+
+<li>
+<a href="#mpscript_run">MPSCRIPT</a> (Execute a script or cancel pending
+commands)</li>
+
+<li>
+<a href="#mpselect">MPSELECT</a> (Examine the mobs environment)</li>
+
+<li>
+<a href="#mpstate">MPSTATE</a> (Manipulates a certain state of the mob)</li>
+
+<li>
+<a href="#mpsteal">MPSTEAL</a> (Remove an object from a player)</li>
+
+<li>
+<a href="#mpstop">MPSTOP</a> (Output messages to say why something is not
+permitted)</li>
+
+<li>
+<a href="#mptransfer">MPTRANSFER</a> (Move others mobiles aroud the mud)</li>
+
+<li>
+<a href="#mpwound">MPWOUND</a> (Deals wounds)</li>
+</ul>
+
+<hr>
+<h2>
+Mob Commands - Details</h2>
+
+<h3>
+<a NAME="mpalign"></a>MPALIGN victim target_alignment</h3>
+The victims alignment is changed to bring it closer to the target alignement.
+The amount of the change is equal to 10% of the difference between the
+victims alignment and the target alignment.
+<br>This is typically used to 'reward' good or bad actions that would not
+otherwise affect the players alignment.
+<h3>
+<a NAME="mpanswer"></a>MPANSWER victim question</h3>
+<font size=+0>The mob initializes an ELIZA chat based on the given question
+and directed towards to victim.</font>
+<h3>
+<a NAME="mpartifact"></a>MPARTIFACT artifact/ALL</h3>
+The mob starts reporting about the whereabouts of a certain specified artifact
+or all artifacts in the game. Be careful with the ALL option.
+<h3>
+<a NAME="mpat"></a>MPAT vnum command</h3>
+This causes the mob to silently move into the room corresponding to the
+vnum, issue the command (whatever it is) and the return to the room it
+was in when the MPAT command was issued. No messages are created.
+<p>This command is useful to having a mob in one location cause things
+to happen in other locations, providing the effect of animated objects
+or for situations where the mob is not in the same room as the victims.
+<br>The room that someone is in can be extracted from an event with the
+@_r token, although the information has a short self life, as the player
+may move to a different room.
+<p><a NAME="mpchat"></a><b><font size=+1>MPCHAT</font></b>
+<p>A mob command for manipulating chat states.
+<br>Without any parms it causes the mob to undergo a normal chat check.
+<br>With a parameter, a single number, it directly updates the mobs chat
+state.
+<h3>
+<a NAME="mpconv"></a>MPCONV victim conv_id sub_id new_state</h3>
+This lets the mobile directly set one of the victims conversational state.
+The can allow new conversational possabilities in view of something that
+the player has seen or done.
+<h3>
+<a NAME="mpdeed_add"></a>MPDEED victim ADD id type title</h3>
+This adds a deed record to the victim. The id is a unique number (like
+a vnum) that identified the deed. The type is made up from the following
+flags:
+<ol>
+<li>
+defaults is Neutral, Private</li>
+
+<li>
+1 - Secret (the player is unaware of it)</li>
+
+<li>
+2 - Public (all players can see it if they look)</li>
+
+<li>
+4 - Good (generally considered a good thing to have done)</li>
+
+<li>
+8 - Bad (generally considered a bad thing to do)</li>
+</ol>
+The title is simply a text string used to explain what the deed means.
+<br>In addition to simply letting a character review their past achievements,
+deeds can also be used for game control, allowing the world to remember
+that things have happened and to modify their behaviour accordingly.
+<p>Alternatively you can hand out knowledge about magical disciplines:
+<b>MPDEED
+victim&nbsp; ADD -1 0 &lt;discipline name></b>
+<h3>
+<a NAME="mpdeed_remove"></a>MPDEED victim REMOVE id</h3>
+This removes the deed record for the victim.
+<br>It would normally be used when a player atones for something bad they
+did or when they use a favour in exchange for something good they did.
+<h3>
+<a NAME="mpecho"></a>MPECHO <i>scope</i> text</h3>
+This issues the text string as an echo event to all rooms within the named
+scope. If a scope is not named, it defaults to the current room.
+<p>Valid scopes are:
+<dl>
+<dt>
+_room</dt>
+
+<dd>
+The room the mobile is in. This is the default.</dd>
+
+<dt>
+_room_plus</dt>
+
+<dd>
+This room the mobile is in plus all potentially adjacent rooms.</dd>
+
+<dt>
+_subarea</dt>
+
+<dd>
+All rooms in the same subarea as the mobile.</dd>
+
+<dt>
+_subarea_plus</dt>
+
+<dd>
+All room in the same subarea as the mobile plus all potentially adjacent
+rooms.</dd>
+
+<dt>
+_area</dt>
+
+<dd>
+All rooms in the same area as the mobile. This is fairly expensive to process.</dd>
+
+<dt>
+_area_plus</dt>
+
+<dd>
+All rooms in the same area as the mobile plus all potentially adjacent
+rooms.</dd>
+
+<dt>
+_zone</dt>
+
+<dd>
+All rooms in the same zone as the mobile. This is very expensive to process.</dd>
+
+<dt>
+_universe</dt>
+
+<dd>
+All rooms in the mud. This is horrendously expensive to process.</dd>
+
+<dt>
+_group</dt>
+
+<dd>
+All rooms containg one or more mobs in the same group as the mobile.</dd>
+</dl>
+
+<h3>
+<a NAME="mpechoat"></a>MPECHOAT victim text</h3>
+The text is sent to the victim, regardless of where the victim is.
+<p><a NAME="mpeffect"></a><b><font size=+1>MPEFFECT</font></b>
+<p>This instantaneously applies a spell effect to a mobile without going
+through the whole spell casting sequence.&nbsp; It is intended for usage
+by high level mobiles granting (or afflicting) others with spell like effects.&nbsp;
+Generally mobs should use spell casting instead of this command.&nbsp;
+This command will, however, work on an MPAT command.
+<p>MPEFFECT mobile 'effect name' level
+<p>This applies the named effect to the mobile.&nbsp; This can be the mobile
+issueing the MPEFFECT call.&nbsp; If level is omitted, the issuing mobiles
+will be used.
+<p><a NAME="mpemergency"></a><b><font size=+1>MPEMERGENCY [subarea]</font></b>
+<p>This command allows a mob to summon a great number of local guards (if
+availiable). This can be very deadly if a criminal flag is given before.
+Add a subarea tag for limited range.
+<h3>
+<a NAME="mpfame"></a>MPFAME victim ammount</h3>
+This command rewards FAME points to a player. Never award more than 5 points
+and even those only as reward for extraordinary tasks.
+<h3>
+<a NAME="mpforce"></a>MPFORCE victim command</h3>
+This makes the victim (either another mobile or a player) issue the command.
+It cannot be used on immortals.
+<p>As the command executes, it issues all of its normal messages.
+<h3>
+<a NAME="mpgoto"></a>MPGOTO vnum</h3>
+This moves the mobile to the room corresponding to the given vnum. No messages
+are issued.
+<p>If the mobile is just moving to an adjacent room, it is better to have
+it use the directional movement commands (north, south, east, west, etc...)
+as these put out the normal arrival and departure messages.
+<p><a NAME="mphunt"></a><b><font size=+1>MPHUNT</font></b>
+<p>This makes the mob hunt the specified pc.&nbsp; Currently it only works
+with the special routines that handle hunting mobs.
+<p>MPHUNT mobile
+<br>Mob starts hunting (and trying to kill) the mobile
+<p>MPHUNT
+<br>Mob stops hunting.
+<h3>
+<a NAME="mphurt"></a>MPHURT victim d_h s_h d_m s_m d_v s_v</h3>
+This causes damage to victim without starting a fight. It is meant to be
+used to simulate physical damage due to falling, flying rocks and strange
+magical effects. The parameters are pairs of dice number and dice side
+values which are rolled and applied to hit points, mana and move.
+<p>Because the damage may be fatal, the mob should echo a command describing
+the cause of the damage before issuing this command. That way the player
+knows what they died of. Not that heavy movement loss may also prove fatal
+if the character is in a hostile enviornment.
+<h3>
+<a NAME="mpinvasion"></a>MPINVASION</h3>
+This command schedules an invasion in the area, the mob is currently in.
+The invasion will be executed on next area repop..
+<h3>
+<a NAME="mpjunk"></a>MPJUNK object</h3>
+This locates the object within the mobiles inventory and destroys it.
+<h3>
+<a NAME="mpkill"></a>MPKILL victim</h3>
+This causes the mobile to immedietly attack the vitim. It should be used
+inplace of the normal kill and murder commands that players use, as it
+does not have the checks that prevent players from killing each other.
+<p><a NAME="mpmemory"></a><b><font size=+1>MPMEMORY</font></b>
+<p>This updates a mobs memory
+<p>MPMEMORY mobile REMEMBER slot text
+<br>This causes the mob to remember something in a slot.
+<p>MPMEMORY mobile FORGET slot
+<br>This causes the mobile to forget what is in a slot.
+<h3>
+<a NAME="mpmload"></a>MPMLOAD vnum</h3>
+An instance of the mob identified by vnum is created and placed in the
+same room as the mobile. No messages are issued.
+<br>If the mob subsequently purges itself, it can present the appearance
+of having transformed into something else.
+<h3>
+<a NAME="mpmset"></a>MPMSET victim stat value</h3>
+Similar to the <b>set char</b> wiz-command you can set the stats of a certain
+mob.
+<h3>
+<a NAME="mpnote"></a>MPNOTE &lt;board name> '&lt;recipient>' '&lt;subject>'
+&lt;text></h3>
+This creates a note written by the mob who executes it. The quotes around
+recipient and subject are nescessary, if they are multiple-word strings.
+The text itself does not need quotes, but keep it as short as possible.
+Substitution parameters as @ax, @vx, @ox can be used anywhere in the command.
+<h3>
+<a NAME="mpoload"></a>MPOLOAD vnum level</h3>
+An instance of the object identified by vnum is loaded at the indicated
+level and put into the mobiles inventory. This is true even if the item
+cannot, normally, be picked up. This is to allow mobiles to distribute
+static objects through out the mud.
+<h3>
+<a NAME="mposet"></a>MPOSET object stat value</h3>
+Similar to the <b>set obj</b> wiz-command you can set the stats of a certain
+obj.
+<h3>
+<a NAME="mppassport"></a>MPPASSPORT player command value</h3>
+<font size=+0>This looks for a player's passport and modifies the entries.</font>
+<br><font size=+0>COMMAND <b>ADD</b>: The value is the code number of the
+crime to add (1-3 at the moment).</font>
+<br><font size=+0>COMMAND <b>REMOVE</b>: -1 remove all entries, 0 remove
+first entry, 1-999 remove entry of the selected type</font>
+<h3>
+<a NAME="mppay"></a>MPPAY player money</h3>
+<font size=+0>Forces the player to pay some money to the mob. If the amount
+is negative, the mob pays. If there isn't enough money (local currency),
+as much as possible is given.</font>
+<h3>
+<a NAME="mppeace"></a>MPPEACE [player]</h3>
+<font size=+0>This interrupts a combat if one of the fighting characters
+is selected. If nobody is selected all fighting is stopped.</font>
+<h3>
+<a NAME="mppet"></a>MPPET player</h3>
+<font size=+0>This command forces the mob to accept a given player as master.</font>
+<h3>
+<a NAME="mppktimer"></a>MPPKTIMER player [+, -] time</h3>
+<font size=+0>This command sets a players PK timer. The options + or -
+allow to add to, substract from an existing timer. Without option the timer
+is being set to whatever time is given.</font>
+<h3>
+<a NAME="mppurge"></a>MPPURGE <i>target</i></h3>
+This locates target within the same room as the mobile and destroys it.
+Target can be the name of either an object or a mobile. If target is not
+specified, then all objects and NPCs in the room (hopefully except pets)
+will be destroyed.
+<p>Mobiles can use the MPPURGE command on themselves, but it should be
+coded as the very last line in the script. In this case, the target can
+be specified as 'self'.
+<h3>
+<a NAME="mpquest"></a>MPQUEST</h3>
+MPQUEST player START id title
+<br>This starts the player onthe quest and should normally be followed
+by an update to give them thier first instruction.
+<p>MPQUEST player UPDATE id state instruction
+<br>This updates the state of a quest that the player is already on.&nbsp;
+There are no checks, so it might move them backwards overall.
+<p>MPQUEST player COMPLETE id instruction
+<br>This marks the quest as having been completed (state 9999).
+<p>MPQUEST player FORGET id
+<br>This removes all memory of the quest from the player.&nbsp; It is as
+if they had never started it.
+<p>If the player is in a group, the command will affect all group members.
+<h3>
+<a NAME="mprelev"></a>MPRELEV <i>level</i> <i>delta</i></h3>
+This mob command allows a mobile to change its level.
+<p>Base and delta are added together to work out the level the mob changes
+to.
+<p>This enables mobs to change their challange factor in response to both
+players and actions.
+<p>The mob should be created at the lowest level it is likely to want to
+achieve, as that is the level its equipment will be created at.
+<p>Random level variation still occurs. This modifies the resultant level
+by up to 1 level for every 10 levels that the mob has. The code fragment
+is:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (mob->level >= 10) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mob->level += dice(1, mob->level/10);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mob->level -= dice(1, mob->level/10);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</pre>
+This means a mob that is meant to be 53rd level, could end up anywhere
+from
+49th to 57th level, but will average around 53rd.
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 49&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 in 25&nbsp;&nbsp;&nbsp; 4%&nbsp;&nbsp; 1,5
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 in 25&nbsp;&nbsp;&nbsp; 8%&nbsp;&nbsp; 1,4 2,5
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 in 25&nbsp;&nbsp; 12%&nbsp;&nbsp; 1,3 2,4 3,5
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 in 25&nbsp;&nbsp; 16%&nbsp;&nbsp; 1,2 2,3 3,4 4,5
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 in 25&nbsp;&nbsp; 20%&nbsp;&nbsp; 1,1 2,2 3,3 4,4 5,5
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 54&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 in 25&nbsp;&nbsp; 16%&nbsp;&nbsp; 2,1 3,2 4,3 5,4
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 in 25&nbsp;&nbsp; 12%&nbsp;&nbsp; 3,1 4,2 5,3
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 in 25&nbsp;&nbsp;&nbsp; 8%&nbsp;&nbsp; 4,1 5,2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 in 25&nbsp;&nbsp;&nbsp; 4%&nbsp;&nbsp; 5,1</pre>
+The primary aim of random level variation is to make areas somewhat less
+predictable. What a player can kill one day they may not be able to kill
+the next.
+<p>Changing a mobs level alters its hit points, mana points, movement points
+and armor class. Damage ratios are preserved, however, so if a 20th level
+mob with 400 maximum hits and 300 current hits is changed to 10th level
+where it rolls 160 maximum hits, its current hits will be reduced to 120.
+<h3>
+<a NAME="mpreset"></a>MPRESET [room/subarea/area]</h3>
+This resets the rooms in a certain range around the mob.
+<br>&nbsp;
+<h3>
+<a NAME="mpreward"></a>MPREWARD victim [type] ammount</h3>
+This gives the victim the specified ammount of xps. Normally it would be
+used in response to the player having done something helpful for the mob.
+If the victim is the member of a group, the xps are split between all group
+members who are present.
+<br>Rewards for small actions should be around 1/10th of a level, while
+rewards for major achievements should be around a whole level.
+<p>Alternative types: xp, fame, prac, train
+<br>&nbsp;
+<p><a NAME="mpsanity"></a><b><font size=+1>MPSANITY</font></b>
+<p>MPSANITY player CHECK threshold action
+<br>The player makes a sanity check againt the threshold.&nbsp; If an action
+has been specified they will take it if they fail the check.&nbsp; If no
+action has been specified, they will take a random action.&nbsp; The threshold
+must
+<br>&nbsp;be at least 30.
+<p>MPSANITY player RECOVER points
+<br>The players sanity will be increased by the specified number of points.
+There is a maximum of 20.
+<h3>
+<a NAME="mpscript_run"></a>MPSCRIPT victim RUN script_id</h3>
+The mobile will enqueue the commands in the indicated script for execution.
+<p>This is normally used with a target of self, but if used on others,
+the sript comes from the mob issuing the commands, not from the victim.
+Used in this fashion, it is an extended version of MPFORCE.
+<h3>
+<a NAME="mpscript_cancel"></a>MPSCRIPT victim CANCEL cmd_id</h3>
+This causes the mobile to dequeue all commands associated with cmd_id that
+have not yet been issued.
+<h3>
+<a NAME="mpselect"></a>MPSELECT mob_sel mob_sel obj_sel obj_sel number
+text</h3>
+The purpose of this command is to generate an event, containing one or
+more elements from the mobs current environment that is then run throug
+the mobs triggers to see if any action is required. It provides a very
+crude mechanism for a mob to 'think' about its current situation.
+<p>mob_sel - a mob selector:
+<pre>&nbsp;&nbsp;&nbsp; mob_none&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No mob is selected.
+&nbsp;&nbsp;&nbsp; mob_me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The mob issuing the MPSELECT is selected.
+&nbsp;&nbsp;&nbsp; mob_any&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Any mob in the room is selected.
+&nbsp;&nbsp;&nbsp; mob_npc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Any non player mob in the room is selected.
+&nbsp;&nbsp;&nbsp; mob_pc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Any player mob in the room is selected.
+&nbsp;&nbsp;&nbsp; mob_pc_mortal&nbsp; Any player mob in the room who is not a god.
+&nbsp;&nbsp;&nbsp; name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The mob with this name is selected, as long as
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; it is neither the selecting mob nor the actor.</pre>
+Additionally a selection modifier may be used:
+<pre>&nbsp;&nbsp;&nbsp; random&nbsp;&nbsp;&nbsp;&nbsp; One is picked at random
+&nbsp;&nbsp;&nbsp; highest&nbsp;&nbsp;&nbsp; The highest level one is picked
+&nbsp;&nbsp;&nbsp; lowest&nbsp;&nbsp;&nbsp;&nbsp; The lowest level one is picked</pre>
+For example:
+<pre>&nbsp;&nbsp;&nbsp; highest.mob_pc_mortal</pre>
+Will pick the highest level non-god player mob in the room.
+<p>The first selector is for the actor, the second is for the victim. The
+mob driving the MPSELECT can only be selected through the mob_me selector.
+The same mob will not be selected as both actor and victim.
+<p>obj_sel - an object selector:
+<pre>&nbsp;&nbsp;&nbsp; obj_none&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No object selected.
+&nbsp;&nbsp;&nbsp; obj_any&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Any object in the room can be selected.
+&nbsp;&nbsp;&nbsp; obj_any_actor&nbsp;&nbsp; Any object the actor is carrying/wearing.
+&nbsp;&nbsp;&nbsp; obj_any_victim&nbsp; Any object the victim is carrying/wearing.
+&nbsp;&nbsp;&nbsp; obj_any_mine&nbsp;&nbsp;&nbsp; Any object the mob is carrying/wearing.</pre>
+The first selector is for the primary object, the second for the secondary
+object. The same object will not be selected as both primary and secondary.
+<p>number - a number, taken as is.
+<p>text - taken as is.
+<p>Once the various bits have been selected an event (mob, select) is generated
+and passed to the mob that issued the MPSELECT command. That is the only
+mob that gets to see the event.
+<h3>
+<a NAME="mpstate"></a>MPSTATE victim state_type state</h3>
+A certain state of (or concerning) the victim is changed.
+<br>Availiable state_types are:&nbsp;&nbsp;&nbsp;&nbsp; <b>MPSTATE player
+CONV conversation sub_conv starte</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<b>MPSTATE mob CHAT state</b>
+<h3>
+<a NAME="mpstop"></a>MPSTOP victim action</h3>
+This command just outputs an event with suitable wording to say that the
+mobile stopped the victim from taking an action. The messages produced
+are:
+<pre>&nbsp; mobile STOPS YOU FROM action
+&nbsp; mobile STOPS victim FROM action
+&nbsp; YOU STOP victim FROM action</pre>
+It is designed to the used on a script triggered by a <a href="trigger.html">challange
+trigger</a> to explain when the action failed.
+<p><a NAME="mpsteal"></a><b><font size=+1>MPSTEAL</font></b>
+<p>Allows a mob to unconditionally take an object from another player or
+mobile.&nbsp; No messages are generated, so use appropriate echos.
+<p>MPSTEAL 'mobile' 'item name'
+<br>If item can be found on mobile it will be removed (and unequipped if
+worn) and put into the inventory of the mobile.
+<h3>
+<a NAME="mptransfer"></a>MPTRANSFER victim <i>vnum</i></h3>
+This enables the mobile to move other mobiles (including players) to other
+rooms. No messages are created during transit and there is no autolook
+at the other end.
+<p>The victim specifies the name of the mobile to be transported, and a
+value of 'all' means all mobiles in the same room as the issuer. They are
+moved to the room corresponding to the vnum. If this is omitted, then it
+defaults to the room the mobile is in. Note that the victim does not have
+to be in the same room as the mobile to get transferred.
+<p>Used with a destination of a different room, it can server to move a
+player away from the mobile. When used without a vnum, it can serve to
+move a player to the mobile (indeed, MPTRANSFER ALL should have the effect
+of bringing every player to the mobiles room).
+<br>&nbsp;
+<h3>
+<a NAME="mpwound"></a>MPWOUND victim head torso larm rarm legs</h3>
+This deals wounds to a victim. You should send an explanatory message when
+you do. The wounds add up with already existing ones. When an amount of
+10 is reached the body part is cut off which is especially fatal in the
+case of the head or torso.
+<p>
+<hr>[ <a href="index.html">Index</a> ]
+</body>
+</html>

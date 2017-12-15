@@ -1,0 +1,129 @@
+Update, May 29th, 2000
+----------------------
+
+	act_info.c
+	act_move.c
+	act_obj.c
+	act_wiz.c
+	anchor.c
+	bank.c
+	comm.c
+	db.c
+	doors.c
+	fight.c
+	lease.c
+	locker.c
+	magic.c
+	mem.c
+	merc.h
+	mob.c
+	mob_commands.c
+	monitor.c
+	olc.c
+	olc_act.c
+	olc_save.c
+	profile.c
+	profile.h
+	save.c
+
+	Added fixed bank.c from Yog.
+
+	Changed all vnums to be of type VNUM in preparation for library support.
+
+		VNUM is just a long at the moment, which will eventually be split into a 2 byte
+		library code and a 2 byte vnum (as in the standard rom vnum).
+
+		xxx_data->vnum, recall, dream, respawn, morgue, day, night, exit keys
+
+		Object values change to long so they can still hold a full vnum.
+		
+		No increase in runtime as a g++ int is 4 bytes, same as a g++ long.
+
+Update, May 28th, 2000
+----------------------
+
+	Makefile
+	db.c
+	olc_save.c
+	music.c
+
+	Integrated with Yogs code from May 25th.
+
+	Fixed Makefile to include music.o into the merc executable and to add music.o as a 
+	makeable entity.
+
+	Fixed bug with music.c trying to fclose the music file if it failed to open it.
+
+	Fixed P reset - P 0 obj_vnum count cont_vnum
+
+		Will now search the room (from last O or M reset) and all mobs in it for all
+		objects with the vnums indicated by its 3rd parm.  The specified number of
+		objects will be placed within that object.  This will happen even if a player
+		or a mob is carrying the object.
+
+		Through OLC you can only create a P reset for an object inside an object in
+		the room.  I guess you could give the same object to a mob and then delete the
+		reset in the room.
+
+		The object should be created before the P reset is executed or the obects will
+		be missing until the second reset.
+
+        Fixed R reset - R 0 room_vnum dir_count 0
+
+		Will now muddle up the exits up to the dir_count minus 1.
+
+			 4 - NSEW
+			 6 - NSEWUD
+			10 - NSEWUD plus NSEW diagonals
+			12 - NSEWUD, diagonals plus In and Out
+
+		The resets command displays R resets ok, but there doesn't seem to be any way
+		to create R resets through OLC.
+
+
+Update, May 26th, 2000
+----------------------
+
+	merc.h
+	bit.c
+	act_obj.c
+	db2.c
+	wev.h
+	wev.c
+	triggers.c
+	magic.c
+	handler.c
+
+	Added ROM extra identification flags:
+
+		ROM_NONMETAL
+		ROM_NOLOCATE
+		ROM_MELT_DROP
+		ROM_HAD_TIMER
+		ROM_SELL_EXTRACT
+		ROM_BURN_PROOF
+		ROM_NOUNCURSE
+
+		There is no code behind these, they are just for translation.
+
+		Due to limitations on the extra_flag numbers NONMETAL, HAD_TIMER and BURN_PROOF
+		are not being implemented within Cthulhumud. 
+
+	Added extra flag: ITEM_MELT_DROP
+	Added wev subtype: WEV_DROP, WEV_DROP_ITEM_MELT
+
+		An item with this flag dissolves into smoke if it is dropped.
+
+	Added extra_flag: ITEM_NOLOCATE
+
+		An item with this flag set cannot be found with a locate object spell.
+
+	Added extra_flag: ITEM_SELL_EXTRACT
+
+		When an item with this flag is sold, it is removed from the game (like trash).
+
+	Added extra_flag: ITEM_NOUNCURSE
+
+		If an item with NODROP or NOREMOVE has this set, the 'curse' cannot be removed by
+		the 'remove curse' spell.
+

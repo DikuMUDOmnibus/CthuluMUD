@@ -1,0 +1,804 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (Win98; I) [Netscape]">
+   <title>CthulhuMud - Triggers</title>
+</head>
+<body link="#0000FF" vlink="#800080" background="paper.jpg">
+
+<center>
+<hr></center>
+
+<center>
+<h1>
+CthulhuMud - Triggers</h1></center>
+
+<center>
+<hr>[ <a href="index.html">Index</a> ]
+<hr></center>
+
+<p>Triggers provide the ability for mobs to react to <a href="events.html">events</a>
+that are generated in their vacinity.
+<p>There are two types of triggers:
+<dl>
+<dt>
+<b>Challange Triggers</b></dt>
+
+<dd>
+Which provide the mob with the ability to prevent other mobs (including
+players) from doing things</dd>
+
+<dt>
+<b>Reaction Triggers</b></dt>
+
+<dd>
+Which provide the mob with the ability to take actions after it has 'seen'
+other mobs (including players) do something.</dd>
+</dl>
+Triggers are the primary animating force for mobs, being used to drive
+the initiation of scripts in response to input that the mob recieves. In
+addition to the normal, visual, events that players see, there are a number
+of hidden events that only mobs can react to.
+<br>
+<hr>
+<h2>
+Trigger Data</h2>
+Triggers are part of a mobs definition and are added through the OLC Trigger
+command.
+<p>The attributes for each trigger are:
+<dl>
+<dt>
+<b>Event Type</b> (<a href="#types">event type</a>)</dt>
+
+<dd>
+This is the type of the event that will be reacted to. A trigger can only
+match a single event type.</dd>
+
+<dt>
+<b>Sequence Number</b> (int)</dt>
+
+<dd>
+The triggers associated with each event type are checked in order of this
+sequence number. This is important as the order than the events are checked
+can determine which one matches the trigger.</dd>
+
+<dt>
+<b>Event subtype</b> (<a href="#types">event subtype</a>)</dt>
+
+<dd>
+This is the subtype defined within the event that the trigger should match.
+You can also speicfy 'none', in which case the trigger will match all events
+of its main event type.</dd>
+
+<dt>
+<b>Script Number</b> (script)</dt>
+
+<dd>
+The number of the script that should be run when the trigger is satisfied.
+There are no checks that the script is defined when the trigger is defined.</dd>
+
+<dt>
+<b><a href="#text">Text template</a></b> (string)</dt>
+
+<dd>
+This is an optional string of phrases combined with AND and OR logic that
+will be compared to the text present on the event. It should be used carefully,
+as text based matching is expensive.</dd>
+
+<dt>
+<b>Condition</b> (<a href="conds.html">condition</a>)</dt>
+
+<dd>
+The condition is evaluated for each event that reaches the trigger. If
+the condition is satisfied (as well as the type, subtype and text fields),
+the the trigger has matched the event. No further trigger comparisons will
+occur for the event (on this mob) and the script associated with the trigger
+will be enqueued to the mob for execution.</dd>
+</dl>
+
+<hr>
+<h2>
+<a NAME="eval"></a>Trigger Evaluation</h2>
+The processes for evaluating Challange and Reaction Triggers are slightly
+different. Reaction triggers are about letting all mobs react to an event
+that has happened. Challange triggers are about finding out if any of the
+mobs present objects to the action. The evaluation of challange triggers
+stops as soon as 1 mob in the room objects to the action (ie has a challange
+trigger which matches the event).
+<p>The process is thus:
+<ol>
+<li>
+The events type is used to see if the mob has any triggers for that type.
+If it does not, there is assumed to be no reaction and no objection.</li>
+
+<li>
+The triggers for that type are then checked in sequence.</li>
+
+<li>
+If the subtype on the trigger isn't none, that is checked.</li>
+
+<li>
+If a text template is specified, that is checked.</li>
+
+<li>
+Finally, if one is present, the condition is checked.</li>
+
+<li>
+If there is a match on all of these, then the event is said to have matched
+the trigger and the reaction (or objection) is scheduled.</li>
+</ol>
+With challange triggers, it is the responsability of the mob builder to
+provide a script which will explain why the action was denied. The code
+will simply not perform it and no error messages will be issued to anyone.
+<p>It should also be noted that certain events do not have challange or
+reaction forms. These are either because it would be silly/impossible for
+the mob to deny permission, because the result of such a denial would be
+ambigious or paradoxical or because the reaction side would produce to
+much visual clutter for players.
+<h3>
+<a NAME="text"></a>Text Templates</h3>
+Text templates consist of words or phrases separated by and (&amp;) and
+or (&amp;OR;) signs. The ANDs are always evaluated before the ORs.
+<p>The following is an example of a text temple:
+<pre>&nbsp;&nbsp; woman&amp;white|lady&amp;white|ghost&amp;lady</pre>
+This is parsed and checked as:
+<pre>&nbsp;&nbsp; ((woman)&amp;(white))|((lady)&amp;(white))|((ghost)&amp;(lady))</pre>
+It would match any of the following:
+<ul>
+<li>
+Have you see the <u>woman</u> in <u>white</u>?</li>
+
+<li>
+Who is the <u>white</u> <u>lady</u>?</li>
+
+<li>
+Where is the <u>ghost</u> of <u>lady</u> Zara?</li>
+</ul>
+But it would NOT match the following:
+<ul>
+<li>
+Tell me about the white ghost</li>
+
+<li>
+Who is the ghost of the woman?</li>
+
+<li>
+Who is the lady of the castle?</li>
+</ul>
+The strings being tested may not contain the '&amp;', '|' or '~' characters.
+<h2>
+<a NAME="types"></a>Event Types and Subtypes</h2>
+
+<dl>
+<dt>
+<b>give</b></dt>
+
+<ol>
+<li>
+gold</li>
+
+<li>
+item</li>
+</ol>
+
+<dt>
+<b>get</b></dt>
+
+<ol>
+<li>
+gold</li>
+
+<li>
+item</li>
+</ol>
+
+<dt>
+<b>put</b></dt>
+
+<ol>
+<li>
+item</li>
+</ol>
+
+<dt>
+<b>drop</b></dt>
+
+<ol>
+<li>
+gold</li>
+
+<li>
+item</li>
+
+<li>
+plant</li>
+
+<li>
+item_melt</li>
+</ol>
+
+<dt>
+<b>poison</b></dt>
+
+<ol>
+<li>
+food</li>
+
+<li>
+weapon</li>
+
+<li>
+fountain</li>
+</ol>
+
+<dt>
+<b>fill</b></dt>
+
+<ol>
+<li>
+fountain</li>
+</ol>
+
+<dt>
+<b>drink</b></dt>
+
+<ol>
+<li>
+fountain_ok</li>
+
+<li>
+fountain_bad</li>
+
+<li>
+item_ok</li>
+
+<li>
+item_bad</li>
+</ol>
+
+<dt>
+<b>eat</b></dt>
+
+<ol>
+<li>
+food_ok</li>
+
+<li>
+food_bad</li>
+
+<li>
+pill</li>
+
+<li>
+herb</li>
+
+<li>
+corpse</li>
+</ol>
+
+<dt>
+<b>sacrifice</b></dt>
+
+<ol>
+<li>
+pc_corpse</li>
+
+<li>
+corpse</li>
+
+<li>
+trash</li>
+
+<li>
+treasure</li>
+
+<li>
+item</li>
+</ol>
+
+<dt>
+<b>gadget</b></dt>
+
+<ol>
+<li>
+gadget_ok</li>
+
+<li>
+gadget_bad</li>
+</ol>
+
+<dt>
+<b>search</b></dt>
+
+<ol>
+<li>
+item</li>
+
+<li>
+room</li>
+
+<li>
+find_item</li>
+
+<li>
+find_mob</li>
+
+<li>
+find_door</li>
+
+<li>
+find_hound</li>
+</ol>
+
+<dt>
+<b>depart</b></dt>
+
+<ol>
+<li>
+walk</li>
+
+<li>
+sneak</li>
+
+<li>
+fly</li>
+
+<li>
+swim</li>
+
+<li>
+sail</li>
+
+<li>
+portal</li>
+
+<li>
+magic</li>
+
+<li>
+current</li>
+
+<li>
+fleeing</li>
+</ol>
+
+<dt>
+<b>arrive</b></dt>
+
+<ol>
+<li>
+walk</li>
+
+<li>
+sneak</li>
+
+<li>
+fly</li>
+
+<li>
+swim</li>
+
+<li>
+sail</li>
+
+<li>
+portal</li>
+
+<li>
+magic</li>
+
+<li>
+current</li>
+
+<li>
+fleeing</li>
+</ol>
+
+<dt>
+<b>pulse</b></dt>
+
+<ol>
+<li>
+1_sec</li>
+
+<li>
+3_sec</li>
+
+<li>
+4_sec</li>
+
+<li>
+5_sec</li>
+
+<li>
+10_sec</li>
+
+<li>
+30_sec</li>
+
+<li>
+area</li>
+</ol>
+
+<dt>
+<b>time</b></dt>
+
+<ol>
+<li>
+hour</li>
+
+<li>
+day</li>
+
+<li>
+sunrise</li>
+
+<li>
+sunset</li>
+
+<li>
+dawn</li>
+
+<li>
+dusk</li>
+</ol>
+
+<dt>
+<b>control</b></dt>
+
+<ol>
+<li>
+login</li>
+
+<li>
+logout</li>
+
+<li>
+linkdead</li>
+
+<li>
+reconnect</li>
+</ol>
+
+<dt>
+<b>mob</b></dt>
+
+<ol>
+<li>
+stop</li>
+
+<li>
+select</li>
+
+<li>
+echo</li>
+</ol>
+
+<dt>
+<b>death</b></dt>
+
+<ol>
+<li>
+slain</li>
+
+<li>
+stun</li>
+</ol>
+
+<dt>
+<b>attack</b></dt>
+
+<ol>
+<li>
+kill</li>
+
+<li>
+kick</li>
+
+<li>
+trip</li>
+
+<li>
+bash</li>
+
+<li>
+dirt</li>
+
+<li>
+backstab</li>
+
+<li>
+disarm</li>
+
+<li>
+circle</li>
+
+<li>
+rotate</li>
+
+<li>
+murder</li>
+
+<li>
+tail</li>
+
+<li>
+crush</li>
+</ol>
+
+<dt>
+<b>combat</b></dt>
+
+<ol>
+<li>
+miss</li>
+
+<li>
+hit</li>
+
+<li>
+block</li>
+
+<li>
+parry</li>
+
+<li>
+dodge</li>
+
+<li>
+absorb</li>
+
+<li>
+immune</li>
+</ol>
+
+<dt>
+<b>damage</b></dt>
+
+<ol>
+<li>
+injured</li>
+
+<li>
+hurt</li>
+
+<li>
+dirt</li>
+
+<li>
+trip</li>
+
+<li>
+bash</li>
+
+<li>
+env</li>
+</ol>
+
+<dt>
+<b>oocc</b></dt>
+
+<ol>
+<li>
+beep</li>
+
+<li>
+gossip</li>
+
+<li>
+music</li>
+
+<li>
+immtalk</li>
+
+<li>
+question</li>
+
+<li>
+answer</li>
+
+<li>
+tell</li>
+
+<li>
+gtell</li>
+</ol>
+
+<dt>
+<b>icc</b></dt>
+
+<ol>
+<li>
+tell</li>
+
+<li>
+say</li>
+
+<li>
+shout</li>
+
+<li>
+scream</li>
+
+<li>
+yell</li>
+
+<li>
+mtell</li>
+
+<li>
+telepathy</li>
+</ol>
+
+<dt>
+<b>social</b></dt>
+
+<ol>
+<li>
+emote</li>
+
+<li>
+fsoul</li>
+
+<li>
+nsoul</li>
+
+<li>
+hsoul</li>
+
+<li>
+csoul</li>
+</ol>
+
+<dt>
+<b>idol</b></dt>
+
+<ol>
+<li>
+hold</li>
+
+<li>
+pray</li>
+
+<li>
+object</li>
+
+<li>
+gold</li>
+</ol>
+
+<dt>
+<b>society</b></dt>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; invite
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; join
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; advance
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; resign
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; expel
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; demote
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; test
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; foe
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; pardon
+<br><b>&nbsp;dream</b>
+<br><b>&nbsp;</b>&nbsp;&nbsp;&nbsp; #&nbsp; walk
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; awaken
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; say
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; psay
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; emote
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; pemote
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; cast
+<br>&nbsp;&nbsp;&nbsp;&nbsp; #&nbsp; pcast
+<dt>
+<b>lock</b></dt>
+
+<ol>
+<li>
+d_open</li>
+
+<li>
+i_open</li>
+
+<li>
+d_close</li>
+
+<li>
+i_close</li>
+
+<li>
+d_lock</li>
+
+<li>
+i_lock</li>
+
+<li>
+d_unlock</li>
+
+<li>
+i_unlock</li>
+
+<li>
+d_pick</li>
+
+<li>
+i_pick</li>
+</ol>
+<b>activity</b>
+<ol>
+<li>
+start</li>
+
+<li>
+stop</li>
+</ol>
+<b>heal</b>
+<ol>
+<li>
+hits</li>
+
+<li>
+mana</li>
+
+<li>
+moves</li>
+</ol>
+<b>debate</b>
+<ol>
+<li>
+start</li>
+
+<li>
+continue</li>
+
+<li>
+finish</li>
+</ol>
+<b>knock</b>
+<ol>
+<li>
+door</li>
+</ol>
+<b>interpret</b>
+<ol>
+<li>
+strange</li>
+</ol>
+<b>oprog</b>
+<ol>
+<li>
+use</li>
+
+<li>
+wear</li>
+
+<li>
+remove</li>
+
+<li>
+explosion</li>
+
+<li>
+photo</li>
+
+<li>
+destroy</li>
+
+<li>
+rebuild</li>
+
+<li>
+effect</li>
+</ol>
+<b>learn</b>
+<ol>
+<li>
+learn</li>
+
+<li>
+practice</li>
+</ol>
+</dl>
+
+<hr>[ <a href="index.html">Index</a> ]
+</body>
+</html>

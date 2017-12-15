@@ -1,0 +1,8175 @@
+SHOP oldstyle stanley~
+10454
+10524
+Gold 2496
+#O
+Vnum 10432
+Nest 0
+Size   6
+Name figurine horse~
+ShD  a figurine of a horse~
+Desc You see a small figurine of a horse on the ground.~
+ExtF 8192
+WeaF 16385
+Ityp 8
+Wt   3
+Wear -1
+Lev  45
+Cost 11800
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 10433
+Nest 0
+Size   6
+Name figurine winged horse pegasus~
+ShD  a figurine of a winged horse~
+Desc You see a small figurine of a winged horse on the ground.~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   3
+Wear -1
+Lev  19
+Cost 16600
+Cond 100
+Val  54 50 50 39 0
+ValOrig  54 50 50 39 0
+Spell 3 'summon'
+ZMask 0
+End
+
+#O
+Vnum 10434
+Nest 0
+Size   6
+Name figurine dark horse nightmare~
+ShD  a figurine of a nightmare~
+Desc You see a small figurine of a dark horse on the ground.~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   3
+Wear -1
+Lev  19
+Cost 18900
+Cond 100
+Val  54 50 50 2 0
+ValOrig  54 50 50 2 0
+Spell 3 'teleport'
+ZMask 0
+End
+
+#O
+Vnum 10435
+Nest 0
+Size   6
+Name figurine black dragon~
+ShD  a figurine of a black dragon~
+Desc You see a small figurine of a black dragon on the ground.~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   3
+Wear -1
+Lev  10
+Cost 3900
+Cond 100
+Val  54 10 10 67 0
+ValOrig  54 10 10 67 0
+Spell 3 'weaken'
+ZMask 0
+End
+
+#O
+Vnum 10436
+Nest 0
+Size   6
+Name figurine red dragon~
+ShD  a figurine of a red dragon~
+Desc You see a small figurine of a red dragon on the ground.~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   3
+Wear -1
+Lev  18
+Cost 11000
+Cond 100
+Val  54 10 10 68 0
+ValOrig  54 10 10 68 0
+Spell 3 'mass invis'
+ZMask 0
+End
+
+#O
+Vnum 10437
+Nest 0
+Size   6
+Name figurine white dragon~
+ShD  a figurine of a white dragon~
+Desc You see a small figurine of a white dragon on the ground.~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   3
+Wear -1
+Lev  23
+Cost 17600
+Cond 100
+Val  54 10 10 69 0
+ValOrig  54 10 10 69 0
+Spell 3 'acid blast'
+ZMask 0
+End
+
+#O
+Vnum 10438
+Nest 0
+Size   6
+Name figurine green dragon~
+ShD  a figurine of a green dragon~
+Desc You see a small figurine of a green dragon on the ground.~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   3
+Wear -1
+Lev  31
+Cost 37800
+Cond 100
+Val  54 10 10 89 0
+ValOrig  54 10 10 89 0
+Spell 3 'gas breath'
+ZMask 0
+End
+
+#O
+Vnum 10439
+Nest 0
+Size   6
+Name figurine blue dragon~
+ShD  a figurine of a blue dragon~
+Desc You see a small figurine of a blue dragon on the ground.~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   3
+Wear -1
+Lev  4
+Cost 1840
+Cond 100
+Val  54 10 10 70 0
+ValOrig  54 10 10 70 0
+Spell 3 'faerie fire'
+ZMask 0
+End
+
+SHOP oldstyle bastard hiramoto~
+10451
+10514
+Gold 1879
+#O
+Vnum 10428
+Nest 0
+Size   6
+Name golden ring~
+ShD  a golden ring~
+Desc A golden ring lies on the ground.~
+ExtF 8192
+WeaF 3
+Ityp 57
+Wt   1
+Wear -1
+Lev  31
+Cost 2900
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 10429
+Nest 0
+Size   6
+Name engagement ring~
+ShD  an engagement ring~
+Desc An engagement ring lies here.~
+ExtF 8192
+WeaF 3
+Ityp 57
+Wt   1
+Wear -1
+Lev  33
+Cost 2700
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 10430
+Nest 0
+Size   6
+Name prenuptual agreement~
+ShD  a prenuptual agreement~
+Desc A prenuptual agreement lies here.~
+ExtF 8192
+WeaF 1
+Ityp 2
+Wt   1
+Wear -1
+Lev  11
+Cost 2400
+Cond 100
+Val  51 13 17 66 0
+ValOrig  51 13 17 66 0
+Spell 1 'cure blindness'
+Spell 2 'detect evil'
+Spell 3 'shield'
+ZMask 0
+End
+
+SHOP adept cleric~
+3717
+3718
+Gold 0
+#O
+Vnum 3138
+Nest 0
+Size   6
+Name skin water buffalo~
+ShD  a buffalo water skin~
+Desc A bloated dead buffalo is on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   4
+Wear -1
+Cost 24
+Cond 90
+Val  64 64 0 0 0
+ValOrig  64 64 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3031
+Nest 0
+Size   6
+Name lantern~
+ShD  a hooded brass lantern~
+Desc A hooded brass lantern has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 1
+Wt   4
+Wear -1
+Cost 75
+Cond 100
+Val  0 0 250 0 0
+ValOrig  0 0 250 0 0
+ZMask 0
+End
+
+SHOP oldstyle grocer greengrocer julius~
+915
+924
+Gold 744
+#O
+Vnum 914
+Nest 0
+Size   6
+Name grapes~
+ShD  a bunch of grapes~
+Desc A bunch of grapes.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 100
+Cond 100
+Val  24 24 0 0 0
+ValOrig  24 24 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 918
+Nest 0
+Size   6
+Name apple~
+ShD  an apple~
+Desc An apple is here.~
+ExtF 8192
+WeaF 1
+Ityp 26
+Wt   1
+Wear -1
+Cost 340
+Cond 100
+Val  24 0 0 15 0
+ValOrig  24 0 0 15 0
+Spell 3 'cure light'
+ZMask 0
+End
+
+#O
+Vnum 919
+Nest 0
+Size   6
+Name pear~
+ShD  a pear~
+Desc A pear is here.~
+ExtF 8192
+WeaF 1
+Ityp 26
+Wt   1
+Wear -1
+Lev  6
+Cost 530
+Cond 100
+Val  24 0 0 42 0
+ValOrig  24 0 0 42 0
+Spell 3 'cure poison'
+ZMask 0
+End
+
+#O
+Vnum 920
+Nest 0
+Size   6
+Name orange~
+ShD  a orange~
+Desc A orange is here.~
+ExtF 8192
+WeaF 1
+Ityp 26
+Wt   1
+Wear -1
+Cost 340
+Cond 100
+Val  24 0 0 1 0
+ValOrig  24 0 0 1 0
+Spell 3 'armor'
+ZMask 0
+End
+
+#O
+Vnum 921
+Nest 0
+Size   6
+Name kiwi~
+ShD  a kiwi~
+Desc A kiwi is here.~
+ExtF 8192
+WeaF 1
+Ityp 26
+Wt   1
+Wear -1
+Lev  6
+Cost 530
+Cond 100
+Val  24 0 0 42 0
+ValOrig  24 0 0 42 0
+Spell 3 'cure poison'
+ZMask 0
+End
+
+SHOP oldstyle keeper innkeeper~
+308
+5556
+Gold 3
+#O
+Vnum 3000
+Nest 0
+Size   6
+Name barrel beer~
+ShD  a barrel of beer~
+Desc A beer barrel has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   16
+Wear -1
+Cost 75
+Cond 100
+Val  300 300 1 0 0
+ValOrig  300 300 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 3001
+Nest 0
+Size   6
+Name bottle beer~
+ShD  a bottle of beer~
+Desc A beer bottle has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 5
+Cond 100
+Val  16 16 1 0 0
+ValOrig  16 16 1 0 0
+ZMask 0
+End
+
+SHOP oldstyle luxan shopkeeper~
+306
+5555
+Gold 516
+#O
+Vnum 304
+Nest 0
+Size   6
+Name wild flowers~
+ShD  wild flowers~
+Desc A bunch of pretty wild flowers is here.~
+ExtF 8192
+WeaF 16401
+Ityp 13
+Wt   1
+Wear -1
+Cost 0
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3030
+Nest 0
+Size   6
+Name torch~
+ShD  a torch~
+Desc A large torch.~
+ExtF 8192
+WeaF 1
+Ityp 1
+Wt   3
+Wear -1
+Cost 4
+Cond 90
+Val  0 0 50 0 0
+ValOrig  0 0 50 0 0
+ZMask 0
+End
+
+SHOP oldstyle blacksmith~
+9566
+9644
+Gold 657
+#O
+Vnum 9589
+Nest 0
+Size   6
+Name crop riding~
+ShD  a riding crop~
+Desc A riding crop lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   1
+Wear -1
+Cost 105
+Cond 100
+Val  7 1 4 4 0
+ValOrig  7 1 4 4 0
+ZMask 0
+End
+
+#O
+Vnum 9588
+Nest 0
+Size   6
+Name saddle~
+ShD  a saddle~
+Desc A saddle lies here.~
+ExtF 8192
+WeaF 1
+Ityp 12
+Wt   4
+Wear -1
+Cost 600
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9587
+Nest 0
+Size   6
+Name horse shoe~
+ShD  a horse shoe~
+Desc A horse shoe lies here.~
+ExtF 8192
+WeaF 16389
+Ityp 9
+Wt   2
+Wear -1
+Lev  5
+Cost 300
+Cond 100
+Val  1 1 1 0 0
+ValOrig  1 1 1 0 0
+ZMask 0
+End
+
+SHOP oldstyle shipwright captain~
+9565
+9642
+Gold 556
+#O
+Vnum 3061
+Nest 0
+Size   6
+Name cap leather~
+ShD  a leather cap~
+Desc A leather cap is lying on the ground.~
+ExtF 8192
+WeaF 17
+Ityp 9
+Wt   1
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 3060
+Nest 0
+Size   6
+Name jerkin leather~
+ShD  a leather jerkin~
+Desc A leather jerkin is lying on the ground.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   5
+Wear -1
+Cost 270
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+SHOP oldstyle patch bartender~
+9583
+9638
+Gold 292
+#O
+Vnum 9577
+Nest 0
+Size   6
+Name whisky shot~
+ShD  a shot~
+Desc A shot of strong liquor lies here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 12
+Cond 100
+Val  2 2 5 0 0
+ValOrig  2 2 5 0 0
+ZMask 0
+End
+
+#O
+Vnum 9576
+Nest 0
+Size   6
+Name barrel beer~
+ShD  a barrel of beer~
+Desc A barrel of beer lies here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   8
+Wear -1
+Cost 120
+Cond 100
+Val  150 150 1 0 0
+ValOrig  150 150 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 9575
+Nest 0
+Size   6
+Name beer bottle scorpion flaming~
+ShD  a flaming scorpion~
+Desc A bottle of strong beer lies here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 6
+Cond 100
+Val  16 16 1 0 0
+ValOrig  16 16 1 0 0
+ZMask 0
+End
+
+SHOP oldstyle stitch~
+9584
+9637
+Gold 496
+#O
+Vnum 9533
+Nest 0
+Size   6
+Name leather shield~
+ShD  a leather shield~
+Desc A leather shield lies here.~
+ExtF 8192
+WeaF 513
+Ityp 9
+Wt   3
+Wear -1
+Cost 250
+Cond 100
+Val  2 2 2 0 0
+ValOrig  2 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 9532
+Nest 0
+Size   6
+Name studded leather gloves~
+ShD  a pair of studded leather gloves~
+Desc A pair of studded leather gloves lies here.~
+ExtF 8192
+WeaF 129
+Ityp 9
+Wt   3
+Wear -1
+Cost 168
+Cond 100
+Val  2 2 2 0 0
+ValOrig  2 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 9531
+Nest 0
+Size   6
+Name studded leather pants~
+ShD  a pair of studded leather pants~
+Desc A pair of studded leather pants lies here.~
+ExtF 8192
+WeaF 33
+Ityp 9
+Wt   3
+Wear -1
+Cost 168
+Cond 100
+Val  2 2 2 0 0
+ValOrig  2 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 9530
+Nest 0
+Size   6
+Name studded leather sleeves~
+ShD  a pair of studded leather sleeves~
+Desc A pair of studded leather sleeves lies here.~
+ExtF 8192
+WeaF 257
+Ityp 9
+Wt   3
+Wear -1
+Cost 168
+Cond 100
+Val  2 2 2 0 0
+ValOrig  2 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 9529
+Nest 0
+Size   6
+Name studded leather jacket~
+ShD  a studded leather jacket~
+Desc A studded leather jacket lies here.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   10
+Wear -1
+Cost 340
+Cond 100
+Val  2 2 2 0 0
+ValOrig  2 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 9528
+Nest 0
+Size   6
+Name padded leather boots~
+ShD  a pair of padded leather boots~
+Desc A pair of padded leather boots lies here.~
+ExtF 8192
+WeaF 65
+Ityp 9
+Wt   2
+Wear -1
+Cost 72
+Cond 100
+Val  1 1 1 0 0
+ValOrig  1 1 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 9527
+Nest 0
+Size   6
+Name leather gloves~
+ShD  a pair of leather gloves~
+Desc A pair of leather gloves lies here.~
+ExtF 8192
+WeaF 129
+Ityp 9
+Wt   2
+Wear -1
+Cost 72
+Cond 100
+Val  1 1 1 0 0
+ValOrig  1 1 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 9526
+Nest 0
+Size   6
+Name leather pants~
+ShD  a pair of leather pants~
+Desc A pair of leather pants lies here.~
+ExtF 8192
+WeaF 33
+Ityp 9
+Wt   2
+Wear -1
+Cost 72
+Cond 100
+Val  1 1 1 0 0
+ValOrig  1 1 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 9525
+Nest 0
+Size   6
+Name cap leather~
+ShD  a leather cap~
+Desc A leather cap lies here~
+ExtF 8192
+WeaF 17
+Ityp 9
+Wt   2
+Wear -1
+Cost 72
+Cond 100
+Val  1 1 1 0 0
+ValOrig  1 1 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 9524
+Nest 0
+Size   6
+Name sleeves leather~
+ShD  a pair of leather sleeves~
+Desc A pair of leather sleeves lies here.~
+ExtF 8192
+WeaF 257
+Ityp 9
+Wt   2
+Wear -1
+Cost 72
+Cond 100
+Val  1 1 1 0 0
+ValOrig  1 1 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 9523
+Nest 0
+Size   6
+Name jacket leather~
+ShD  a leather jacket~
+Desc A leather jacket lies here.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   6
+Wear -1
+Cost 144
+Cond 100
+Val  1 1 1 0 0
+ValOrig  1 1 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 9522
+Nest 0
+Size   6
+Name buckler shield~
+ShD  a buckler~
+Desc A buckler lies here.~
+ExtF 8192
+WeaF 513
+Ityp 9
+Wt   6
+Wear -1
+Cost 108
+Cond 100
+Val  1 1 1 0 0
+ValOrig  1 1 1 0 0
+ZMask 0
+End
+
+SHOP oldstyle igor weaponsmith~
+9517
+9636
+Gold 498
+#O
+Vnum 9591
+Nest 0
+Size   0
+Name sesame seed~
+ShD  a sesame seed~
+Desc A sesame seed lies here.~
+ExtF 0
+WeaF 16385
+Ityp 18
+Wt   3
+Wear 17
+Cost 1
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9514
+Nest 0
+Size   6
+Name rapier~
+ShD  a rapier~
+Desc A rapier lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   10
+Wear -1
+Lev  11
+Cost 850
+Cond 100
+Val  1 3 4 3 0
+ValOrig  1 3 4 3 0
+ZMask 0
+End
+
+#O
+Vnum 9513
+Nest 0
+Size   6
+Name scimitar~
+ShD  a scimitar~
+Desc A scimitar lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   10
+Wear -1
+Lev  5
+Cost 490
+Cond 100
+Val  1 1 9 3 0
+ValOrig  1 1 9 3 0
+ZMask 0
+End
+
+#O
+Vnum 9512
+Nest 0
+Size   6
+Name bastard two sword~
+ShD  a two-handed bastard sword~
+Desc A two handed bastard sword lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   16
+Wear -1
+Lev  13
+Cost 1190
+Cond 100
+Val  1 3 5 21 32
+ValOrig  1 3 5 21 32
+ZMask 0
+End
+
+#O
+Vnum 9511
+Nest 0
+Size   6
+Name sickle~
+ShD  a sickle~
+Desc A sickle lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   1
+Wear -1
+Cost 210
+Cond 100
+Val  1 1 4 3 0
+ValOrig  1 1 4 3 0
+ZMask 0
+End
+
+#O
+Vnum 9510
+Nest 0
+Size   6
+Name guisarme~
+ShD  a guisarme~
+Desc A guisarme lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   4
+Wear -1
+Lev  3
+Cost 169
+Cond 100
+Val  8 2 4 3 32
+ValOrig  8 2 4 3 32
+ZMask 0
+End
+
+#O
+Vnum 9509
+Nest 0
+Size   6
+Name glaive~
+ShD  a glaive~
+Desc A glaive lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   3
+Wear -1
+Lev  4
+Cost 192
+Cond 100
+Val  8 1 10 25 32
+ValOrig  8 1 10 25 32
+ZMask 0
+End
+
+#O
+Vnum 9508
+Nest 0
+Size   6
+Name fauchard~
+ShD  a fauchard~
+Desc A fauchard lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   3
+Wear -1
+Lev  2
+Cost 148
+Cond 100
+Val  8 1 8 3 32
+ValOrig  8 1 8 3 32
+ZMask 0
+End
+
+#O
+Vnum 9507
+Nest 0
+Size   6
+Name bill guisarme~
+ShD  a bill-guisarme~
+Desc A bill-guisarme lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   3
+Wear -1
+Lev  2
+Cost 148
+Cond 100
+Val  8 1 8 3 32
+ValOrig  8 1 8 3 32
+ZMask 0
+End
+
+#O
+Vnum 9506
+Nest 0
+Size   6
+Name bec corbin~
+ShD  a bec de corbine~
+Desc A bec de corbine lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   3
+Wear -1
+Lev  2
+Cost 148
+Cond 100
+Val  8 1 8 11 32
+ValOrig  8 1 8 11 32
+ZMask 0
+End
+
+#O
+Vnum 9505
+Nest 0
+Size   6
+Name bardiche~
+ShD  a bardiche~
+Desc A bardiche lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   4
+Wear -1
+Lev  8
+Cost 270
+Cond 100
+Val  8 2 6 21 32
+ValOrig  8 2 6 21 32
+ZMask 0
+End
+
+#O
+Vnum 9504
+Nest 0
+Size   6
+Name awl pike awl-pike~
+ShD  an awl-pike~
+Desc An awl pike lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   3
+Wear -1
+Lev  6
+Cost 108
+Cond 100
+Val  13 1 10 11 0
+ValOrig  13 1 10 11 0
+ZMask 0
+End
+
+#O
+Vnum 9503
+Nest 0
+Size   6
+Name morning star morningstar~
+ShD  a morningstar~
+Desc A small spiked metal ball connected to a rod by links of chain lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   5
+Wear -1
+Lev  10
+Cost 620
+Cond 100
+Val  6 2 6 6 0
+ValOrig  6 2 6 6 0
+ZMask 0
+End
+
+SHOP oldstyle baker~
+9510
+9635
+Gold 668
+#O
+Vnum 9545
+Nest 0
+Size   6
+Name nuts~
+ShD  some nuts~
+Desc Some nuts lies scattered on the ground.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 3
+Cond 100
+Val  1 1 0 0 0
+ValOrig  1 1 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9543
+Nest 0
+Size   6
+Name iron rations~
+ShD  some iron rations~
+Desc A tin of iron rations lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 50
+Cond 100
+Val  18 30 0 0 0
+ValOrig  18 30 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9542
+Nest 0
+Size   6
+Name dry rations~
+ShD  some dry rations~
+Desc Some dry rations lie here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   2
+Wear -1
+Cost 24
+Cond 100
+Val  15 20 0 0 0
+ValOrig  15 20 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9541
+Nest 0
+Size   6
+Name bread~
+ShD  a bread~
+Desc A bread lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 6
+Cond 100
+Val  5 3 0 0 0
+ValOrig  5 3 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9540
+Nest 0
+Size   6
+Name cheese~
+ShD  a hunk of cheese~
+Desc A hunk of cheese lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 4
+Cond 100
+Val  5 5 0 0 0
+ValOrig  5 5 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle abdul armorer~
+9516
+9629
+Gold 622
+#O
+Vnum 9521
+Nest 0
+Size   6
+Name splinted shield~
+ShD  a splinted shield~
+Desc A splinted shield lies here.~
+ExtF 8192
+WeaF 513
+Ityp 9
+Wt   8
+Wear -1
+Lev  5
+Cost 710
+Cond 100
+Val  4 4 4 0 0
+ValOrig  4 4 4 0 0
+ZMask 0
+End
+
+#O
+Vnum 9520
+Nest 0
+Size   6
+Name wooden shield~
+ShD  a wooden shield~
+Desc A wooden shield lies here~
+ExtF 8192
+WeaF 513
+Ityp 9
+Wt   1
+Wear -1
+Cost 250
+Cond 100
+Val  2 2 2 0 0
+ValOrig  2 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 9519
+Nest 0
+Size   6
+Name splintmail splint mail suit~
+ShD  a suit of splintmail~
+Desc A suit of splintmail armor lies here.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   45
+Wear -1
+Lev  8
+Cost 1280
+Cond 100
+Val  5 5 5 0 0
+ValOrig  5 5 5 0 0
+ZMask 0
+End
+
+#O
+Vnum 9518
+Nest 0
+Size   6
+Name ringmail ring mail suit~
+ShD  a suit of ringmail~
+Desc A suit of ringmail lies here.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   36
+Wear -1
+Cost 176
+Cond 100
+Val  3 3 3 0 0
+ValOrig  3 3 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 9517
+Nest 0
+Size   6
+Name field plate suit~
+ShD  a suit of field plate~
+Desc A suit of field plate lies here.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   28
+Wear -1
+Lev  25
+Cost 3900
+Cond 100
+Val  8 8 8 0 0
+ValOrig  8 8 8 0 0
+ZMask 0
+End
+
+#O
+Vnum 9516
+Nest 0
+Size   6
+Name brigandine suit~
+ShD  a suit of brigandine~
+Desc A suit of brigandine lies here.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   20
+Wear -1
+Lev  20
+Cost 2900
+Cond 100
+Val  7 7 7 0 0
+ValOrig  7 7 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 9515
+Nest 0
+Size   6
+Name banded mail suit~
+ShD  a suit of banded mail~
+Desc A suit of banded mail lies here.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   25
+Wear -1
+Lev  20
+Cost 2900
+Cond 100
+Val  7 7 7 0 0
+ValOrig  7 7 7 0 0
+ZMask 0
+End
+
+SHOP oldstyle shopkeeper~
+9511
+9628
+Gold 477
+#O
+Vnum 9538
+Nest 0
+Size   6
+Name belt pouch~
+ShD  a belt pouch~
+Desc A belt pouch lies here~
+ExtF 8192
+WeaF 2049
+Ityp 16
+Wt   1
+Wear -1
+Cost 27
+Cond 100
+Val  25 0 0 100 100
+ValOrig  25 0 0 100 100
+ZMask 0
+End
+
+#O
+Vnum 9539
+Nest 0
+Size   6
+Name candle~
+ShD  a candle~
+Desc A candle lies here~
+ExtF 8192
+WeaF 16385
+Ityp 1
+Wt   1
+Wear -1
+Cost 4
+Cond 100
+Val  0 0 50 0 0
+ValOrig  0 0 50 0 0
+ZMask 0
+End
+
+#O
+Vnum 9537
+Nest 0
+Size   6
+Name basket~
+ShD  a basket~
+Desc A basket lies here.~
+ExtF 8192
+WeaF 1
+Ityp 16
+Wt   4
+Wear -1
+Cost 8
+Cond 100
+Val  50 0 0 100 100
+ValOrig  50 0 0 100 100
+ZMask 0
+End
+
+#O
+Vnum 9536
+Nest 0
+Size   6
+Name backpack back pack~
+ShD  a backpack~
+Desc A backpack lies here~
+ExtF 8192
+WeaF 1025
+Ityp 16
+Wt   4
+Wear -1
+Cost 50
+Cond 100
+Val  100 1 0 100 100
+ValOrig  100 1 0 100 100
+ZMask 0
+End
+
+#O
+Vnum 9535
+Nest 0
+Size   6
+Name oil lamp oillamp~
+ShD  an oil lamp~
+Desc An oil lamp lies here~
+ExtF 8192
+WeaF 1
+Ityp 1
+Wt   1
+Wear -1
+Cost 50
+Cond 100
+Val  0 0 100 0 0
+ValOrig  0 0 100 0 0
+ZMask 0
+End
+
+#O
+Vnum 9534
+Nest 0
+Size   6
+Name sack~
+ShD  a sack~
+Desc A sack lies here~
+ExtF 8192
+WeaF 16385
+Ityp 16
+Wt   1
+Wear -1
+Cost 12
+Cond 100
+Val  50 0 0 100 100
+ValOrig  50 0 0 100 100
+ZMask 0
+End
+
+SHOP oldstyle braheem~
+9580
+9624
+Gold 857
+#O
+Vnum 9582
+Nest 0
+Size   6
+Name wand faerie fire~
+ShD  a pink wand~
+Desc A pink wand lies here~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   1
+Wear -1
+Lev  2
+Cost 250
+Cond 100
+Val  3 3 3 70 0
+ValOrig  3 3 3 70 0
+Spell 3 'faerie fire'
+ZMask 0
+End
+
+#O
+Vnum 9581
+Nest 0
+Size   6
+Name wand armor~
+ShD  a wand of oak~
+Desc A wand of oak lies here.~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   1
+Wear -1
+Lev  3
+Cost 410
+Cond 100
+Val  5 10 10 1 0
+ValOrig  5 10 10 1 0
+Spell 3 'armor'
+ZMask 0
+End
+
+#O
+Vnum 9579
+Nest 0
+Size   6
+Name wand call lightning~
+ShD  a grey-silver wand~
+Desc A grey-silver wand lies here.~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   1
+Wear -1
+Lev  13
+Cost 2800
+Cond 100
+Val  15 3 3 6 0
+ValOrig  15 3 3 6 0
+Spell 3 'call lightning'
+ZMask 0
+End
+
+#O
+Vnum 9578
+Nest 0
+Size   6
+Name scroll recall~
+ShD  a scroll of recall~
+Desc A scroll of recall lies here.~
+ExtF 8192
+WeaF 16385
+Ityp 2
+Wt   4
+Wear -1
+Lev  17
+Cost 2700
+Cond 100
+Val  12 41 0 0 0
+ValOrig  12 41 0 0 0
+Spell 1 'word of recall'
+ZMask 0
+End
+
+SHOP oldstyle elvira~
+9579
+9623
+Gold 873
+#O
+Vnum 9574
+Nest 0
+Size   6
+Name potion dark blue~
+ShD  a dark blue potion~
+Desc A dark blue potion lies here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Cost 200
+Cond 100
+Val  10 17 76 0 0
+ValOrig  10 17 76 0 0
+Spell 1 'detect evil'
+Spell 2 'refresh'
+ZMask 0
+End
+
+#O
+Vnum 9573
+Nest 0
+Size   6
+Name white potion~
+ShD  an off white potion~
+Desc An off white potion lies here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  11
+Cost 820
+Cond 100
+Val  21 112 0 0 0
+ValOrig  21 112 0 0 0
+Spell 1 'haste'
+ZMask 0
+End
+
+#O
+Vnum 9572
+Nest 0
+Size   6
+Name potion crystal clear~
+ShD  a crystal clear potion~
+Desc A crystal clear potion lies here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Cost 200
+Cond 100
+Val  10 18 0 0 0
+ValOrig  10 18 0 0 0
+Spell 1 'detect invis'
+ZMask 0
+End
+
+#O
+Vnum 9571
+Nest 0
+Size   6
+Name potion green~
+ShD  a deep-green potion~
+Desc A deep-green potion lies here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  12
+Cost 950
+Cond 100
+Val  10 -1 4 0 0
+ValOrig  10 -1 4 0 0
+Spell 2 'blindness'
+ZMask 0
+End
+
+#O
+Vnum 9570
+Nest 0
+Size   6
+Name glowing vial blue~
+ShD  a glowing blue vial~
+Desc A glowing blue vial lies here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  1
+Cost 270
+Cond 100
+Val  12 37 0 0 0
+ValOrig  12 37 0 0 0
+Spell 1 'sleep'
+ZMask 0
+End
+
+SHOP oldstyle butch~
+9515
+9622
+Gold 692
+#O
+Vnum 9584
+Nest 0
+Size   0
+Name meat cleaver~
+ShD  a meat cleaver~
+Desc A meat cleaver lies here~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Cost 190
+Cond 100
+Val  2 1 5 21 0
+ValOrig  2 1 5 21 0
+ZMask 0
+End
+
+#O
+Vnum 9563
+Nest 0
+Size   6
+Name whole chicken~
+ShD  a whole chicken~
+Desc A whole skinned chicken lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   3
+Wear -1
+Cost 12
+Cond 100
+Val  12 12 0 0 0
+ValOrig  12 12 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9562
+Nest 0
+Size   6
+Name side beef~
+ShD  a side of beef~
+Desc A side of beef lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   5
+Wear -1
+Cost 20
+Cond 100
+Val  15 15 0 0 0
+ValOrig  15 15 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9561
+Nest 0
+Size   6
+Name leg lamb~
+ShD  a leg of lamb~
+Desc A leg of land lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   2
+Wear -1
+Cost 10
+Cond 100
+Val  10 12 0 0 0
+ValOrig  10 12 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle vera~
+9514
+9615
+Gold 363
+#O
+Vnum 9560
+Nest 0
+Size   6
+Name dates~
+ShD  some dates~
+Desc A bunch of dates lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 6
+Cond 100
+Val  2 2 0 0 0
+ValOrig  2 2 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9559
+Nest 0
+Size   6
+Name fig~
+ShD  a fig~
+Desc A fig lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 3
+Cond 100
+Val  2 1 0 0 0
+ValOrig  2 1 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9558
+Nest 0
+Size   6
+Name tomato~
+ShD  a tomato~
+Desc A tomato lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 12
+Cond 100
+Val  2 2 0 0 0
+ValOrig  2 2 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9557
+Nest 0
+Size   6
+Name carrot~
+ShD  a carrot~
+Desc A carrot lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 6
+Cond 100
+Val  3 3 0 0 0
+ValOrig  3 3 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9556
+Nest 0
+Size   6
+Name egg~
+ShD  an egg~
+Desc An egg lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 4
+Cond 100
+Val  2 2 0 0 0
+ValOrig  2 2 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle ahkeem tailor~
+9513
+9614
+Gold 524
+#O
+Vnum 9583
+Nest 0
+Size   0
+Name sewing shears~
+ShD  a pair of sewing shears~
+Desc A pair of sewing shears lies here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   2
+Wear 16
+Lev  5
+Cost 360
+Cond 100
+Val  2 2 4 25 0
+ValOrig  2 2 4 25 0
+ZMask 0
+End
+
+#O
+Vnum 9555
+Nest 0
+Size   6
+Name silk jacket~
+ShD  a silk jacket~
+Desc A nicely made silk jacket lies here.~
+ExtF 8192
+WeaF 1025
+Ityp 11
+Wt   1
+Wear -1
+Cost 320
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9554
+Nest 0
+Size   6
+Name sash~
+ShD  a sash~
+Desc A nicely made sash lies here.~
+ExtF 8192
+WeaF 2049
+Ityp 11
+Wt   1
+Wear -1
+Cost 8
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9553
+Nest 0
+Size   6
+Name sandles~
+ShD  a pair of sandles~
+Desc A nicely made pair of sandles lies here.~
+ExtF 8192
+WeaF 65
+Ityp 11
+Wt   1
+Wear -1
+Cost 20
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9552
+Nest 0
+Size   6
+Name embroidered robe~
+ShD  an embroidered robe~
+Desc A nicely made robe of embroidered cloth lies here.~
+ExtF 8192
+WeaF 1033
+Ityp 11
+Wt   2
+Wear -1
+Cost 200
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9551
+Nest 0
+Size   6
+Name common robe~
+ShD  a common robe~
+Desc A nicely made robe of common cloth lies here.~
+ExtF 8192
+WeaF 9
+Ityp 11
+Wt   2
+Wear -1
+Cost 36
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9550
+Nest 0
+Size   6
+Name hose~
+ShD  a pair of hose~
+Desc A nicely made pair of hose lie here.~
+ExtF 8192
+WeaF 33
+Ityp 11
+Wt   1
+Wear -1
+Cost 8
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9549
+Nest 0
+Size   6
+Name girdle~
+ShD  a girdle~
+Desc A nicely made girdle lies here.~
+ExtF 8192
+WeaF 2049
+Ityp 11
+Wt   1
+Wear -1
+Cost 12
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9548
+Nest 0
+Size   6
+Name fur cloak~
+ShD  a fur cloak~
+Desc A nicely made fur cloak lies here.~
+ExtF 8192
+WeaF 1025
+Ityp 11
+Wt   2
+Wear -1
+Cost 200
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9547
+Nest 0
+Size   6
+Name hiking boots~
+ShD  a pair of hiking boots~
+Desc A nicely made pair of boots lies here.~
+ExtF 8192
+WeaF 65
+Ityp 11
+Wt   3
+Wear -1
+Cost 12
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9546
+Nest 0
+Size   6
+Name belt~
+ShD  a belt~
+Desc A nicely made belt lies here.~
+ExtF 8192
+WeaF 4097
+Ityp 11
+Wt   2
+Wear -1
+Cost 8
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle cassandra~
+9518
+9532
+Gold 303
+#O
+Vnum 9564
+Nest 0
+Size   6
+Name herring salted~
+ShD  a salted herring~
+Desc A salted herring lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 8
+Cond 100
+Val  8 8 0 0 0
+ValOrig  8 8 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 9565
+Nest 0
+Size   6
+Name mussel~
+ShD  a mussel~
+Desc A mussel lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 4
+Cond 100
+Val  4 4 0 0 0
+ValOrig  4 4 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle bartender~
+9505
+9502
+Gold 325
+#O
+Vnum 9569
+Nest 0
+Size   6
+Name bottle grog~
+ShD  a bottle of grog~
+Desc A bottle lies here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 8
+Cond 100
+Val  16 16 3 0 0
+ValOrig  16 16 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 9568
+Nest 0
+Size   6
+Name wine glass~
+ShD  a glass of wine~
+Desc A glass rests here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 13
+Cond 100
+Val  6 6 2 0 0
+ValOrig  6 6 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 9567
+Nest 0
+Size   6
+Name liquor glass blue oasis~
+ShD  a glass of blue oasis~
+Desc A glass of blue alcohol rests here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 10
+Cond 100
+Val  2 2 5 0 0
+ValOrig  2 2 5 0 0
+ZMask 0
+End
+
+SHOP oldstyle dan barkeep~
+5310
+5330
+Gold 29
+#O
+Vnum 648
+Nest 0
+Size   6
+Name whiskey shot~
+ShD  a shot of whiskey~
+Desc A shot of whiskey is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 12
+Cond 100
+Val  2 2 5 0 0
+ValOrig  2 2 5 0 0
+ZMask 0
+End
+
+#O
+Vnum 649
+Nest 0
+Size   6
+Name ale quart~
+ShD  a quart of ale~
+Desc A quart of ale is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 10
+Cond 100
+Val  32 32 3 0 0
+ValOrig  32 32 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 650
+Nest 0
+Size   6
+Name port brew quart~
+ShD  a quart of port brew~
+Desc A quart of port brew is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 18
+Cond 100
+Val  32 32 4 0 0
+ValOrig  32 32 4 0 0
+ZMask 0
+End
+
+SHOP oldstyle ben smith~
+5314
+5321
+Gold 28
+#O
+Vnum 601
+Nest 0
+Size   6
+Name meat cleaver~
+ShD  a meat cleaver~
+Desc A sharp meat cleaver is just lying on the floor here!~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   5
+Wear -1
+Lev  8
+Cost 530
+Cond 100
+Val  2 2 5 25 0
+ValOrig  2 2 5 25 0
+ZMask 0
+End
+
+#O
+Vnum 615
+Nest 0
+Size   6
+Name pitchfork fork~
+ShD  a pitchfork~
+Desc A pitchfork is on the floor.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   10
+Wear -1
+Lev  7
+Cost 122
+Cond 100
+Val  13 3 3 2 0
+ValOrig  13 3 3 2 0
+ZMask 0
+End
+
+SHOP oldstyle farmer betty~
+5312
+5320
+Gold 71
+#O
+Vnum 609
+Nest 0
+Size   6
+Name cabbage~
+ShD  a head of cabbage~
+Desc Some fresh cabbage is here, get it while it lasts!~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   2
+Wear -1
+Cost 2
+Cond 100
+Val  12 12 0 0 0
+ValOrig  12 12 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 610
+Nest 0
+Size   6
+Name lettuce~
+ShD  a head of lettuce~
+Desc Some fresh lettuce is here, get it while it lasts!~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   2
+Wear -1
+Cost 2
+Cond 100
+Val  12 12 0 0 0
+ValOrig  12 12 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 611
+Nest 0
+Size   6
+Name milk bottle~
+ShD  a bottle of milk~
+Desc A glass bottle of milk is on a shelf here, fresh from the cow.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   5
+Wear -1
+Cost 3
+Cond 100
+Val  20 20 10 0 0
+ValOrig  20 20 10 0 0
+ZMask 0
+End
+
+#O
+Vnum 612
+Nest 0
+Size   6
+Name apple~
+ShD  an apple~
+Desc An apple is on the ground.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 1
+Cond 100
+Val  8 8 0 0 0
+ValOrig  8 8 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 613
+Nest 0
+Size   6
+Name corn~
+ShD  an ear of corn~
+Desc An ear of corn is on the ground.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 3
+Cond 100
+Val  8 8 0 0 0
+ValOrig  8 8 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle george butcher~
+5311
+5317
+Gold 34
+#O
+Vnum 5219
+Nest 0
+Size   6
+Name venison chunk~
+ShD  a chunk of venison~
+Desc A large chunk of venison sits here ready to be eaten.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   20
+Wear -1
+Cost 0
+Cond 100
+Val  24 24 0 0 0
+ValOrig  24 24 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 601
+Nest 0
+Size   2
+Name meat cleaver~
+ShD  a meat cleaver~
+Desc A sharp meat cleaver is just lying on the floor here!~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  8
+Cost 530
+Cond 100
+Val  2 2 5 25 0
+ValOrig  2 2 5 25 0
+ZMask 0
+End
+
+#O
+Vnum 602
+Nest 0
+Size   6
+Name side meat beef~
+ShD  a side of beef~
+Desc A side of beef is here on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   10
+Wear -1
+Cost 50
+Cond 100
+Val  24 24 0 0 0
+ValOrig  24 24 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 603
+Nest 0
+Size   6
+Name side meat pork~
+ShD  a side of pork~
+Desc A side of pork is here on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   10
+Wear -1
+Cost 42
+Cond 100
+Val  23 23 0 0 0
+ValOrig  23 23 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 604
+Nest 0
+Size   6
+Name side meat horse~
+ShD  a side of horse~
+Desc A side of horse is here on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   12
+Wear -1
+Cost 21
+Cond 100
+Val  30 30 0 0 0
+ValOrig  30 30 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 605
+Nest 0
+Size   6
+Name meat chicken~
+ShD  a defeathered chicken~
+Desc A defeathered chicken is here on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   5
+Wear -1
+Cost 10
+Cond 100
+Val  16 16 0 0 0
+ValOrig  16 16 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle strick bartender~
+1305
+1318
+Gold 98
+#O
+Vnum 1351
+Nest 0
+Size   6
+Name cup brew herbal~
+ShD  a herbal brew~
+Desc A herbal brew is here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 12
+Cond 100
+Val  6 6 11 1 0
+ValOrig  6 6 11 1 0
+ZMask 0
+End
+
+#O
+Vnum 1352
+Nest 0
+Size   6
+Name waybread~
+ShD  a waybread~
+Desc A loaf of waybread has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 50
+Cond 100
+Val  25 32 0 0 0
+ValOrig  25 32 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle baker~
+6504
+6535
+Gold 63
+#O
+Vnum 3000
+Nest 0
+Size   6
+Name barrel beer~
+ShD  a barrel of beer~
+Desc A beer barrel has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   16
+Wear -1
+Cost 75
+Cond 100
+Val  300 300 1 0 0
+ValOrig  300 300 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 3003
+Nest 0
+Size   6
+Name bottle firebreather~
+ShD  a bottle of firebreather~
+Desc A bottle of firebreather has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 25
+Cond 100
+Val  12 12 7 0 0
+ValOrig  12 12 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 3009
+Nest 0
+Size   6
+Name potpie pot pie~
+ShD  a big pot pie~
+Desc A big pot pie has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   2
+Wear -1
+Cost 22
+Cond 100
+Val  20 40 0 0 0
+ValOrig  20 40 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3031
+Nest 0
+Size   6
+Name lantern~
+ShD  a hooded brass lantern~
+Desc A hooded brass lantern has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 1
+Wt   4
+Wear -1
+Cost 75
+Cond 100
+Val  0 0 250 0 0
+ValOrig  0 0 250 0 0
+ZMask 0
+End
+
+#O
+Vnum 6504
+Nest 0
+Size   2
+Name dwarven hammer~
+ShD  a hammer~
+Desc There is a dwarven hammer laying here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   3
+Wear 16
+Lev  17
+Cost 880
+Cond 100
+Val  4 4 4 7 0
+ValOrig  4 4 4 7 0
+ZMask 0
+End
+
+SHOP oldstyle storekeeper~
+6503
+6516
+Gold 2326
+#O
+Vnum 6504
+Nest 0
+Size   6
+Name dwarven hammer~
+ShD  a hammer~
+Desc There is a dwarven hammer laying here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   3
+Wear -1
+Lev  17
+Cost 880
+Cond 100
+Val  4 4 4 7 0
+ValOrig  4 4 4 7 0
+ZMask 0
+End
+
+#O
+Vnum 6505
+Nest 0
+Size   6
+Name dwarven plate~
+ShD  dwarven plate mail~
+Desc There is dwarven plate mail laying here.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   4
+Wear -1
+Lev  20
+Cost 2900
+Cond 100
+Val  7 7 7 0 0
+ValOrig  7 7 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 6510
+Nest 0
+Size   6
+Name helmet~
+ShD  a dwarven helmet~
+Desc A dwarven helmet is here.~
+ExtF 8192
+WeaF 17
+Ityp 9
+Wt   4
+Wear -1
+Lev  20
+Cost 1450
+Cond 100
+Val  7 7 7 0 0
+ValOrig  7 7 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 6511
+Nest 0
+Size   6
+Name ring golden dwarven~
+ShD  a dwarven golden ring~
+Desc A pretty golden ring is here.~
+ExtF 8192
+WeaF 3
+Ityp 56
+Wt   1
+Wear -1
+Lev  7
+Cost 460
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 6512
+Nest 0
+Size   6
+Name gloves~
+ShD  dwarven gloves~
+Desc Thick dwarven gloves lay here.~
+ExtF 8192
+WeaF 129
+Ityp 9
+Wt   2
+Wear -1
+Lev  13
+Cost 2000
+Cond 100
+Val  5 5 5 0 0
+ValOrig  5 5 5 0 0
+ZMask 0
+End
+
+#O
+Vnum 6504
+Nest 0
+Size   2
+Name dwarven hammer~
+ShD  a hammer~
+Desc There is a dwarven hammer laying here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   3
+Wear 16
+Lev  17
+Cost 880
+Cond 100
+Val  4 4 4 7 0
+ValOrig  4 4 4 7 0
+ZMask 0
+End
+
+SHOP Melancholy~
+3160
+3160
+Gold 1361
+#O
+Vnum 3168
+Nest 0
+Size   6
+Name map olympus~
+ShD  a map of Olympus~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 2000
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3167
+Nest 0
+Size   6
+Name map new thalos~
+ShD  a map of New Thalos ~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 2500
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3166
+Nest 0
+Size   6
+Name map moria first~
+ShD  a map of the first level of Moria~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 1500
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3165
+Nest 0
+Size   6
+Name map dwarven kingdom dwarf~
+ShD  a map of the Dwarven Kingdom~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 750
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3164
+Nest 0
+Size   6
+Name map southern midgaard~
+ShD  a map of southern Midgaard~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 1000
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3163
+Nest 0
+Size   6
+Name map thera~
+ShD  a map of Thera~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 1500
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3162
+Nest 0
+Size   6
+Name map midgaard~
+ShD  a map of the city of Midgaard~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 500
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+SHOP esme waitress~
+3150
+3150
+Gold 924
+#O
+Vnum 3154
+Nest 0
+Size   6
+Name beer bottle killian irish red~
+ShD  a bottle of George Killian's Irish Red~
+Desc A dark-tinted bottle of beer is here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 20
+Cond 100
+Val  16 16 1 0 0
+ValOrig  16 16 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 3152
+Nest 0
+Size   6
+Name bowl beef stew~
+ShD  a bowl of beef stew~
+Desc A bowl of nice thick beef stew, with lots of vegetables, steams here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   3
+Wear -1
+Cost 14
+Cond 100
+Val  25 25 0 0 0
+ValOrig  25 25 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3153
+Nest 0
+Size   6
+Name biscuit~
+ShD  a biscuit~
+Desc A yummy biscuit, covered with butter, is here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 5
+Cond 100
+Val  4 3 0 0 0
+ValOrig  4 3 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3151
+Nest 0
+Size   6
+Name soup bowl~
+ShD  a bowl of chicken noodle soup~
+Desc A nice hot bowl of chicken noodle soup is here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   2
+Wear -1
+Cost 10
+Cond 100
+Val  4 8 0 0 0
+ValOrig  4 8 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 1103
+Nest 0
+Size   6
+Name pipeweed bread~
+ShD  a pipeweed bread~
+Desc A loaf of pipeweed bread arouses your hunger.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 15
+Cond 100
+Val  30 24 0 0 0
+ValOrig  30 24 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3150
+Nest 0
+Size   6
+Name coffee cup cinnamon~
+ShD  a cup of cinnamon coffee~
+Desc A piping hot cup of cinnamon coffee is here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 12
+Cond 100
+Val  6 6 12 0 0
+ValOrig  6 6 12 0 0
+ZMask 0
+End
+
+#O
+Vnum 3100
+Nest 0
+Size   6
+Name tea cup~
+ShD  a cup of tea~
+Desc A cup has been set here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 8
+Cond 100
+Val  6 6 11 0 0
+ValOrig  6 6 11 0 0
+ZMask 0
+End
+
+SHOP maid~
+3100
+3106
+Gold 263
+#O
+Vnum 3100
+Nest 0
+Size   6
+Name tea cup~
+ShD  a cup of tea~
+Desc A cup has been set here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 8
+Cond 100
+Val  6 6 11 0 0
+ValOrig  6 6 11 0 0
+ZMask 0
+End
+
+#O
+Vnum 3101
+Nest 0
+Size   6
+Name coffee cup~
+ShD  a cup of coffee~
+Desc A cup has been set here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 6
+Cond 100
+Val  6 6 12 0 0
+ValOrig  6 6 12 0 0
+ZMask 0
+End
+
+#O
+Vnum 3102
+Nest 0
+Size   6
+Name water cup~
+ShD  a cup of water~
+Desc A cup has been set here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 1
+Cond 100
+Val  10 10 0 0 0
+ValOrig  10 10 0 0 0
+ZMask 0
+End
+
+SHOP shopkeeper old man~
+3070
+3056
+Gold 1805
+#O
+Vnum 3080
+Nest 0
+Size   6
+Name potion heal healing~
+ShD  a potion of healing~
+Desc A potion of healing is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  11
+Cost 800
+Cond 100
+Val  20 27 0 0 0
+ValOrig  20 27 0 0 0
+Spell 1 'heal'
+ZMask 0
+End
+
+#O
+Vnum 3081
+Nest 0
+Size   6
+Name potion sanct sanctuary~
+ShD  a potion of sanctuary~
+Desc A potion of sanctuary is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  11
+Cost 800
+Cond 100
+Val  20 35 0 0 0
+ValOrig  20 35 0 0 0
+Spell 1 'sanctuary'
+ZMask 0
+End
+
+#O
+Vnum 3082
+Nest 0
+Size   6
+Name potion divine~
+ShD  a potion of divine protection~
+Desc A potion of divine protection is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  16
+Cost 1800
+Cond 100
+Val  35 35 -1 1 0
+ValOrig  35 35 -1 1 0
+Spell 1 'sanctuary'
+Spell 3 'armor'
+ZMask 0
+End
+
+#O
+Vnum 3083
+Nest 0
+Size   6
+Name potion cure light~
+ShD  a potion of cure light wounds~
+Desc A potion of cure light wounds is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Cost 150
+Cond 100
+Val  5 15 0 0 0
+ValOrig  5 15 0 0 0
+Spell 1 'cure light'
+ZMask 0
+End
+
+#O
+Vnum 3084
+Nest 0
+Size   6
+Name potion cure serious~
+ShD  a potion of cure serious wounds~
+Desc A potion of cure serious wounds is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  1
+Cost 220
+Cond 100
+Val  10 60 0 0 0
+ValOrig  10 60 0 0 0
+Spell 1 'cure serious'
+ZMask 0
+End
+
+#O
+Vnum 3085
+Nest 0
+Size   6
+Name potion cure critical critic~
+ShD  a potion of cure critical wounds~
+Desc A potion of cure critical wounds is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  5
+Cost 390
+Cond 100
+Val  15 14 0 0 0
+ValOrig  15 14 0 0 0
+Spell 1 'cure critical'
+ZMask 0
+End
+
+#O
+Vnum 3086
+Nest 0
+Size   6
+Name potion antidote bottle~
+ShD  a bottle of antidote~
+Desc A bottle of antidote is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  8
+Cost 550
+Cond 100
+Val  14 42 15 111 0
+ValOrig  14 42 15 111 0
+Spell 1 'cure poison'
+Spell 2 'cure light'
+Spell 3 'cure disease'
+ZMask 0
+End
+
+#O
+Vnum 3087
+Nest 0
+Size   6
+Name potion cure blindness~
+ShD  a potion of cure blindness~
+Desc A potion of cure blindness is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Cost 230
+Cond 100
+Val  13 13 0 0 0
+ValOrig  13 13 0 0 0
+Spell 1 'cure blindness'
+ZMask 0
+End
+
+#O
+Vnum 3088
+Nest 0
+Size   6
+Name vial holy water~
+ShD  a vial of holy water~
+Desc A vial of holy water is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  10
+Cost 720
+Cond 100
+Val  20 3 33 34 0
+ValOrig  20 3 33 34 0
+Spell 1 'bless'
+Spell 2 'protection evil'
+Spell 3 'remove curse'
+ZMask 0
+End
+
+#O
+Vnum 3089
+Nest 0
+Size   6
+Name potion armor~
+ShD  a potion of armor~
+Desc A potion of armor is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Cost 200
+Cond 100
+Val  10 1 0 0 0
+ValOrig  10 1 0 0 0
+Spell 1 'armor'
+ZMask 0
+End
+
+#O
+Vnum 3090
+Nest 0
+Size   6
+Name potion negation~
+ShD  a potion of negation~
+Desc A potion of negation is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  9
+Cost 830
+Cond 100
+Val  35 117 0 0 0
+ValOrig  35 117 0 0 0
+Spell 1 'cancellation'
+ZMask 0
+End
+
+#O
+Vnum 3091
+Nest 0
+Size   6
+Name potion fly flying~
+ShD  a potion of flying~
+Desc A potion of flying is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  3
+Cost 250
+Cond 100
+Val  9 55 0 0 0
+ValOrig  9 55 0 0 0
+Spell 1 'fly'
+ZMask 0
+End
+
+#O
+Vnum 3092
+Nest 0
+Size   6
+Name potion true sight~
+ShD  a potion of true sight~
+Desc A potion of true sight is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  4
+Cost 290
+Cond 100
+Val  10 18 19 43 0
+ValOrig  10 18 19 43 0
+Spell 1 'detect invis'
+Spell 2 'detect magic'
+Spell 3 'detect hidden'
+ZMask 0
+End
+
+SHOP captain~
+3006
+3049
+Gold 591
+#O
+Vnum 3050
+Nest 0
+Size   6
+Name raft~
+ShD  a raft~
+Desc A raft has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 22
+Wt   75
+Wear -1
+Cost 400
+Cond 75
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3051
+Nest 0
+Size   6
+Name canoe~
+ShD  a canoe~
+Desc A canoe has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 22
+Wt   32
+Wear -1
+Cost 900
+Cond 90
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+SHOP filthy~
+3046
+3048
+Gold 104
+#O
+Vnum 3003
+Nest 0
+Size   6
+Name bottle firebreather~
+ShD  a bottle of firebreather~
+Desc A bottle of firebreather has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 25
+Cond 100
+Val  12 12 7 0 0
+ValOrig  12 12 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 3004
+Nest 0
+Size   6
+Name bottle local~
+ShD  a bottle of local specialty~
+Desc A dark bottle has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 11
+Cond 100
+Val  12 12 8 0 0
+ValOrig  12 12 8 0 0
+ZMask 0
+End
+
+#O
+Vnum 3022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP leather worker~
+3010
+3035
+Gold 2204
+#O
+Vnum 3060
+Nest 0
+Size   6
+Name jerkin leather~
+ShD  a leather jerkin~
+Desc A leather jerkin is lying on the ground.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   5
+Wear -1
+Cost 270
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 3061
+Nest 0
+Size   6
+Name cap leather~
+ShD  a leather cap~
+Desc A leather cap is lying on the ground.~
+ExtF 8192
+WeaF 17
+Ityp 9
+Wt   1
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 3062
+Nest 0
+Size   6
+Name pants leather~
+ShD  a pair of leather pants~
+Desc A pair of leather pants is lying on the ground.~
+ExtF 8192
+WeaF 33
+Ityp 9
+Wt   5
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 3063
+Nest 0
+Size   6
+Name boots leather~
+ShD  a pair of leather boots~
+Desc A pair of leather boots lies here.~
+ExtF 8192
+WeaF 65
+Ityp 9
+Wt   3
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 3064
+Nest 0
+Size   6
+Name gloves leather~
+ShD  a pair of leather gloves~
+Desc A pair of leather gloves is lying on the ground.~
+ExtF 8192
+WeaF 129
+Ityp 9
+Wt   1
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 3065
+Nest 0
+Size   6
+Name sleeves leather~
+ShD  a pair of leather sleeves~
+Desc A pair of leather sleeves is lying on the ground.~
+ExtF 8192
+WeaF 257
+Ityp 9
+Wt   3
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 3066
+Nest 0
+Size   6
+Name jerkin hard leather~
+ShD  a hard leather jerkin~
+Desc A hard leather jerkin is lying on the ground.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   8
+Wear -1
+Cost 430
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+#O
+Vnum 3067
+Nest 0
+Size   6
+Name cap hard leather~
+ShD  a hard leather cap~
+Desc A hard leather cap is lying on the ground.~
+ExtF 8192
+WeaF 17
+Ityp 9
+Wt   2
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 0
+ValOrig  1 3 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 3068
+Nest 0
+Size   6
+Name pants hard leather~
+ShD  a pair of hard leather pants~
+Desc A pair of hard leather pants is lying on the ground.~
+ExtF 8192
+WeaF 33
+Ityp 9
+Wt   7
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+#O
+Vnum 3069
+Nest 0
+Size   6
+Name boots hard leather~
+ShD  a pair of hard leather boots~
+Desc A pair of hard leather boots lies here.~
+ExtF 8192
+WeaF 65
+Ityp 9
+Wt   4
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+#O
+Vnum 3070
+Nest 0
+Size   6
+Name gloves hard leather~
+ShD  a pair of hard leather gloves~
+Desc A pair of hard leather gloves is lying on the ground.~
+ExtF 8192
+WeaF 129
+Ityp 9
+Wt   1
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+#O
+Vnum 3071
+Nest 0
+Size   6
+Name sleeves hard leather~
+ShD  a pair of hard leather sleeves~
+Desc A pair of hard leather sleeves is lying on the ground.~
+ExtF 8192
+WeaF 257
+Ityp 9
+Wt   4
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+#O
+Vnum 3052
+Nest 0
+Size   6
+Name bracer strong leather~
+ShD  a leather bracer~
+Desc A strong leather bracer is here.~
+ExtF 8192
+WeaF 4097
+Ityp 9
+Wt   1
+Wear -1
+Cost 112
+Cond 90
+Val  0 2 2 0 0
+ValOrig  0 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 3053
+Nest 0
+Size   6
+Name belt leather~
+ShD  a leather belt~
+Desc A soft leather belt is here.~
+ExtF 8192
+WeaF 2049
+Ityp 9
+Wt   1
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 3054
+Nest 0
+Size   6
+Name girdle leather~
+ShD  a leather girdle~
+Desc A wide leather girdle is here.~
+ExtF 8192
+WeaF 2049
+Ityp 9
+Wt   2
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+SHOP jeweller~
+3009
+3034
+Gold 42849
+#O
+Vnum 3378
+Nest 0
+Size   6
+Name opal~
+ShD  an opal~
+Desc A lustrous opal reminds you of far-off places.~
+ExtF 8192
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 2000
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3377
+Nest 0
+Size   6
+Name diamond gem~
+ShD  a diamond~
+Desc A diamond catches and reflects the lighting.~
+ExtF 8192
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 10000
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3376
+Nest 0
+Size   6
+Name ruby gem~
+ShD  a ruby~
+Desc A beautiful, if small, ruby is here.~
+ExtF 8192
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 6000
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3375
+Nest 0
+Size   6
+Name emerald gem~
+ShD  an emerald~
+Desc A deep green emerald winks at you.~
+ExtF 8192
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 5000
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3374
+Nest 0
+Size   6
+Name garnet gem~
+ShD  a garnet~
+Desc A garnet catches your eye.~
+ExtF 8192
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 500
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3373
+Nest 0
+Size   6
+Name pearl~
+ShD  a small pearl~
+Desc A small but well-formed pearl lies here.~
+ExtF 8192
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 1000
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+SHOP wizard~
+3000
+3033
+Gold 10612
+#O
+Vnum 3040
+Nest 0
+Size   6
+Name scroll identify~
+ShD  a scroll of identify~
+Desc A scroll has carelessly been left here.~
+ExtF 8192
+WeaF 16385
+Ityp 2
+Wt   1
+Wear -1
+Lev  7
+Cost 890
+Cond 100
+Val  12 51 0 0 0
+ValOrig  12 51 0 0 0
+Spell 1 'identify'
+ZMask 0
+End
+
+#O
+Vnum 3041
+Nest 0
+Size   6
+Name potion yellow~
+ShD  a yellow potion of see invisible~
+Desc A small yellow potion has carelessly been left here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Cost 220
+Cond 100
+Val  12 18 0 0 0
+ValOrig  12 18 0 0 0
+Spell 1 'detect invis'
+ZMask 0
+End
+
+#O
+Vnum 3039
+Nest 0
+Size   6
+Name scroll cancellation~
+ShD  a scroll of cancellation~
+Desc A rolled vellum scroll is here.~
+ExtF 8192
+WeaF 16385
+Ityp 2
+Wt   1
+Wear -1
+Lev  9
+Cost 1190
+Cond 100
+Val  15 117 0 0 0
+ValOrig  15 117 0 0 0
+Spell 1 'cancellation'
+ZMask 0
+End
+
+#O
+Vnum 3042
+Nest 0
+Size   6
+Name scroll recall~
+ShD  a scroll of recall~
+Desc A scroll has carelessly been left here.~
+ExtF 8192
+WeaF 16385
+Ityp 2
+Wt   2
+Wear -1
+Lev  17
+Cost 2900
+Cond 100
+Val  20 41 0 0 0
+ValOrig  20 41 0 0 0
+Spell 1 'word of recall'
+ZMask 0
+End
+
+#O
+Vnum 3043
+Nest 0
+Size   6
+Name ring protection~
+ShD  a ring of protection~
+Desc an enchanted ring of protection sits on the floor.~
+ExtF 8192
+WeaF 3
+Ityp 8
+Wt   1
+Wear -1
+Lev  8
+Cost 640
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3044
+Nest 0
+Size   6
+Name wand magic missile missiles~
+ShD  a wand of magic missiles~
+Desc a wooden stick lies on the ground.~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   1
+Wear -1
+Lev  2
+Cost 320
+Cond 100
+Val  4 10 10 31 0
+ValOrig  4 10 10 31 0
+Spell 3 'magic missile'
+ZMask 0
+End
+
+SHOP waiter~
+3044
+3028
+Gold 158
+#O
+Vnum 3003
+Nest 0
+Size   6
+Name bottle firebreather~
+ShD  a bottle of firebreather~
+Desc A bottle of firebreather has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 25
+Cond 100
+Val  12 12 7 0 0
+ValOrig  12 12 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 3004
+Nest 0
+Size   6
+Name bottle local~
+ShD  a bottle of local specialty~
+Desc A dark bottle has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 11
+Cond 100
+Val  12 12 8 0 0
+ValOrig  12 12 8 0 0
+ZMask 0
+End
+
+#O
+Vnum 3022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP waiter~
+3045
+3022
+Gold 159
+#O
+Vnum 3002
+Nest 0
+Size   6
+Name bottle ale~
+ShD  a bottle of ale~
+Desc A dark bottle of ale has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 6
+Cond 100
+Val  16 16 3 0 0
+ValOrig  16 16 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 3003
+Nest 0
+Size   6
+Name bottle firebreather~
+ShD  a bottle of firebreather~
+Desc A bottle of firebreather has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 25
+Cond 100
+Val  12 12 7 0 0
+ValOrig  12 12 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 3004
+Nest 0
+Size   6
+Name bottle local~
+ShD  a bottle of local specialty~
+Desc A dark bottle has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 11
+Cond 100
+Val  12 12 8 0 0
+ValOrig  12 12 8 0 0
+ZMask 0
+End
+
+#O
+Vnum 3022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP armourer armorer~
+3004
+3020
+Gold 17945
+#O
+Vnum 3072
+Nest 0
+Size   6
+Name jerkin scale mail~
+ShD  a scale mail jerkin~
+Desc A scale mail jerkin is lying on the ground.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   14
+Wear -1
+Lev  5
+Cost 850
+Cond 100
+Val  3 4 4 0 2
+ValOrig  3 4 4 0 2
+ZMask 0
+End
+
+#O
+Vnum 3073
+Nest 0
+Size   6
+Name coif scale mail~
+ShD  a scale mail coif~
+Desc A scale mail coif is lying on the ground.~
+ExtF 8192
+WeaF 17
+Ityp 9
+Wt   4
+Wear -1
+Lev  5
+Cost 420
+Cond 100
+Val  3 4 4 0 1
+ValOrig  3 4 4 0 1
+ZMask 0
+End
+
+#O
+Vnum 3074
+Nest 0
+Size   6
+Name skirt scale mail~
+ShD  a long scale mail skirt~
+Desc A long scale mail skirt is lying on the ground.~
+ExtF 8192
+WeaF 33
+Ityp 9
+Wt   8
+Wear -1
+Lev  5
+Cost 420
+Cond 100
+Val  3 4 4 0 2
+ValOrig  3 4 4 0 2
+ZMask 0
+End
+
+#O
+Vnum 3075
+Nest 0
+Size   6
+Name boots reinforced~
+ShD  a pair of reinforced boots~
+Desc A pair of reinforced boots lies here.~
+ExtF 8192
+WeaF 65
+Ityp 9
+Wt   4
+Wear -1
+Lev  5
+Cost 420
+Cond 100
+Val  3 4 4 0 2
+ValOrig  3 4 4 0 2
+ZMask 0
+End
+
+#O
+Vnum 3076
+Nest 0
+Size   6
+Name gloves reinforced~
+ShD  a pair of reinforced gloves~
+Desc A pair of reinforced gloves is lying on the ground.~
+ExtF 8192
+WeaF 129
+Ityp 9
+Wt   2
+Wear -1
+Lev  5
+Cost 420
+Cond 100
+Val  3 4 4 0 2
+ValOrig  3 4 4 0 2
+ZMask 0
+End
+
+#O
+Vnum 3077
+Nest 0
+Size   6
+Name sleeves scale mail~
+ShD  a pair of scale mail sleeves~
+Desc A pair of scale mail sleeves is lying on the ground.~
+ExtF 8192
+WeaF 257
+Ityp 9
+Wt   6
+Wear -1
+Lev  5
+Cost 420
+Cond 100
+Val  3 4 4 0 2
+ValOrig  3 4 4 0 2
+ZMask 0
+End
+
+#O
+Vnum 3110
+Nest 0
+Size   6
+Name shirt chain mail~
+ShD  a chain mail shirt~
+Desc A chain mail shirt is lying on the ground.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   18
+Wear -1
+Lev  10
+Cost 1320
+Cond 100
+Val  5 4 5 0 3
+ValOrig  5 4 5 0 3
+ZMask 0
+End
+
+#O
+Vnum 3111
+Nest 0
+Size   6
+Name coif chain mail~
+ShD  a chain mail coif~
+Desc A chain mail coif is lying on the ground.~
+ExtF 8192
+WeaF 17
+Ityp 9
+Wt   5
+Wear -1
+Lev  10
+Cost 660
+Cond 100
+Val  5 4 5 0 2
+ValOrig  5 4 5 0 2
+ZMask 0
+End
+
+#O
+Vnum 3112
+Nest 0
+Size   6
+Name skirt chain mail~
+ShD  a long chain mail skirt~
+Desc A long chain mail skirt is lying on the ground.~
+ExtF 8192
+WeaF 33
+Ityp 9
+Wt   10
+Wear -1
+Lev  10
+Cost 660
+Cond 100
+Val  5 4 5 0 3
+ValOrig  5 4 5 0 3
+ZMask 0
+End
+
+#O
+Vnum 3113
+Nest 0
+Size   6
+Name boots ironbound~
+ShD  a pair of iron-bound boots~
+Desc A pair of iron-bound boots lies here.~
+ExtF 8192
+WeaF 65
+Ityp 9
+Wt   6
+Wear -1
+Lev  10
+Cost 660
+Cond 100
+Val  5 4 5 0 3
+ValOrig  5 4 5 0 3
+ZMask 0
+End
+
+#O
+Vnum 3114
+Nest 0
+Size   6
+Name gauntlets chain mail~
+ShD  a pair of chain mail gauntlets~
+Desc A pair of chain mail gauntlets is lying on the ground.~
+ExtF 8192
+WeaF 129
+Ityp 9
+Wt   4
+Wear -1
+Lev  10
+Cost 660
+Cond 100
+Val  5 4 5 0 3
+ValOrig  5 4 5 0 3
+ZMask 0
+End
+
+#O
+Vnum 3115
+Nest 0
+Size   6
+Name sleeves chain mail~
+ShD  a pair of chain mail sleeves~
+Desc A pair of chain mail sleeves is lying on the ground.~
+ExtF 8192
+WeaF 257
+Ityp 9
+Wt   8
+Wear -1
+Lev  10
+Cost 660
+Cond 100
+Val  5 4 5 0 3
+ValOrig  5 4 5 0 3
+ZMask 0
+End
+
+#O
+Vnum 3116
+Nest 0
+Size   6
+Name shield large metal~
+ShD  a large metal shield~
+Desc A large metal shield is lying on the ground.~
+ExtF 8192
+WeaF 513
+Ityp 9
+Wt   10
+Wear -1
+Lev  10
+Cost 1190
+Cond 100
+Val  5 5 5 2 4
+ValOrig  5 5 5 2 4
+ZMask 0
+End
+
+#O
+Vnum 3097
+Nest 0
+Size   6
+Name shield small metal~
+ShD  a small metal shield~
+Desc A small metal shield is lying on the ground.~
+ExtF 8192
+WeaF 513
+Ityp 9
+Wt   3
+Wear -1
+Lev  5
+Cost 750
+Cond 100
+Val  4 4 4 1 2
+ValOrig  4 4 4 1 2
+ZMask 0
+End
+
+#O
+Vnum 3117
+Nest 0
+Size   6
+Name shield small wooden~
+ShD  a small wooden shield~
+Desc A small wooden shield is lying on the ground.~
+ExtF 8192
+WeaF 513
+Ityp 9
+Wt   2
+Wear -1
+Lev  3
+Cost 510
+Cond 100
+Val  4 3 2 1 1
+ValOrig  4 3 2 1 1
+ZMask 0
+End
+
+#O
+Vnum 3022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP waiter~
+3042
+3018
+Gold 115
+#O
+Vnum 3002
+Nest 0
+Size   6
+Name bottle ale~
+ShD  a bottle of ale~
+Desc A dark bottle of ale has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 6
+Cond 100
+Val  16 16 3 0 0
+ValOrig  16 16 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 3003
+Nest 0
+Size   6
+Name bottle firebreather~
+ShD  a bottle of firebreather~
+Desc A bottle of firebreather has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 25
+Cond 100
+Val  12 12 7 0 0
+ValOrig  12 12 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 3022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP weaponsmith~
+3003
+3011
+Gold 17268
+#O
+Vnum 3020
+Nest 0
+Size   6
+Name dagger~
+ShD  a dagger~
+Desc A dagger with a long thin blade is here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   1
+Wear -1
+Cost 157
+Cond 90
+Val  2 1 4 2 0
+ValOrig  2 1 4 2 0
+ZMask 0
+End
+
+#O
+Vnum 3021
+Nest 0
+Size   6
+Name sword small~
+ShD  a small sword~
+Desc A small sword lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   3
+Wear -1
+Cost 250
+Cond 90
+Val  1 1 5 1 0
+ValOrig  1 1 5 1 0
+ZMask 0
+End
+
+#O
+Vnum 3022
+Nest 0
+Size   6
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   5
+Wear -1
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+#O
+Vnum 3023
+Nest 0
+Size   6
+Name club~
+ShD  a club~
+Desc A stout wooden club is here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   3
+Wear -1
+Lev  3
+Cost 220
+Cond 90
+Val  4 1 7 7 0
+ValOrig  4 1 7 7 0
+ZMask 0
+End
+
+#O
+Vnum 3024
+Nest 0
+Size   6
+Name mace heavy~
+ShD  a mace~
+Desc A heavy iron mace is here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   10
+Wear -1
+Lev  6
+Cost 390
+Cond 90
+Val  4 2 4 7 0
+ValOrig  4 2 4 7 0
+ZMask 0
+End
+
+#O
+Vnum 3025
+Nest 0
+Size   6
+Name axe hand~
+ShD  a hand axe~
+Desc A small hand axe lies forgotten on the floor.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   5
+Wear -1
+Lev  1
+Cost 310
+Cond 90
+Val  5 1 6 25 0
+ValOrig  5 1 6 25 0
+ZMask 0
+End
+
+#O
+Vnum 3026
+Nest 0
+Size   6
+Name axe battle~
+ShD  a battle axe~
+Desc A large steel axe rests on the ground.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   9
+Wear -1
+Lev  5
+Cost 650
+Cond 90
+Val  5 2 5 25 32
+ValOrig  5 2 5 25 32
+ZMask 0
+End
+
+#O
+Vnum 3027
+Nest 0
+Size   6
+Name spear~
+ShD  a spear~
+Desc A long spear leans against the wall.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   5
+Wear -1
+Lev  4
+Cost 84
+Cond 90
+Val  13 1 8 11 0
+ValOrig  13 1 8 11 0
+ZMask 0
+End
+
+#O
+Vnum 3028
+Nest 0
+Size   6
+Name staff~
+ShD  a wooden staff~
+Desc A stout wooden staff lies on the floor.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   4
+Wear -1
+Lev  9
+Cost 580
+Cond 90
+Val  13 1 8 7 32
+ValOrig  13 1 8 7 32
+ZMask 0
+End
+
+#O
+Vnum 3029
+Nest 0
+Size   6
+Name flail~
+ShD  a flail~
+Desc A small iron flail is here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   5
+Wear -1
+Lev  1
+Cost 77
+Cond 90
+Val  6 1 7 7 0
+ValOrig  6 1 7 7 0
+ZMask 0
+End
+
+#O
+Vnum 3022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP grocer~
+3002
+3010
+Gold 669
+#O
+Vnum 3030
+Nest 0
+Size   6
+Name torch~
+ShD  a torch~
+Desc A large torch.~
+ExtF 8192
+WeaF 1
+Ityp 1
+Wt   3
+Wear -1
+Cost 4
+Cond 90
+Val  0 0 50 0 0
+ValOrig  0 0 50 0 0
+ZMask 0
+End
+
+#O
+Vnum 3031
+Nest 0
+Size   6
+Name lantern~
+ShD  a hooded brass lantern~
+Desc A hooded brass lantern has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 1
+Wt   4
+Wear -1
+Cost 75
+Cond 100
+Val  0 0 250 0 0
+ValOrig  0 0 250 0 0
+ZMask 0
+End
+
+#O
+Vnum 3138
+Nest 0
+Size   6
+Name skin water buffalo~
+ShD  a buffalo water skin~
+Desc A bloated dead buffalo is on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   4
+Wear -1
+Cost 24
+Cond 90
+Val  64 64 0 0 0
+ValOrig  64 64 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3032
+Nest 0
+Size   6
+Name bag~
+ShD  a bag~
+Desc A small bag.~
+ExtF 8192
+WeaF 1
+Ityp 16
+Wt   1
+Wear -1
+Cost 9
+Cond 90
+Val  50 0 0 100 100
+ValOrig  50 0 0 100 100
+ZMask 0
+End
+
+#O
+Vnum 3033
+Nest 0
+Size   6
+Name box~
+ShD  a box~
+Desc A small box.~
+ExtF 8192
+WeaF 1
+Ityp 16
+Wt   1
+Wear -1
+Cost 30
+Cond 90
+Val  10 0 0 100 100
+ValOrig  10 0 0 100 100
+ZMask 0
+End
+
+#O
+Vnum 3022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP baker~
+3001
+3009
+Gold 347
+#O
+Vnum 3009
+Nest 0
+Size   6
+Name potpie pot pie~
+ShD  a big pot pie~
+Desc A big pot pie has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   2
+Wear -1
+Cost 22
+Cond 100
+Val  20 40 0 0 0
+ValOrig  20 40 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3011
+Nest 0
+Size   6
+Name bread~
+ShD  a bread~
+Desc A loaf of bread is here. It doesn't look too stale.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 9
+Cond 100
+Val  18 12 0 0 0
+ValOrig  18 12 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3012
+Nest 0
+Size   6
+Name cinnamon roll~
+ShD  a cinnamon roll~
+Desc A piping hot cinnamon roll is here. It looks delicious!~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 16
+Cond 100
+Val  4 8 0 0 0
+ValOrig  4 8 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3013
+Nest 0
+Size   6
+Name cookies~
+ShD  a batch of Sara's cookies~
+Desc A plate of chocolate chip cookies is here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 11
+Cond 100
+Val  8 10 0 0 0
+ValOrig  8 10 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3014
+Nest 0
+Size   6
+Name danish blueberry~
+ShD  a blueberry danish~
+Desc A scrumptious blueberry danish is here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 5
+Cond 100
+Val  8 6 0 0 0
+ValOrig  8 6 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 3022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP bartender~
+3040
+3007
+Gold 172
+#O
+Vnum 3000
+Nest 0
+Size   6
+Name barrel beer~
+ShD  a barrel of beer~
+Desc A beer barrel has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   16
+Wear -1
+Cost 75
+Cond 100
+Val  300 300 1 0 0
+ValOrig  300 300 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 3001
+Nest 0
+Size   6
+Name bottle beer~
+ShD  a bottle of beer~
+Desc A beer bottle has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 5
+Cond 100
+Val  16 16 1 0 0
+ValOrig  16 16 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 3022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP waiter~
+3043
+3003
+Gold 145
+#O
+Vnum 3002
+Nest 0
+Size   6
+Name bottle ale~
+ShD  a bottle of ale~
+Desc A dark bottle of ale has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 6
+Cond 100
+Val  16 16 3 0 0
+ValOrig  16 16 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 3004
+Nest 0
+Size   6
+Name bottle local~
+ShD  a bottle of local specialty~
+Desc A dark bottle has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 11
+Cond 100
+Val  12 12 8 0 0
+ValOrig  12 12 8 0 0
+ZMask 0
+End
+
+#O
+Vnum 3022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP oldstyle innkeeper~
+1130
+1144
+Gold 42
+#O
+Vnum 1110
+Nest 0
+Size   6
+Name egg~
+ShD  an egg~
+Desc An egg lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 2
+Cond 100
+Val  12 12 0 0 0
+ValOrig  12 12 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 648
+Nest 0
+Size   6
+Name whiskey shot~
+ShD  a shot of whiskey~
+Desc A shot of whiskey is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 12
+Cond 100
+Val  2 2 5 0 0
+ValOrig  2 2 5 0 0
+ZMask 0
+End
+
+#O
+Vnum 649
+Nest 0
+Size   6
+Name ale quart~
+ShD  a quart of ale~
+Desc A quart of ale is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 10
+Cond 100
+Val  32 32 3 0 0
+ValOrig  32 32 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 650
+Nest 0
+Size   6
+Name port brew quart~
+ShD  a quart of port brew~
+Desc A quart of port brew is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 18
+Cond 100
+Val  32 32 4 0 0
+ValOrig  32 32 4 0 0
+ZMask 0
+End
+
+SHOP oldstyle grocer~
+1119
+1121
+Gold 56
+#O
+Vnum 1103
+Nest 0
+Size   6
+Name pipeweed bread~
+ShD  a pipeweed bread~
+Desc A loaf of pipeweed bread arouses your hunger.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 15
+Cond 100
+Val  30 24 0 0 0
+ValOrig  30 24 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle innkeeper~
+1113
+1116
+Gold 50
+#O
+Vnum 1110
+Nest 0
+Size   6
+Name egg~
+ShD  an egg~
+Desc An egg lies here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 2
+Cond 100
+Val  12 12 0 0 0
+ValOrig  12 12 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 648
+Nest 0
+Size   6
+Name whiskey shot~
+ShD  a shot of whiskey~
+Desc A shot of whiskey is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 12
+Cond 100
+Val  2 2 5 0 0
+ValOrig  2 2 5 0 0
+ZMask 0
+End
+
+#O
+Vnum 649
+Nest 0
+Size   6
+Name ale quart~
+ShD  a quart of ale~
+Desc A quart of ale is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 10
+Cond 100
+Val  32 32 3 0 0
+ValOrig  32 32 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 650
+Nest 0
+Size   6
+Name port brew quart~
+ShD  a quart of port brew~
+Desc A quart of port brew is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 18
+Cond 100
+Val  32 32 4 0 0
+ValOrig  32 32 4 0 0
+ZMask 0
+End
+
+SHOP oldstyle shopkeeper~
+1118
+1105
+Gold 430
+#O
+Vnum 1111
+Nest 0
+Size   6
+Name bag~
+ShD  a bag~
+Desc A bag is on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 16
+Wt   1
+Wear -1
+Cost 11
+Cond 100
+Val  50 0 0 100 100
+ValOrig  50 0 0 100 100
+ZMask 0
+End
+
+#O
+Vnum 1112
+Nest 0
+Size   6
+Name lantern~
+ShD  a lantern~
+Desc A lantern is on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 1
+Wt   4
+Wear -1
+Cost 60
+Cond 100
+Val  0 0 200 0 0
+ValOrig  0 0 200 0 0
+ZMask 0
+End
+
+SHOP oldstyle elizabeth farmer~
+608
+610
+Gold 243
+#O
+Vnum 609
+Nest 0
+Size   6
+Name cabbage~
+ShD  a head of cabbage~
+Desc Some fresh cabbage is here, get it while it lasts!~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   2
+Wear -1
+Cost 2
+Cond 100
+Val  12 12 0 0 0
+ValOrig  12 12 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 610
+Nest 0
+Size   6
+Name lettuce~
+ShD  a head of lettuce~
+Desc Some fresh lettuce is here, get it while it lasts!~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   2
+Wear -1
+Cost 2
+Cond 100
+Val  12 12 0 0 0
+ValOrig  12 12 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 611
+Nest 0
+Size   6
+Name milk bottle~
+ShD  a bottle of milk~
+Desc A glass bottle of milk is on a shelf here, fresh from the cow.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   5
+Wear -1
+Cost 3
+Cond 100
+Val  20 20 10 0 0
+ValOrig  20 20 10 0 0
+ZMask 0
+End
+
+#O
+Vnum 612
+Nest 0
+Size   6
+Name apple~
+ShD  an apple~
+Desc An apple is on the ground.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 1
+Cond 100
+Val  8 8 0 0 0
+ValOrig  8 8 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 613
+Nest 0
+Size   6
+Name corn~
+ShD  an ear of corn~
+Desc An ear of corn is on the ground.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 3
+Cond 100
+Val  8 8 0 0 0
+ValOrig  8 8 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle Nyles~
+622
+609
+Gold 59
+#O
+Vnum 648
+Nest 0
+Size   6
+Name whiskey shot~
+ShD  a shot of whiskey~
+Desc A shot of whiskey is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 12
+Cond 100
+Val  2 2 5 0 0
+ValOrig  2 2 5 0 0
+ZMask 0
+End
+
+#O
+Vnum 649
+Nest 0
+Size   6
+Name ale quart~
+ShD  a quart of ale~
+Desc A quart of ale is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 10
+Cond 100
+Val  32 32 3 0 0
+ValOrig  32 32 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 650
+Nest 0
+Size   6
+Name port brew quart~
+ShD  a quart of port brew~
+Desc A quart of port brew is on the table.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 18
+Cond 100
+Val  32 32 4 0 0
+ValOrig  32 32 4 0 0
+ZMask 0
+End
+
+SHOP oldstyle marty~
+607
+607
+Gold 294
+#O
+Vnum 602
+Nest 0
+Size   6
+Name side meat beef~
+ShD  a side of beef~
+Desc A side of beef is here on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   10
+Wear -1
+Cost 50
+Cond 100
+Val  24 24 0 0 0
+ValOrig  24 24 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 603
+Nest 0
+Size   6
+Name side meat pork~
+ShD  a side of pork~
+Desc A side of pork is here on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   10
+Wear -1
+Cost 42
+Cond 100
+Val  23 23 0 0 0
+ValOrig  23 23 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 604
+Nest 0
+Size   6
+Name side meat horse~
+ShD  a side of horse~
+Desc A side of horse is here on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   12
+Wear -1
+Cost 21
+Cond 100
+Val  30 30 0 0 0
+ValOrig  30 30 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 605
+Nest 0
+Size   6
+Name meat chicken~
+ShD  a defeathered chicken~
+Desc A defeathered chicken is here on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   5
+Wear -1
+Cost 10
+Cond 100
+Val  16 16 0 0 0
+ValOrig  16 16 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle madam tracy~
+606
+606
+Gold 852
+#O
+Vnum 606
+Nest 0
+Size   6
+Name emerald ring~
+ShD  an emerald ring~
+Desc An emerald ring is on the floor, gathering dust.~
+ExtF 8192
+WeaF 3
+Ityp 57
+Wt   1
+Wear -1
+Cost 1000
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 607
+Nest 0
+Size   6
+Name glass trinket~
+ShD  a glass trinket~
+Desc A glass trinket is on the floor, gathering dust.~
+ExtF 8192
+WeaF 16385
+Ityp 56
+Wt   1
+Wear -1
+Cost 150
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 608
+Nest 0
+Size   6
+Name golden necklace~
+ShD  a golden necklace~
+Desc A golden necklace is on the floor, gathering dust.~
+ExtF 8192
+WeaF 5
+Ityp 57
+Wt   2
+Wear -1
+Cost 500
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+SHOP oldstyle sam~
+605
+604
+Gold 1054
+#O
+Vnum 616
+Nest 0
+Size   6
+Name vest~
+ShD  a leather vest~
+Desc A leather vest is on the floor.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   10
+Wear -1
+Cost 270
+Cond 100
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 617
+Nest 0
+Size   6
+Name sleeves~
+ShD  some leather sleeves~
+Desc Some leather sleeves are on the floor.~
+ExtF 8192
+WeaF 257
+Ityp 9
+Wt   5
+Wear -1
+Cost 136
+Cond 100
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 618
+Nest 0
+Size   6
+Name leggings~
+ShD  some leather leggings~
+Desc Some leather leggings are on the floor.~
+ExtF 8192
+WeaF 33
+Ityp 9
+Wt   5
+Wear -1
+Cost 136
+Cond 100
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 619
+Nest 0
+Size   6
+Name boots~
+ShD  some leather boots~
+Desc Some leather boots are on the floor.~
+ExtF 8192
+WeaF 65
+Ityp 9
+Wt   5
+Wear -1
+Cost 136
+Cond 100
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+SHOP oldstyle jim blacksmith~
+604
+603
+Gold 2434
+#O
+Vnum 600
+Nest 0
+Size   6
+Name axe hand~
+ShD  a hand axe~
+Desc A hand axe is on the floor here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   10
+Wear -1
+Lev  4
+Cost 420
+Cond 100
+Val  5 1 8 25 0
+ValOrig  5 1 8 25 0
+ZMask 0
+End
+
+#O
+Vnum 601
+Nest 0
+Size   6
+Name meat cleaver~
+ShD  a meat cleaver~
+Desc A sharp meat cleaver is just lying on the floor here!~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   5
+Wear -1
+Lev  8
+Cost 530
+Cond 100
+Val  2 2 5 25 0
+ValOrig  2 2 5 25 0
+ZMask 0
+End
+
+#O
+Vnum 615
+Nest 0
+Size   6
+Name pitchfork fork~
+ShD  a pitchfork~
+Desc A pitchfork is on the floor.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   10
+Wear -1
+Lev  7
+Cost 122
+Cond 100
+Val  13 3 3 2 0
+ValOrig  13 3 3 2 0
+ZMask 0
+End
+
+#O
+Vnum 667
+Nest 0
+Size   6
+Name chest~
+ShD  a chest~
+Desc A chest is on the floor here.~
+ExtF 8192
+WeaF 1
+Ityp 16
+Wt   10
+Wear -1
+Cost 100
+Cond 100
+Val  100 0 0 100 100
+ValOrig  100 0 0 100 100
+ZMask 0
+End
+
+SHOP Melancholy~
+13160
+13160
+Gold 1230
+#O
+Vnum 13168
+Nest 0
+Size   6
+Name map olympus~
+ShD  a map of Olympus~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 2000
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13167
+Nest 0
+Size   6
+Name map new thalos~
+ShD  a map of New Thalos ~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 2500
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13166
+Nest 0
+Size   6
+Name map moria first~
+ShD  a map of the first level of Moria~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 1500
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13165
+Nest 0
+Size   6
+Name map dwarven kingdom dwarf~
+ShD  a map of the Dwarven Kingdom~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 750
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13164
+Nest 0
+Size   6
+Name map southern midgaard~
+ShD  a map of southern Midgaard~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 1000
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13163
+Nest 0
+Size   6
+Name map thera~
+ShD  a map of Thera~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 1500
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13162
+Nest 0
+Size   6
+Name map midgaard~
+ShD  a map of the city of Midgaard~
+Desc A rolled up map is here.~
+ExtF 8192
+WeaF 1
+Ityp 28
+Wt   1
+Wear -1
+Cost 500
+Cond 100
+Val  1 0 0 0 0
+ValOrig  1 0 0 0 0
+ZMask 0
+End
+
+SHOP esme waitress~
+13150
+13150
+Gold 1111
+#O
+Vnum 13154
+Nest 0
+Size   6
+Name beer bottle killian irish red~
+ShD  a bottle of George Killian's Irish Red~
+Desc A dark-tinted bottle of beer is here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 20
+Cond 100
+Val  16 16 1 0 0
+ValOrig  16 16 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 13152
+Nest 0
+Size   6
+Name bowl beef stew~
+ShD  a bowl of beef stew~
+Desc A bowl of nice thick beef stew, with lots of vegetables, steams here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   3
+Wear -1
+Cost 14
+Cond 100
+Val  25 25 0 0 0
+ValOrig  25 25 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13153
+Nest 0
+Size   6
+Name biscuit~
+ShD  a biscuit~
+Desc A yummy biscuit, covered with butter, is here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 5
+Cond 100
+Val  4 3 0 0 0
+ValOrig  4 3 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13151
+Nest 0
+Size   6
+Name soup bowl~
+ShD  a bowl of chicken noodle soup~
+Desc A nice hot bowl of chicken noodle soup is here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   2
+Wear -1
+Cost 10
+Cond 100
+Val  4 8 0 0 0
+ValOrig  4 8 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13150
+Nest 0
+Size   6
+Name coffee cup cinnamon~
+ShD  a cup of cinnamon coffee~
+Desc A piping hot cup of cinnamon coffee is here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 12
+Cond 100
+Val  6 6 12 0 0
+ValOrig  6 6 12 0 0
+ZMask 0
+End
+
+#O
+Vnum 13100
+Nest 0
+Size   6
+Name tea cup~
+ShD  a cup of tea~
+Desc A cup has been set here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 8
+Cond 100
+Val  6 6 11 0 0
+ValOrig  6 6 11 0 0
+ZMask 0
+End
+
+SHOP maid~
+13100
+13106
+Gold 240
+#O
+Vnum 13100
+Nest 0
+Size   6
+Name tea cup~
+ShD  a cup of tea~
+Desc A cup has been set here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 8
+Cond 100
+Val  6 6 11 0 0
+ValOrig  6 6 11 0 0
+ZMask 0
+End
+
+#O
+Vnum 13101
+Nest 0
+Size   6
+Name coffee cup~
+ShD  a cup of coffee~
+Desc A cup has been set here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 6
+Cond 100
+Val  6 6 12 0 0
+ValOrig  6 6 12 0 0
+ZMask 0
+End
+
+#O
+Vnum 13102
+Nest 0
+Size   6
+Name water cup~
+ShD  a cup of water~
+Desc A cup has been set here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 1
+Cond 100
+Val  10 10 0 0 0
+ValOrig  10 10 0 0 0
+ZMask 0
+End
+
+SHOP shopkeeper old man~
+13070
+13056
+Gold 1986
+#O
+Vnum 13080
+Nest 0
+Size   6
+Name potion heal healing~
+ShD  a potion of healing~
+Desc A potion of healing is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  11
+Cost 800
+Cond 100
+Val  20 27 0 0 0
+ValOrig  20 27 0 0 0
+Spell 1 'heal'
+ZMask 0
+End
+
+#O
+Vnum 13081
+Nest 0
+Size   6
+Name potion sanct sanctuary~
+ShD  a potion of sanctuary~
+Desc A potion of sanctuary is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  11
+Cost 800
+Cond 100
+Val  20 35 0 0 0
+ValOrig  20 35 0 0 0
+Spell 1 'sanctuary'
+ZMask 0
+End
+
+#O
+Vnum 13082
+Nest 0
+Size   6
+Name potion divine~
+ShD  a potion of divine protection~
+Desc A potion of divine protection is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  16
+Cost 1800
+Cond 100
+Val  35 35 -1 1 0
+ValOrig  35 35 -1 1 0
+Spell 1 'sanctuary'
+Spell 3 'armor'
+ZMask 0
+End
+
+#O
+Vnum 13083
+Nest 0
+Size   6
+Name potion cure light~
+ShD  a potion of cure light wounds~
+Desc A potion of cure light wounds is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Cost 150
+Cond 100
+Val  5 15 0 0 0
+ValOrig  5 15 0 0 0
+Spell 1 'cure light'
+ZMask 0
+End
+
+#O
+Vnum 13084
+Nest 0
+Size   6
+Name potion cure serious~
+ShD  a potion of cure serious wounds~
+Desc A potion of cure serious wounds is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  1
+Cost 220
+Cond 100
+Val  10 60 0 0 0
+ValOrig  10 60 0 0 0
+Spell 1 'cure serious'
+ZMask 0
+End
+
+#O
+Vnum 13085
+Nest 0
+Size   6
+Name potion cure critical critic~
+ShD  a potion of cure critical wounds~
+Desc A potion of cure critical wounds is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  5
+Cost 390
+Cond 100
+Val  15 14 0 0 0
+ValOrig  15 14 0 0 0
+Spell 1 'cure critical'
+ZMask 0
+End
+
+#O
+Vnum 13086
+Nest 0
+Size   6
+Name potion antidote bottle~
+ShD  a bottle of antidote~
+Desc A bottle of antidote is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  8
+Cost 550
+Cond 100
+Val  14 42 15 111 0
+ValOrig  14 42 15 111 0
+Spell 1 'cure poison'
+Spell 2 'cure light'
+Spell 3 'cure disease'
+ZMask 0
+End
+
+#O
+Vnum 13087
+Nest 0
+Size   6
+Name potion cure blindness~
+ShD  a potion of cure blindness~
+Desc A potion of cure blindness is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Cost 230
+Cond 100
+Val  13 13 0 0 0
+ValOrig  13 13 0 0 0
+Spell 1 'cure blindness'
+ZMask 0
+End
+
+#O
+Vnum 13088
+Nest 0
+Size   6
+Name vial holy water~
+ShD  a vial of holy water~
+Desc A vial of holy water is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  10
+Cost 720
+Cond 100
+Val  20 3 33 34 0
+ValOrig  20 3 33 34 0
+Spell 1 'bless'
+Spell 2 'protection evil'
+Spell 3 'remove curse'
+ZMask 0
+End
+
+#O
+Vnum 13089
+Nest 0
+Size   6
+Name potion armor~
+ShD  a potion of armor~
+Desc A potion of armor is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Cost 200
+Cond 100
+Val  10 1 0 0 0
+ValOrig  10 1 0 0 0
+Spell 1 'armor'
+ZMask 0
+End
+
+#O
+Vnum 13090
+Nest 0
+Size   6
+Name potion negation~
+ShD  a potion of negation~
+Desc A potion of negation is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  9
+Cost 830
+Cond 100
+Val  35 117 0 0 0
+ValOrig  35 117 0 0 0
+Spell 1 'cancellation'
+ZMask 0
+End
+
+#O
+Vnum 13091
+Nest 0
+Size   6
+Name potion fly flying~
+ShD  a potion of flying~
+Desc A potion of flying is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  3
+Cost 250
+Cond 100
+Val  9 55 0 0 0
+ValOrig  9 55 0 0 0
+Spell 1 'fly'
+ZMask 0
+End
+
+#O
+Vnum 13092
+Nest 0
+Size   6
+Name potion true sight~
+ShD  a potion of true sight~
+Desc A potion of true sight is here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Lev  4
+Cost 290
+Cond 100
+Val  10 18 19 43 0
+ValOrig  10 18 19 43 0
+Spell 1 'detect invis'
+Spell 2 'detect magic'
+Spell 3 'detect hidden'
+ZMask 0
+End
+
+SHOP captain~
+13006
+13049
+Gold 744
+#O
+Vnum 13050
+Nest 0
+Size   6
+Name raft~
+ShD  a raft~
+Desc A raft has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 22
+Wt   75
+Wear -1
+Cost 400
+Cond 75
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13051
+Nest 0
+Size   6
+Name canoe~
+ShD  a canoe~
+Desc A canoe has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 22
+Wt   32
+Wear -1
+Cost 900
+Cond 90
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+SHOP filthy~
+13046
+13048
+Gold 197
+#O
+Vnum 13003
+Nest 0
+Size   6
+Name bottle firebreather~
+ShD  a bottle of firebreather~
+Desc A bottle of firebreather has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 25
+Cond 100
+Val  12 12 7 0 0
+ValOrig  12 12 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 13004
+Nest 0
+Size   6
+Name bottle local~
+ShD  a bottle of local specialty~
+Desc A dark bottle has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 11
+Cond 100
+Val  12 12 8 0 0
+ValOrig  12 12 8 0 0
+ZMask 0
+End
+
+#O
+Vnum 13022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP leather worker~
+13010
+13035
+Gold 2498
+#O
+Vnum 13060
+Nest 0
+Size   6
+Name jerkin leather~
+ShD  a leather jerkin~
+Desc A leather jerkin is lying on the ground.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   5
+Wear -1
+Cost 270
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 13061
+Nest 0
+Size   6
+Name cap leather~
+ShD  a leather cap~
+Desc A leather cap is lying on the ground.~
+ExtF 8192
+WeaF 17
+Ityp 9
+Wt   1
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 13062
+Nest 0
+Size   6
+Name pants leather~
+ShD  a pair of leather pants~
+Desc A pair of leather pants is lying on the ground.~
+ExtF 8192
+WeaF 33
+Ityp 9
+Wt   5
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 13063
+Nest 0
+Size   6
+Name boots leather~
+ShD  a pair of leather boots~
+Desc A pair of leather boots lies here.~
+ExtF 8192
+WeaF 65
+Ityp 9
+Wt   3
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 13064
+Nest 0
+Size   6
+Name gloves leather~
+ShD  a pair of leather gloves~
+Desc A pair of leather gloves is lying on the ground.~
+ExtF 8192
+WeaF 129
+Ityp 9
+Wt   1
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 13065
+Nest 0
+Size   6
+Name sleeves leather~
+ShD  a pair of leather sleeves~
+Desc A pair of leather sleeves is lying on the ground.~
+ExtF 8192
+WeaF 257
+Ityp 9
+Wt   3
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 13066
+Nest 0
+Size   6
+Name jerkin hard leather~
+ShD  a hard leather jerkin~
+Desc A hard leather jerkin is lying on the ground.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   8
+Wear -1
+Cost 430
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+#O
+Vnum 13067
+Nest 0
+Size   6
+Name cap hard leather~
+ShD  a hard leather cap~
+Desc A hard leather cap is lying on the ground.~
+ExtF 8192
+WeaF 17
+Ityp 9
+Wt   2
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 0
+ValOrig  1 3 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 13068
+Nest 0
+Size   6
+Name pants hard leather~
+ShD  a pair of hard leather pants~
+Desc A pair of hard leather pants is lying on the ground.~
+ExtF 8192
+WeaF 33
+Ityp 9
+Wt   7
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+#O
+Vnum 13069
+Nest 0
+Size   6
+Name boots hard leather~
+ShD  a pair of hard leather boots~
+Desc A pair of hard leather boots lies here.~
+ExtF 8192
+WeaF 65
+Ityp 9
+Wt   4
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+#O
+Vnum 13070
+Nest 0
+Size   6
+Name gloves hard leather~
+ShD  a pair of hard leather gloves~
+Desc A pair of hard leather gloves is lying on the ground.~
+ExtF 8192
+WeaF 129
+Ityp 9
+Wt   1
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+#O
+Vnum 13071
+Nest 0
+Size   6
+Name sleeves hard leather~
+ShD  a pair of hard leather sleeves~
+Desc A pair of hard leather sleeves is lying on the ground.~
+ExtF 8192
+WeaF 257
+Ityp 9
+Wt   4
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+#O
+Vnum 13052
+Nest 0
+Size   6
+Name bracer strong leather~
+ShD  a leather bracer~
+Desc A strong leather bracer is here.~
+ExtF 8192
+WeaF 4097
+Ityp 9
+Wt   1
+Wear -1
+Cost 112
+Cond 90
+Val  0 2 2 0 0
+ValOrig  0 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 13053
+Nest 0
+Size   6
+Name belt leather~
+ShD  a leather belt~
+Desc A soft leather belt is here.~
+ExtF 8192
+WeaF 2049
+Ityp 9
+Wt   1
+Wear -1
+Cost 136
+Cond 90
+Val  1 2 2 0 0
+ValOrig  1 2 2 0 0
+ZMask 0
+End
+
+#O
+Vnum 13054
+Nest 0
+Size   6
+Name girdle leather~
+ShD  a leather girdle~
+Desc A wide leather girdle is here.~
+ExtF 8192
+WeaF 2049
+Ityp 9
+Wt   2
+Wear -1
+Cost 220
+Cond 90
+Val  1 3 3 0 1
+ValOrig  1 3 3 0 1
+ZMask 0
+End
+
+SHOP jeweller~
+13009
+13034
+Gold 40781
+#O
+Vnum 13378
+Nest 0
+Size   6
+Name opal~
+ShD  an opal~
+Desc A lustrous opal reminds you of far-off places.~
+ExtF 268443648
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 2000
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13377
+Nest 0
+Size   6
+Name diamond gem~
+ShD  a diamond~
+Desc A diamond catches and reflects the lighting.~
+ExtF 268443648
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 10000
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13376
+Nest 0
+Size   6
+Name ruby gem~
+ShD  a ruby~
+Desc A beautiful, if small, ruby is here.~
+ExtF 268443648
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 6000
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13375
+Nest 0
+Size   6
+Name emerald gem~
+ShD  an emerald~
+Desc A deep green emerald winks at you.~
+ExtF 268443648
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 5000
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13374
+Nest 0
+Size   6
+Name garnet gem~
+ShD  a garnet~
+Desc A garnet catches your eye.~
+ExtF 268443648
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 500
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13373
+Nest 0
+Size   6
+Name pearl~
+ShD  a small pearl~
+Desc A small but well-formed pearl lies here.~
+ExtF 268443648
+WeaF 16385
+Ityp 56
+Wt   0
+Wear -1
+Cost 1000
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+SHOP wizard~
+13000
+13033
+Gold 6266
+#O
+Vnum 13040
+Nest 0
+Size   6
+Name scroll identify~
+ShD  a scroll of identify~
+Desc A scroll has carelessly been left here.~
+ExtF 8192
+WeaF 16385
+Ityp 2
+Wt   1
+Wear -1
+Lev  7
+Cost 890
+Cond 100
+Val  12 51 0 0 0
+ValOrig  12 51 0 0 0
+Spell 1 'identify'
+ZMask 0
+End
+
+#O
+Vnum 13041
+Nest 0
+Size   6
+Name potion yellow~
+ShD  a yellow potion of see invisible~
+Desc A small yellow potion has carelessly been left here.~
+ExtF 8192
+WeaF 16385
+Ityp 10
+Wt   1
+Wear -1
+Cost 220
+Cond 100
+Val  12 18 0 0 0
+ValOrig  12 18 0 0 0
+Spell 1 'detect invis'
+ZMask 0
+End
+
+#O
+Vnum 13039
+Nest 0
+Size   6
+Name scroll cancellation~
+ShD  a scroll of cancellation~
+Desc A rolled vellum scroll is here.~
+ExtF 8192
+WeaF 16385
+Ityp 2
+Wt   1
+Wear -1
+Lev  9
+Cost 1190
+Cond 100
+Val  15 117 0 0 0
+ValOrig  15 117 0 0 0
+Spell 1 'cancellation'
+ZMask 0
+End
+
+#O
+Vnum 13042
+Nest 0
+Size   6
+Name scroll recall~
+ShD  a scroll of recall~
+Desc A scroll has carelessly been left here.~
+ExtF 8192
+WeaF 16385
+Ityp 2
+Wt   2
+Wear -1
+Lev  17
+Cost 2900
+Cond 100
+Val  20 41 0 0 0
+ValOrig  20 41 0 0 0
+Spell 1 'word of recall'
+ZMask 0
+End
+
+#O
+Vnum 13043
+Nest 0
+Size   6
+Name ring protection~
+ShD  a ring of protection~
+Desc an enchanted ring of protection sits on the floor.~
+ExtF 8192
+WeaF 3
+Ityp 8
+Wt   1
+Wear -1
+Lev  8
+Cost 640
+Cond 100
+Val  0 0 0 0 0
+ValOrig  0 0 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13044
+Nest 0
+Size   6
+Name wand magic missile missiles~
+ShD  a wand of magic missiles~
+Desc a wooden stick lies on the ground.~
+ExtF 8192
+WeaF 16385
+Ityp 3
+Wt   1
+Wear -1
+Lev  2
+Cost 320
+Cond 100
+Val  4 10 10 31 0
+ValOrig  4 10 10 31 0
+Spell 3 'magic missile'
+ZMask 0
+End
+
+SHOP waiter~
+13044
+13028
+Gold 120
+#O
+Vnum 13003
+Nest 0
+Size   6
+Name bottle firebreather~
+ShD  a bottle of firebreather~
+Desc A bottle of firebreather has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 25
+Cond 100
+Val  12 12 7 0 0
+ValOrig  12 12 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 13004
+Nest 0
+Size   6
+Name bottle local~
+ShD  a bottle of local specialty~
+Desc A dark bottle has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 11
+Cond 100
+Val  12 12 8 0 0
+ValOrig  12 12 8 0 0
+ZMask 0
+End
+
+#O
+Vnum 13022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP waiter~
+13045
+13022
+Gold 77
+#O
+Vnum 13002
+Nest 0
+Size   6
+Name bottle ale~
+ShD  a bottle of ale~
+Desc A dark bottle of ale has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 6
+Cond 100
+Val  16 16 3 0 0
+ValOrig  16 16 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 13003
+Nest 0
+Size   6
+Name bottle firebreather~
+ShD  a bottle of firebreather~
+Desc A bottle of firebreather has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 25
+Cond 100
+Val  12 12 7 0 0
+ValOrig  12 12 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 13004
+Nest 0
+Size   6
+Name bottle local~
+ShD  a bottle of local specialty~
+Desc A dark bottle has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 11
+Cond 100
+Val  12 12 8 0 0
+ValOrig  12 12 8 0 0
+ZMask 0
+End
+
+#O
+Vnum 13022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP armourer armorer~
+13004
+13020
+Gold 14831
+#O
+Vnum 13072
+Nest 0
+Size   6
+Name jerkin scale mail~
+ShD  a scale mail jerkin~
+Desc A scale mail jerkin is lying on the ground.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   14
+Wear -1
+Lev  5
+Cost 850
+Cond 100
+Val  3 4 4 0 2
+ValOrig  3 4 4 0 2
+ZMask 0
+End
+
+#O
+Vnum 13073
+Nest 0
+Size   6
+Name coif scale mail~
+ShD  a scale mail coif~
+Desc A scale mail coif is lying on the ground.~
+ExtF 8192
+WeaF 17
+Ityp 9
+Wt   4
+Wear -1
+Lev  5
+Cost 420
+Cond 100
+Val  3 4 4 0 1
+ValOrig  3 4 4 0 1
+ZMask 0
+End
+
+#O
+Vnum 13074
+Nest 0
+Size   6
+Name skirt scale mail~
+ShD  a long scale mail skirt~
+Desc A long scale mail skirt is lying on the ground.~
+ExtF 8192
+WeaF 33
+Ityp 9
+Wt   8
+Wear -1
+Lev  5
+Cost 420
+Cond 100
+Val  3 4 4 0 2
+ValOrig  3 4 4 0 2
+ZMask 0
+End
+
+#O
+Vnum 13075
+Nest 0
+Size   6
+Name boots reinforced~
+ShD  a pair of reinforced boots~
+Desc A pair of reinforced boots lies here.~
+ExtF 8192
+WeaF 65
+Ityp 9
+Wt   4
+Wear -1
+Lev  5
+Cost 420
+Cond 100
+Val  3 4 4 0 2
+ValOrig  3 4 4 0 2
+ZMask 0
+End
+
+#O
+Vnum 13076
+Nest 0
+Size   6
+Name gloves reinforced~
+ShD  a pair of reinforced gloves~
+Desc A pair of reinforced gloves is lying on the ground.~
+ExtF 8192
+WeaF 129
+Ityp 9
+Wt   2
+Wear -1
+Lev  5
+Cost 420
+Cond 100
+Val  3 4 4 0 2
+ValOrig  3 4 4 0 2
+ZMask 0
+End
+
+#O
+Vnum 13077
+Nest 0
+Size   6
+Name sleeves scale mail~
+ShD  a pair of scale mail sleeves~
+Desc A pair of scale mail sleeves is lying on the ground.~
+ExtF 8192
+WeaF 257
+Ityp 9
+Wt   6
+Wear -1
+Lev  5
+Cost 420
+Cond 100
+Val  3 4 4 0 2
+ValOrig  3 4 4 0 2
+ZMask 0
+End
+
+#O
+Vnum 13110
+Nest 0
+Size   6
+Name shirt chain mail~
+ShD  a chain mail shirt~
+Desc A chain mail shirt is lying on the ground.~
+ExtF 8192
+WeaF 9
+Ityp 9
+Wt   18
+Wear -1
+Lev  10
+Cost 1320
+Cond 100
+Val  5 4 5 0 3
+ValOrig  5 4 5 0 3
+ZMask 0
+End
+
+#O
+Vnum 13111
+Nest 0
+Size   6
+Name coif chain mail~
+ShD  a chain mail coif~
+Desc A chain mail coif is lying on the ground.~
+ExtF 8192
+WeaF 17
+Ityp 9
+Wt   5
+Wear -1
+Lev  10
+Cost 660
+Cond 100
+Val  5 4 5 0 2
+ValOrig  5 4 5 0 2
+ZMask 0
+End
+
+#O
+Vnum 13112
+Nest 0
+Size   6
+Name skirt chain mail~
+ShD  a long chain mail skirt~
+Desc A long chain mail skirt is lying on the ground.~
+ExtF 8192
+WeaF 33
+Ityp 9
+Wt   10
+Wear -1
+Lev  10
+Cost 660
+Cond 100
+Val  5 4 5 0 3
+ValOrig  5 4 5 0 3
+ZMask 0
+End
+
+#O
+Vnum 13113
+Nest 0
+Size   6
+Name boots ironbound~
+ShD  a pair of iron-bound boots~
+Desc A pair of iron-bound boots lies here.~
+ExtF 8192
+WeaF 65
+Ityp 9
+Wt   6
+Wear -1
+Lev  10
+Cost 660
+Cond 100
+Val  5 4 5 0 3
+ValOrig  5 4 5 0 3
+ZMask 0
+End
+
+#O
+Vnum 13114
+Nest 0
+Size   6
+Name gauntlets chain mail~
+ShD  a pair of chain mail gauntlets~
+Desc A pair of chain mail gauntlets is lying on the ground.~
+ExtF 8192
+WeaF 129
+Ityp 9
+Wt   4
+Wear -1
+Lev  10
+Cost 660
+Cond 100
+Val  5 4 5 0 3
+ValOrig  5 4 5 0 3
+ZMask 0
+End
+
+#O
+Vnum 13115
+Nest 0
+Size   6
+Name sleeves chain mail~
+ShD  a pair of chain mail sleeves~
+Desc A pair of chain mail sleeves is lying on the ground.~
+ExtF 8192
+WeaF 257
+Ityp 9
+Wt   8
+Wear -1
+Lev  10
+Cost 660
+Cond 100
+Val  5 4 5 0 3
+ValOrig  5 4 5 0 3
+ZMask 0
+End
+
+#O
+Vnum 13116
+Nest 0
+Size   6
+Name shield large metal~
+ShD  a large metal shield~
+Desc A large metal shield is lying on the ground.~
+ExtF 8192
+WeaF 513
+Ityp 9
+Wt   10
+Wear -1
+Lev  10
+Cost 1190
+Cond 100
+Val  5 5 5 2 4
+ValOrig  5 5 5 2 4
+ZMask 0
+End
+
+#O
+Vnum 13097
+Nest 0
+Size   6
+Name shield small metal~
+ShD  a small metal shield~
+Desc A small metal shield is lying on the ground.~
+ExtF 8192
+WeaF 513
+Ityp 9
+Wt   3
+Wear -1
+Lev  5
+Cost 750
+Cond 100
+Val  4 4 4 1 2
+ValOrig  4 4 4 1 2
+ZMask 0
+End
+
+#O
+Vnum 13117
+Nest 0
+Size   6
+Name shield small wooden~
+ShD  a small wooden shield~
+Desc A small wooden shield is lying on the ground.~
+ExtF 8192
+WeaF 513
+Ityp 9
+Wt   2
+Wear -1
+Lev  3
+Cost 510
+Cond 100
+Val  4 3 2 1 1
+ValOrig  4 3 2 1 1
+ZMask 0
+End
+
+#O
+Vnum 13022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP waiter~
+13042
+13018
+Gold 189
+#O
+Vnum 13002
+Nest 0
+Size   6
+Name bottle ale~
+ShD  a bottle of ale~
+Desc A dark bottle of ale has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 6
+Cond 100
+Val  16 16 3 0 0
+ValOrig  16 16 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 13003
+Nest 0
+Size   6
+Name bottle firebreather~
+ShD  a bottle of firebreather~
+Desc A bottle of firebreather has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 25
+Cond 100
+Val  12 12 7 0 0
+ValOrig  12 12 7 0 0
+ZMask 0
+End
+
+#O
+Vnum 13022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP weaponsmith~
+13003
+13011
+Gold 8722
+#O
+Vnum 13020
+Nest 0
+Size   6
+Name dagger~
+ShD  a dagger~
+Desc A dagger with a long thin blade is here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   1
+Wear -1
+Cost 157
+Cond 90
+Val  2 1 4 2 0
+ValOrig  2 1 4 2 0
+ZMask 0
+End
+
+#O
+Vnum 13021
+Nest 0
+Size   6
+Name sword small~
+ShD  a small sword~
+Desc A small sword lies here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   3
+Wear -1
+Cost 250
+Cond 90
+Val  1 1 5 1 0
+ValOrig  1 1 5 1 0
+ZMask 0
+End
+
+#O
+Vnum 13022
+Nest 0
+Size   6
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   5
+Wear -1
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+#O
+Vnum 13023
+Nest 0
+Size   6
+Name club~
+ShD  a club~
+Desc A stout wooden club is here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   3
+Wear -1
+Lev  3
+Cost 220
+Cond 90
+Val  4 1 7 7 0
+ValOrig  4 1 7 7 0
+ZMask 0
+End
+
+#O
+Vnum 13024
+Nest 0
+Size   6
+Name mace heavy~
+ShD  a mace~
+Desc A heavy iron mace is here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   10
+Wear -1
+Lev  6
+Cost 390
+Cond 90
+Val  4 2 4 7 0
+ValOrig  4 2 4 7 0
+ZMask 0
+End
+
+#O
+Vnum 13025
+Nest 0
+Size   6
+Name axe hand~
+ShD  a hand axe~
+Desc A small hand axe lies forgotten on the floor.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   5
+Wear -1
+Lev  1
+Cost 310
+Cond 90
+Val  5 1 6 25 0
+ValOrig  5 1 6 25 0
+ZMask 0
+End
+
+#O
+Vnum 13026
+Nest 0
+Size   6
+Name axe battle~
+ShD  a battle axe~
+Desc A large steel axe rests on the ground.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   9
+Wear -1
+Lev  5
+Cost 650
+Cond 90
+Val  5 2 5 25 32
+ValOrig  5 2 5 25 32
+ZMask 0
+End
+
+#O
+Vnum 13027
+Nest 0
+Size   6
+Name spear~
+ShD  a spear~
+Desc A long spear leans against the wall.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   5
+Wear -1
+Lev  4
+Cost 84
+Cond 90
+Val  13 1 8 11 0
+ValOrig  13 1 8 11 0
+ZMask 0
+End
+
+#O
+Vnum 13028
+Nest 0
+Size   6
+Name staff~
+ShD  a wooden staff~
+Desc A stout wooden staff lies on the floor.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   4
+Wear -1
+Lev  9
+Cost 580
+Cond 90
+Val  13 1 8 7 32
+ValOrig  13 1 8 7 32
+ZMask 0
+End
+
+#O
+Vnum 13029
+Nest 0
+Size   6
+Name flail~
+ShD  a flail~
+Desc A small iron flail is here.~
+ExtF 8192
+WeaF 8193
+Ityp 5
+Wt   5
+Wear -1
+Lev  1
+Cost 77
+Cond 90
+Val  6 1 7 7 0
+ValOrig  6 1 7 7 0
+ZMask 0
+End
+
+#O
+Vnum 13022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP grocer~
+13002
+13010
+Gold 958
+#O
+Vnum 13030
+Nest 0
+Size   6
+Name torch~
+ShD  a torch~
+Desc A large torch.~
+ExtF 8192
+WeaF 1
+Ityp 1
+Wt   3
+Wear -1
+Cost 4
+Cond 90
+Val  0 0 50 0 0
+ValOrig  0 0 50 0 0
+ZMask 0
+End
+
+#O
+Vnum 13031
+Nest 0
+Size   6
+Name lantern~
+ShD  a hooded brass lantern~
+Desc A hooded brass lantern has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 1
+Wt   4
+Wear -1
+Cost 75
+Cond 100
+Val  0 0 250 0 0
+ValOrig  0 0 250 0 0
+ZMask 0
+End
+
+#O
+Vnum 13138
+Nest 0
+Size   6
+Name skin water buffalo~
+ShD  a buffalo water skin~
+Desc A bloated dead buffalo is on the floor.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   4
+Wear -1
+Cost 24
+Cond 90
+Val  64 64 0 0 0
+ValOrig  64 64 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13032
+Nest 0
+Size   6
+Name bag~
+ShD  a bag~
+Desc A small bag.~
+ExtF 8192
+WeaF 1
+Ityp 16
+Wt   1
+Wear -1
+Cost 9
+Cond 90
+Val  50 0 0 100 100
+ValOrig  50 0 0 100 100
+ZMask 0
+End
+
+#O
+Vnum 13033
+Nest 0
+Size   6
+Name box~
+ShD  a box~
+Desc A small box.~
+ExtF 8192
+WeaF 1
+Ityp 16
+Wt   1
+Wear -1
+Cost 30
+Cond 90
+Val  10 0 0 100 100
+ValOrig  10 0 0 100 100
+ZMask 0
+End
+
+#O
+Vnum 13022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP baker~
+13001
+13009
+Gold 348
+#O
+Vnum 13009
+Nest 0
+Size   6
+Name potpie pot pie~
+ShD  a big pot pie~
+Desc A big pot pie has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   2
+Wear -1
+Cost 22
+Cond 100
+Val  20 40 0 0 0
+ValOrig  20 40 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13011
+Nest 0
+Size   6
+Name bread~
+ShD  a bread~
+Desc A loaf of bread is here. It doesn't look too stale.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 9
+Cond 100
+Val  18 12 0 0 0
+ValOrig  18 12 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13012
+Nest 0
+Size   6
+Name cinnamon roll~
+ShD  a cinnamon roll~
+Desc A piping hot cinnamon roll is here. It looks delicious!~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 16
+Cond 100
+Val  4 8 0 0 0
+ValOrig  4 8 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13013
+Nest 0
+Size   6
+Name cookies~
+ShD  a batch of Sara's cookies~
+Desc A plate of chocolate chip cookies is here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 11
+Cond 100
+Val  8 10 0 0 0
+ValOrig  8 10 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13014
+Nest 0
+Size   6
+Name danish blueberry~
+ShD  a blueberry danish~
+Desc A scrumptious blueberry danish is here.~
+ExtF 8192
+WeaF 1
+Ityp 19
+Wt   1
+Wear -1
+Cost 5
+Cond 100
+Val  8 6 0 0 0
+ValOrig  8 6 0 0 0
+ZMask 0
+End
+
+#O
+Vnum 13022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP bartender~
+13040
+13007
+Gold 144
+#O
+Vnum 13000
+Nest 0
+Size   6
+Name barrel beer~
+ShD  a barrel of beer~
+Desc A beer barrel has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   16
+Wear -1
+Cost 75
+Cond 100
+Val  300 300 1 0 0
+ValOrig  300 300 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 13001
+Nest 0
+Size   6
+Name bottle beer~
+ShD  a bottle of beer~
+Desc A beer bottle has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 5
+Cond 100
+Val  16 16 1 0 0
+ValOrig  16 16 1 0 0
+ZMask 0
+End
+
+#O
+Vnum 13022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+SHOP waiter~
+13043
+13003
+Gold 200
+#O
+Vnum 13002
+Nest 0
+Size   6
+Name bottle ale~
+ShD  a bottle of ale~
+Desc A dark bottle of ale has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   2
+Wear -1
+Cost 6
+Cond 100
+Val  16 16 3 0 0
+ValOrig  16 16 3 0 0
+ZMask 0
+End
+
+#O
+Vnum 13004
+Nest 0
+Size   6
+Name bottle local~
+ShD  a bottle of local specialty~
+Desc A dark bottle has been left here.~
+ExtF 8192
+WeaF 1
+Ityp 17
+Wt   1
+Wear -1
+Cost 11
+Cond 100
+Val  12 12 8 0 0
+ValOrig  12 12 8 0 0
+ZMask 0
+End
+
+#O
+Vnum 13022
+Nest 0
+Size   2
+Name sword long~
+ShD  a long sword~
+Desc A long sword has been left here.~
+ExtF 0
+WeaF 8193
+Ityp 5
+Wt   5
+Wear 16
+Lev  7
+Cost 610
+Cond 90
+Val  1 2 5 3 0
+ValOrig  1 2 5 3 0
+ZMask 0
+End
+
+END

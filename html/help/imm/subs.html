@@ -1,0 +1,79 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; I) [Netscape]">
+   <title>CthulhuMud - Substitution paramters</title>
+</head>
+<body link="#0000FF" vlink="#800080" background="paper.jpg">
+
+<center>
+<hr></center>
+
+<center>
+<h1>
+CthulhuMud - Substitution Paramters</h1></center>
+
+<center>
+<hr>[ <a href="index.html">Index</a> ]
+<hr></center>
+
+<p>Substitution paramters enable details from <a href="events.html">events</a>
+to be embeded into commands that a mob scehdules for execution. This allows
+mobs to tailor their reaction to accomodate the mob that caused it.
+<br>
+<hr>
+<h2>
+Available Paramters</h2>
+Substitution paramters are available for all parts of an event, although
+the paramteres available depend upon the nature of the item being referenced.
+<p>The basic form of a substitution parameter is:
+<pre>&nbsp; @xy</pre>
+Where x determines the item being referenced and y determines the attribute
+of it being referenced.
+<p>The following items can be referenced:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x&nbsp; Meaning
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp; ----------------
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g&nbsp; global
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a&nbsp; actor
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; v&nbsp; victim
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; o&nbsp; observer
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; p&nbsp; primary object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; s&nbsp; secondary object
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t&nbsp; text
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n&nbsp; number&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; r&nbsp; room</pre>
+The attributes that can be referenced depend upon the nature of the item:
+<pre>&nbsp; y&nbsp; Character&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Object&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Room&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Global
+&nbsp; - -----------&nbsp;&nbsp;&nbsp;&nbsp; -------------&nbsp;&nbsp; ----&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -------&nbsp;&nbsp;&nbsp;&nbsp; -------
+&nbsp; 0&nbsp; a/an&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a/an&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vnum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mud Name&nbsp;&nbsp;
+&nbsp; 1&nbsp; name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; garbled text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mud URL
+&nbsp; 2&nbsp; short desc&nbsp;&nbsp;&nbsp;&nbsp; short desc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mud IP
+&nbsp; 3&nbsp; his/her/its&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; 4&nbsp; him/her/it
+&nbsp; 5&nbsp; he/she/it
+&nbsp; 6&nbsp; man/woman/thing
+&nbsp; 7&nbsp; Sir/Lady/Thing
+&nbsp; 8&nbsp; Lad/Lass/Thingy
+&nbsp; 9&nbsp; Sir/Madam/Thing
+&nbsp; r&nbsp; vnum of room
+&nbsp; d&nbsp; vnum of dreaming from room
+&nbsp; t&nbsp; true name
+&nbsp; l&nbsp; level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; level</pre>
+If you want an @ sign, use @@.
+<br>
+<hr>
+<h2>
+<a NAME="truename"></a>True Names</h2>
+A true name is a unique name for a mob within the current mud. The true
+name is comprised of a constant (@M or @P) followed by the hex address
+of the mobs storage location in memory. The main use of true names is to
+ensure that commands always refer to the correct mob. Consider a case where
+a room has two mobs called 'guard' in it. Any command issued simply against
+'guard' will always affect the first mob, even if the seond one was the
+intended target. By using the true name to refer to the target mob, you
+can guarentee that the right mob will always be found.
+<br>
+<hr>[ <a href="index.html">Index</a> ]
+</body>
+</html>

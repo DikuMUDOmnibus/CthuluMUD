@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+<TITLE>CthulhuMud - MobProg Overview</TITLE>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080" BACKGROUND="paper.jpg">
+<CENTER>
+<HR>
+<H1>CthulhuMud - MobProg Overview</H1>
+<HR>
+[ <A HREF="index.html">Index</A> ]
+<HR>
+</CENTER>
+<H2>About MobProgs</H2>
+<H3>Purpose</H3>
+<P>A Mob Prog is a 'program' for a mobile.
+They enables mobiles to be programmed so that they do more interesting
+things than simply stand there waiting for someone to kill them.</P>
+<P>MobProgs are about enabling mobiles to react to the world around
+them.  When a player walks into a room with a mobile, the mob is able,
+through a mob prog, to greet them, attack them, give them something, 
+transport them smewhere, or anything else you can persuade the code to do.
+Mobs also have access to the muds internal timing loops, clock and calandar.
+By having the mobs react to these, the mob can be made to appear to behave
+in a non-reactive fashion.
+This is just an illusion though - the mob is racting, but it is to an event 
+that the player is not aware of.</P>
+<H3>Capabilities</H3>
+<P>There are two distinct parts to a mob prog.
+The first is the <A HREF="trigger.html">trigger</A>, which decides when to
+initate a particular series of actions.
+The second is the script, which is a simple list of commands that the
+mob will obey.
+The commands can be either normal mud commands (pretty much anything the
+players can do and the mob has the skills for) or special 
+<A HREF="mobcmds.html">Mob Commands</A> which allow the mob to do a few
+things that only immortals can do.
+The special abilities of the mob commands include actions such as loading
+objects, transporting players, changing player stats and generating 'sourceless'
+messages.</P>
+<HR>
+<H2>Implementation</H2>
+<H3><A HREF="events.html">Events</A></H3>
+<P>Whenever anything happens, that is an event.
+A player entering a room is an event.
+A player picking up a chalice is an event.
+A player attacking a monster is an event.
+A monster being killed by a player is an event.
+<P>
+<P>All events within CthulhuMud are described with a few simple terms:</P>
+<DL>
+<DT>Type and Subtype
+<DD>These identify the general nature of the event (ie put or get) and the 
+more specific nature (get object or get object from container).
+<DT>Observer, Actor and Victim
+<DD>The actor is the player or mob causing the event (ie the player).
+The victim is the player or mob being affected by the action (ie the monster).
+The observer is the player or mobile who is currently examaning the event.
+<DT>Primary and secondary objects
+<DD>These are the objects involved in the event.
+The primary object is the main one (ie the chalice) while the secondary object
+plays a less important role (ie the chest).
+<DT>Number and Text
+<DD>Some events additionally have a number (ie number of gold coins or direction)
+and/or some text (ie words spoken) associated with them.
+<DT>Location
+<DD>All events have to happen somewhere.
+This is the room that the actor is in.
+It is quite common for the observer and the victim to be in the same room.
+</DL>
+<HR>
+<P>The parts of an event are actually split into a 
+<A HREF="context.html">context</A> and an <A HREF="events.html">event</A>
+which contains it.
+<H3>Triggers</H3>
+<P>When a mob or a player receives an event it will examine it.
+For players this means presenting it to the human player via their telnet
+session.
+For mobs, it means running it past a set of triggers, to see if the mob
+wants to react to the event.
+Whenever anything occurs in the presence of a mob, including things that the 
+mob does, the corresponding event gets sent through the mobs triggers.</P>
+<P>Each trigger consists of an event type specification (ie get, put, arrive,
+depart, die) and an optional subtype definition (a subtype of none will
+match all subtypes).
+Once a trigger has matched on type and subtype, the 
+<A HREF="conds.html">conditions</A> associated with the trigger are checked.
+If all of the conditions match, then the trigger is deemed to have matched
+the event and the script associated with that trigger is schedulded for
+execution.  Processig of the event stops (ie it will only ever trigger one
+script).</P>
+<H3>Challange Triggers</H3>
+<P>Challange triggers are a special type of trigger that allow a mob to
+do something that players cannot.
+A number of commands will build their event and issue it as a challange
+before they perform the action associated with the command.
+For instance, the command 'get challace from altar' will generate a challange
+event (actor=player, pri_obj=challace, sec_obj=altar, 
+type=get subtype=object_from_container).
+Mobs in the room are able to react to this challange event (ie they are able
+to react to the players intention, not to their action).</P>
+<P>If a mob in the room does react to the challange event, the action does
+not proceed, and it is up to the script the mob runs to explain to the player
+why the action did not succeeed.
+Consider:</P>
+<PRE>
+  : get challace altar
+  Big Ogre stops you from getting the challace
+  Big Ogre says 'Leave that alone!'
+</PRE>
+
+[ <A HREF="index.html">Index</A> ]
+</BODY>
+</HTML>

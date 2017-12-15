@@ -1,0 +1,944 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="jh">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; I) [Netscape]">
+   <title>Flags</title>
+</head>
+<body background="paper.jpg" nosave>
+<a NAME="Act"></a><b><u><font size=+3>Act:</font></u></b>
+<br>&nbsp;
+<ol>
+<li>
+<font color="#FF0000">SENTINEL:</font> The mob is stationary. It doesn't
+do random movement even though it might be moved by progs.</li>
+
+<li>
+<font color="#FF0000">SCAVENGER</font>: The mob collects stuff it finds
+lying on the floor - mean in conjuncion with disarm.</li>
+
+<li>
+<font color="#FF0000">NIGHT_ACTIVE</font>: The mob disappears during daytime.</li>
+
+<li>
+<font color="#FF0000">AGGRESSIVE</font>: The wob will attack everyone who's
+not very superior in level.</li>
+
+<li>
+<font color="#FF0000">STAY-AREA</font>: The mob will not leave its area.</li>
+
+<li>
+<font color="#FF0000">STAY-SUBAREA</font>: The mob will not leave its subarea.</li>
+
+<li>
+<font color="#FF0000">WIMPY</font>: The mob will flee if seriously hurt.</li>
+
+<li>
+<font color="#FF0000">PET</font>: The mob can be used as bought pet.</li>
+
+<li>
+<font color="#FF0000">PRACTICE</font>: You can practice here.</li>
+
+<li>
+<font color="#FF0000">VAMPIRE</font>: Enables vampire commands.</li>
+
+<li>
+<font color="#FF0000">WERE</font>: Enables were commands.</li>
+
+<li>
+<font color="#FF0000">BOUND</font>: Temporary flag for bondage - DO NOT
+SET!</li>
+
+<li>
+<font color="#FF0000">MOUNT</font>: Can be ridden - if it's charmed or
+a pet.</li>
+
+<li>
+<font color="#FF0000">UNDEAD</font>: Undead offensive set.</li>
+
+<li>
+<font color="#FF0000">CLERIC</font>: Cleric offensive set.</li>
+
+<li>
+<font color="#FF0000">MAGE</font>: Mage offensive set.</li>
+
+<li>
+<font color="#FF0000">THIEF</font>: Thief offensive set.</li>
+
+<li>
+<font color="#FF0000">WARRIOR</font>: Warrior offensive set.</li>
+
+<li>
+<font color="#FF0000">NOALIGN</font>: Killing this mob will not affect
+your alignment.</li>
+
+<li>
+<font color="#FF0000">NOPURGE</font>: The mob can't be purged - DO NOT
+SET if you don't know what you're doing!</li>
+
+<li>
+<font color="#FF0000">DREAM-NATIVE</font>: The mob can't dream but can't
+as well not be denied.</li>
+
+<li>
+<font color="#FF0000">BRAINSUCKED</font>: Marks a mob as non-food for mi-go.
+Usually no need to set on average mobs.</li>
+
+<li>
+<font color="#FF0000">CRIMINAL</font>: This mob can be quested for.</li>
+
+<li>
+<font color="#FF0000">ALIENIST</font>: Here you get a therapy.</li>
+
+<li>
+<font color="#FF0000">HEALER</font>: Here you get healing.</li>
+
+<li>
+<font color="#FF0000">TELEPOP</font>: The mob teleports on repop - ASK
+before you set it.</li>
+
+<li>
+<font color="#FF0000">UPDATE-ALWAYS</font>: Changes will immediately update
+to the mob. Usually no need to set on average mobs.</li>
+
+<li>
+<font color="#FF0000">RANDOM-KIT</font>: The mob is sometimes outfitted
+with random pieces of equipment. Only give this to average human citicens
+- preferably dreamlands.</li>
+
+<li>
+<font color="#FF0000">AUTO-HOME</font>: The mob returns to his repop place
+on tick.</li>
+
+<li>
+<font color="#FF0000">INVADER</font>: The mob attacks players as well as
+other mobs.</li>
+
+<li>
+<font color="#FF0000">WATCHER</font>: Invisible to every mortal - needed
+to handle some progs.</li>
+
+<li>
+<font color="#FF0000">PROTECTED</font>: This mob is protected - killing
+it will give you a criminal flag and/or a bounty.</li>
+
+<li>
+<font color="#FF0000">MARTIAL</font>: This mob only appears under Martial
+Law conditions and has its very own guard style.</li>
+</ol>
+
+<br>&nbsp;
+<p><a NAME="Aff"></a><b><u><font size=+3>Affects:</font></u></b>
+<br>&nbsp;
+<ol>
+<li>
+<font color="#FF0000">BLIND</font>: The victim can't see and is utterly
+helpless. DO NOT use it as permanent affect.</li>
+
+<li>
+<font color="#FF0000">INVISIBLE</font>: The character is invisible.</li>
+
+<li>
+<font color="#FF0000">DETECT-EVIL</font>: The character detects alignment
+based aurae.</li>
+
+<li>
+<font color="#FF0000">DETECT-INVIS</font>: The character detects invisible
+stuff.</li>
+
+<li>
+<font color="#FF0000">DETECT-MAGIC</font>: The character detects magic
+objects.</li>
+
+<li>
+<font color="#FF0000">DETECT-HIDDEN</font>: The character detects hidden/sneaking
+characters and concealed objects.</li>
+
+<li>
+<font color="#FF0000">MIND-MELD</font>: Intelligence isreduced, spell casting
+is very limited.</li>
+
+<li>
+<font color="#FF0000">SANCTUARY</font>: Protective aura - damage is reduced.</li>
+
+<li>
+<font color="#FF0000">FAERIE-FIRE</font>: The character is easy to hit.</li>
+
+<li>
+<font color="#FF0000">INFRARED</font>: A limited version of DARK-VISION.</li>
+
+<li>
+<font color="#FF0000">CURSE</font>: The character is cursed.</li>
+
+<li>
+<font color="#FF0000">FEAR</font>: The character is frightened and unable
+to attack.</li>
+
+<li>
+<font color="#FF0000">POISON</font>: the character is poisoned. If you
+want to create a poisonous character, use the SPEC.</li>
+
+<li>
+<font color="#FF0000">PROTECT-GOOD</font>: 25% protection against good.</li>
+
+<li>
+<font color="#FF0000">PROTECT-EVIL</font>: 25% protection against evil.</li>
+
+<li>
+<font color="#FF0000">SNEAK</font>: The character is sneaking.</li>
+
+<li>
+<font color="#FF0000">HIDE</font>: The character is hiding.</li>
+
+<li>
+<font color="#FF0000">HASTE</font>: One extra attack in combat.</li>
+
+<li>
+<font color="#FF0000">CALM</font>: Counters berserk but turns characters
+unable to fight.</li>
+
+<li>
+<font color="#FF0000">SLEEP</font>: The character is put to sleep. DO NOT
+use it as a permanent affect.</li>
+
+<li>
+<font color="#FF0000">CHARM</font>: The character is charmed. DO NOT use
+it as permanent affect.</li>
+
+<li>
+<font color="#FF0000">FLYING</font>: The character is flying.</li>
+
+<li>
+<font color="#FF0000">PASS-DOOR</font>: The character can move through
+closed doors and walls.</li>
+
+<li>
+<font color="#FF0000">PLAGUE</font>: The character is infacted by the plague.</li>
+
+<li>
+<font color="#FF0000">WEAKEN</font>: Strength is reduced.</li>
+
+<li>
+<font color="#FF0000">DARK-VISION</font>: Simulates the effect of a light.</li>
+
+<li>
+<font color="#FF0000">BERSERK</font>: More attack, less defense and unable
+to flee.</li>
+
+<li>
+<font color="#FF0000">SWIM</font>: Ability to swim.</li>
+
+<li>
+<font color="#FF0000">REGENERATION</font>: Increased regenerative abilities.</li>
+
+<li>
+<font color="#FF0000">ABSORB</font>: Defense against all magical attacks.</li>
+
+<li>
+<font color="#FF0000">WATER-BREATHING</font>: No damage in NO-AIR rooms.</li>
+
+<li>
+<font color="#FF0000">DARKNESS</font>: The character is covered in darkness.</li>
+
+<li>
+<font color="#FF0000">AURA</font>: The character has an aura of his alignment.</li>
+
+<li>
+<font color="#FF0000">HALLUCINATING</font>: The character is hallucinating
+(annoying!).</li>
+
+<li>
+<font color="#FF0000">RELAXED</font>: The character is protected against
+most fright checks.</li>
+
+<li>
+<font color="#FF0000">FIRE-SHIELD</font>: The character is protected by
+an offensive fire shield.</li>
+
+<li>
+<font color="#FF0000">FROST-SHIELD</font>: The character is protected by
+an offensive frost shield.</li>
+
+<li>
+<font color="#FF0000">SLOWED</font>: Counters HASTE. One Attack less in
+combat.</li>
+
+<li>
+<font color="#FF0000">GLOBE-OF-PROTECTION</font>: A magical protection.
+Allows flying underwater.</li>
+
+<li>
+<font color="#FF0000">INCARNATED</font>: Makes immortals vulnerable. Use
+with caution.</li>
+
+<li>
+<font color="#FF0000">MIST</font>: Mistform. Use with caution.</li>
+
+<li>
+<font color="#FF0000">ELDER-SHIELD</font>:&nbsp; Strongest protection.
+DO NOT use it as permanent affect.</li>
+
+<li>
+<font color="#FF0000">MASK</font>: Masks a character similar to the mask
+self spell.</li>
+</ol>
+
+<br>&nbsp;
+<p><a NAME="Nature"></a><b><u><font size=+3>Nature:</font></u></b>
+<br>&nbsp;
+<ol>
+<li>
+<font color="#FF0000">STRONG</font>: +STR</li>
+
+<li>
+<font color="#FF0000">FEEBLE</font>: -STR</li>
+
+<li>
+<font color="#FF0000">SMART</font>: +INT</li>
+
+<li>
+<font color="#FF0000">DUMB</font>: -INT</li>
+
+<li>
+<font color="#FF0000">AGILE</font>: +DEX</li>
+
+<li>
+<font color="#FF0000">LUMBERING</font>: -DEX</li>
+
+<li>
+<font color="#FF0000">SLY</font>: +WIS</li>
+
+<li>
+<font color="#FF0000">GULLIBLE</font>: -INT</li>
+
+<li>
+<font color="#FF0000">ROBUST</font>: +CON</li>
+
+<li>
+<font color="#FF0000">SICKLY</font>: -CON</li>
+
+<li>
+<font color="#FF0000">STURDY</font>: +HP</li>
+
+<li>
+<font color="#FF0000">FRAGILE</font>: -HP</li>
+
+<li>
+<font color="#FF0000">MAGICAL</font>: +MANA</li>
+
+<li>
+<font color="#FF0000">MUNDAIN</font>: -MANA</li>
+
+<li>
+<font color="#FF0000">VISCIOUS</font>: +DAM</li>
+
+<li>
+<font color="#FF0000">HARMLESS</font>: -DAM</li>
+
+<li>
+<font color="#FF0000">ARMOURED</font>: better AC</li>
+
+<li>
+<font color="#FF0000">EXPOSED</font>: worse AC</li>
+
+<li>
+<font color="#FF0000">MONSTEROUS</font>: bonus combo</li>
+</ol>
+
+<br>&nbsp;
+<p><a NAME="Off"></a><b><u><font size=+3>Offensive:</font></u></b>
+<br>&nbsp;
+<ol>
+<li>
+<font color="#FF0000">AREA-ATTACK</font>: The mob attacks everyone in the
+room with one hit.</li>
+
+<li>
+<font color="#FF0000">BACKSTAB</font>: The mob tries to initiate combat
+with a backstab (skill needed!).</li>
+
+<li>
+<font color="#FF0000">BASH</font>: The mob uses Bash command.</li>
+
+<li>
+<font color="#FF0000">BERSERK</font>: The mob uses Berserk command.</li>
+
+<li>
+<font color="#FF0000">DISARM</font>: The mob uses Disarm command. Interesting
+in combination with ACT_SCAVENGER.</li>
+
+<li>
+<font color="#FF0000">DODGE</font>: The mob can dodge.</li>
+
+<li>
+<font color="#FF0000">FADE</font>: The mob can evade attacks by fading
+away. Part of the UNDEAD package.</li>
+
+<li>
+<font color="#FF0000">FAST</font>: One extra attack. Be careful with fast
+newbie mobs.</li>
+
+<li>
+<font color="#FF0000">KICK</font>: The mob uses Kick command.</li>
+
+<li>
+<font color="#FF0000">KICK-DIRT</font>: The mob uses Kick Dirt command.</li>
+
+<li>
+<font color="#FF0000">PARRY</font>: The mob can parry.</li>
+
+<li>
+<font color="#FF0000">RESCUE</font>: This rarely makes sense. The mob can
+act as bodyguard and attract your attacks.</li>
+
+<li>
+<font color="#FF0000">TAIL</font>: Tail attack. The mob needs a long tail.
+Additionally the mob can be poisonois.</li>
+
+<li>
+<font color="#FF0000">TRIP</font>: The mob uses Trip command.</li>
+
+<li>
+<font color="#FF0000">CRUSH</font>: The mob uses Crush command.</li>
+
+<li>
+<font color="#FF0000">ASSIST-ALL</font>: The mob assists all mobs against
+players.</li>
+
+<li>
+<font color="#FF0000">ASSIST-ALIGN</font>: The mob assists everyone of
+its align type.</li>
+
+<li>
+<font color="#FF0000">ASSIST-RACE</font>: The mob assists all members of
+its race.</li>
+
+<li>
+<font color="#FF0000">ASSIST-PLAYER</font>: The mob assists players. That
+can be so annoying - perfect kill stealing.</li>
+
+<li>
+<font color="#FF0000">ASSIST-GUARD</font>: The typical guard/police behavior
+including stun attacks and looking for a jail.</li>
+
+<li>
+<font color="#FF0000">ASSIST-VNUM</font>: The mob assists mobs of its own
+type.</li>
+
+<li>
+<font color="#FF0000">STUN</font>: This mob prefers stun attacks.</li>
+
+<li>
+<font color="#FF0000">DISTRACT</font>: This mob uses the distract command,
+leaving you defensless against all other attackers.</li>
+</ol>
+
+<br>&nbsp;
+<p><a NAME="Extra"></a><b><u><font size=+3>Extra:</font></u></b>
+<br>&nbsp;
+<ol>
+<li>
+<font color="#FF0000">GLOW</font>: Well, it glows - used to show players
+without detect-magic, this object is special.</li>
+
+<li>
+<font color="#FF0000">HUM</font>: Well, it hums - used to show players
+without detect-magic, this object is special.</li>
+
+<li>
+<font color="#FF0000">DARK</font>: This thing is hard to find in the dark.</li>
+
+<li>
+<font color="#FF0000">NEUTRAL</font>: This balances your align toward neutrality.</li>
+
+<li>
+<font color="#FF0000">EVIL</font>: This balances your align towards evil.</li>
+
+<li>
+<font color="#FF0000">BLESS</font>: This balances your align towards good.</li>
+
+<li>
+<font color="#FF0000">INVIS</font>: This object is invisible.</li>
+
+<li>
+<font color="#FF0000">CONCEALED</font>: This object is hidden until someone
+takes it.</li>
+
+<li>
+<font color="#FF0000">MAGIC</font>: This object has a magic aura and is
+a bit more resistant towards some spells. Other spells need magic objects.</li>
+
+<li>
+<font color="#FF0000">NODROP</font>: You can't drop it... CURSED.</li>
+
+<li>
+<font color="#FF0000">NOREMOVE</font>: You can't remove it... CURSED.</li>
+
+<li>
+<font color="#FF0000">ANTI-GOOD</font>: Good characters can't use it.</li>
+
+<li>
+<font color="#FF0000">ANTI-NEUTRAL</font>: Neutral characters can't use
+it.</li>
+
+<li>
+<font color="#FF0000">ANTI-EVIL</font>: Evil characters can't use it.</li>
+
+<li>
+<font color="#FF0000">INVENTORY</font>: Unlimited item - like stuff, a
+shopkeeper sells - be careful with this flag.</li>
+
+<li>
+<font color="#FF0000">NOPURGE</font>: This object can't be purged - DO
+NOT SET if you don't know what you're doing!</li>
+
+<li>
+<font color="#FF0000">ROT-AFTER-DEATH</font>: You death causes the objects
+decay timer to start, if you carry it.</li>
+
+<li>
+<font color="#FF0000">VIS-AFTER-DEATH</font>: Your death makes it bekom
+visible, if you carry it. Only makes sense if it's invis.</li>
+
+<li>
+<font color="#FF0000">NO_SAC</font>: The object can't be sacrificed. Makes
+sense with almost all notake objects.</li>
+
+<li>
+<font color="#FF0000">NO_COND</font>: Object can't be damaged.</li>
+
+<li>
+<font color="#FF0000">SCENIC</font>: The object does not show up as object
+- do not forget to mention it in your room description. Scenics can never
+be taken.</li>
+
+<li>
+<font color="#FF0000">NODISARM</font>: Does only make sense on a weapon
+- it can't be disarmed.</li>
+
+<li>
+<font color="#FF0000">USABLE</font>: This object is allowed to trigger
+a use event. After triggering it - it is destroyed.</li>
+
+<li>
+<font color="#FF0000">USABLE_INFINITE</font>: This object is allowed to
+trigger a use event.</li>
+
+<li>
+<font color="#FF0000">HYPERTECH</font>: It's only usable by migo and extremely
+intelligent others.</li>
+
+<li>
+<font color="#FF0000">ANIMATED</font>: DO NOT SET THAT MANUALLY!</li>
+
+<li>
+<font color="#FF0000">MELT-DROP</font>: Dropping this object will destroy
+it.</li>
+
+<li>
+<font color="#FF0000">NO-LOCATE</font>: This object can't be located.</li>
+
+<li>
+<font color="#FF0000">SELL-EXTRACT</font>: This object is destroyed when
+sold - similar to TRASH objects.</li>
+
+<li>
+<font color="#FF0000">NO-UNCURSE</font>: Remove curse will not work on
+this object - be careful. That can ve extremely mean.</li>
+
+<li>
+<font color="#FF0000">BURN-PROOF</font>: The object will resist elementar
+damage.</li>
+
+<li>
+<font color="#FF0000">ARTIFACT</font>: This enables the artifact set of
+variables.</li>
+
+<li>
+<font color="#FF0000">VANISH</font>: This object vanishes for good, when
+carried out of its home area.</li>
+</ol>
+
+<br>&nbsp;
+<br>&nbsp;
+<p><a NAME="Room"></a><b><u><font size=+3>Room:</font></u></b>
+<br>&nbsp;
+<ol>
+<li>
+<font color="#FF0000">DARK</font>: The room is dark - you need a light
+of some sort.</li>
+
+<li>
+<font color="#FF0000">DUMP</font>: Everything dropped here will decay shortly
+after.</li>
+
+<li>
+<font color="#FF0000">NO_MOB</font>: Mobs don't wander in by random movement,
+but they can reset here or move in when following or progged.</li>
+
+<li>
+<font color="#FF0000">INSIDE</font>: No weather effect, protection against
+flying TELEHUNTERS.</li>
+
+<li>
+<font color="#FF0000">PRIVATE</font>: Room is being saved like morgue rooms.</li>
+
+<li>
+<font color="#FF0000">SAFE</font>: This is a protected room - no offensive
+actions can happen here.</li>
+
+<li>
+<font color="#FF0000">PET_SHOP</font>: Used to mark the pet storage of
+a Pet Shop.</li>
+
+<li>
+<font color="#FF0000">NO_RECALL</font>: You can't recall from here, you
+can't portal, gate (,...) to here.</li>
+
+<li>
+<font color="#FF0000">SOLITARY</font>: Only 1 player can be in here at
+the same time.</li>
+
+<li>
+<font color="#FF0000">IMP_ONLY</font>: Only imms of the IMP rank can enter.</li>
+
+<li>
+<font color="#FF0000">GODS_ONLY</font>: Only imms can enter.</li>
+
+<li>
+<font color="#FF0000">HEROES_ONLY</font>: Only heroes or imms can enter.</li>
+
+<li>
+<font color="#FF0000">NEWBIE_ONLY</font>: Only newbies, imms or helpers
+can enter.</li>
+
+<li>
+<font color="#FF0000">LAW</font>: Some basic stuff like charming is forbidden
+here - good for central areas without aggros.</li>
+
+<li>
+<font color="#FF0000">FASTHEAL</font>: Double regeneration - but you can
+do that as well with the regeneration variables.</li>
+
+<li>
+<font color="#FF0000">RENT</font>: This room can be leased. Do not forget
+to set the rent cost.</li>
+
+<li>
+<font color="#FF0000">AUCTION</font>: This marks an auction hall - ASK
+before you set it.</li>
+
+<li>
+<font color="#FF0000">BOUNTY_OFFICE</font>: This marks a bounty office
+- ASK before you set it.</li>
+
+<li>
+<font color="#FF0000">PKILL</font>: Marks a free PK room - meaningless
+in full PK mode.</li>
+
+<li>
+<font color="#FF0000">MISTY</font>: Disables scanning in this room.</li>
+
+<li>
+<font color="#FF0000">ECHO</font>: Enables rooom-to-room WEV echoes.</li>
+
+<li>
+<font color="#FF0000">BUILDING_PATTERN</font>: Marks this room as building
+pattern - NEVER EVER SET WITHOUT ASKING!</li>
+
+<li>
+<font color="#FF0000">VEHICLE</font>: This is used to dynamically mark
+a vehicles interior - NEVER EVER SET WITHOUT ASKING!</li>
+
+<li>
+<font color="#FF0000">GAS</font>: Gas Station, where you can refuel your
+vehicles.</li>
+
+<li>
+<font color="#FF0000">DREAM_SAFE</font>: Dreaming here will never result
+in a nightmare.</li>
+
+<li>
+<font color="#FF0000">NO_DREAM</font>: Dreaming is disabled here.</li>
+
+<li>
+<font color="#FF0000">NO_FLEE</font>: You can't flee from this room.</li>
+
+<li>
+<font color="#FF0000">TREE</font>: Marks that a tree is here - NO NEED
+TO SET THAT MANUALLY.</li>
+
+<li>
+<font color="#FF0000">ALWAYS_RESET</font>: The room will reset on TICK,
+no matter if there is a player in it or not. Good in crowded newbie areas
+without many aggros.</li>
+
+<li>
+<font color="#FF0000">NOMAGIC</font>: No magic is possible here. Roomwide
+version of the NOMAGIC area flag.</li>
+</ol>
+
+<br>&nbsp;
+<p><a NAME="Raff"></a><b><u><font size=+3>Raffects:</font></u></b>
+<br>&nbsp;
+<ol>
+<li>
+<font color="#FF0000">HOLY_GROUND</font>: Holy damage to evil characters.</li>
+
+<li>
+<font color="#FF0000">EVIL_GROUND</font>: Negative damage to good characters.</li>
+
+<li>
+<font color="#FF0000">SILENCE</font>: IC communications &amp; verbal spells
+disabled.</li>
+
+<li>
+<font color="#FF0000">DARKNESS</font>: Light effects disabled.</li>
+
+<li>
+<font color="#FF0000">WILD-MAGIC</font>: Spells are being randomized within
+their own target type.</li>
+
+<li>
+<font color="#FF0000">LOW-MAGIC</font>: Magic is less effective here.</li>
+
+<li>
+<font color="#FF0000">HIGH-MAGIC</font>: Magic is more effective here.</li>
+
+<li>
+<font color="#FF0000">NO_BREATHE</font>: Causes damage.</li>
+
+<li>
+<font color="#FF0000">DRAIN</font>: Causes damage.</li>
+
+<li>
+<font color="#FF0000">MARE</font>: You can only have nightmares here.</li>
+
+<li>
+<font color="#FF0000">ENCLOSED</font>: There is no way to enter or exit
+this room - usually only used as TEMPORARY spell affect.</li>
+
+<li>
+<font color="#FF0000">NO_MORGUE</font>: If you die here, your corpse stays
+here.</li>
+
+<li>
+<font color="#FF0000">FATIGUE</font>: Causes stun damage.</li>
+
+<li>
+<font color="#FF0000">DESTRUCTIVE</font>: Destroys your equipment.</li>
+</ol>
+
+<br>&nbsp;
+<p><a NAME="Exit"></a><b><u><font size=+3>Exits:</font></u></b>
+<br>&nbsp;
+<ol>
+<li>
+<font color="#FF0000">DOOR</font>: There is a door => Closeable.</li>
+
+<li>
+<font color="#FF0000">CLOSED</font>: (Needs <font color="#3366FF">DOOR</font>!)
+The door is closed by default.</li>
+
+<li>
+<font color="#FF0000">LOCKED</font>: (Needs <font color="#3366FF">DOOR</font>,
+<font color="#3366FF">CLOSED</font>!)
+The door is locked by default.</li>
+
+<li>
+<font color="#FF0000">PICKPROOF</font>: (Needs <font color="#3366FF">DOOR</font>,
+<font color="#3366FF">CLOSED</font>,
+<font color="#3366FF">LOCKED</font>!)
+You can't pick the lock on that door.</li>
+
+<li>
+<font color="#FF0000">HIDDEN</font>: (Needs <font color="#3366FF">DOOR</font>,
+<font color="#3366FF">CLOSED</font>!)
+The door is hidden - you need to search.</li>
+
+<li>
+<font color="#FF0000">NO_PASS</font>: (Needs <font color="#3366FF">DOOR</font>,
+<font color="#3366FF">CLOSED</font>!)
+Pass Door spell won't help you getting through.</li>
+
+<li>
+<font color="#FF0000">ECHO_ALL</font>: All kinds of WEVs will be transmitted
+through the exit.</li>
+
+<li>
+<font color="#FF0000">ECHO_SOUND</font>: Only audible WEVs will be transmitted.</li>
+
+<li>
+<font color="#FF0000">ECHO_VISION</font>: Only visible WEVs will be transmitted.</li>
+
+<li>
+<font color="#FF0000">ROBUST</font>: (Needs <font color="#3366FF">DOOR</font>!)
+The door is hard to smash.</li>
+
+<li>
+<font color="#FF0000">ARMOURED</font>: (Needs <font color="#3366FF">DOOR</font>!)
+The door is harder to smash.</li>
+
+<li>
+<font color="#FF0000">WALL</font>: (Needs <font color="#3366FF">DOOR</font>,
+<font color="#3366FF">CLOSED</font>!)
+The door is actually a wall, you can destroy (smash, explosives,...)</li>
+
+<li>
+<font color="#FF0000">CREAKY</font>: (Needs <font color="#3366FF">DOOR</font>!)
+The door emits a sound when opened/closed. You can trigger on that event.</li>
+
+<li>
+<font color="#FF0000">TRICKY</font>: (Needs <font color="#3366FF">DOOR</font>,
+<font color="#3366FF">CLOSED</font>,
+<font color="#3366FF">LOCKED</font>!)
+You can pick that lock, but it's hard.</li>
+</ol>
+
+<br>&nbsp;
+<p><a NAME="Spec"></a><b><u><font size=+3>Specs:</font></u></b>
+<br>&nbsp;
+<ol>
+<li>
+<font color="#FF0000">BREATH_ANY</font>: Randomly selected breath attack.</li>
+
+<li>
+<font color="#FF0000">BREATH _ACID</font>: Acid breath attack.</li>
+
+<li>
+<font color="#FF0000">BREATH_FIRE</font>: Fire breath attack.</li>
+
+<li>
+<font color="#FF0000">BREATH_FROST</font>: Frost breath attack.</li>
+
+<li>
+<font color="#FF0000">BREATH_GAS</font>: Poison breath attack.</li>
+
+<li>
+<font color="#FF0000">BREATH_LIGHTNING</font>: Lightning breath attack.</li>
+
+<li>
+<font color="#FF0000">CAST_ADEPT</font>: Uses 'mob adept' spell list. Does
+Spellups to newbies.</li>
+
+<li>
+<font color="#FF0000">CAST_CLERIC</font>: Uses 'mob cleric' spell list.</li>
+
+<li>
+<font color="#FF0000">CAST_MAGE</font>: Uses 'mob mage' spell list.</li>
+
+<li>
+<font color="#FF0000">CAST_UNDEAD</font>: Uses 'mob undead' spell list.</li>
+
+<li>
+<font color="#FF0000">CAST_JUDGE</font>: This is ROM compatibility. DO
+NOT SET.</li>
+
+<li>
+<font color="#FF0000">CAST_NATURE</font>: Uses 'mob nature' spell list.</li>
+
+<li>
+<font color="#FF0000">CAST_POWER</font>: Uses 'mob power' spell list.</li>
+
+<li>
+<font color="#FF0000">GUARD</font>: Attacks criminals.</li>
+
+<li>
+<font color="#FF0000">EXECUTIONER</font>: Mainly the same as guard but
+summons some other guards too.</li>
+
+<li>
+<font color="#FF0000">FIDO</font>: Devours corpses.</li>
+
+<li>
+<font color="#FF0000">JANITOR</font>: Collects worthless objects.</li>
+
+<li>
+<font color="#FF0000">MAYOR</font>: This is ROM compatibility. DO NOT SET.</li>
+
+<li>
+<font color="#FF0000">POISON</font>: The mob can poison you.</li>
+
+<li>
+<font color="#FF0000">PLAGUE</font>: The mob can plague you.</li>
+
+<li>
+<font color="#FF0000">THIEF</font>: The mob attempts to steal from you.</li>
+
+<li>
+<font color="#FF0000">NASTY</font>: A nasty mixture of attacking, stealing
+and running.</li>
+
+<li>
+<font color="#FF0000">PUFF</font>: This is ROM compatibility. DO NOT SET.</li>
+
+<li>
+<font color="#FF0000">CLANGUARD</font>: The mob attacks non-clannies. Add
+_soc_&lt;num> to the name.</li>
+
+<li>
+<font color="#FF0000">HOMEGUARD</font>: The mob attacks everyone but the
+owner. Add _plr:&lt;name> to the name.</li>
+
+<li>
+<font color="#FF0000">PLAYERSHOP</font>: Owned shopkeeper. Add _plr:&lt;name>
+to the name.</li>
+
+<li>
+<font color="#FF0000">MINER</font>: Owned Miner. Add _plr:&lt;name> to
+the name.</li>
+
+<li>
+<font color="#FF0000">TRANSLATOR</font>: The mob can translate books.</li>
+
+<li>
+<font color="#FF0000">MECHANIC</font>: The mob can repair vehicles.</li>
+
+<li>
+<font color="#FF0000">HUNTER</font>: Basic mob memory. The mob remembers
+who attacked it.</li>
+
+<li>
+<font color="#FF0000">TRACKER</font>: A hunter who tracks his enemy.</li>
+
+<li>
+<font color="#FF0000">TELETRACKER</font>: The mob tracks his enemy by teleporting
+but does not attack</li>
+
+<li>
+<font color="#FF0000">TELEHUNTER</font>: The mob tracks his enemy by teleporting
+and attacks at sight.</li>
+
+<li>
+<font color="#FF0000">HOUND</font>: A modified telehunter. ASK before you
+set.</li>
+
+<li>
+<font color="#FF0000">ARTIFACTTRACKER</font>: A teletracker with a special
+affinity to artifacts. ASK before you set.</li>
+
+<li>
+<font color="#FF0000">ARTIFACTHUNTER</font>: A telehunter with a special
+affinity to artifacts. ASK before you set.</li>
+
+<li>
+<font color="#FF0000">PATROLMAN</font>: Stops fighting. ROM compatibility
+but can come handy.</li>
+
+<li>
+<font color="#FF0000">TROLL_MEMBER</font>: ROM compatibility. Basic gang
+set.</li>
+
+<li>
+<font color="#FF0000">OGRE_MEMBER</font>: ROM compatibility. Basic gang
+set.</li>
+
+<li>
+<font color="#FF0000">SOCIAL</font>: Those mobs tend to group with other
+mobs of their kind.</li>
+</ol>
+
+<br>&nbsp;
+</body>
+</html>

@@ -1,0 +1,105 @@
+#! /bin/csh -f
+#
+# CthulhuMud
+#
+# Take a backup of the current mud, assuming the right directory structure
+#
+
+# Must speify directory name
+
+if ( "$1" == "" ) then 
+  echo "You must specify the backup directory!"
+  exit 1
+endif
+
+set bkdir = "$1"
+
+if ( -e $bkdir ) then
+  echo "Backup directory already exists!"
+  exit 2
+endif
+
+mkdir $bkdir
+
+cd $bkdir
+
+# Backup areas
+
+echo "Backing up areas..."
+
+cd ../../area
+tar -c -farea.tar *.are
+gzip area.tar
+mv area.tar.gz ../backup/$bkdir
+
+echo "...areas backed up"
+
+# Backup config
+
+echo "Backing up config..."
+
+cd ../config
+tar -c -fconfig.tar *.txt
+gzip config.tar
+mv config.tar.gz ../backup/$bkdir
+
+echo "...config backed up"
+
+# Backup data
+
+echo "Backing up data..."
+
+cd ../data
+tar -c -fdata.tar *.dat
+gzip data.tar
+mv data.tar.gz ../backup/$bkdir
+
+echo "...data backed up"
+
+# Backup players
+
+echo "Backing up players..."
+
+cd ../player
+tar -c -fplayers.tar *
+gzip players.tar
+mv players.tar.gz ../backup/$bkdir
+
+echo "...players backed up"
+
+# Backup msgbase
+
+echo "Backing up msgbase..."
+
+cd ../msgbase
+tar -c -fmsgbase.tar *
+gzip msgbase.tar
+mv msgbase.tar.gz ../backup/$bkdir
+
+echo "...msgbase backed up"
+
+echo "Backing up html..."
+cd ../html
+tar -c -fhtml.tar *
+gzip html.tar
+mv html.tar.gz ../backup/$bkdir
+
+echo "...html backed up"
+                               
+
+          
+                   
+             
+                               
+
+                              
+
+# All done
+
+cd ../backup
+
+echo "Backup successful"
+
+ls $bkdir
+
+exit 0

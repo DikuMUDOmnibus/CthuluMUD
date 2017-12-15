@@ -1,0 +1,54 @@
+CthulhuMud Driver 4
+-------------------
+
+   Mythos races (const.c)
+     Byakhee
+
+   Prompt (comm.c)
+     Disabled xp display (%e and %E)
+     Added time displays (%t - named hours, %T 24 hour clock)   
+     Added name display (%n) 
+     Show your health in battle as well as your opponents.
+
+   Recovery
+     Fixed rounding on move recovery.
+     Added 'alarm clock' to awaken when fully recovered.
+ 
+   Combat
+     Change chances for parry, shield block and dodge.
+       Now include weapon skills.
+     Whole hit/miss system needs reworking sometime.
+
+   Mob Skills
+     Moved skill array from ch->pcdata->learned[]
+                         to ch->effective->skill[]
+     This enables Mobs to have skills.
+     No OLC support yet, not tested. 
+
+   Skills
+     Practice display shows total number of skill points
+     You can keep practicing after you become adept, but...
+       Deminishing returns - half points 60-80, quarter 80-100
+     Preparation for unlimited skills.
+
+   Devour command
+     Only works on characters and mobs
+     Kills mobs
+     Moves characters to room 20030
+       Set up in system.are
+       This area may be fatal to newbies and those on slow links.
+     Be careful of who you try and eat.
+
+   Miscellaneous fixes (act_info.c, merc.h, startup, comm.c)
+     Fix Who display to split gods and mortals properly.
+     Add NOCRYPT for the freebsd compilation option.
+     Update startup for drv4 directory.
+     Change driver title.
+     Restricted oldscore to immortals.
+     Added some animation for the living dead slayer.
+     Match examine colors with battle prompt colours.
+     Stop people parrying bullets.
+     Lots of fixes for divinity. 
+     Exits now considers doors to be obvious exits.
+     Added some more materials
+ 

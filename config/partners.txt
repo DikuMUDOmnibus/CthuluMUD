@@ -1,0 +1,14 @@
+#
+# Partner Database
+#
+# PARTNER 	(Partner Mud name)
+# Title		(Partner Mud full name string)~
+# IP		(Numeric IP address)
+# Port		(Port number)
+# Login		(ftp Login)
+# Passwd	(ftp Password)
+# Dominance 	(0-9) The higher the more power their admins have on your mud.
+#
+
+End
+

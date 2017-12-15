@@ -1,0 +1,3084 @@
+#AREADATA
+Name        [ {rSystem{g] System Area~
+Copyright   (null)~
+Zone        0
+Builders    Cthulhumud~
+Map         None~
+VNUMs       20000 20099
+Security    9
+Recall      0
+Respawn     0
+Morgue      0
+Dream       0
+Mare       0
+Prison     0
+Climate     0
+Version     1
+MAX_CURRENCY    5
+Currency -1 -1 -1 -1 -1
+End
+
+
+
+#MOBILES
+#20000
+hound of tindalos dog~
+Hound of Tindalos~
+A massive blue hound is after you.
+~
+This beast is enormous, standing fully 5' high at the shoulder.  It's
+blue skin is hairless, but covered in a thick, pale blue pus.  Something
+about the hound feels very, very wrong.  It's seems all sharp and jaggy, an
+inescapable alienness.  You can almost sense an aura of malign hatred
+eminating from it.  
+~
+dog~
+AFc DFJVZce 200 0
+120 160 16d108+648 40d10+100 5d9+45 'bite' 'energy'
+-15 -15 -15 -2
+FGH BFLQR CDINP b
+'standing' 'standing' 'male' 0
+ABCDGHKUV ACDEFHJKQUV 'huge' 'unknown'
+X
+Nature 262160
+Fright 55
+End
++ 2 spell casting~
++ 2 dreaming~
++ 103 hand to hand~
++ 62 bash~
++ 65 berserk~
++ 86 dirt kicking~
++ 40 disarm~
++ 89 kick~
++ 49 rescue~
++ 62 rotate~
++ 70 trip~
++ 103 dodge~
++ 41 parry~
++ 76 second attack~
++ 31 third attack~
++ 68 enhanced damage~
++ 28 ultra damage~
++ 65 fast healing~
+#20001
+cone-shaped creature~
+a conic irridescent creature~
+A conic shaped gigantic irridescent creature is here 
+~
+~
+yithian~
+AB DFVZac 0 0
+150 220 0d0+0 0d0+0 0d0+0 'smash' 'bash'
+0 0 0 0
+CFKNOR FGIR DPQ DN
+'standing' 'standing' 'neutral' 0
+ACHVX ADEFKLMN 'medium' 'rubber'
+X
+Nature 262145
+End
++ 1 dreaming~
++ 121 hand to hand~
++ 106 martial arts~
++ 90 black belt~
++ 102 bash~
++ 100 berserk~
++ 24 crush~
++ 102 dirt kicking~
++ 103 disarm~
++ 111 kick~
++ 101 rescue~
++ 111 rotate~
++ 102 trip~
++ 115 dodge~
++ 111 parry~
++ 102 second attack~
++ 103 third attack~
++ 85 fourth attack~
++ 114 enhanced damage~
++ 105 ultra damage~
++ 93 lethal damage~
++ 105 fast healing~
+#20002
+cone-shaped creature vessel gargantuan~
+a gargantuan conic irridescent creature~
+A conic shaped gargantuan irridescent creature lies in the middle of odd apparels.
+~
+~
+yithian~
+AB DFHNOVZac 0 0
+160 240 0d0+0 0d0+0 0d0+0 'epower' 'old'
+0 0 0 0
+CFKNR FGHI DPQ DN
+'standing' 'standing' 'neutral' 0
+ACHVX ADEFKLMN 'medium' 'rubber'
+X
+Nature 344069
+Fright 150
+End
++ 113 hand to hand~
++ 92 martial arts~
++ 92 black belt~
++ 101 bash~
++ 107 berserk~
++ 105 dirt kicking~
++ 103 disarm~
++ 102 kick~
++ 104 rescue~
++ 103 rotate~
++ 114 trip~
++ 120 dodge~
++ 103 parry~
++ 99 second attack~
++ 119 third attack~
++ 103 fourth attack~
++ 108 enhanced damage~
++ 102 ultra damage~
++ 95 lethal damage~
++ 114 fast healing~
+#20010
+crab acid~
+an acid crab~
+An Acid Crab
+~
+Something does live under the acid.  This terrible creature has a soft,
+rubbery shell and lots and lots of long, thin tenticles it uses to move
+and attack you with.  
+~
+snake~
+ABF 0 -15 0
+3 0 1d6+23 3d10+100 1d10+0 'sting' 'pierce'
+8 8 8 9
+FHNR KR IL HI
+'standing' 'standing' 'male' 0
+ABGQRUXYc ADEFKLMNQVX 'medium' 'unknown'
+X
+Nature 0
+End
+#20011
+mound seaweed rotting of~
+a mound of rotting seaweed~
+A mound of rotting seaweed
+~
+On the ouside this looks very much like a mound of rotting seaweed, but
+it seems to be somehow alive.  It is sort of rolling and wriggling around
+after you.  
+~
+snake~
+A DEFJb 0 0
+12 0 5d32+120 12d10+100 4d4+11 'crush' 'bash'
+2 2 2 6
+CFHMN IJKPRT DHL IS
+'standing' 'standing' 'neutral' 0
+ABEGRSUXYc ADEFKLMNQVX 'medium' 'unknown'
+X
+Nature 0
+End
+#20020
+familier generic~
+a generic familier~
+A generic familier
+~
+A strange, grey creature that looks distinctly unfinished.
+~
+cat~
+AI Zc 0 0
+0 0 0d0+0 0d0+0 0d0+0 'none' 'slash'
+0 0 0 0
+FGHN ABPQ 0 CNa
+'standing' 'standing' 'neutral' 0
+ABGHUV ABCDEFGHIJKLQUV 'small' 'unknown'
+X
+Nature 4096
+End
+#20021
+elder watcher~
+Elder Watcher~
+An Elder Watcher has been placed here.
+~
+~
+demon~
+AB BDFJNZc 0 0
+0 0 0d0+0 0d0+0 0d0+0 'magic' 'energy'
+0 0 0 0
+BFKMR LQ B Na
+'standing' 'standing' 'neutral' 0
+BCHM ABCDEFGHJKLPQUV 'large' 'unknown'
+X
+Nature 0
+Script 3 'strike3'
+ScriptLine 10 0 0 mpecho You're caught in a terrible explosion of elder magic.~
+ScriptLine 20 0 0 mphurt @at 25 25 25 25 25 25~
+ScriptLine 30 0 0 mpecho {rYou feel the Watcher's wrath.{x~
+ScriptLine 40 1 0 say Hereby I have done my duty. Farewell.~
+ScriptLine 50 1 0 mppurge self~
+Script 2 'strike2'
+ScriptLine 10 0 0 mpecho You're caught in a terrible explosion of elder magic.~
+ScriptLine 20 0 0 mphurt @at 20 20 20 20 20 20~
+ScriptLine 30 0 0 mpecho {rYou feel the Watcher's wrath.{x~
+ScriptLine 40 1 0 say Hereby I have done my duty. Farewell.~
+ScriptLine 50 1 0 mppurge self~
+Script 1 'strike1'
+ScriptLine 10 0 0 mpecho You're caught in a terrible explosion of elder magic.~
+ScriptLine 20 0 0 mphurt @at 10 10 10 10 10 10~
+ScriptLine 30 0 0 mpecho {rYou feel the Watcher's wrath.{x~
+ScriptLine 40 1 0 say Hereby I have done my duty. Farewell.~
+ScriptLine 50 1 0 mppurge self~
+Script 4 'strike4'
+ScriptLine 10 0 0 mpecho You're caught in a terrible explosion of elder magic.~
+ScriptLine 20 0 0 mphurt @at 30 30 30 30 30 30~
+ScriptLine 30 0 0 mpecho {rYou feel the Watcher's wrath.{x~
+ScriptLine 40 1 0 say Hereby I have done my duty. Farewell.~
+ScriptLine 50 1 0 mppurge self~
+TriggerReact 14 10 0 1
+TriggerCond 1 -2 'level' 1 9
+TriggerCond 3 2 'level' 1 19
+TriggerReact 14 20 0 2
+TriggerCond 1 -2 'level' 1 9
+TriggerCond 3 2 'level' 20 39
+TriggerReact 14 30 0 3
+TriggerCond 1 -2 'level' 1 9
+TriggerCond 3 2 'level' 40 79
+TriggerReact 14 40 0 4
+TriggerCond 1 -2 'level' 1 9
+TriggerCond 3 2 'level' 80 -1
+End
+#20022
+spirit dummy~
+spirit dummy~
+Spirit dummy
+~
+~
+demon~
+AIO DFHJNUZc 0 0
+0 0 0d0+0 0d0+0 0d0+0 'drain' 'negative power'
+0 0 0 0
+BFGHKMR LQ BD Na
+'standing' 'standing' 'neutral' 0
+BCHM ABCDEFGHJKLPQUV 'large' 'unknown'
+X
+Nature 69632
+End
+#20023
+assassin~
+Assassin~
+A hired assassin is here to kill you.
+~
+~
+human~
+ABST DFVZ 0 0
+0 50 0d0+0 0d0+0 0d0+0 'stab' 'pierce'
+0 0 0 0
+BFK 0 0 0
+'standing' 'standing' 'random' 0
+AHMV ABCDEFGHIJK 'medium' 'unknown'
+X
+Nature 16
+End
+#20024
+bodyguard~
+Bodyguard~
+A bodyguard is here protecting his master.
+~
+~
+human~
+ABT Ze 0 0
+0 50 0d0+0 0d0+0 0d0+0 'punch' 'bash'
+0 0 0 0
+CFIK 0 0 0
+'standing' 'standing' 'male' 0
+AHMV ABCDEFGHIJK 'large' 'unknown'
+X
+Nature 65537
+End
+#20025
+thief~
+Thief~
+A thief is here, hiding with his loot.
+~
+~
+human~
+ABY DFZ 0 0
+0 0 0d0+0 0d0+0 0d0+0 'punch' 'bash'
+0 0 0 0
+FK 0 0 0
+'standing' 'standing' 'male' 0
+AHMV ABCDEFGHIJK 'medium' 'unknown'
+X
+Nature 16
+Script 2 'nokill'
+ScriptLine 10 0 0 yell Go away, jerk!~
+Script 1 'kill'
+ScriptLine 10 0 0 yell That's mine!~
+ScriptLine 20 0 0 mpkill @at~
+TriggerChallange 3 20 2 2
+TriggerCond 1 2 'level' 1 14
+TriggerReact 3 10 2 1
+TriggerCond 1 2 'level' 15 -1
+End
+#20090
+midget~
+Crippled Midget~
+An annoying crippled midged is here.
+~
+~
+human~
+AB Z -350 0
+15 0 0d0+0 0d0+0 0d0+0 'punch' 'bash'
+0 0 0 0
+FK 0 0 0
+'standing' 'standing' 'neutral' 5
+AHMV ABCDEFGHIJK 'small' 'skin'
+X
+Nature 2048
+Script 1 'cackle'
+ScriptLine 10 0 0 cackle~
+Script 2 'doomed'
+ScriptLine 10 0 0 say You're doomed! They're after you!~
+Script 3 'select'
+ScriptLine 10 0 0 mpselect random.mob_pc mob_none obj_none obj_none 0~
+Script 4 'point'
+ScriptLine 10 0 0 point @at~
+TriggerReact 18 10 2 4
+Chat 0 25  1 0  1 0  1 0  2 0  2 0  3 0  3 0  3 0
+End
+#20091
+assassin cultist aran man~
+Assassin Cultuist~
+An arab in dark robes is here, looking for you.
+~
+~
+human~
+ABCSY VZ -450 0
+40 0 0d0+0 0d0+0 0d0+0 'stab' 'pierce'
+0 0 0 0
+BEFK 0 0 0
+'standing' 'standing' 'neutral' 15
+AHMV ABCDEFGHIJK 'medium' 'skin'
+X
+Nature 16
+End
+#20092
+tcho cultist~
+Tcho Tcho Cultist~
+A hideous Tcho Tcho cultist is after you.
+~
+~
+tcho tcho~
+ACTXY cl -750 0
+65 50 0d0+0 0d0+0 0d0+0 'punch' 'bash'
+0 0 0 0
+CFK I LQ N
+'standing' 'standing' 'random' 50
+HMV ABCDEFGHIJK 'large' 'skin'
+X
+Nature 73
+Fright 65
+End
++ 70 education~
++ 73 axe~
++ 72 dagger~
++ 72 flail~
++ 72 mace~
++ 41 polearm~
++ 65 spear~
++ 81 sword~
++ 26 sword master~
++ 31 whip~
++ 80 hand to hand~
++ 33 black belt~
++ 61 bow~
++ 32 bash~
++ 31 berserk~
++ 51 dirt kicking~
++ 63 disarm~
++ 67 kick~
++ 40 rescue~
++ 62 riding~
++ 31 rotate~
++ 16 sharpen~
++ 42 strangle~
++ 47 strong grip~
++ 33 trip~
++ 50 dodge~
++ 43 parry~
++ 71 shield block~
++ 34 dual~
++ 16 second attack~
++ 33 third attack~
++ 7 fourth attack~
++ 61 enhanced damage~
++ 7 ultra damage~
++ 15 fast healing~
++ 53 forging~
++ 88 recall~
++ 37 scrolls~
++ 47 streetwise~
++ 15 staves~
++ 18 wands~
++ 84 english~
++ 70 dreamlands~
+#0
+
+
+
+#NEWOBJECTS
+#20000
+pool blue misty portal~
+a misty blue pool~
+A misty blue pool~
+unknown~
+'portal' M 0
+FJKLO 0 0 0 0
+1 10000 0 P
+R 100
+E
+pool blue misty~
+Somehow the swirling blue mist seems to extend further into the pool,
+almost making a passage beneath its surface.  
+~
+#20001
+key large white ivory~
+a white ivory key~
+A large white ivory key~
+bone~
+'key' F A
+0 0 0 0 0
+50 1 5000 P
+R 100
+E
+pattern runes runic~
+You can't make it out.  It seems to twist and turn in ways it shouldn't.  
+~
+E
+key large ivory white~
+It's quite large and its haft is engraved with a strange, runic pattern.
+~
+#20002
+door silver doorway portal north~
+a silver doorway~
+A silver doorway~
+silver~
+'portal' M 0
+ABCEFJKLO 0 0 0 0
+1 20000 10000 P
+R 100
+E
+silver door doorway portal north~
+When you look through it you can see stars.  
+You need to 'enter' this door.  
+~
+#20003
+door ivory doorway portal south~
+an ivory doorway~
+An ivory doorway~
+bone~
+'portal' M 0
+ABEFKL 0 0 0 0
+1 20000 5000 P
+R 100
+E
+ivory door doorway portal south~
+When you look through it, you can see stars.  
+You need to 'enter' this door.
+~
+#20004
+pool silvery silver water of~
+a pool of water~
+A pool of silvery water~
+unknown~
+'fountain' M 0
+'water' 0 0 'none' 0
+1 20000 0 P
+R 100
+E
+pool silvery silver water of~
+It looks quite shallow.  It seems to be fed by a small spring.  The water
+look clean and drinkable.  
+~
+#20005
+barrel small wooden~
+a small wooden barrel~
+A small wooden barrel~
+wood~
+'container' 0 0
+50 0 0 100 0
+1 20000 200 P
+R 100
+E
+barrel small wooden~
+It looks like a fairly normal barrel.  The word 'Biscuits' is written on
+the side.  
+~
+#20006
+biscuit hard~
+a hard biscuit~
+A hard biscuit~
+food~
+'food' 0 AN
+24 0 'none' 0 0
+1 1 2 P
+R 100
+E
+biscuit hard oat~
+It is about 3 inches by 4 and looks to be made from rough oat meal.  It
+is also very hard.  You are not sure if you should eat it or use it as a 
+club!
+~
+#20007
+skeleton bones bone corpse body dusty~
+a skeleton~
+A dusty skeleton~
+bone~
+'trash' 0 A
+0 0 0 0 0
+1 50 5 P
+R 100
+E
+skeleton bones bone corpse body dusty~
+It looks like it died quite a while ago.  Probably starved to death.
+~
+#20008
+pool filthy bilge water~
+a pool of bilge water~
+A pool of filthy bilge water~
+wood~
+'fountain' 0 0
+'water' 0 0 'none' 0
+1 500 1 P
+R 100
+E
+pool filthy bilge water~
+It is a dark brown colour and smells strongly of fish and the sea.  There
+seem to some brown fungii and a few creeping, crawling things growing in it.
+All in all it looks fairly digusting, but it's the only potable water
+around.  
+~
+#20009
+wellies rubber green~
+a pair of wellies~
+A pair of green rubber wellies~
+leather~
+'armor' 0 AG
+C C C C 0
+5 5 250 P
+R 100
+#20010
+sphincter tight~
+a tight sphincter~
+A tight sphincter~
+flesh~
+'portal' 0 0
+ABEFKL 0 0 0 0
+5 5000 1 P
+R 100
+#20011
+wedding ring~
+a wedding ring~
+A wedding ring lies here.~
+gold~
+'trash' T AB
+0 0 0 0 0
+0 1 0 P
+R 100
+A 5 1
+A 4 1
+A 2 1
+A 3 1
+A 1 1
+#20012
+wedding band~
+a wedding band~
+A wedding band lies here.~
+cloth~
+'trash' T AM
+0 0 0 0 0
+0 1 0 P
+R 100
+A 5 1
+A 4 1
+A 2 1
+A 3 1
+A 1 1
+#20013
+camera~
+a camera~
+A bulky photographic camera on a tripod stands here.~
+iron~
+'camera' 0 AO
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdef AC 0 0 0
+0 18 9500 P
+R 100
+Z ABCDEFGHIJM
+#20014
+photographic glass plate~
+a photographic plate~
+A glass plate lies here, covered with black plastic foil.~
+glass~
+'photograph' 0 A
+0 0 0 0 0
+0 3 50 P
+R 100
+Z ABCDEFGHIJM
+#20015
+Nodens dagger~
+an exquisitely carved obsidian dagger~
+An exquisitely carved obsidian dagger ornated with vast batlike wings lies here.~
+essence of time~
+'weapon' GITf ANO
+'dagger' 32 8 'epower' E
+1 2 0 P
+R 100
+#20020
+dollar silver~
+a silver dollar~
+A silver dollar~
+silver~
+'component' 0 A
+0 0 0 0 0
+5 1 10 P
+R 100
+#20021
+dream catcher~
+a dream catcher~
+A dream catcher~
+skin~
+'component' 0 A
+0 0 0 0 0
+1 2 55 P
+R 100
+#20022
+silver bell~
+a silver bell~
+A silver bell~
+silver~
+'component' 0 A
+0 0 0 0 0
+1 1 130 P
+R 100
+#20023
+brass pendent~
+a brass pendent~
+A brass pendent~
+brass~
+'component' 0 A
+0 0 0 0 0
+1 1 140 P
+R 100
+#20024
+silver sand~
+a small bag of silver sand~
+A small bag of silver sand~
+silver~
+'component' 0 A
+0 0 0 0 0
+1 0 90 P
+R 100
+#20025
+bag yusefs dust~
+a small bag of ivory dust~
+A small bag of ivory dust~
+bone~
+'component' 0 A
+0 0 0 0 0
+1 1 500 P
+R 100
+#20026
+poison~
+a small vial of poison~
+A small vial of poison~
+liquid~
+'component' 0 A
+0 0 0 0 0
+1 1 100 P
+R 100
+#20027
+alabaster~
+a small piece of alabaster~
+A small piece of alabaster~
+stone~
+'component' 0 A
+0 0 0 0 0
+1 1 25 P
+R 100
+#20028
+obsidian~
+a small piece of obsidian~
+A small piece of obsidian~
+stone~
+'component' 0 A
+0 0 0 0 0
+1 1 30 P
+R 100
+#20029
+dried frog~
+a dried frog~
+A dried frog~
+bone~
+'component' 0 A
+0 0 0 0 0
+1 1 75 P
+R 100
+#20030
+weasel skull~
+a weasel skull~
+A weasel skull~
+bone~
+'component' 0 A
+0 0 0 0 0
+1 1 0 P
+R 100
+#20031
+rock salt~
+a bag of rock salt~
+A bag of rock salt~
+stone~
+'component' 0 A
+0 0 0 0 0
+1 1 10 P
+R 100
+#20032
+shot of rum~
+a shot glass, full of rum~
+A shot glass, full of rum~
+liquid~
+'component' 0 A
+0 0 0 0 0
+1 1 5 P
+R 100
+#20033
+hair of dog~
+some dog hairs~
+Some dog hairs~
+hair~
+'component' 0 A
+0 0 0 0 0
+1 1 28 P
+R 100
+#20034
+whale fat box blubber~
+a small box of blubber~
+A small box of blubber~
+food~
+'component' 0 A
+0 0 0 0 0
+1 1 25 P
+R 100
+#20035
+yellow leech~
+a repulsive yellow leech~
+A repulsive yellow leech~
+flesh~
+'component' W A
+0 0 0 0 0
+1 1 275 P
+R 100
+#20036
+silver needle~
+a silver needle~
+A sharp silver needle~
+silver~
+'component' 0 AO
+0 0 0 0 0
+5 0 30 P
+R 100
+#20037
+brass gong~
+a brass gong~
+A small brass gong~
+brass~
+'component' 0 A
+0 0 0 0 0
+5 3 25 P
+R 100
+#20038
+quartz crystal~
+a quartz crystal~
+A large quartz crystal~
+crystal~
+'component' 0 A
+0 0 0 0 0
+0 5 150 P
+R 100
+#20039
+voodoo doll~
+a voodoo doll~
+A small rag doll lies here.~
+cloth~
+'component' C AO
+0 0 0 0 0
+30 1 100000 P
+R 100
+#20040
+cushiony pillow~
+cushiony pillow~
+Cushiony pillow~
+glass~
+'component' C AO
+0 0 0 0 0
+30 1 300 P
+R 100
+#20041
+fresh lemmon bottle juice~
+a small bottle of lemmon juice~
+A small bottle of lemmon juice sits here.~
+glass~
+'component' 0 A
+0 0 0 0 0
+5 1 30 P
+R 100
+#20042
+mithril shard~
+a shard of mithril~
+A shard of mithril lies here shimmering brightly.~
+mithril~
+'component' 0 A
+0 0 0 0 0
+20 3 350 P
+R 100
+#20043
+candles~
+some ritual candles~
+Some black ritual candles lie here.~
+food~
+'component' G A
+0 0 0 0 0
+15 2 35 P
+R 100
+#20050
+mirror leng~
+The Mirror of Leng~
+A dark metallic mirror lies here.~
+silver~
+'portal' 0 AO
+EFGIJN 0 0 0 0
+0 2 0 P
+R 100
+A 25 20
+N -1 0 0 268435456
+#20051
+crystal yuggoth scrying~
+a {rYuggoth scrying crystal{x~
+A {rblood red shard of crystal{x lies here.~
+crystal~
+'scry' BGT AO
+0 0 0 0 0
+0 1 0 P
+R 100
+A 12 100
+A 14 100
+A 13 100
+#20052
+blanket~
+{xthe blanket of dreams~
+A soft black blanket lies here.~
+cloth~
+'furniture' G A
+ABC DGH 0 0 0
+0 12 0 P
+R 100
+N -1 0 0 128
+#20059
+sealed document~
+a sealed document {r[QUEST]{x~
+A sealed document has been forgotten here.~
+paper~
+'trash' f A
+0 0 0 0 0
+0 1 0 P
+R 100
+T 0 99 -1
+#20060
+staff ulthar~
+Staff of Ulthar~
+A long wooden staff lies here.~
+wood~
+'trash' G AO
+0 0 0 0 0
+1 5 0 P
+R 100
+A 12 50
+#20061
+crown celephais~
+Crown of Celephais~
+A golden crown lies here.~
+gold~
+'trash' G AE
+0 0 0 0 0
+1 3 0 P
+R 100
+A 4 1
+#20062
+banner dylath leen~
+Banner of Dylath Leen~
+A bright red war banner lies here.~
+wood~
+'trash' G AO
+0 0 0 0 0
+1 6 0 P
+R 100
+A 1 1
+#20063
+crystal woods~
+Crystal of the Woods~
+A radiating crystal lies here.~
+crystal~
+'trash' G AO
+0 0 0 0 0
+1 1 0 P
+R 100
+A 3 1
+#20064
+star silvery oriab~
+Star of Oriab~
+A silvery star lies here.~
+silver~
+'pride' G AQ
+0 0 0 0 0
+1 1 0 P
+R 100
+A 25 10
+#20065
+stone dreamstone xura~
+Dreamstone of Xura~
+An opaque stone sits here.~
+stone~
+'trash' 0 AO
+0 0 0 0 0
+1 2 0 P
+R 100
+S 'dreaming' 15
+#20066
+ring autocrat~
+Ring of the Autocrat~
+A plain golden ring lies here.~
+gold~
+'trash' G AB
+0 0 0 0 0
+1 1 0 P
+R 100
+A 24 -5
+#20067
+book lomar~
+Book of Lomar~
+A thick ancient book lies here.~
+paper~
+'book' G AO
+'cthonic' 10 'chill touch' 'none' 'none'
+1 3 0 P
+R 100
+#20068
+scepter kranon ultharian~
+Scepter of Kranon~
+The ultharian scepter lies here.~
+adamantite~
+'trash' G AO
+0 0 0 0 0
+1 4 0 P
+R 100
+A 14 50
+A 12 50
+#20069
+demon skull demonic pnath~
+Skull of Pnath~
+A large demonic skull lies here.~
+bone~
+'component' G A
+0 0 0 0 0
+1 1 0 P
+R 100
+#20070
+ore lump rock~
+a lump of ore~
+A red rock lies here.~
+iron~
+'raw_material' 0 AO
+0 C 0 0 0
+1 20 35 P
+R 100
+#20071
+ore lump silver silvery~
+a lump of silvery ore~
+A silvery rock lies here.~
+silver~
+'raw_material' 0 AO
+0 0 0 0 0
+1 15 250 P
+R 100
+#20072
+ore lump gold golden~
+a lump of raw gold~
+A golden rock lies here.~
+gold~
+'raw_material' 0 AO
+A D 0 0 0
+1 30 1000 P
+R 100
+#20073
+ore lump mithril~
+a lump of mithril~
+A lumineszent rock lies here.~
+mithril~
+'raw_material' A AO
+AB CDEFGHIJKLMNOPQRSTUVWXYZabcdef 0 0 0
+1 10 2500 P
+R 100
+Z KL
+#20074
+ore lump adamantite~
+a lump of adamantite~
+A deep black rock lies here.~
+adamantite~
+'raw_material' BG AO
+AC 0 0 0 0
+1 15 5000 P
+R 100
+Z KL
+#20075
+block crystal~
+a block of crystal~
+A big block of crystal sits here.~
+crystal~
+'raw_material' 0 AO
+0 DEFGHIJKLMNOPQRSTUVWXYZabcdef 0 0 0
+1 5 60 P
+R 100
+#20076
+shards diamond~
+some diamond shards~
+Small shards of diamond lie here.~
+diamond~
+'raw_material' 0 AO
+AC DEFGHIJKLMNOPQRSTUVWXYZabcdef 0 0 0
+1 5 10000 P
+R 100
+#20077
+block aluminium~
+some raw aluminium~
+A block of a whitish metal lies here.~
+aluminium~
+'raw_material' 0 AO
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdef CEFGHIJKLMNOPQRSTUVWXYZabcdef 0 0 0
+0 2 100 P
+R 100
+#20080
+blur~
+a blur~
+A blur~
+unknown~
+'portal' U 0
+ADFGHIJKM 0 0 0 0
+0 0 0 P
+R 100
+#20091
+water sea~
+the water~
+Water~
+water~
+'fountain' RU 0
+'salt water' 0 0 'none' 0
+0 0 0 P
+R 100
+#20092
+water lake river~
+the water~
+Water~
+water~
+'fountain' RU 0
+'water' 0 0 'none' 0
+0 0 0 P
+R 100
+#20093
+water~
+water~
+Water~
+water~
+'fountain' RU 0
+'water' 1 0 'none' 0
+0 0 0 P
+R 100
+#20094
+herb thorny~
+a thorny herb~
+A small thorny herb grows here.~
+unknown~
+'herb' S AO
+25 'armor' 'protection evil' 0 1
+22 0 15 P
+R 100
+#20095
+hemp plant cannabis~
+some cannabis~
+A small hemp plant grows here.~
+food~
+'herb' 0 AO
+5 'trance' 'relax' 1 1
+0 1 0 P
+R 100
+E
+secondary_long~
+Through a shimmery portal~
+#20096
+herb blueish smooth leaves~
+a blueish herb~
+A smooth blueish herb grows here.~
+food~
+'herb' S AO
+25 'restore limb' 'none' 1 1
+0 1 0 P
+R 100
+E
+secondary_long~
+Some blueish leaves lie here.~
+#0
+
+
+
+#ROOMS
+#20000
+Blue Mist Marsh~
+You are standing in the misty blue marshes.  Somehow everything around
+you keeps slipping in and out of focus.  You can see strange shadows
+flicking in the mists, although there is nothing there when you turn to
+look.  When you look out of the still, mist covered water, over the waist
+high blue reeds you cannot see a single living thing.  Somehow this place
+seems so very alien.  Almost hostile.  In the distance you can hear the
+baying of unearthly hounds.
+~
+0 4 2
+X
+End
+S
+#20001
+A chaotic beachside~
+You stand on a vast dusty grey beach.  All around you on either sides but
+the beach you can only spot grey dust and distorded massive rocks.  There
+seems nothing but a depressing emptyness here.  The sea itself is far from
+its ideal blue lagoon counterpart.  Instead, it's a vast silent liquid grey
+mass.  The sky is all clouds, grey clouds, so thick the sun barely manages
+to lighten the surface.  Tendrils of mist and steam crawl at the water
+surface, while there is no breathable atmosphere.
+~
+0 8912896 10
+D0
+~
+~
+0 0 20002
+D1
+~
+~
+0 0 20003
+D2
+~
+~
+0 0 20005
+D3
+~
+~
+0 0 20004
+X
+Affect H
+End
+S
+#20002
+By a grey sea~
+You stand on a vast dusty grey beach.  There seams to be nothing but a
+depressing emptyness here.  On the north, the sea extends far away.  A vast
+silent liquid gray mass, with tendrils of mist and steam crawling on its
+surface.  The sky is all clouds, grey clouds, so thick the sun barely
+manages to lighten the surface.  A massive block of razorbladed dark stone
+prevents to go east.
+There is no breathable atmosphere.
+~
+0 8921088 10
+D2
+~
+~
+0 0 20001
+D3
+~
+~
+0 0 20007
+X
+Affect H
+End
+S
+#20003
+A chaotic beachside~
+You stand on a vast dusty grey beach.  All around you on either sides but
+the beach you can only spot grey dust and distorded massive rocks.  There
+seems nothing but a depressing emptyness here.  The sea itself is far from
+its ideal blue lagoon counterpart.  Instead, it's a vast silent liquid grey
+mass.  The sky is all clouds, grey clouds, so thick the sun barely manages
+to lighten the surface.  Tendrils of mist and steam crawl at the water
+surface, while there is no breathable atmosphere.  To the east the beach
+stops and becomes the foot of a massive black razoredged stone cliff.
+~
+0 8921088 10
+D1
+~
+~
+0 0 20009
+D2
+~
+~
+0 0 20008
+D3
+~
+~
+0 0 20001
+X
+Affect H
+End
+S
+#20004
+A chaotic beachside~
+You stand on a vast dusty grey beach.  All around you on either sides but
+the beach you can only spot grey dust and distorded massive rocks.  There
+seems nothing but a depressing emptyness here.  The sea itself is far from
+its ideal blue lagoon counterpart.  Instead, it's a vast silent liquid grey
+mass.  The sky is all clouds, grey clouds, so thick the sun barely manages
+to lighten the surface.  Tendrils of mist and steam crawl at the water
+surface, while there is no breathable atmosphere.
+~
+0 8921088 10
+D0
+~
+~
+0 0 20007
+D1
+~
+~
+0 0 20001
+D2
+~
+~
+0 0 20006
+D3
+~
+~
+0 0 20012
+X
+Affect H
+End
+S
+#20005
+A chaotic beachside~
+You stand on a vast dusty grey beach.  All around you on either sides but
+the beach you can only spot grey dust and distorded massive rocks.  There
+seems nothing but a depressing emptyness here.  The sea itself is far from
+its ideal blue lagoon counterpart.  Instead, it's a vast silent liquid grey
+mass. The sky is all clouds, grey clouds, so thick the sun barely manages
+to lighten the surface.  Tendrils of mist and steam crawl at the water
+surface, while there is no breathable atmosphere.
+~
+0 8921088 10
+D0
+~
+~
+0 0 20001
+D1
+~
+~
+0 0 20008
+D3
+~
+~
+0 0 20006
+X
+Affect H
+End
+S
+#20006
+A chaotic beachside~
+You stand on a vast dusty grey beach.  All around you on either sides but
+the beach you can only spot grey dust and distorded massive rocks.  There
+seems nothing but a depressing emptyness here.  The sea itself is far from
+its ideal blue lagoon counterpart.  Instead, it's a vast silent liquid grey
+mass. The sky is all clouds, grey clouds, so thick the sun barely manages
+to lighten the surface.  Tendrils of mist and steam crawl at the water
+surface, while there is no breathable atmosphere.
+~
+0 8912896 10
+D0
+~
+~
+0 0 20004
+D1
+~
+~
+0 0 20005
+D3
+~
+~
+0 0 20011
+X
+End
+S
+#20007
+By a grey sea~
+You stand on a vast dusty grey beach.  There seams to be nothing but a
+depressing emptyness here.  On the north, the sea extends far away.  A vast
+silent liquid gray mass, with tendrils of mist and steam crawling on its
+surface.  The sky is all clouds, grey clouds, so thick the sun barely
+manages to lighten the surface.
+There is no breathable atmosphere.
+~
+0 8921088 10
+D1
+~
+~
+0 0 20002
+D2
+~
+~
+0 0 20004
+D3
+~
+~
+0 0 20013
+X
+Affect H
+End
+S
+#20008
+A chaotic beachside~
+You stand on a vast dusty grey beach.  All around you on either sides but
+the beach you can only spot grey dust and distorded massive rocks.  There
+seems nothing but a depressing emptyness here.  The sea itself is far from
+its ideal blue lagoon counterpart.  Instead, it's a vast silent liquid grey
+mass. The sky is all clouds, grey clouds, so thick the sun barely manages
+to lighten the surface.  Tendrils of mist and steam crawl at the water
+surface and your vision goes blurry. 
+~
+0 8921088 10
+E
+sea~
+~
+D0
+~
+~
+0 0 20003
+D3
+~
+~
+0 0 20005
+X
+Affect H
+End
+S
+#20009
+At the base of the black cliff~
+around you, preventing to move easily.  The rock seems to be some kind of
+huge diamond.  Its edges are very sharp and you must be cautious to not cut
+yourself badly.  Further to the east on the cliffside itself you spot a
+natural entryway into a cavern.
+~
+0 8921088 25
+D1
+~
+~
+0 0 20010
+D3
+~
+~
+0 0 20003
+X
+Affect H
+End
+S
+#20010
+An opening in the black cliffside~
+The corridor which opens on the cliff side seems to be natural.  At first
+sight.  It quickly becomes obvious that someone carved it.  On the floor and
+walls, many scratches on the rock show evidence of previous movement. 
+Whatever it was which was able to scratch this rock substance, you wonder
+anyway.
+~
+0 8921097 11
+D1
+~
+~
+0 0 20014
+D3
+~
+~
+0 0 20009
+X
+Affect H
+End
+S
+#20011
+A chaotic beachside~
+You stand on a vast dusty grey beach.  All around you on either sides but
+the beach you can only spot grey dust and distorded massive rocks.  There
+seems nothing but a depressing emptyness here.  The sea itself is far from
+its ideal blue lagoon counterpart.  Instead, it's a vast silent liquid grey
+mass. The sky is all clouds, grey clouds, so thick the sun barely manages
+to lighten the surface.  Tendrils of mist and steam crawl at the water
+surface, while there is no breathable atmosphere.
+~
+0 8921088 10
+D0
+~
+~
+0 0 20012
+D1
+~
+~
+0 0 20006
+D3
+~
+~
+0 0 20011
+X
+Affect H
+End
+S
+#20012
+A chaotic beachside~
+You stand on a vast dusty grey beach.  All around you on either sides but
+the beach you can only spot grey dust and distorded massive rocks.  There
+seems nothing but a depressing emptyness here.  The sea itself is far from
+its ideal blue lagoon counterpart.  Instead, it's a vast silent liquid grey
+mass. The sky is all clouds, grey clouds, so thick the sun barely manages
+to lighten the surface.  Tendrils of mist and steam crawl at the water
+surface, while there is no breathable atmosphere.
+~
+0 8921088 10
+D0
+~
+~
+0 0 20013
+D1
+~
+~
+0 0 20004
+D2
+~
+~
+0 0 20011
+D3
+~
+~
+0 0 20012
+X
+Affect H
+End
+S
+#20013
+A chaotic beachside~
+You stand on a vast dusty grey beach.  All around you on either sides but
+the beach you can only spot grey dust and distorded massive rocks.  There
+seems nothing but a depressing emptyness here.  The sea itself is far from
+its ideal blue lagoon counterpart.  Instead, it's a vast silent liquid grey
+mass. The sky is all clouds, grey clouds, so thick the sun barely manages
+to lighten the surface.  Tendrils of mist and steam crawl at the water
+surface, while there is no breathable atmosphere.
+~
+0 8921088 0
+D1
+~
+~
+0 0 20007
+D2
+~
+~
+0 0 20012
+D3
+~
+~
+0 0 20013
+X
+Affect H
+End
+S
+#20014
+A gigantic dark cavern~
+~
+0 8921097 11
+D1
+~
+~
+0 0 20016
+D3
+~
+~
+0 0 20010
+D6
+~
+~
+0 0 20015
+D7
+~
+~
+0 0 20017
+X
+Affect H
+End
+S
+#20015
+A gigantic dark cavern~
+~
+0 532489 11
+D1
+~
+~
+3 0 20019
+D2
+~
+~
+0 0 20016
+D7
+~
+~
+0 0 20018
+D8
+~
+~
+0 0 20014
+X
+Affect H
+End
+S
+#20016
+A gigantic dark cavern~
+~
+0 8921101 11
+D0
+~
+~
+0 0 20015
+D1
+~
+~
+0 0 20018
+D2
+~
+~
+0 0 20017
+D3
+~
+~
+0 0 20014
+X
+Affect H
+End
+S
+#20017
+A gigantic dark cavern~
+~
+0 8201 11
+D0
+~
+~
+0 0 20016
+D6
+~
+~
+0 0 20018
+D9
+~
+~
+0 0 20014
+X
+Affect H
+End
+S
+#20018
+A gigantic dark cavern~
+~
+0 8921097 11
+D3
+~
+~
+0 0 20016
+D8
+~
+~
+0 0 20017
+D9
+~
+~
+0 0 20015
+X
+Affect H
+End
+S
+#20019
+Behind an illusionary wall~
+You stand in a room totally different from its surrounding.  It shows
+heavy evidences of intelligent manufacturing.  Pieces of material hangs
+around.  They are all crafted with an extraordinary technological knowledge,
+yet they also bear sign of runic inscriptions on them.  Their shapes are so
+unusual it can't help to guess what they are made for.  Yet, many of them
+seem to be connected somehow to a huge lifeform in the center of the room.
+~
+0 8200 0
+D3
+~
+~
+3 0 20015
+X
+Affect H
+End
+S
+#20020
+Halls of Doors~
+~
+0 8196 0
+E
+door heavy iron~
+The door is made of heavy iron, rusted a little on the outside, but quite
+solid underneath.  There is a big lock imbedded into it.  
+~
+X
+End
+S
+#20021
+Halls of Doors~
+~
+0 8196 0
+E
+door heavy iron~
+The door is made of heavy iron, rusted a little on the outside, but quite
+solid underneath.  There is a big lock imbedded into it.  
+~
+D0
+~
+~
+1 20001 20022
+X
+End
+S
+#20022
+Halls of Doors~
+~
+0 8196 0
+E
+door heavy iron~
+The door is made of heavy iron, rusted a little on the outside, but quite
+solid underneath.  There is a big lock imbedded into it.  
+~
+D0
+~
+~
+1 20001 20025
+D1
+~
+~
+1 20001 20024
+D2
+~
+~
+1 20001 20021
+X
+End
+S
+#20023
+Halls of Doors~
+You are in a fairly large chamber, walled in featureless grey stone.  In
+the center of each wall is a heavy iron door.  You cannot see a light
+source, but it is quite well lit.  There is a pool of water here and 
+a small barrel.
+~
+0 8196 0
+E
+door heavy iron~
+The door is made of heavy iron, rusted a little on the outside, but quite
+solid underneath.  There is a big lock imbedded into it.  
+~
+X
+End
+S
+#20024
+Halls of Doors~
+You are in a fairly large chamber, walled in featureless grey stone.  In
+the center of the east and west walls are heavy iron doors.  To the north
+there is a silver doorway, to the south an ivory one.  
+~
+0 8196 0
+E
+heavy iron~
+The door is made of heavy iron, rusted a little on the outside, but quite
+solid underneath.  There is a big lock imbedded into it.  
+~
+D1
+~
+~
+1 20001 20025
+D3
+~
+~
+1 20001 20022
+X
+End
+S
+#20025
+Halls of Doors~
+~
+0 8196 0
+E
+door heavy iron~
+The door is made of heavy iron, rusted a little on the outside, but quite
+solid underneath.  There is a big lock imbedded into it.  
+~
+D2
+~
+~
+1 20001 20022
+D3
+~
+~
+1 20001 20024
+X
+End
+S
+#20030
+Fleshy Island~
+You are on a low island that seems to be made out of a soft, fleshy
+substance that's covered in a thick layer of mucus.  All around you is a
+vast, shallow sea of acid.  
+~
+0 12 0
+E
+mucus~
+Thich and slimey.  It looks like it's being secreted from the island
+itself.  There is quite a bit of it on you.  
+~
+E
+island flesh fleshy~
+The island looks natural, but rather organic.  It seems to be an
+extension of the sea bed.  Occasionally it shifts and quivers.  
+~
+E
+sea acid shallow vast~
+The sea seems to be a wide, but fairly shallow lake of rather powerful
+acid.  There's a strong smell in the air and you can see occasional bubbles
+fizzing to the sufrace of the green fluid.  There is no sign of any life
+within it.  
+~
+D0
+~
+~
+0 0 20032
+D1
+~
+~
+0 0 20035
+D2
+~
+~
+0 0 20038
+D3
+~
+~
+0 0 20034
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20031
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20041
+D1
+~
+~
+0 0 20032
+D2
+~
+~
+0 0 20034
+D3
+~
+~
+0 0 20050
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20032
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20051
+D1
+~
+~
+0 0 20033
+D2
+~
+~
+0 0 20030
+D3
+~
+~
+0 0 20031
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20033
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20052
+D1
+~
+~
+0 0 20047
+D2
+~
+~
+0 0 20035
+D3
+~
+~
+0 0 20032
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20034
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20031
+D1
+~
+~
+0 0 20030
+D2
+~
+~
+0 0 20037
+D3
+~
+~
+0 0 20053
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20035
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20033
+D1
+~
+~
+0 0 20036
+D2
+~
+~
+0 0 20039
+D3
+~
+~
+0 0 20030
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20036
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  You can see a ship to the south.
+~
+0 12 20
+E
+ship~
+This is a strange place for a ship to be.  As you look at the ship it
+becomes apparent that it is more of a wreck than a ship.
+~
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20047
+D1
+~
+~
+0 0 20051
+D2
+~
+~
+0 0 20040
+D3
+~
+~
+0 0 20035
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20037
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20034
+D1
+~
+~
+0 0 20038
+D2
+~
+~
+0 0 20043
+D3
+~
+~
+0 0 20041
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20038
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20030
+D1
+~
+~
+0 0 20039
+D2
+~
+~
+0 0 20044
+D3
+~
+~
+0 0 20037
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20039
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  You can see a ship to the east. 
+~
+0 12 20
+E
+ship~
+This is a strange place for a ship to be.  As you look at the ship it
+becomes apparent that it is more of a wreck than a ship.
+~
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20035
+D1
+~
+~
+0 0 20040
+D2
+~
+~
+0 0 20045
+D3
+~
+~
+0 0 20038
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20040
+Acid Sea~
+You are standing blow the wreck of a large ship.  It's hull is riddled with
+holes and most of its masts and fittings are broken or missing.  The acid
+still stretches in all directions.  If you climbed up onto the wreck you
+might get out of the acid for a while...
+~
+0 12 20
+E
+ship walls wall hold vessel wreck~
+She looks like she was once a cutter, possible an Indiaman.  All that's
+left now is the bulk of her hull, the broken stubs of her masts and rotting
+remains of her figure head.  There's a heavily corroded nameplate on her
+side.  
+~
+E
+figurehead~
+Looks like it was once a young lady, but time, acid and whatever accident
+brought her here have reduced the figure head to no more than some
+indistinctly shaped bits of rotting wood.  
+~
+E
+nameplate name plate~
+It's very hard the read:
+ 
+  {RMaid Of Orleans{x
+     {RIpswitch{x
+ 
+~
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20036
+D1
+~
+~
+0 0 20041
+D2
+~
+~
+0 0 20046
+D3
+~
+~
+0 0 20039
+D4
+~
+~
+0 0 20055
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20041
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  You can see a ship to the west.
+~
+0 12 20
+E
+ship~
+This is a strange place for a ship to be.  As you look at the ship it
+becomes apparent that it is more of a wreck than a ship.
+~
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20053
+D1
+~
+~
+0 0 20037
+D2
+~
+~
+0 0 20031
+D3
+~
+~
+0 0 20040
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20042
+Fleshy Island~
+You are on a low island that seems to be made out of a soft, fleshy
+substance that's covered in a thick layer of mucus.  All around you is a
+vast, shallow sea of acid.  There seems to be a ridge of some sorts to the
+south of the island.  
+~
+0 12 0
+E
+mucus~
+Thich and slimey.  It looks like it's being secreted from the island
+itself.  There is quite a bit of it on you.  
+~
+E
+island flesh fleshy~
+The island looks natural, but rather organic.  It seems to be an
+extension of the sea bed.  Occasionally it shifts and quivers.  
+~
+E
+sea acid shallow vast~
+The sea seems to be a wide, but fairly shallow lake of rather powerful
+acid.  There's a strong smell in the air and you can see occasional bubbles
+fizzing to the sufrace of the green fluid.  There is no sign of any life
+within it.  
+~
+D1
+~
+~
+0 0 20043
+D2
+~
+~
+0 0 20054
+D3
+~
+~
+0 0 20046
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20043
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20037
+D1
+~
+~
+0 0 20044
+D2
+~
+~
+0 0 20047
+D3
+~
+~
+0 0 20042
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20044
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20038
+D1
+~
+~
+0 0 20045
+D2
+~
+~
+0 0 20048
+D3
+~
+~
+0 0 20043
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20045
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20039
+D1
+~
+~
+0 0 20046
+D2
+~
+~
+0 0 20049
+D3
+~
+~
+0 0 20044
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20046
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  You can see a ship to the north.
+~
+0 12 20
+E
+ship~
+This is a strange place for a ship to be.  As you look at the ship it
+becomes apparent that it is more of a wreck than a ship.
+~
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20040
+D1
+~
+~
+0 0 20042
+D2
+~
+~
+0 0 20050
+D3
+~
+~
+0 0 20045
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20047
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20043
+D1
+~
+~
+0 0 20048
+D2
+~
+~
+0 0 20036
+D3
+~
+~
+0 0 20033
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20048
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20044
+D1
+~
+~
+0 0 20049
+D2
+~
+~
+0 0 20051
+D3
+~
+~
+0 0 20047
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20049
+Fleshy Island~
+You are on a low island that seems to be made out of a soft, fleshy
+substance that's covered in a thick layer of mucus.  All around you is a
+vast, shallow sea of acid.  
+~
+0 12 0
+E
+mucus~
+Thich and slimey.  It looks like it's being secreted from the island
+itself.  There is quite a bit of it on you.  
+~
+E
+island flesh fleshy~
+The island looks natural, but rather organic.  It seems to be an
+extension of the sea bed.  Occasionally it shifts and quivers.  
+~
+E
+sea acid shallow vast~
+The sea seems to be a wide, but fairly shallow lake of rather powerful
+acid.  There's a strong smell in the air and you can see occasional bubbles
+fizzing to the sufrace of the green fluid.  There is no sign of any life
+within it.  
+~
+D0
+~
+~
+0 0 20045
+D1
+~
+~
+0 0 20050
+D2
+~
+~
+0 0 20052
+D3
+~
+~
+0 0 20048
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20050
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20046
+D1
+~
+~
+0 0 20031
+D2
+~
+~
+0 0 20053
+D3
+~
+~
+0 0 20049
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20051
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20048
+D1
+~
+~
+0 0 20052
+D2
+~
+~
+0 0 20032
+D3
+~
+~
+0 0 20036
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20052
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20049
+D1
+~
+~
+0 0 20053
+D2
+~
+~
+0 0 20033
+D3
+~
+~
+0 0 20051
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20053
+Acid Sea~
+You are wading in a shallow sea of burning acid that stretches to the
+horizon in all directions.  Noxious fumes fill the air, and the acid bubbles
+and fizzes around your legs.  
+~
+0 12 20
+E
+acid sea shallow burning~
+The acid is green and bubbly and seems to go on forever.  
+~
+D0
+~
+~
+0 0 20050
+D1
+~
+~
+0 0 20034
+D2
+~
+~
+0 0 20041
+D3
+~
+~
+0 0 20052
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20054
+Fleshy Enterence~
+Here the island widens out and you can see a wide, but dark tunnel leading
+down below the surface of the sea.  A ridge of mucus covered flesh surrounds
+the enterence, and it seems to be free of acid.  The low island is back to 
+the north.
+~
+0 12 0
+E
+tunnel dark fleshy~
+It leads down under the sea.  It looks very organic and its walls are
+oozing with mucus.  There's a very bad smell coming from it.
+~
+E
+mucus~
+Thich and slimey.  It looks like it's being secreted from the island
+itself.  There is quite a bit of it on you.  
+~
+E
+island flesh fleshy~
+The island looks natural, but rather organic.  It seems to be an
+extension of the sea bed.  Occasionally it shifts and quivers.  
+~
+E
+sea acid shallow vast~
+The sea seems to be a wide, but fairly shallow lake of rather powerful
+acid.  There's a strong smell in the air and you can see occasional bubbles
+fizzing to the sufrace of the green fluid.  There is no sign of any life
+within it.  
+~
+D0
+~
+~
+0 0 20042
+D5
+~
+~
+0 0 20056
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20055
+Wrecked Ship~
+You are inside the ruined hold of a wrecked ship.  The rotting boards
+creak and squeel as you walk over them.  Looking down you can see the acid
+sea through the holes in the floor.  The room is full of the stench of the
+acid.  The only way out seems to be back down into the acid.  
+~
+0 12 0
+E
+ship walls wall hold vessel wreck~
+She looks like she was once a cutter, possible an Indiaman.  All that's
+left now is the bulk of her hull, the broken stubs of her masts and rotting
+remains of her figure head.  There's a heavily corroded nameplate on her
+side.  
+~
+E
+figurehead~
+Looks like it was once a carving of a young lady, but time, acid and whatever
+accident brought her here have reduced the figure head to no more than some
+indistinctly shaped bits of rotting wood.  
+~
+E
+nameplate name plate~
+It's very hard the read:
+ 
+  {RMaid Of Orleans{x
+     {RIpswitch{x
+ 
+~
+D5
+~
+~
+0 0 20040
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20056
+Flesh Tunnel~
+You are is a wet, circular tunnel of flesh.  The ribbed walls glisten
+with mucus and seem to be pulsating very slowly.  It's quite warm and humid
+and there is a strong smell of rotting seaweed.  The tunnel runs south, and
+seem to open out above you.  
+~
+0 9 0
+E
+walls ribbed wall~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them. 
+~
+D2
+~
+~
+0 0 20057
+D4
+~
+~
+0 0 20054
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20057
+Flesh Tunnel~
+You are is a wet, circular tunnel of flesh.  The ribbed walls glisten
+with mucus and seem to be pulsating very slowly.  It's quite warm and humid
+and there is a strong smell of rotting seaweed.  The tunnel runs to the
+north and goes down deeper.  
+~
+0 9 0
+E
+walls ribbed wall~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them.
+~
+D0
+~
+~
+0 0 20056
+D5
+~
+~
+0 0 20058
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20058
+Flesh Tunnel~
+You are in a wet, circular tunnel of flesh.  The ribbed walls glisten
+with mucus and seem to be pulsating very slowly.  It's quite warm and humid
+and there is a strong smell of rotting seaweed.  The tunnel runs west and
+up.
+~
+0 9 0
+E
+walls ribbed wall~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them.  
+~
+D3
+~
+~
+0 0 20059
+D4
+~
+~
+0 0 20057
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20059
+Flesh Tunnel~
+You are in a wet, circular tunnel of flesh.  The ribbed walls glisten
+with mucus and seem to be pulsating very slowly.  It's quite warm and humid
+and there is a strong smell of rotting seaweed.  The tunnel runs north and 
+east.
+~
+0 9 0
+E
+walls ribbed wall~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them.  
+~
+D0
+~
+~
+0 0 20060
+D1
+~
+~
+0 0 20058
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20060
+Flesh Tunnel~
+You are in a wet, circular tunnel of flesh.  The ribbed walls glisten
+with mucus and seem to be pulsating very slowly.  It's quite warm and humid
+and there is a strong smell of rotting seaweed.  The tunnel runs east and
+south.
+~
+0 9 0
+E
+walls ribbed wall~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them.  
+~
+D1
+~
+~
+0 0 20061
+D2
+~
+~
+0 0 20059
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20061
+Flesh Tunnel~
+You are in a wet, circular tunnel of flesh.  The ribbed walls glisten
+with mucus and seem to be pulsating very slowly.  It's quite warm and humid
+and there is a strong smell of rotting seaweed.  The tunnel runs east/west.
+~
+0 9 0
+E
+walls ribbed wall~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them.  
+~
+D1
+~
+~
+0 0 20062
+D3
+~
+~
+0 0 20060
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20062
+Flesh Tunnel~
+You are in a wet, circular tunnel of flesh.  The ribbed walls glisten
+with mucus and seem to be pulsating very slowly.  It's quite warm and humid
+and there is a strong smell of rotting seaweed.  The tunnel runs west and
+south.
+~
+0 9 0
+E
+walls ribbed wall~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them.  
+~
+D2
+~
+~
+0 0 20063
+D3
+~
+~
+0 0 20061
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20063
+Flesh Tunnel~
+You are in a wet, circular tunnel of flesh.  The ribbed walls glisten
+with mucus and seem to be pulsating very slowly.  It's quite warm and humid
+and there is a strong smell of rotting seaweed.  The tunnel runs north and 
+upwards, where it seems to open out.
+~
+0 13 0
+E
+walls ribbed wall~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them.  
+~
+D0
+~
+~
+0 0 20062
+D4
+~
+~
+0 0 20064
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20064
+Wide Fleshy Tunnel~
+You are in a wide, circular tunnel of flesh.  The distant ribbed walls 
+glisten with mucus and seem to be pulsating very slowly.  It's quite warm 
+and humid and there is a very strong smell of rotting seaweed.  The wide
+tunnel runs north, while a narrow tunnel runs downwards.
+~
+0 9 0
+E
+walls ribbed wall distant~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them.  
+~
+D0
+~
+~
+0 0 20065
+D5
+~
+~
+0 0 20063
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20065
+Wide Fleshy Tunnel~
+You are in a wide, circular tunnel of flesh.  The distant ribbed walls 
+glisten with mucus and seem to be pulsating very slowly.  It's quite warm 
+and humid and there is a very strong smell of rotting seaweed.  The tunnel
+runs north/south. 
+~
+0 9 0
+E
+walls ribbed wall distant~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them.  
+~
+D0
+~
+~
+0 0 20066
+D2
+~
+~
+0 0 20064
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20066
+Wide Fleshy Tunnel~
+You are in a wide, circular tunnel of flesh.  The distant ribbed walls 
+glisten with mucus and seem to be pulsating very slowly.  It's quite warm 
+and humid and there is a very strong smell of rotting seaweed.  The tunnel
+runs south and downwards.
+~
+0 9 0
+E
+walls ribbed wall distant~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them.  
+~
+D2
+~
+~
+0 0 20065
+D5
+~
+~
+0 0 20067
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#20067
+End of Wide Fleshy Tunnel~
+You are at the bottom of a wide, circular tunnel of flesh.  The ribbed
+walls glisten with mucus and seem to be pulsating very slowly.  It's quite
+warm and humid and there is a very strong smell of rotting seaweed.  The
+tunnel runs upwards and ends at a tight sphincter below you.  
+~
+0 9 0
+E
+walls ribbed wall distant~
+The walls seem to be covered with hundreds and thousands of short, thick
+tenticles that blindly grope for whatever they can reach.  With some
+difficulty you are able to pull your hand free of them.  
+~
+D4
+~
+~
+0 0 20066
+X
+Recall 20030
+Respawn 20030
+Dream 20030
+End
+S
+#0
+
+
+
+#SPECIALS
+M 20000 spec_teleHunter Load to: Hound of Tindalos
+M 20022 spec_cast_undead Load to: spirit dummy
+M 20023 spec_teleHunter Load to: Assassin
+M 20090 spec_artifactTracker Load to: Crippled Midget
+M 20091 spec_artifactHunter Load to: Assassin Cultuist
+M 20092 spec_artifactHunter Load to: Tcho Tcho Cultist
+S
+
+
+
+#RESETS
+D 0 20021 0 2
+D 0 20022 0 2
+D 0 20022 1 2
+D 0 20022 2 2
+D 0 20024 1 2
+D 0 20024 3 2
+D 0 20025 2 2
+D 0 20025 3 2
+O 0 20000 1 20000 A misty blue pool loaded to Blue Mist Marsh
+M 0 20000 1 20002 Load Hound of Tindalos
+M 0 20000 2 20004 Load Hound of Tindalos
+M 0 20000 3 20006 Load Hound of Tindalos
+M 0 20000 1 20007 Load Hound of Tindalos
+O 0 20080 1 20008 A blur loaded to A chaotic beachside
+M 0 20000 3 20012 Load Hound of Tindalos
+M 0 20001 1 20014 Load a conic irridescent creature
+M 0 20001 1 20015 Load a conic irridescent creature
+M 0 20001 2 20016 Load a conic irridescent creature
+M 0 20001 1 20017 Load a conic irridescent creature
+M 0 20001 1 20018 Load a conic irridescent creature
+M 0 20002 1 20019 Load a gargantuan conic irridescent creature
+O 0 20007 1 20021 A skeleton loaded to Halls of Doors
+O 0 20004 1 20023 A pool of water loaded to Halls of Doors
+O 0 20005 1 20023 A small wooden barrel loaded to Halls of Doors
+O 0 20002 1 20024 A silver doorway loaded to Halls of Doors
+O 0 20003 1 20024 An ivory doorway loaded to Halls of Doors
+P 0 20006 5 20005 A hard biscuit put inside a hard biscuit
+M 0 20010 1 20031 Load an acid crab
+M 0 20010 1 20045 Load an acid crab
+M 0 20010 1 20047 Load an acid crab
+O 0 20005 1 20055 A small wooden barrel loaded to Wrecked Ship
+O 0 20008 1 20055 A pool of bilge water loaded to Wrecked Ship
+M 0 20011 1 20065 Load a mound of rotting seaweed
+O 0 20010 1 20067 A tight sphincter loaded to End of Wide Fleshy Tunnel
+S
+
+
+
+#SHOPS
+0
+
+
+
+#$

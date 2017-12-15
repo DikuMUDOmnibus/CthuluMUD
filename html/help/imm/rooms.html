@@ -1,0 +1,613 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; I) [Netscape]">
+   <meta name="Author" content="jh">
+   <title>The Rooms Content</title>
+</head>
+<body text="#C0C0C0" bgcolor="#FFFFFF" link="#0000FF" vlink="#000080" alink="#996633" background="paper.jpg">
+&nbsp;
+<center>
+<p><b><font face="Arial"><font color="#006600"><font size=+2>Introduction</font></font></font></b></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<p><font face="Arial"><font color="#000000"><font size=+0>Rooms are without
+a doubt the easiest thing to create, but building a quality room is a different
+matter. This section only covers the commands, not tips or guidance on
+quality and style.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<center>
+<p><a NAME="roomscreate"></a><b><font face="Arial"><font color="#006600"><font size=+1>Creating
+Rooms</font></font></font></b></center>
+
+<p><br>
+<br>
+<p><font face="Arial"><font color="#000000"><font size=+0>Creating rooms
+is a relative simple matter and can be accomplished in two fashions:</font></font></font>
+<p><font face="Arial"><font size=+0><font color="#000000">1. </font><b><font color="#3333FF">EDIT
+ROOM CREATE [VNUM]</font></b><font color="#000000"> which both creates
+the new room and automatically transfers you there.</font></font></font>
+<p><font face="Arial"><font color="#000000"><font size=+0>2. Linking a
+door to a non-existant room will automatically create one. You will not
+be automatically moved to rooms created in this fashion.</font></font></font>
+<p><font face="Arial"><font color="#000000"><font size=+0>The method you
+use isn't important as long as it works for you. Some people prefer to
+just map out their entire area by creating doors to their new rooms. While
+this will initially set up the entire area, remembering the location of
+rooms relative to each other for additional doors might become complicated.
+The method I use, use it or ignore it as you prefer, is to initially sketch
+out my area on graph paper. Then I fill in the rooms inside the sketch
+and label them with their VNUMs. This helps me keep track of which rooms
+need to be linked with each other and prevents further confusion down the
+road, but please feel free to use whatever method works for you.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="roomsedit"></a><b><font face="Arial"><font color="#006600"><font size=+1>Editing
+Rooms</font></font></font></b></center>
+
+<p><font face="Arial"><font size=+0><b><font color="#3366FF">EDIT ROOM</font></b><font color="#000000">will
+allow you to edit your rooms after you have finished laying them all out,
+or if you prefer, to finish them while creating.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="roomsdesc"></a><b><font face="Arial"><font color="#006600"><font size=+1>Descriptions</font></font></font></b></center>
+
+<p><font face="Arial"><font size=+0><b><font color="#3366FF">DESC</font></b><font color="#000000">will
+enter the APPEND mode, the standard editor for note spools, descriptions
+and MOBprograms. If you aren't that familiar with the editor from playing
+Macula, I suggest you become an expert with all its functions. It even
+has a spell checker, so there is no excuse for blatant mispelling. Grammar
+errors, however, require a watchful eye and proofreading by both yourself
+and other builders.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="roomsext"></a><b><font face="Arial"><font color="#006600"><font size=+1>Extended
+Descriptions</font></font></font></b></center>
+
+<p><font face="Arial"><font color="#000000"><font size=+0>The commands
+for extended descriptions are:</font></font></font>
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>ED ADD [KEYWORD
+LIST]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>ED CHANGE
+[id] [NEW KEYWORD LIST]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>ED SHOW [id]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>ED EDIT [id]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>ED DELETE
+[id]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>ED FORMAT
+[id]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>ED COND [id]
+[condition]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>ED DEED [id]
+[deed id] [type] [TITLE string]</font></font></font></b>
+<br>&nbsp;
+<p><font face="Arial"><font color="#000000"><font size=+0>This is where
+you make your money as a builder. Extended descriptions add depth and flavor
+to your rooms. Players, especially those exploring your area for the first
+time, will want to look around and examine everything. Prominent features
+in your room description should be given their own extended description.
+Some builders actually go as far as placing keywords in their room description
+in a different color, letting players know which words are linked to extended
+descriptions. There can be, and often warranted, multiple keywords for
+an extended description as seen in this example:</font></font></font>
+<br><tt><font face="Arial"><font color="#000000"><font size=+0>The trail
+of sticky memo pads leads to a dusty corner.</font></font></font></tt>
+<br>&nbsp;
+<p><font face="Arial"><font color="#000000"><font size=+0>Here, both <i>memo</i>
+and <i>pads</i> could be keywords to an extended description detailing
+what the memo pads look like--perhaps there is even a secret message on
+them or more likely just useless scribbles and tic-tac-toe games played
+during admin sessions where nothing is getting accomplished.</font></font></font>
+<p><font face="Arial"><font color="#000000"><font size=+0>With good imagination
+and planning, a builder doesn't just make a nifty leveling area but actually
+tells a story if the players delve into the descriptions. Further extended
+descriptions might be embedded in the first set of extendeds, visible in
+the room description. Looking at a desk might detail the fact that its
+a plain oak desk with three drawers. Examining the drawers might reveal
+a secret message scratched in the wood telling players how to bypass the
+overly nasty mobile in the next room or reveal the location of a buried
+treasure--whatever.</font></font></font>
+<p><font face="Arial"><font color="#000000"><font size=+0>Typical ed conds
+are based on skills:</font></font></font>
+<br><i><font face="Arial"><font color="#000000"><font size=+0>ed cond 1
+actor skill 'german' 40 -1</font></font></font></i>
+<br><font face="Arial"><font color="#000000"><font size=+0>will result
+in the ed only being activated, when the person triggering it has a GERMAN
+skill of 40 or higher (-1).</font></font></font>
+<br><font face="Arial"><font color="#000000"><font size=+0>But also more
+global stuff can be used:</font></font></font>
+<br><i><font face="Arial"><font color="#000000"><font size=+0>ed cond 1
+world not hour_of_day 7 19</font></font></font></i>
+<br><font face="Arial"><font color="#000000"><font size=+0>will result
+in the ed only being availiable by between 8pm and 6am</font></font></font>
+<p><font face="Arial"><font color="#000000"><font size=+0>Getting an ed
+can also give you a deed:</font></font></font>
+<br><i><font face="Arial"><font color="#000000"><font size=+0>ed deed 1
+1234 private You looked at Pickman's portrait.</font></font></font></i>
+<br><font face="Arial"><font color="#000000"><font size=+0>will give you
+the deed 1234 with this title. Other deed types are <i>public</i> and <i>secret</i>.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><a NAME="roomsedit"></a><b><font face="Arial"><font color="#006600"><font size=+1>Room
+Settings</font></font></font></b></center>
+
+<p><font face="Arial"><font color="#000000"><font size=+0>There is quite
+a number of numeric settings for your room. In most cases the defaults
+will be sufficient but sometimes you should fine-tune them a bit.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>RECALL [vnum]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This sets the
+recall location for this room. If it isn't set, your area recall location
+will be used.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>&nbsp;RESPAWN
+[vnum]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This sets the
+respawn (starting point after death) location for this room. If it isn't
+set, your area respawn location will be used.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>MORGUE [vnum]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This sets the
+morgue location for this room. If it isn't set, your area morgue location
+will be used.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>DREAM [vnum]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This sets the
+dream location for this room. If it isn't set, your area dream location
+will be used.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>MARE [vnum]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This sets the
+nightmare location for this room. If it isn't set, your area nightmare
+location will be used. If it's set to -1 this room issafe for dreaming.
+No nightmares will happen.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>NIGHT [vnum]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This sets the
+vnum for an alternate night room. You'll be taken there by night making
+the room appear different. If none is set, the room is used as its own
+night room (default).</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>DAY [vnum]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This sets the
+vnum for an alternate day room. You'll be taken there by day making the
+room appear different. If none is set, the room is used as its own day
+room (default).</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>RENT [cost]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This is the rent
+cost for the room, which only makes sense if the room is rentable. 5000/month
+is used as default value.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>HEAL [%]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This is the healing
+rate. 100 is default; 0 means, you don't regenerate hit points in here.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>MANA [%]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This is the mana
+rate. 100 is default; 0 means, you don't regenerate mana points in here.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><a NAME="roomsflag"></a><b><font face="Arial"><font color="#006600"><font size=+1>Room
+Flags</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>FLAG [FLAG]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>These <a href="flags.html#Room">flags</a>
+define what affects the room has, the possible flags are:</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="roomssect"></a><b><font face="Arial"><font color="#006600"><font size=+1>Sector
+Types</font></font></font></b></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>SECTOR [Type]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Sector flags
+determine the terrain which affects movement and access:</font></font></font>
+<br>&nbsp;
+<table WIDTH="47%" >
+<tr>
+<td><font color="#000000">Type</font></td>
+
+<td><font color="#000000">Move Pts</font></td>
+
+<td><font color="#000000">Notes</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">inside</font></td>
+
+<td><font color="#000000">1</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">city</font></td>
+
+<td><font color="#000000">2</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">field&nbsp;</font></td>
+
+<td><font color="#000000">2</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">forest</font></td>
+
+<td><font color="#000000">6</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">hills</font></td>
+
+<td><font color="#000000">4</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">mountain</font></td>
+
+<td><font color="#000000">6</font></td>
+
+<td><font color="#000000">climb check</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">swim</font></td>
+
+<td><font color="#000000">4</font></td>
+
+<td><font color="#000000">swim check</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">noswim</font></td>
+
+<td><font color="#000000">1</font></td>
+
+<td><font color="#000000">needs boat</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">air</font></td>
+
+<td><font color="#000000">10</font></td>
+
+<td><font color="#000000">must be flying</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">desert</font></td>
+
+<td><font color="#000000">6</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">underground</font></td>
+
+<td><font color="#000000">4</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">swamp</font></td>
+
+<td><font color="#000000">8</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">moor</font></td>
+
+<td><font color="#000000">4</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">space</font></td>
+
+<td><font color="#000000">10</font></td>
+
+<td><font color="#000000">must be flying, </font><font color="#FF0000">no
+air</font><font color="#000000">, </font><font color="#FF0000">cold</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">underwater</font></td>
+
+<td><font color="#000000">8</font></td>
+
+<td><font color="#000000">swim check, </font><font color="#FF0000">no air</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">small-fire</font></td>
+
+<td><font color="#000000">4</font></td>
+
+<td><font color="#FF0000">fire</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">fire</font></td>
+
+<td><font color="#000000">5</font></td>
+
+<td><font color="#FF0000">fire</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">big-fire</font></td>
+
+<td><font color="#000000">6</font></td>
+
+<td><font color="#FF0000">fire</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">cold</font></td>
+
+<td><font color="#000000">4</font></td>
+
+<td><font color="#FF0000">cold</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">acid</font></td>
+
+<td><font color="#000000">6</font></td>
+
+<td><font color="#FF0000">acid</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">lightning</font></td>
+
+<td><font color="#000000">4</font></td>
+
+<td><font color="#FF0000">lightning</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">holy</font></td>
+
+<td><font color="#000000">4</font></td>
+
+<td><font color="#FF0000">holy</font><font color="#000000"> (evil chars)</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">evil</font></td>
+
+<td><font color="#000000">4</font></td>
+
+<td><font color="#FF0000">negative</font><font color="#000000"> (good chars)</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">jungle</font></td>
+
+<td><font color="#000000">8</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">path</font></td>
+
+<td><font color="#000000">2</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">road</font></td>
+
+<td><font color="#000000">1</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td><font color="#000000">plain</font></td>
+
+<td><font color="#000000">2</font></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+</table>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<center>
+<p><a NAME="roomsdoors"></a><b><font face="Arial"><font color="#006600"><font size=+1>Doors</font></font></font></b></center>
+
+<p><font face="Arial"><font color="#000000"><font size=+0>From the room
+editor, doors require the following syntax followed by the extended commands.</font></font></font>
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>[DIRECTION]
+[COMMAND]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0><b>Extended Commands</b>
+(Required for any door operation)</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>DIG [VNUM]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Creates a standard
+two-way exit to another room. The editor will automatically create the
+room.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>LINK [VNUM]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Creates a standard
+two exit to another room. The room must already exist.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>ROOM [VNUM]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Creates a standard
+oneway exit to another room. The room must already exist.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>KEY [OBJECT
+VNUM]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This commands
+restricts all lock/unlock actions to those with they key object of the
+specified VNUM. This can only be used on exits defined already as DOOR.
+Keys are set only on one side of the door. If you want a keyhole on both
+sides, you got to set it on both sides.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>NAME 'DOOR
+NAME'</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Sets the exit/keywords.
+Someone can only open/close the door if they use the keywords defined here.
+The following example set exit keywords to <i>rat hole</i>.</font></font></font>
+<br><tt><font face="Arial"><font color="#000000"><font size=+0>WEST NAME
+'RAT HOLE'</font></font></font></tt>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>DESCRIPTION</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This will take
+you straight into the APPEND Mode to edit the description of an exit text.
+This is seen when looking in that direction and usually contains the name
+or clues to the name of a <b>NAME</b>d exit.</font></font></font>
+<br>&nbsp;<b><font face="Arial"><font color="#3366FF"><font size=+0></font></font></font></b>
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>TRANSITION</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This will take
+you straight into the APPEND Mode to edit the transition of an exit text.
+It's being displayed, when you're using an exit.</font></font></font>
+<br><font face="Arial"><font color="#000000"><font size=+0></font></font></font>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>DELETE</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Deletes an exit
+in the specified direction. Can be used to delete only one side or both
+at once.</font></font></font>
+<br>&nbsp;
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>DOOR [EXIT-FLAG]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Sets the <a href="flags.html#Exit">door
+flags</a> to an exit. Whether it IS a door for example and whether players
+will be able to use pass door or pick the lock. You <b>MUST</b> define
+a door as DOOR first before applying any other flags!</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><a NAME="roomsshops"></a><b><font face="Arial"><font color="#006600"><font size=+1>Pet
+Shops</font></font></font></b></center>
+
+<p><font face="Arial"><font color="#000000"><font size=+0>Pet Shops require
+special addressing as most shops can be generated as regular rooms with
+an NPC shopkeeper mobile. A pet shop is in reality two rooms, not one.
+The first room is the actual shop where players will buy the pets. The
+second room is the pet storage room.</font></font></font>
+<p><b><font face="Arial"><font color="#FF0000"><font size=+0>The room VNUMs
+MUST be sequential!</font></font></font></b>
+<br><b><font face="Arial"><font color="#FF0000"><font size=+0>The first
+room MUST be flagged with Pet_shop</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>So if room VNUM
+1000 is the pet shop (and flagged pet_shop), the pet storage room MUST
+be room VNUM 1001. The pet storage room is where you will place the resets
+on the mobiles that the shopkeeper will sell.</font></font></font>
+<p><font face="Arial"><font color="#000000"><font size=+0>All pet storage
+rooms should be flagged
+<tt>No_mob</tt> and <tt>Gods_only</tt>. The first
+is to prevent mobiles from being teleported into the room. Though I'm sure
+players would love to buy Tiamat as a pet, we don't want to see that happen.
+The second flag is to prevent players from entering the room, they have
+no business being in there.</font></font></font>
+<br>&nbsp;
+</body>
+</html>

@@ -1,0 +1,980 @@
+Driver 7
+--------
+
+  Driver 7.2.9 Installation
+  -------------------------
+
+    Copy races.txt, spells.txt, skills.txt and socrace.txt to /config
+    Edit /config/society.txt and remove the racial societies
+
+  RedHat Linux 6.0 compatability
+  ------------------------------
+
+    There seems to be a problem with db.c where the compiler says that
+    variables pReset and letter are not initialized.  Looking at the code
+    I don't see how that can be the case though.
+
+  ACT/PLR Flag split
+  ------------------
+
+    The act word was used for two different sets of flags, one for NPCs
+    and one for PCs.  This worked fine until someone used the switch
+    command and we got a mob that was a PC but with the bits still set
+    for its mob role.
+
+    Fix is to introduce a new word for player bits and change all 
+    references for PLR_ flags.
+
+  Stats changed to max. 103
+  -------------------------
+
+    Stat ranges are now from 0 to 103, with bonuses and penalties
+    correspondingly adjusted.  Players stats are suitably scaled when
+    the player is loaded.
+   
+    The primary effect is to reduce the power of all stat boosting 
+    items by 75%.  This is generally in keeping with a move away from
+    a power play based system.
+
+    It also opens the possabilities for a return of the train
+    command.
+
+  Positions and Activities
+  ------------------------
+  
+    New internal function to set position and activity - integer values
+    and descriptions.  Descriptions seen when a character is looked at.
+
+    Position descriptions are 'default' and can be set through stand,
+    rest, sit and sleep.  A few are also set by some commands.
+
+    Activities are for long running processes, and last until there
+    is another change in position or activity (or the process that
+    is controlling the activity decides it is over).  Eventually this
+    mechanism will be used for spell casting.
+
+  Time Rebase
+  -----------
+
+    Changed base timescale for be 45 seconds to the hour rather than
+    30 seconds.  This makes a few game features take a little longer.
+    Time chart is now:
+
+      4 pulses per second, 180 pulses make 1 game hour.
+
+      So: 
+
+	1 game minute	 	=  3/4 second
+	1 game hour		=   45 seconds
+	1 game day		=   18 minutes
+	1 game week		=  126 minutes
+				=    2 hours, 6 minutes
+	1 game month		=  504 minutes
+				=    8 hours, 40 minutes
+	1 game year		= 6048 minutes
+				=  100 hours, 48 minutes
+				=    4 days, 4 hours, 48 minutes
+
+    1 day realtime is 2 months, 3 weeks, and 3 days.  So logging in at
+    the same time every day gets you in 4 days earlier in the month.
+    Over 4 days you get 16 days earlier in the year.
+
+   	1 real hour 	=	 3 days, 21 hours, 20 minutes
+	2 real hours	=	 7 days, 18 hours, 40 minutes
+	3 real hours	=	11 days, 14 hours
+
+  Day and Night Rooms
+  -------------------
+
+    You can now specify alternate day and night locations for rooms.  Players
+    and exits are automatically shifted according to the time of day.  Each
+    day is divided into Dawn, Day, Dusk and Night.  During the day a rooms
+    day alternative is used, during the night its night alternative will be
+    used.  Dawn and dusk are one hour long and during them neither alternative
+    is used.
+
+    Note that you probably want a symmetrical setup, with the night room of
+    one room being the day room of the other.
+
+  Activities
+  ----------
+
+    A process for ongoing activities has been added.  Initial adaptions are
+    lock picking, searching rooms, sneaking and hiding.  You can only do
+    one thing at a time.  Transition between sneaking and hiding should be
+    silent, as long as you are successful at both.
+
+  Prompt
+  ------
+
+    Remove alignment.
+
+    Add %p for position and %a for activity.
+
+  Spells
+  ------
+
+    Spells are reworked to use the ongoing process model.  Spell casting is
+    now a series of sequential steps, allowing casting to be interrupted.
+
+    Spell definitions are externalized into config/spells.txt.  See that
+    for the full details.
+
+    A spell can be based upon 2 skills, in which case the average of these
+    skills is used for the casting.
+
+    Area affect spells that hit one or more rooms are also supported.
+
+  Weather
+  -------
+
+    Weather system reworked, presentation with each room.
+
+    Primative climates introduced on an area basis.
+
+    'fullweather' command to toggle between summary and full text.
+
+    Snow and Deep Snow increase movement costs.
+
+  Boot Scripts
+  ------------
+
+    Script cthulhu can be placed in /etc/rc.d/init.d and linked into
+    the rc3.d directory.  It is a redhat 6 complient start/stop script.
+
+  New professions
+  ---------------
+
+    Profs.txt updated to include 20th century professions
+
+      undergraduate
+      convent undergraduate
+      apprentice
+      hoodlem
+      cadet
+
+      soldier
+      policeman
+      postgraduate
+      good priest
+      evil priest
+      occultist
+      gangster
+      adventurer
+      journeyman
+      thief
+      artist
+
+   If you want the old professions, keep the old profs.txt or change the
+   Player and Initial settings in this one.
+
+ Quests
+ ------
+
+   Quests are like deeds, but have multiple stages:
+
+       -1  Not yet started
+        0  Started, but no details yet
+        n  On step n
+     9999  Completed
+
+   Quests have a vnum like id, a state, a title that is set when the quest
+   is assigned and an instruction that is set whenever the quest is updated.
+
+   Mobs can access quest state through a quest condition, taking the quest id
+   and a range of state values.
+
+   Mobs can modify a players stae data through the MPQUEST command.
+
+   A short quest might be:
+
+     Wizard
+      asked for quest
+        quest not 37 0 9999
+          MPQUEST @at START 37 Fetch Wizards book
+          MPQUEST @at UPDATE 37 1 Ask apprentice 
+          Say Ask Mob 2 where it is
+
+      given book
+        quest 37 2 2
+          Say Thank you
+          MPQUEST @at COMPLETE 37 Returned to Wizard
+          MPREWARD @at 1000
+        quest 37 not 2 2
+          Say That's not the right book!
+
+    Apprentice
+      asked about book
+        quest 37 1 1
+          MPQUEST @at UPDATE 37 2 Look in the woods
+          Say I lost it in the woods
+        quest 37 2 2
+          Say I told you, I lost it in the woods
+        quest not 37 1 2
+          Say Book! What book?
+ 
+    Woods Room
+      north
+        quest 37 2 2 -> secret room 
+
+    Secret Room
+      book
+      nasty monster
+
+   This forces the player to go through the acts in the correct sequence.
+   
+   You can combine several quests to get multiple threads which the player
+   may persue in parallel.
+
+ MPQUEST
+ -------
+
+   MPQUEST player START id title
+
+     This starts the player onthe quest and should normally be followed by
+     an update to give them thier first instruction.
+
+   MPQUEST player UPDATE id state instruction
+
+     This updates the state of a quest that the player is already on.  There
+     are no checks, so it might move them backwards overall.
+
+   MPQUEST player COMPLETE id instruction
+
+     This marks the quest as having been completed (state 9999).
+
+   MPQUEST player FORGET id
+
+     This removes all memory of the quest from the player.  It is as if they
+     had never started it.
+ 
+   If the player is in a group, the command will affect all group members.
+
+ Training
+ --------
+
+   You get one training session per level.  You can spend them to
+   improve your attributes:
+
+     Strength, Intelligence, Wisdom, Dexterity, Constitution
+
+       1-3 points per gain until 97, then 1 point per gain
+
+       1st gain costs 1, 2nd 3, 3rd 6, 4th 10, 5th 15, 6th 21, etc...
+
+     Hits, Mana, Move
+ 
+       4-6 points per gain
+
+       1st gain costs 1, 2nd 3, 3rd 6, 4th 10, 5th 15, 6th 21, etc...
+
+     Practice, Sanity
+
+       1-3 points per gain
+
+       Each gain costs 1 train session.	
+	
+
+ Sanity
+ ------
+
+   Each player starts with a sanity rating that is a little higher than
+   thier wisdom.  This will typically range from 60 (low) to 90 (high).
+   If a players sanity drops below 32 they will start exhibiting signs
+   of madness and these get progressively worse as their sanity drops
+   towards zero.
+
+   Sanity is normally lost through sanity checks.  These are triggered
+   by mobs using the MPSANITY command.  This command specifies a threshold
+   which is used to challange the players sanity using the formula:
+
+     sanity + open d100 > threshold + open d100
+
+   Threshold settings should be set carefully:
+
+     40		Not very scary, only already insane players will have trouble
+		with this.  Players will fail approx 20% of the time.
+     50		Players will fail approx 30% of the time.
+     60		Players will fail approx 40% of the time.
+     70		Players will fail approx 50% of the time.
+     80		Players will fail approx 60% of the time.
+     90		Players will fail approx 70% of the time.
+    100         Players will fail approx 80% of the time.
+
+   So:
+
+     Marginally mindbending:	 50
+     Typcally mindbending:	 75
+     Seriously mindbending:	100
+     Mindblowing:		150
+
+   Additionally sanity is also lost if you die.
+
+   There are currently 3 ways to recover sanity:
+
+     Train sanity
+     Pass a sanity check by more than 100 points
+     Persuade a mob to issue an MPSANITY RECOVER for you
+
+   Econd for sanity added.
+
+
+ MPSANITY
+ --------
+
+   MPSANITY player CHECK threshold action
+
+     The player makes a sanity check againt the threshold.  If an action has
+     been specified they will take it if they fail the check.  If no action
+     has been specified, they will take a random action.  The threshold must
+     be at least 30.
+
+   MPSANITY player RESTORE points
+
+     The players sanity will be increased by the specified number of points.
+     There is a maximum of 20.
+
+ Fright
+ ------
+
+   Mobiles may have a fright value set.  This is used as a sanity threshold
+   whenever the player:
+
+     enters a room and sees the mobile
+     examines the mobile
+     sees the mobile enter a room
+     sees the mobile make a sacrifice
+     sees the mobile interact with an idol
+
+   The check is only made if the player is of a lower level than the mobile.
+
+ Object Spell Casting
+ --------------------
+
+   Tidied up, fixed a couple of OLC bugs, removed the 'automatic hit' with
+   attack spells.
+ 
+ MPEFFECT
+ --------
+ 
+   This instantaneously applies a spell effect to a mobile without going
+   through the whole spell casting sequence.  It is intended for usage
+   by high level mobiles granting (or afflicting) others with spell like
+   effects.  Generally mobs should use spell casting instead of this
+   command.  This command will, however, work on an MPAT command.
+
+   MPEFFECT mobile 'effect name' level
+
+     This applies the named effect to the mobile.  This can be the mobile
+     issueing the MPEFFECT call.  If level is omitted, the issuing mobiles
+     will be used.
+
+ Mob Memory
+ ----------
+
+   Mobs (and palyers) each have ten memory slots, each of which can hold 
+   a string.  Strings are remembered through the MPMEMORY command and can
+   be accessed through either @mx substitution tags or through the memory,
+   memory_value, actor_remembered, and victim_remembered econds.
+
+   Generally they are meant to be used to remember player and object names.
+
+   A mob forgets everything when it is killed.
+
+   Truenames are a good way to remember unique mobiles, but it is possible
+   that they may be reused if, for instance, a mobile is killed or a player
+   logs off.  True names are only valid for a few seconds after they are
+   obtained.  It is better to remember player names rather than true name 
+   Remembering the players name means that they cannot just quit and login
+   again to make the monster lose track of them.
+
+   A simple 'remember my enemy and be prepared' setup might be:
+
+     combat/hit:
+       not->actor_remembered 1
+       am_victim
+         MPMEMORY self REMEMBER 1 @a1
+         Say I shall kill you, @a2!
+ 
+     mob/death:
+       actor_remembered 1 
+         MPMEMORY self FORGET 1
+
+     arrive/none:
+       actor_remembered 1
+         MPEFFECT self 'shield'
+         MPEFFECT self 'haste'
+         MPEFFECT self 'giant strength'
+         MPEFFECT @at  'weaken'
+         MPKILL @at
+         Say I said I would kill you!
+ 
+  A more complicated usage would involve the track command, where the mob
+  would hunt the PC down if they left.  Note that this remains in effect
+  until either the mob is slain or the mob sees the pc die.
+
+ MPMEMORY
+ --------
+
+   This updates a mobs memory
+
+     MPMEMORY mobile REMEMBER slot text
+ 
+       This causes the mob to remember something in a slot.
+
+     MPMEMORY mobile FORGET slot
+
+       This causes the mobile to forget what is in a slot.      
+
+ Web Status
+ ----------
+
+   From Driver 7.1.5 CthulhuMud will maintain an html document called
+
+      mud/html/online.html
+
+   which contains the muds current status.  When the mud is running it will
+   contain a list of current players (updated every 45 seconds).  When the
+   mud is down or booting, it will contain some appropriate text (copied
+   from the booting.html, shutdown.html and crashing.html files in the
+   same directory).
+
+ Iff
+ ---
+
+   Added the ability to determine if another mob is friend or foe.  The
+   code uses fighting, hunting, groups and societies to make this
+   determination.  In addition to display and econds it is also used to
+   target area spells, in conjunction with a scope.
+
+ MPHUNT
+ ------
+
+   This makes the mob hunt the specified pc.  Currently it only works with 
+   the special routines that handle hunting mobs.
+
+   MPHUNT mobile
+
+     Mob starts hunting (and trying to kill) the mobile
+
+   MPHUNT
+ 
+     Mob stops hunting.
+
+ Text Formatting
+ ---------------
+ 
+   Introduced a new, single pass, text formatting routine.  It knows about
+   {? control codes and imbedded periods.  It can support an imbedded {/
+   for when you want a new paragraph in a description.
+
+   The {? control codes are:
+
+     {x  Reset to (grey on black, not extended highlighting)
+     {b  Blue
+     {c  Cyan
+     {d  Invisible (black)
+     {g  Green
+     {m  Magenta
+     {r  Red
+     {w  Dirty white
+     {y  Browny yellow
+     {B  Bright Blue
+     {C  Bright Cyan
+     {G  Bright Green
+     {M  Bright Magenta
+     {R  Bright Red
+     {W  Bright White
+     {Y  Bright Yellow
+     {D  Dark Grey (Bright Black, would you believe)
+     {*  Bell (very annoying)
+     {/  New line
+     {{  A {
+     {3  Underlined   \
+     {4  Reverse       > Not all clients support these, so use with caution.  
+     {&  Blinking     /
+     {F  Toggle formatting off and back on
+
+   If you enter an invalid code, you get the code shown as is.  This probably
+   isn't a good idea as I may add more codes later.
+
+ Tracks
+ ------
+
+   Two types of tracks - footprints and guides.
+
+   Footprints can be permanent (part fo the room) or transient (left by
+   something walking through the room).  Transient foot prints wear out
+   with time.
+
+   Guides are a part of the room definition and instruct mobs to move
+   in a certain direction and run certain scripts.
+
+   Tracking is through the tracks command.  On its own it shows all tracks
+   in the room, with a parm it tries to follow those tracks from room to
+   room.  Mobs should use the track command for follow guide tracks.
+
+   Permanent tracks are created with the ptracks redit command.  It will
+   create either footprint tracks or guide tracks.
+
+   When specifying size for tracks you have a range from 0 to 5:
+
+	0	Tiny
+	1	Small
+	2	Medium
+	3	Large
+	4	Huge
+	5	Gigantic
+
+   Directions must also be specified as numbers:
+
+	 0	North
+	 1	East
+	 2	South
+	 3	West
+	 4	Up
+	 5	Down
+	 6	Northeast
+	 7	Southeast
+	 8	Southwest
+	 9 	Northwest
+	10	Here
+	11	Elsewhere
+
+   Values 10 and 11 cannot be followed through automatic tracking.
+
+ spec_clanguard
+ --------------
+
+   Special procedure for society oriented guards.  Thier names should
+   contain the string _soc_nn, where nn is the societies id.
+ 
+   A clan guard will ignore friends of its society, and attack foes 
+   on sight. It may also attack anyone else who happens to stray near
+   it on general principles. 
+
+ ACT_AUTOHOME
+ ------------
+ 
+   If a mob with this attribute find itself alone for more than 5 minutes
+   in a room other than the one it was spawned in, it will teleport back
+   there.  Useful for things that go tracking.
+
+ Player Combat
+ -------------
+
+   The rules are simple:
+
+     o Newbies may participate in fights
+     o No one may attack an immortal
+     o If you kill a player, you get your permadeath flag set
+
+   The mud also has an unrestricted PK mode, set via the setpk command.
+   When active, you do not get your permadeath flag set for killing another
+   player.
+
+ Permadeath Flag
+ ---------------
+
+   If the character dies, for any reason, then it will be deleted.
+
+   All players start with it set off, but there are ways of getting it
+   turned on.
+
+   Getting it turned off is considerable more difficult. 
+
+ spec_clanhealer
+ ---------------
+
+   A mob with this attribute should also have ACT_CLERIC or ACT_MAGE set.
+   They will cast bless, armor, cure blindness, cure light, cure poison
+   and restore spells on those characters that are identified as friendly
+   to them.
+
+   Thier names should contain _soc_nn, where nn is the id of the society
+   they are a member of.
+
+   They can also recognise the societies foes and will react appropriately.
+
+ Can_See/Can_Not_See
+ -------------------
+ 
+   These allow you to specify econds for when a mobile can or cannot
+   unconditionally see a player.  The can see function is checked first.
+
+   Mobs should only react to players that they can see.
+
+   Econds actor_visible and victim_visible added to support this.
+
+ MPSTEAL
+ -------
+
+   Allows a mob to unconditionally take an object from another player or 
+   mobile.  No messages are generated, so use appropriate echos.
+
+   MPSTEAL 'mobile' 'item'
+
+   If item can be found on mobile it will be removed (and unequipped if
+   worn) and put into the inventory of the mobile.
+
+   For example:
+
+     MPSTEAL @at 'ghul stone'
+     MPJUNK 'ghul stone'
+     MPECHOAT @at {YYour ghul stone shatters!{x
+
+   Which will give the effect of the players 'ghul stone' being destroyed
+   whenever the script is run.  Econds should be used to check the player
+   actually has one first.
+
+ Debating
+ --------
+
+   A battle of skills between two mobs, but without the bloodshed of
+   combat.
+
+     Each player matches debating skill + roll + debated skill
+
+     Highest wins one or more points.
+
+     First to 15 points wins the debate
+
+   Debating uses movement and you only get a reward for winning (or a penalty
+   for losing) a debate where the skills are closely matched.
+
+ New Skills
+ ----------
+
+   fourth attack
+
+     Gives an extra attack if 3rd is successful
+
+   lethal damage
+
+     Another level of damage multiplier after ultra damage
+
+   black belt
+
+     Another level of martial arts damage
+
+   axe master, flial master, mace master, dagger master, polearm master,
+   spear master, sword master, whip master
+
+     Master skills for various weapons, giving damage boosts.
+
+   marksman
+
+     Master skill for gun and handgun.  Does not apply to smgs.
+
+ Scrying
+ -------
+
+   Adds a skill and on object type.  You need to have a scrying object to
+   use the skill.  Can be carried or in the room.
+
+   Usage is 'scry mob'.  Mortals get to pass a skill check (with penalties
+   for out of area and out of zone scrying) and pay a mana cost (cost for
+   power word plus the victims level).
+
+   Shows the players view of the room that contains a mob matching the
+   victim.  It msy not be the person you wanted to look at.
+
+ HTML Support
+ ------------
+
+   Designed to work with Fire Client.  Might also work with Pueblo.
+
+   Internal HTML formatter for those using other clients.
+     Handles a few tags, but does some font/color management.
+     Unrecognized tags are passed through, as they are sometimes
+       valid data.
+     Intercepts send_to_char and page_to_char.
+
+   Added an 'html' command to turn html output on and off.
+ 
+   Added Image and Homepage commands to complement the email command.
+
+   Upgraded whois to display them.
+
+ Driver 7.1.1
+ ------------
+   Various small fixes and the yog compile flag
+
+ Driver 7.1.2
+ ------------
+   Fixes to config files - profile (room 32000) and profs.txt (journeyman
+     qualification condition)
+   Two skill spells
+   Quests and MPQUEST
+   actor/victim_grouped econds
+
+ Driver 7.1.3
+ ------------
+   Profession desciptions
+   Training
+   Sanity part 1
+   Object spells and MPEFFECT
+   Mob memory
+   Add player name to player true name
+
+ Driver 7.1.4
+ ------------
+   Fix problem with underground areas always being dark
+   Change AFK to display (AFK) rather than remove your prompt
+   Fix crash in brew and scribe
+   Add (concealed) and (vis-death) tags for objects
+   Fix problem with environment cold damage being treeted as drowning
+   Fix parry messages for freak dual parry situation
+   Add editor type to OLC prompt
+   Fix bug in potions with undefined effects
+
+ Driver 7.1.5
+ ------------
+   Fix crash at year end
+   Add starting location for professions
+   Add sanity step for spells
+   Fix spell casting sequence/timing
+   Fix typos in spell finished message
+   Fix crash in chat when replacing only chat line 
+   Improved restart scripts
+   Fix bug in spec_cast_adept for cure blindness
+   Fix bug swith spells showing things you cannot cast
+   Fix bug in check_skill causes skills to be to easy to learn through
+     failed usage.
+
+ Driver 7.1.6
+ ------------
+   Fix problem with online.html file permissions (now set to 664)
+   Fix problems with PCs not sobering up
+   Fix problem with knurd NPC (and PCs now)
+   Fix 'ghastly sobriety' spell
+   Fix set food, drink, drunk, fat getting applied to wrong char
+   Fix buffer clearing problem in score
+   Change exit process for when target departs
+   Only gain sanity from a good check if threat > sanity
+   Move society details from 'examine ch' to 'society research ch'
+   Added glance command which does not show equipment
+   Added insanity indicator to examine display
+   Fix spelling of Occultist
+   Reactivate haggle and rework some of the buy code
+   Complete @ to end a note
+   Change a lot of pointers to 'static xxx yyy = NULL;' declarations
+   Added fright
+   Enhanced text formatting
+
+ Driver 7.1.7 (October 16th, 1999)
+ ---------------------------------
+   Fix FAST_HEAL crash when player not in a room
+   Fix weight loss problems
+   Fix glance position/activity message
+   Fix Show format for Mobs
+   Fix startup to copy booting script after reboot
+   Add quests ALL parameter
+   Complete help indexer
+   Added hits, mana, move, hits_percent, mana_percent and move_percent econds
+   Added ACT_ALIENIST and the threapy command
+   Added Tracks and Tracking
+   Added player bios, changed desc to use the editor
+   Reworked the memory allocation a little
+   Fix bug in buy when short_descr and name don't match
+   Reworked spec_clanguard for societies
+   Allowed heroes to see immtalk
+   Add 'fix on load' for food and drink strangeness
+   Added Permadeath
+   Fix bug in dream skills
+   Simplified PK system
+   Added ACT_AUTOHOME
+   Added spec_clanhealer
+   Added can_see/can_not_see vision econds
+   Ulthar based professions added
+   
+ Driver 7.1.8 (October 17th, 1999)
+ ---------------------------------
+   Fix affect stripping in save.c
+   Force a pets room to NULL on load
+   Reimplemented update.gain_condition to condition problems
+   Fix spec_breath and add a natural magic skill
+   Reset AUTOHOME timer after move home
+   Fix clanguard and clanhealer
+   Fix scheduling of new command before first command
+
+ Driver 7.1.9 (October 18th, 1999)
+ ---------------------------------
+   Fix for hard loop after boot
+   Fix for turbo-cops problem
+   Fix command scheduling
+   Suppreess a few state change messages (tracking and incap)
+   Fix duplicate pet insert bug leading to loop 
+
+ Driver 7.2.1 (October 21st, 1999)
+ ---------------------------------
+   Fix queueing/execution problems with mob commands
+   Add queue command to see a mobs command queue
+   Add Area_Damage and Area_Healing spell steps
+
+ Driver 7.2.2 (October 24th, 1999)
+ ---------------------------------
+   Fix dream respawn strangeness
+   Fix format with new paragraph problem
+   Change day check to be 1 based rather than 0 based
+   Make affect have a global search scope
+   Reduce chances for lock picking
+   Fix problem with chance divider in some check_improve calls
+   Speed up incapacitated and mortally wounded deaths a bit
+   Added MPSTEAL
+
+ Driver 7.2.3 (October 26th 1999)
+ --------------------------------
+   Fix MPSTEAL and unseen characters
+   Make spell casting in combat a little easier
+   Debating
+   Reactive home
+   Add a knock command for knocking on doors
+
+ Driver 7.2.4 (November 1st, 1999)
+ ---------------------------------
+   Add extra protection to combat commands to avoid crashes
+   Add wait check to auto stand code
+   Protect against trying to save with lprof->profession NULL
+   Better validation of initial profession
+   Fixed @mn substitution problem
+   Add all_room selector for MPTRANSFER
+   Reworked innards of MPTRANSFER 
+   Prevent somebody substitution for @xr, @xt and @xl
+   Added a wear back location, mainly for backpacks
+   Fix short weather being displayed inside and not outside
+   Fix documentation for MPSCRIPT
+   Fix MPxxx command authorization to permit usage by gods and prevent usage
+    by switched mortals
+   Fix command authroization checking to use original char for switched NPCs
+   Unskilled mobs to have a minimum english skill of 51%
+   Add 'switched from' character to stat mob display
+   Add skills brew and scribe, rework the code for them a bit
+   Add new skill group - production
+   Fix problems with a mob that does both learn and practice
+   Remove 'concealed' flag from items when they are picked up
+   Fix conv insert sequence for first entry
+   Add '-' as an escape char for OLC
+   Added Affect4 and code for APPLY_SKILL
+   Key letter 'S' used to store object details
+   Added OEdit addskill command to set them
+
+ Driver 7.2.5 (November 2nd, 1999)
+ ---------------------------------
+   Fix problem with sizes and tracks missing from end of race table
+   Add wards to is_name and is_name_abbv
+   Change affect.bitvector from int to long 
+   Fix bug in switched chars using original divinity
+   Only save characters in CON_PLAYING
+   Add Affect4 to locker.c 
+
+ Driver 7.2.6 (November 3rd, 1999)
+ ---------------------------------
+   Add some new combat skills
+   Fix return from is_name and is_name_abbv in handler.c
+   Make gun damage non-scaling
+   Reduce and normalize h2h damage
+   Fix set skill to have range 0..150
+   Reduce mob damage ranges a bit
+
+ Driver 7.2.7 (November 7th, 1999)
+ ---------------------------------
+   Add interrogate command and skill
+   Third strike to be with dual weapon if dual wielding
+   Give mobs some tracking skill
+   Add otypes OLC command to show object types
+   Adjust exp tables to make levelling harder
+   Reduce exp gain from killing things
+   Reduce chance of out classed mobs fleeing to 50%
+   Give mobs a 50% chance of looking around if the caster is hidden/invis
+   Increase death penalty from 500xps to a third of a levels worth
+   Fix problems with big xp loss when fleeing and losing a level
+   Change flee xp loss to 1/100th of a level
+
+ Driver 7.2.8 (November 20th, 1999)
+ ----------------------------------
+   Restrict learning of 'teach' to the practice command only
+     Also forbid debating it
+   Increase ProtGood/Evil protection from env dam from 25% tp 50%
+   Add directions in and out
+   Add OLC warning for wear pride/light and not type pride/light
+   Raise Mobs gold limit to 10,000
+   Implement gold conservation strategy for mob shop keepers
+     Price reduced 10% per 1000 gold < 10000
+     Price halved if greater than 50% of thier available gold
+     Sales prices increased 5% per 1000 gold < 10000
+   Increase wear and tear on objects (mainly from combat)
+   Fix enchant weapon/armor copying of affect data
+   Fix problem saving afn type affects on objects
+   Allow shopkeepers to buy items up to level + 10
+   Indicate on 'value' if the shopkeeper can afford the item
+   Raised Max damage and reduced damage reduction
+     Increases damage done by high level players and mobs
+   Fix 'power word' losing user supplied words
+   Fix crash in otypes
+   Fix message from Mass Healing
+   Suppress env damage message with 0 points of damage
+   Hide 'skill' from ? apply
+   Reenable recruit
+   Add 'hours' to find out when a shop is open
+   Add 'spell spell_name' to get info about the spell
+   Consider containers to a be single objects for carry purposes
+   Add weight reduction field for containers to give Bag of Holding effect
+   Add a 'weight' command to find out how heavy something is.
+   Added room information to remote glance display
+   Added scrying
+   Fix bug in flee that gives you xps instead of taking them away 
+     Flee loss is 0.5% of xp for level
+   Fix reversed messages with environmental damage
+   Fix pet xp adjustment
+
+ Driver 7.2.9 (November 28th, 1999)
+ ----------------------------------
+   Fix bug with defender shield damage
+   Fix excess mana consumption from late chanting
+   Split socrace.txt out of society.txt 
+   Add external race file
+   Fix crash with Poison and Harm in potions
+   Fix crash trying to pick a non-existant door
+   Notify to use short-descr, not name
+   Set AutoExit, Split, Assist and Save for newbies
+   Support for a limited HTML subset in text
+   Support for IMP_HTML 
+   Added 'html' command to turn html stripping on and off
+   Added 'image' and 'homepage' commands to store URLs
+   Reduce dreaming and spell casting by 1 point for every 2 points of
+     sanity over 120
+   Stop practice mobs letting people learn from them
+   Finally removed the skill table
+   Added spell 'iron skin'
+
+ Driver 7.3.0 (December 5th, 1999)
+ ---------------------------------
+   Another go at fixing the shield bug
+   Fix handling of incomplete html tags
+   Complete external race code
+   Fixed comm.c to prompt for race
+   Add ICond (initial Conditions) to professions to allow race checks
+   Fixed experience to use effective level
+     (to balance for races with permanent effects)
+   Fixed bug that gave 50% more xps than it should have
+   A little more tampering with the xp curves
+   Score now shows effective level as well as current
+   Steepened mob skill progressions, to try and make the high level ones
+     more challanging.
+   Remove old clan code
+     Fix Clan tell and Clan lockers
+   Fix spell poison/portal/gate look up for immortals
+   Fix intox remaining with hangover
+   Fix drunken stupor lasting much to long
+   Fix vocalize/ventriqulocate mix up
+   Drunken speach and skill penalties
+
+  
+ Suspected Bugs
+ --------------
+
+   Crash when deleting an empty note. (7.1.6?)
+   m/o/pwhere can cause overlays with a target that gets a lot of hits (7.1.7)
+   Char getting failed reconnect and not showing on who (7.1.9)
+   

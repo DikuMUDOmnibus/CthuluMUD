@@ -1,0 +1,52 @@
+CthulhuMud Driver 1
+-------------------
+
+  Clans (act_clan.c, special.c)
+    Help reordered 
+    Clan who documented
+    Clan donated fixed to write out clans.txt
+    Clan report extended to include rank.
+    Clan gold added to show how much gold all of the clans have
+    Clan deposit added to give gold to an aribtary clan
+    Clan withdraw added to take gold from an arbitary clan
+
+    New commands can be used by:
+       Gods (level 56+) 
+         - unrestricted access to any clan
+       Clan Rulers and Overseers:
+         - Only for their clan
+         - Gold gives ballpark figures for other clans
+
+    Clanguard special added:
+      Mob will attack people not in the clan and assist those who are.
+      Takes a little while to notice, may warn before attacking.
+
+  Shops (act_obj.c)
+    Shop keepers will only buy items of their level and lower.  This lets
+      you build newbie shops.
+
+  Mob_Progs (mo_prog.c mob_commands.c, comm.c)
+    Fixed numerous problems:
+      speech_prog should run ok (but trigger syntax might get refined)
+      random_prog seems ok (although it doesn't shutdown when noones around).
+      act_prog needs more testing.
+     
+  Locks (act_move.c)
+    The check sequence for lock, unlock and pick have been changed to match
+      the sequence for open and close.  This means that doors and exits are
+      checked before objects (and thus unlock w now works).
+
+  Search (act_obj.c)
+    Changed search to give better chances (especially for those of normal
+      intelligence - 10 int used to be 0%, now 20%. 
+    Made the messages more informative
+      You find: xxx, one for each thing found.
+    Added a message to others in the room when you find something.
+    Removed the silly wait, as it impacted the next command after you had
+      seen the messages saying what, if anything, you had found. 
+
+  OLC (olc_act.c, bit.c)
+    Fixed display of the size and default position fields.
+      problems due to some AH using a static buffer in flag_string.  Left
+      it in place, as there are LOTs of calls to flag-string.
+

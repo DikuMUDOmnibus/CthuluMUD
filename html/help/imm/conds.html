@@ -1,0 +1,725 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; I) [Netscape]">
+   <title>CthulhuMud - Conditions</title>
+</head>
+<body link="#0000FF" vlink="#800080" background="paper.jpg">
+
+<center>
+<hr></center>
+
+<center>
+<h1>
+CthulhuMud - Conditions</h1></center>
+
+<center>
+<hr>[ <a href="index.html">Index</a> ]
+<hr></center>
+
+<p>Conditions are used to detect a number of different situations, generally
+concerned with permission or reaction. Conditions may be chained together
+to make a compound condition. When this is done, the conditions are combined
+with AND logic. For example, the following conditions:
+<pre>&nbsp; actor->is->flying
+&nbsp; actor->level 75 -1
+&nbsp; actor->not->carrying 2057 2057</pre>
+Would match an action performed by an mob who was both flying and of above
+75th level and not carring (or wearing) item 2057.
+<p>Conditions are always evaluated against a <a href="context.html">context</a>,
+most often one coming from an <a href="events.html">event</a>.
+<hr>
+<h2>
+Parts of a Condition</h2>
+Conditions are comprised of 5 parts:
+<dl>
+<dt>
+<b><a href="#subject">Subject</a></b></dt>
+
+<dd>
+This determines what the condition is evaluated against.</dd>
+
+<dt>
+<b>Negation</b></dt>
+
+<dd>
+This indicates that the result of the condition is to be reversed.</dd>
+
+<dt>
+<b><a href="#conds">Conditions</a></b></dt>
+
+<dd>
+This specifies the attribute of the subject that is being checked.</dd>
+
+<dt>
+<b>Index</b></dt>
+
+<dd>
+This is sometimes used to help refine the attribute, and other times used
+to store a part of the comparison condition.</dd>
+
+<dt>
+<b>Low and High</b></dt>
+
+<dd>
+These are a pair of values used for attribute comparison. Generally a value
+of -1 for high means unlimited.</dd>
+</dl>
+
+<h3>
+Creating Conditions Through OLC</h3>
+When entering conditions throug OLC they are normally entered thus:
+<pre>&nbsp; subject &lt;not> condition parms</pre>
+The <i>not</i> is optional and the <i>parms</i> depend upon the condition
+being created.
+<h3>
+Conditions in Files</h3>
+When conditions are written to a file (or is a few cases manually edited
+in one) they are always written out in the sequence:
+<pre>&nbsp; subject condition 'index' low high</pre>
+With everything being numbers except the index which is a string (and may
+not contain quotes).
+<p>The numbers are taken from constants defined in the <i>econd.h</i> file.
+<p>Negated conditions are indicated through the usage of a negative condition
+value.
+<br>
+<hr>
+<h2>
+<a NAME="subject"></a>Subjects</h2>
+Each condition has a subject. Possible subjects are:
+<dl>
+<dt>
+<b>actor</b> (<a href="#mconds">mob</a>)</dt>
+
+<dd>
+The mob who is taking the action</dd>
+
+<dt>
+<b>victim</b> (<a href="#mconds">mob</a>)</dt>
+
+<dd>
+The mob that is being acted upon</dd>
+
+<dt>
+<b>observer</b> (<a href="#mconds">mob</a>)</dt>
+
+<dd>
+The mob the condition is being evaluated for. Can be the same as actor
+or victim</dd>
+
+<dt>
+<b>lactor</b> (<a href="#mconds">mob</a>)</dt>
+
+<dd>
+The leader of the actor</dd>
+
+<dt>
+<b>lvictim</b> (<a href="#mconds">mob</a>)</dt>
+
+<dd>
+The leader of the victim</dd>
+
+<dt>
+<b>lobserver</b> (<a href="#mconds">mob</a>)</dt>
+
+<dd>
+The leader of the observer</dd>
+
+<dt>
+<b>world</b> (<a href="#wconds">world</a>)</dt>
+
+<dd>
+The condition has no specific subject within the mud</dd>
+
+<dt>
+<b>pobj</b> (<a href="#oconds">object</a>)</dt>
+
+<dd>
+The primary object associated with the event</dd>
+
+<dt>
+<b>sobj</b> (<a href="#oconds">object</a>)</dt>
+
+<dd>
+The secondary objet associated with the event</dd>
+
+<dt>
+<b>event</b> (<a href="#econds">event</a>)</dt>
+
+<dd>
+This is the <a href="events.html">event</a> the condition is being evaluated
+against</dd>
+</dl>
+Not all subjects are valid in all contexts. Generally this will depend
+upon the event being reactied to. If a subject is not valid, all conditions
+upon it are unsatisfied.
+<br>
+<hr>
+<h2>
+<a NAME="conds"></a>Conditions</h2>
+The conditions are broken up according to the subjects that they can be
+evaluated against.
+<h3>
+<a NAME="wconds"></a>World Conditions</h3>
+
+<dl>
+<dt>
+<b>moon low high</b></dt>
+
+<dd>
+Checks on the phase of the moon, from 0 New to 4 Full. The moon follows
+a standard 28 day cycle</dd>
+
+<dt>
+<b>random low high</b></dt>
+
+<dd>
+Checks on a random number in the range 0..1023</dd>
+
+<dt>
+<b>hour_of_day low high</b></dt>
+
+<dd>
+Check against time of day (0..23). 1 hour gametime is 30 seconds real time</dd>
+
+<dt>
+<b>hour_of_day_mod div low high</b></dt>
+
+<dd>
+Check against hour of day modulus div (0..(div-1)). Good divs: 2, 3, 4,
+6, 8, 12</dd>
+
+<dt>
+<b>day_of_month low high</b></dt>
+
+<dd>
+Checks against the day of the month (0..32) 1 Month gametime is 6 hours,
+24 minutes realtime.</dd>
+
+<dt>
+<b>day_of_month_mod div low high</b></dt>
+
+<dd>
+Checks against day of month modulus div (0..(div-1)). Good divs: 2, 4,
+8, 16</dd>
+
+<dt>
+<b>day_of_year low high</b></dt>
+
+<dd>
+Checks against the day of the year (0..383). 1 Year gametime is 3 days,
+4 hours and 48 minutes.</dd>
+
+<dt>
+<b>day_of_year_mod div low high</b></dt>
+
+<dd>
+Checks against day of year modulus div (0..(div-1)). Good divs: 2, 3, 4,
+6, 8, 12, 16, 24, 32, 48, 64, 96, 128, 192</dd>
+
+<dt>
+<b>week_of_year low high</b></dt>
+
+<dd>
+Checks against the week of the year (0..47). 1 week gametime is 1 hour,
+36 minutes</dd>
+
+<dt>
+<b>week_of_year_mod div low high</b></dt>
+
+<dd>
+Checks against week of year modulus div (0..(div-1)). Good divs: 2, 3,
+4, 6, 8, 12, 16, 24</dd>
+
+<dt>
+<b>month_of_year low high</b></dt>
+
+<dd>
+Checks against the month of the year (0..11). 1 month gametime is 6 hours,
+24 minutes</dd>
+
+<dt>
+<b>month_of_year_mod div low high</b></dt>
+
+<dd>
+Checks against month of the year modulus div (0..(div-1)). Good divs: 2,
+3, 4, 6</dd>
+
+<dt>
+<b>mob_in_room room low high</b></dt>
+
+<br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>Checks
+a mob with a vnum in the range is in the room
+<br><b>player_in_room room</b>
+<br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>Checks
+to see if any players are in the room
+<br><b>room_empty_mob</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks there
+are no mobiles or players in the room
+<br><b>obj_in_room room obj_low obj_high</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if an
+object with a vnum in the range is in the room
+<br><b>obj_room_container room container obj</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if an
+object with a vnum in the range is in a container in the room
+<br><b>room_empty_obj</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks there
+are no objects in the room
+<dt>
+<b>partner name</b></dt>
+
+<dl>
+<dt>
+Checks if a certain partner mud exists and is connected<i>.</i></dt>
+</dl>
+
+<dt>
+<b>gadget room id state</b></dt>
+
+<dd>
+Checks if gadget <i>id</i> is in state <i>state</i> in room <i>room.</i></dd>
+</dl>
+
+<h3>
+<a NAME="mconds"></a>Mob/Character conditions</h3>
+
+<dl>
+<dt>
+<b>skill 'skill' low high</b></dt>
+
+<dd>
+Checks the mobs skill (0..200)</dd>
+
+<dt>
+<b>race 'race'</b></dt>
+
+<dd>
+Checks the mobs race. All characters are currently human.</dd>
+
+<dt>
+<b>size low high</b></dt>
+
+<dl>
+<dt>
+Checks the mobs size. tiny(0), small(1), medium(2), large(3), huge(4),
+giant(5)</dt>
+</dl>
+
+<dt>
+<b>level low high</b></dt>
+
+<dd>
+Checks the mobs level (1..150)</dd>
+
+<dt>
+<b>divinity low high</b></dt>
+
+<dd>
+Checks the players divinity (newbie(0), player(1), hero(2),... imp(7),
+mud(8))</dd>
+
+<dt>
+<b>sanity low high</b></dt>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks the mobs
+level (1..128)
+<br><b>casting level low high</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks the mobs
+current spell casting level (1..165)
+<dt>
+<b>align low high</b></dt>
+
+<dd>
+Checks the mobs alignment (-1000..1000)</dd>
+
+<dt>
+<b>prof 'profession' low high</b></dt>
+
+<dd>
+Checks the characters profession and profession levels</dd>
+
+<dt>
+<b>start low high</b></dt>
+
+<dd>
+Checks the characters starting room for his newest profession</dd>
+
+<dt>
+<b>hits low high</b></dt>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks the characters
+current hit point total
+<br><b>mana low high</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks the mobs
+current mana point total
+<br><b>move low high</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks the mobs
+current move point total
+<br><b>hits_percent</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks the percentage
+of max hits the mob is on
+<br><b>mana_percent</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks the percentage
+of max mana the mob is on
+<br><b>move_percent</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks the percentage
+of max move the mob is on
+<dt>
+<b>gold low high</b></dt>
+
+<br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>Checks
+for gold
+<dt>
+<b>fame low high</b></dt>
+
+<br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>Checks
+for fame
+<dt>
+<b>name string</b></dt>
+
+<br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>Checks
+for a certain name
+<dt>
+<b>short string</b></dt>
+
+<br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>Checks
+for a certain short-description (used for polymorph affected checks)
+<dt>
+<b>cult string</b></dt>
+
+<br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>Checks
+who the character is worshipping
+<dt>
+<b>discipline string</b></dt>
+
+<br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>Checks
+if a character knows a certain magical discipline
+<dt>
+<b>criminal_rating low high</b></dt>
+
+<br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>Checks
+a characters criminal record. If there is no passport the value 0 is being
+returned - check with an IS condition for the passport
+<dt>
+<b>gender sex1 sex2</b></dt>
+
+<dd>
+Checks the mobs gender</dd>
+
+<dt>
+<b>soc_rank soc_id template</b></dt>
+
+<dd>
+Checks the characters rank within the listed society. Template is made
+up from 1 invited, 2 member, 4 council, 8 Leader, so a value of 14 would
+match anyone who was a member, a council member or a leader.</dd>
+
+<dt>
+<b>soc_level soc_id low high</b></dt>
+
+<dd>
+Checks the characters level within the society.</dd>
+
+<dt>
+<b>soc_auth soc_id template</b></dt>
+
+<dd>
+Checks the charactes authority within the society. Template is made up
+from the SOC_AUTH bits in the society.h file.</dd>
+
+<dt>
+<b>conv conv_id subj_id state</b></dt>
+
+<dd>
+Checks for a particular state in a conversation</dd>
+
+<dt>
+<b>carrying vnum1 vnum2</b></dt>
+
+<dd>
+Checks if an object with either vnum1 or vnum2 is carried or worn</dd>
+
+<dt>
+<b>carrying_type type1 type2</b></dt>
+
+<dd>
+Checks if an object with either type1 or type2 is carried or worn</dd>
+
+<dt>
+<b>wearing vnum1 vnum2</b></dt>
+
+<dd>
+Checks if an object with either vnum1 or vnum2 is worn</dd>
+
+<dt>
+<b>wearing_type type1 type2</b></dt>
+
+<dd>
+Checks if an object with either type1 or type2 is worn</dd>
+
+<dt>
+<b>vnum low high</b></dt>
+
+<dd>
+Checks if the mobs vnum falls within the range given. Does not work on
+characters</dd>
+
+<dt>
+<b>in_room low high</b></dt>
+
+<dd>
+Checks if the mob is in a room with a vnum within the range given</dd>
+
+<dt>
+<b>is_alone</b></dt>
+
+<dd>
+Checks if nobody else is in the mobs room</dd>
+
+<dt>
+<b>in_subarea low high</b></dt>
+
+<dd>
+Checks if the mob is in a room with a subarea within the range given</dd>
+
+<dt>
+<b>deed deed_id flag</b></dt>
+
+<dd>
+Checks if the deed has been done (1) or has not been done (0)</dd>
+
+<dt>
+<b>quest quest_id low high</b></dt>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if the
+state of the quest is within the given range.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Generally 0
+for starting through to 9999 for completed.
+<dt>
+<b>memory memory_slot_number</b></dt>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if there
+is something rmembered in the specified slot.
+<br><b>memory_value memory_slot_number low high</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if the
+value of the string in the slot is within the specified range.
+<dt>
+<b>affected affect</b></dt>
+
+<dd>
+Checks is the mob is affected with a particular spell effect. This uses
+the affect list, not the affect bits which can be checked through an 'is'
+condition. How the character acquires the affect can alter how you have
+to check for it.</dd>
+
+<dt>
+<b>uses_imp</b></dt>
+
+<dd>
+Checks if the player uses an IMP enabled client - useful for switching
+between description and images/links</dd>
+
+<dt>
+<b>is state</b></dt>
+
+<dd>
+Checks if the mob is in the specified state</dd>
+
+<dt>
+<b>is_not state</b></dt>
+
+<dd>
+Checks if the mob is not in the specified state</dd>
+</dl>
+The states that is and is_not can detect are:
+<pre>&nbsp; hungry thirsy drunk
+&nbsp; full refreshed sober
+&nbsp; standing fighting sitting resting awake
+&nbsp; sleeping stunned dieing dead
+&nbsp; blind invisible seeing_evil seeing_invisible seeing_magic
+&nbsp; seeing_hidden mind_melded sanctuary faerie_fire seeing_infrared
+&nbsp; cursed scared poisoned protected_from_good protected_from_evil
+&nbsp; sneaking charmed flying pass_door hasted calmed plauge_ridden
+&nbsp; weakened seeing_in_darkness berserk swimming regenerating
+&nbsp; polymorphed absorbing_magic fleeing dreaming aura slow globe
+&nbsp; hallucinating relaxed fire_shield frost_shield morf incarnated
+&nbsp; criminal vampire were stranger passport</pre>
+
+<pre>&nbsp;</pre>
+
+<h3>
+<a NAME="oconds"></a>Object conditions</h3>
+
+<dl>
+<dt>
+<b>level low high</b></dt>
+
+<dd>
+Checks if the objects level is within this range</dd>
+
+<dt>
+<b>type low high</b></dt>
+
+<dd>
+Checks if the objects 'item type' is within this range</dd>
+
+<dt>
+<b>vnum low high</b></dt>
+
+<dd>
+Checks if the objects vnum is within this range</dd>
+
+<dt>
+<b>owner string</b></dt>
+
+<br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>Checks
+for an object owner
+<dt>
+<b>contains</b></dt>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks object
+contents, depends on object type
+<p><b>Container, Locker, Keyring</b>
+<br><b>contains vnum vnum</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Satisfied if an object with either vnum is present
+<p><b>Scroll, Potion or Pill</b>
+<br><b>contains spell_num spell_num</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Satisfied is both spells are contained. High may be -1.
+<p><b>Light</b>
+<br><b>contains hours</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Satisfied if light hours left are >= value.
+<p><b>Wand, Staff</b>
+<br><b>contains spell_num charges</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Satisfied is at least 1 charge of spell_num remains
+<p><b>Fountain</b>
+<br><b>contains liquid</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Satisfied is the fountain contains the specified liquid.
+<p><b>Drink ontainer</b>
+<br><b>contains liquid drinks</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Satisfied if the container hold that many or more drinks of the liquid
+<dt>
+<b>value number low high</b></dt>
+
+<dd>
+Checks the object v0..v4 flags</dd>
+</dl>
+
+<h3>
+<a NAME="econds"></a>Event conditions</h3>
+
+<dl>
+<dt>
+<b>type low high</b></dt>
+
+<dd>
+Checks if the events type is within this range</dd>
+
+<dt>
+<b>subtype low high</b></dt>
+
+<dd>
+Checks if the events subtype is within this range</dd>
+
+<dt>
+<b>number low high</b></dt>
+
+<dd>
+Checks if the number on the event is within this range</dd>
+
+<dt>
+<b>number_mod mod low high</b></dt>
+
+<dd>
+Checks if the number on the event is within this range subject to modulo
+arithmetic.</dd>
+
+<dt>
+<b>am_actor</b></dt>
+
+<dd>
+Checks if the observer is the same as the actor. This is often true when
+the event is not being evaluated by a mob. This is also true if it is the
+mob doing something.</dd>
+
+<dt>
+<b>am_victim</b></dt>
+
+<dd>
+Checks if the oberser is the victim. This is true if something is being
+done to the mob.</dd>
+
+<dt>
+<b>actor_grouped</b></dt>
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if the
+actor is in the same group as the observer.
+<br><b>victim_grouped</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if the
+victim is in the same group as the observer.
+<br><b>actor_remembered slot</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if the
+actor (true name or player name) is remebered in the indicated memory slots
+on the observer.
+<br><b>victim_remembered slot</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if the
+victim (true name or player name) is remebered in the indicated memory
+slots on the observer.
+<br><b>actor_friend</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if the
+actor is a friend of the observer.
+<br><b>actor_foe</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if the
+actor is a foe of the observer.
+<br><b>victim_foe</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if the
+victim is a foe of the observer.
+<br><b>actor_visible</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if the
+actor is a visible to the observer.
+<br><b>victim_visible</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks if the
+victim is a visible to the observer.
+<dt>
+<b>local</b></dt>
+
+<dd>
+Checks if the event originated in the oberserves room.</dd>
+</dl>
+
+<hr>
+<h2>
+Condition Usage</h2>
+Conditions can be used for:
+<ul>
+<li>
+Extra descriptions - rooms and objects (obs = act)</li>
+
+<li>
+Skill prerequisits (obs = act)</li>
+
+<li>
+Profession prerequisits (obs = act)</li>
+
+<li>
+Door visability (obs = act)</li>
+
+<li>
+Door destinations (obs = act)</li>
+
+<li>
+Conversations (obs, act)</li>
+
+<li>
+Triggers (obs, act, vict)</li>
+</ul>
+
+<hr>[ <a href="index.html">Index</a> ]
+</body>
+</html>

@@ -1,0 +1,53 @@
+#AREADATA
+Name        [ {rSystem{g] Player Property~
+Copyright   None~
+Zone        0
+Builders    Cthulhumud~
+Map         None~
+VNUMs       13400 13699
+Security    1
+Recall      0
+Respawn     0
+Morgue      0
+Dream       0
+Mare       0
+Prison     0
+Climate     0
+Version     1
+MAX_CURRENCY    5
+Currency -1 -1 -1 -1 -1
+End
+
+
+
+#MOBILES
+#0
+
+
+
+#NEWOBJECTS
+#0
+
+
+
+#ROOMS
+#0
+
+
+
+#SPECIALS
+S
+
+
+
+#RESETS
+S
+
+
+
+#SHOPS
+0
+
+
+
+#$

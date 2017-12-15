@@ -1,0 +1,56 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (Win98; I) [Netscape]">
+   <title>CthulhuMud - Monitoring</title>
+</head>
+<body link="#0000FF" vlink="#800080" background="paper.jpg">
+
+<center>
+<hr></center>
+
+<center>
+<h1>
+CthulhuMud - Monitoring</h1></center>
+
+<center>
+<hr>[ <a href="index.html">Index</a> ]
+<hr></center>
+
+<p>Monitoring is the ability for a mob in one room to observe all <a href="events.html">events</a>
+of a certain type that occur within another room. A mob may monitor multiple
+rooms.
+<p>This gives you the ability to, effectively, create room progs, where
+performing a certain action in an otherwise empty room will cause something
+to happen. The 'animation' here is being provided by the off screen mob
+who is monitoring the room where the action occurs. Such mobs may often
+be called Maxwell.
+<br>
+<hr>
+<h2>
+Establishing Monitors</h2>
+Monitors are a part of a mobs definition and are added through the OLC
+Monitor command.
+<br>When a mob is created its monitors are established, when it is destroyed
+its monitors are removed.
+<br>&nbsp;
+<br>&nbsp;
+<h2>
+Global Monitors</h2>
+There is a room, monitoring everything that happens in the mud. By default
+room 20 is used for this purpose. Always be careful, placing mobs there
+or modifying triggers on them.
+<br>&nbsp;
+<br>&nbsp;
+<h2>
+Establishing Anchors</h2>
+As well as mobs can monitor rooms, objects can do the same. But since they
+have no use for the events (remember, no triggers!) all they can do is
+distribute the event to ehere they are, availiable to everyone in room.
+Still working with anchors is rather flexible: You can anchor the obj to
+a room, to a mob or another object.
+<p>
+<hr>[ <a href="index.html">Index</a> ]
+</body>
+</html>

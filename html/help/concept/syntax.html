@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>CthulhuMud Help - Command Syntax</TITLE>
+<CthulhuMud-Title    Command Syntax>
+<CthulhuMud-Index    Concepts>
+<CthulhuMud-Keywords syntax>
+</HEAD>
+<BODY>
+<H3>Command Syntax</H3>
+<P>The representation of the syntax for the commands follow these rules:</P>
+<OL>
+<LI>Keywords are in <B>bold</B>
+<LI>Variables are in normal type
+<LI>Optional parameters are in [square brackets]
+<LI>When there are mutliple forms of the command, they are listed on
+separate lines
+<LI>Where a parameter is shown enclosed in single quotes it must be entered
+as such unless it is only a single word.
+</OL>
+<H4>Examples</H4>
+<PRE>
+  <B>quests</B> [<B>all</B>]
+</PRE>
+<P>This means you can issue <B>quests</B> or <B>quests all</B>.
+<PRE>
+  <B>cast</B> 'spell name' [target]
+</PRE>
+<P>This means that you must specify the name of the spell, say armor,
+and you may specify a target (say Bubba).
+If you do not specify an optional parameter, what happens depends upon the
+command and the context.</P>
+<P>The above would let you issue <B>cast 'armor' bubba</B> 
+(which would cast the spell upon Bubba) or
+<B>cast 'armor'</B> (which would cast the spell upon yourself).</P>
+<P>Note that the quotes are not required here, as the spell name is 
+a single word.  
+While <B>cast armor</B> would work, <B>cast word of recall</B> would not.</P>
+<PRE>
+  <B>bank balance</B>
+  <B>bank deposit</B> gold
+  <B>bank withdraw</B> gold
+</PRE>
+<P>This describes three varients of the bank command used to check your
+bank balance (<B>bank balance</B>) to deposit gold coins into the bank
+(<B>bank deposit 100</B>) and to withdraw money from the bank
+(<B>bank withdraw 50</B>).</P> 
+</BODY> 

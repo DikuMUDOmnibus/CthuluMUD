@@ -1,0 +1,64 @@
+#! /bin/csh -f
+#
+# CthulhuMud
+#
+# Take a backup of the current mud, assuming the right directory structure
+#
+
+# Must speify directory name
+
+if ( "$1" == "" ) then 
+  echo "You must specify the backup directory!"
+  exit 1
+endif
+
+set bkdir = "$1"
+
+if ( -e $bkdir ) then
+  echo "Backup directory already exists!"
+  exit 2
+endif
+
+mkdir $bkdir
+
+cd $bkdir
+
+# Backup C
+
+cd ../../drv8/
+echo "Backing up C..."
+
+tar -c -fc.tar *.c
+gzip c.tar
+mv c.tar.gz ../backup/$bkdir
+
+echo "...C backed up"
+
+# Backup H
+
+echo "Backing up H..."
+
+tar -c -fh.tar *.h
+gzip h.tar
+mv h.tar.gz ../backup/$bkdir
+
+echo "...H backed up"
+
+# Backup Rest
+
+echo "Backing up the rest..."
+
+                           
+cp startyog ../backup/$bkdir
+cp goyog ../backup/$bkdir
+cp Makefile ../backup/$bkdir
+
+echo "...rest backed up"
+
+cd ../backup/
+
+echo "Backup successful"
+
+ls $bkdir
+
+exit 0

@@ -1,0 +1,419 @@
+# Society membership data
+#
+# Members for Unique
+#
+#  S  R  A  Name
+T 100  0
+#
+# Members for Human
+#
+#  S  R  A  Name
+M 101  1  0 'Yog' 'no'
+M 101  1  0 'Admin' 'no'
+M 101  1  0 'Test' 'no'
+M 101  1  0 'Kyndig' 'no'
+T 101  0
+#
+# Members for Spider
+#
+#  S  R  A  Name
+T 102  0
+#
+# Members for Scorpianmen
+#
+#  S  R  A  Name
+T 103  0
+#
+# Members for Satyr
+#
+#  S  R  A  Name
+T 104  0
+#
+# Members for Gargoyle
+#
+#  S  R  A  Name
+T 105  0
+#
+# Members for Elf
+#
+#  S  R  A  Name
+T 106  0
+#
+# Members for Dwarf
+#
+#  S  R  A  Name
+T 107  0
+#
+# Members for Highlander
+#
+#  S  R  A  Name
+T 108  0
+#
+# Members for Giant
+#
+#  S  R  A  Name
+T 109  0
+#
+# Members for Bat
+#
+#  S  R  A  Name
+T 110  0
+#
+# Members for Bear
+#
+#  S  R  A  Name
+T 111  0
+#
+# Members for Cat
+#
+#  S  R  A  Name
+T 112  0
+#
+# Members for Centipede
+#
+#  S  R  A  Name
+T 113  0
+#
+# Members for Dog
+#
+#  S  R  A  Name
+T 114  0
+#
+# Members for Doll
+#
+#  S  R  A  Name
+T 115  0
+#
+# Members for Rat
+#
+#  S  R  A  Name
+T 116  0
+#
+# Members for Fox
+#
+#  S  R  A  Name
+T 117  0
+#
+# Members for Goblin
+#
+#  S  R  A  Name
+T 118  0
+#
+# Members for Hobgoblin
+#
+#  S  R  A  Name
+T 119  0
+#
+# Members for Kobold
+#
+#  S  R  A  Name
+T 120  0
+#
+# Members for Lizard
+#
+#  S  R  A  Name
+T 121  0
+#
+# Members for Modron
+#
+#  S  R  A  Name
+T 122  0
+#
+# Members for Orc
+#
+#  S  R  A  Name
+T 123  0
+#
+# Members for Cattle
+#
+#  S  R  A  Name
+T 124  0
+#
+# Members for Rabbit
+#
+#  S  R  A  Name
+T 125  0
+#
+# Members for Monster
+#
+#  S  R  A  Name
+T 126  0
+#
+# Members for Snake
+#
+#  S  R  A  Name
+T 127  0
+#
+# Members for Bird
+#
+#  S  R  A  Name
+T 128  0
+#
+# Members for Troll
+#
+#  S  R  A  Name
+T 129  0
+#
+# Members for Water Fowl
+#
+#  S  R  A  Name
+T 130  0
+#
+# Members for Wolf
+#
+#  S  R  A  Name
+T 131  0
+#
+# Members for Wyvern
+#
+#  S  R  A  Name
+T 132  0
+#
+# Members for Undead
+#
+#  S  R  A  Name
+T 133  0
+#
+# Members for Demon
+#
+#  S  R  A  Name
+T 134  0
+#
+# Members for Avatar
+#
+#  S  R  A  Name
+T 135  0
+#
+# Members for Deep One
+#
+#  S  R  A  Name
+T 136  0
+#
+# Members for Snake People
+#
+#  S  R  A  Name
+T 137  0
+#
+# Members for Mi-Go
+#
+#  S  R  A  Name
+T 138  0
+#
+# Members for Ghoul
+#
+#  S  R  A  Name
+T 139  0
+#
+# Members for Ghast
+#
+#  S  R  A  Name
+T 140  0
+#
+# Members for Dimensional Shambler
+#
+#  S  R  A  Name
+T 141  0
+#
+# Members for Byakhee
+#
+#  S  R  A  Name
+T 142  0
+#
+# Members for Dragon
+#
+#  S  R  A  Name
+T 143  0
+#
+# Members for Fish
+#
+#  S  R  A  Name
+T 144  0
+#
+# Members for Zoog
+#
+#  S  R  A  Name
+T 145  0
+#
+# Members for Old One
+#
+#  S  R  A  Name
+T 146  0
+#
+# Members for Yithian
+#
+#  S  R  A  Name
+T 147  0
+#
+# Members for Plant
+#
+#  S  R  A  Name
+T 148  0
+#
+# Members for Gug
+#
+#  S  R  A  Name
+T 149  0
+#
+# Members for Tcho Tcho
+#
+#  S  R  A  Name
+T 150  0
+#
+# Members for Insect
+#
+#  S  R  A  Name
+T 151  0
+#
+# Members for Ghost
+#
+#  S  R  A  Name
+T 152  0
+#
+# Members for Warriors of Light
+#
+#  S  R  A  Name
+T  1 20
+#
+# Members for Esoteric Order of Dagon
+#
+#  S  R  A  Name
+T  2  0
+#
+# Members for US Marines
+#
+#  S  R  A  Name
+T  3  5
+#
+# Members for Renders of the Veil
+#
+#  S  R  A  Name
+T  4  0
+#
+# Members for Arkham Masonic Lodge
+#
+#  S  R  A  Name
+T  5  0
+#
+# Members for Ulthar Arcanuum
+#
+#  S  R  A  Name
+T  6  0
+#
+# Members for Illuminati
+#
+#  S  R  A  Name
+T 51  0
+#
+# Members for Sons of Ulfang
+#
+#  S  R  A  Name
+T 52  0
+#
+# Members for The Hidden
+#
+#  S  R  A  Name
+T 53  0
+#
+# Members for The Syndicate
+#
+#  S  R  A  Name
+T 54  0
+#
+# Members for Yuggoth Invasion Force
+#
+#  S  R  A  Name
+T 55 50
+#
+# Members for The Watchers
+#
+#  S  R  A  Name
+T 56  0
+#
+# Members for Miskatonic University
+#
+#  S  R  A  Name
+M 200  1  0 'Yog' 'no'
+T 200  0
+#
+# Members for Citizens of Arkham
+#
+#  S  R  A  Name
+T 201 10
+#
+# Members for Arkham Police Department
+#
+#  S  R  A  Name
+T 202  0
+#
+# Members for Ultharian Temple Guards
+#
+#  S  R  A  Name
+T 203  0
+#
+# Members for Student Counsellors
+#
+#  S  R  A  Name
+M 204  1  0 'Yog' 'no'
+T 204  0
+#
+# Members for Citizens of Ulthar
+#
+#  S  R  A  Name
+T 205  0
+#
+# Members for Bounty Hunters Guild
+#
+#  S  R  A  Name
+T 206  0
+#
+# Members for Followers of Marduk
+#
+#  S  R  A  Name
+T 1001  0
+#
+# Members for Followers of Yehova
+#
+#  S  R  A  Name
+T 1001  0
+#
+# Members for Followers of the Child
+#
+#  S  R  A  Name
+T 1002  0
+#
+# Members for Followers of the One God
+#
+#  S  R  A  Name
+T 1003  0
+#
+# Members for Worshipers of the Spirits
+#
+#  S  R  A  Name
+T 1004  0
+#
+# Members for Worshipers of Baal
+#
+#  S  R  A  Name
+T 1100  0
+#
+# Members for Worshipers of Yog Sothoth
+#
+#  S  R  A  Name
+T 1101  0
+#
+# Members for Children of Shub Niggurath
+#
+#  S  R  A  Name
+T 1102  0
+#
+# Members for Worshipers of the Deep
+#
+#  S  R  A  Name
+T 1103  0
+#
+# Members for Followers of Tsathoggua
+#
+#  S  R  A  Name
+T 1104  0
+#
+X

@@ -1,0 +1,371 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; I) [Netscape]">
+   <title>The Mobiles Content</title>
+</head>
+<body text="#C0C0C0" bgcolor="#FFFFFF" link="#0000FF" vlink="#000080" alink="#996633" background="paper.jpg">
+&nbsp;
+<center>
+<p><b><font face="Arial"><font color="#006600"><font size=+2>Introduction</font></font></font></b></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p><font face="Arial"><font color="#000000"><font size=+0>No area is complete
+without everybody's favorite mud persona, the Mob! Mobiles are an essential
+ingredient to any area, otherwise what is the point of visiting the area
+besides reading all those quality room descriptions? This section will
+address everything you need to know about creating and editing mobiles
+with the vaunted OLC. You can read my 2 cents on building in a different
+section, as this will generally only cover the commands and values required.</font></font></font>
+<br><font face="Arial"><font color="#000000"><font size=+0>Like creating/editing
+room, you start off with:</font></font></font>
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>EDIT MOB {CREATE}
+[VNUM]</font></font></font></b>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<center>
+<p><a NAME="mobilename"></a><b><font face="Arial"><font color="#006600"><font size=+1>Names</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>NAME [STRING]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Every mobile
+needs keyword names. Otherwise players couldn't interact with them. These
+will not be visible to a player but should be logically apparent based
+upon their long and short descriptions. A mobile with a short description
+of <tt>the prince of Valhalla</tt> should have keywords of at least <i>prince</i>
+and <i>valhalla</i>. If the long description is <tt>The royal prince of
+Valhalla stands here, admiring himself.</tt> then the additional name keyword
+of <tt>royal</tt> might be appropriate.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="mobiledesc"></a><b><font face="Arial"><font color="#006600"><font size=+1>Description</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>SHORT [STRING]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>LONG [STRING]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>DESC</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>The short description
+is seen whenever a mob peforms an action or is the object of one (i.e.
+socials and fighting). The short description is also that seen when performing
+a scan. It should NOT be capitalized or have a period at the end.</font></font></font>
+<p><font face="Arial"><font color="#000000"><font size=+0>The long description
+is seen when players enter a room or look in the room where the mobile
+is located. The first word should be capitalized and a period placed at
+the end.</font></font></font>
+<p><font face="Arial"><font color="#000000"><font size=+0>The description
+is what players see when they look at the mobile. This should be just a
+physical description and not a lengthy epic poem about what the players
+think of the mob. Describing apparent emotions of the mobile is okay as
+long as it's not overdone.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="mobilerace"></a><b><font face="Arial"><font color="#006600"><font size=+1>Race</font></font></font></b></center>
+<b><font face="Arial"><font color="#3366FF"><font size=+0>RACE [RACE]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>What's the race
+of your mobile going to be? Keep in mind that selecting a specific race
+will, depening on the race, automatically include certain immunities, vulnerabilities,
+resistances, forms and parts. These can be altered though with the appropriate
+commands. If one doesn't suit you, select unique and go to town generating
+your own one-eye, two headed purple people eater.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<center>
+<p><a NAME="mobilesex"></a><b><font face="Arial"><font color="#006600"><font size=+1>Sex</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>SEX [SEX]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>The sex your
+mobile will be. The flags are:</font></font></font>
+<br>&nbsp;
+<table COLS=4 WIDTH="100%" >
+<tr>
+<td><font color="#000000">male</font></td>
+
+<td><font color="#000000">female</font></td>
+
+<td><font color="#000000">neutral</font></td>
+
+<td><font color="#000000">random</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">none</font></td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+</table>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<center>
+<p><a NAME="mobileform"></a><b><font face="Arial"><font color="#006600"><font size=+1>Form</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>FORM [FLAGS]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>What is the mobile's
+form? Is it a regular mammal or a fantastic construct? Certain form flags
+will be automatically assigned according to the race selected, but they
+too can be altered. Perhaps your dragon is rare breed such as the mist
+dragon. Imagination is the limit but going too far out on a limb is discouraged.
+There just aren't that many undead crustacean centaurs running around.
+Some of the form flags should logically be combined. The available form
+flags:</font></font></font>
+<p><font face="Arial"><font color="#000000"><font size=+0>As you can see,
+a form snake should be both reptile and cold_blood. More exotic combinations
+such as blob and mist would be a cloud.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><a NAME="mobileparts"></a><b><font face="Arial"><font color="#006600"><font size=+1>Parts</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>PART [FLAGS]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>The body parts
+of your mobile. A beholder wouldn't be a beholder without his eyestalks
+and scales. Most creatures tend to have heads and brains. Again, some of
+these logically require another part. Hands and feet are generally attached
+to arms and legs respectively. The available part flags:</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="mobileact"></a><b><font face="Arial"><font color="#006600"><font size=+1>Act</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>ACT [FLAG]</font></font></font></b>
+<p><font color="#000000"><font face="Arial"><font size=+0>These </font></font><font face="Arial,Helvetica"><a href="flags.html#Act">flags</a></font><font face="Arial"><font size=+0>
+dictate the mobiles general function or behavior.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="mobilenature"></a><b><font face="Arial"><font color="#006600"><font size=+1>Nature</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>NATURE [FLAG]</font></font></font></b>
+<p><font color="#000000"><font face="Arial"><font size=+0>These </font></font><font face="Arial,Helvetica"><a href="flags.html#Nature">flags</a></font><font face="Arial"><font size=+0>
+dictate the mobiles general stats.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="mobilealign"></a><b><font face="Arial"><font color="#006600"><font size=+1>Alignment</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>ALIGNMENT
+[NUMBER]</font></font></font></b>
+<p><font face="Arial"><font size=+0><font color="#000000">Most brainless
+animals and monsters will be neutral (</font><font color="#3366FF">0</font><font color="#000000">)
+unless they are somehow inherently evil (</font><font color="#3366FF">-1000</font><font color="#000000">)
+or good (</font><font color="#3366FF">1000</font><font color="#000000">).
+Sentient creatures can by anything that fits. How many good Orcs do you
+know?</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="mobilelevel"></a><b><font face="Arial"><font color="#006600"><font size=+1>Level</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>LEVEL [NUMBER]</font></font></font></b>
+<p><font face="Arial"><font size=+0><font color="#000000">Level is a measure
+of the mobile's overall strength. This also generally determines the&nbsp;<a NAME="mobilehdice"></a></font><font color="#3366FF">Hit
+Dice</font><font color="#000000">,&nbsp;<a NAME="mobileddice"></a></font><font color="#3366FF">Damage
+Dice</font><font color="#000000">, and&nbsp;<a NAME="mobileac"></a></font><font color="#3366FF">Armor
+(AC)</font><font color="#000000"> values for a mobile. The&nbsp;<a NAME="mobilehitroll"></a></font><font color="#3366FF">Hitroll</font><font color="#000000">
+is a bonus or penalty for exceptionally powerful or clumsy, inept mobiles.
+Use it sparingly.</font></font></font>
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>HITROLL [NUMBER]</font></font></font></b>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><a NAME="mobilenoun"></a><b><font face="Arial"><font color="#006600"><font size=+1>Damage
+Nouns</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>ATTACK [TYPE]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Sets the mobiles
+damage noun for combat. Exercise caution when assigning this value. Every
+Attack type has a default damage type, which you can vary, if you wish.</font></font></font>
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>DAMAGE [TYPE]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>The damage type
+sets what kind of damage the attack does and if there are ways to evade
+it (parry,...).</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="mobileaff"></a><b><font face="Arial"><font color="#006600"><font size=+1>Affected</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>AFFECT [FLAG]</font></font></font></b>
+<p><font color="#000000"><font face="Arial,Helvetica"><a href="flags.html#Aff">Affect
+flags</a></font><font face="Arial"><font size=+0> are used to assign spell
+or spell-like effects to mobiles.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><a NAME="mobileimm"></a><b><font face="Arial"><font color="#006600"><font size=+1>Immunities,
+Resistances and Vulnerabilities</font></font></font></b></center>
+
+<p><br>
+<br>
+<br>
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>IMM [FLAGS]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>RES [FLAGS]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>VULN [FLAGS]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Immunities, resistances,
+and vulnerabilities exist to both define the nature of mobiles and make
+fighting them something more than just the usual hack-and-slash with any
+old weapon. Avoid producing mobiles that are vulnerable to only one type
+of attack and immune to everything else. The 'Achilles Heel' mob is both
+boring and pretty easy to defeat. Certain races and forms will automatically
+select certain immunities, resistances and vulnerabilities. You can change
+these however you want though.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><a NAME="mobileoff"></a><b><font face="Arial"><font color="#006600"><font size=+1>Offensives</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>OFF [FLAGS]</font></font></font></b>
+<p><font color="#000000"><font face="Arial,Helvetica"><a href="flags.html#Off">Offensive
+flags</a></font><font face="Arial"><font size=+0> control mobile behavior
+in combat. Be sparing with offensive abilities and generally set only one
+defensive ability.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<br>
+<center>
+<p><a NAME="mobilesize"></a><b><font face="Arial"><font color="#006600"><font size=+1>Size</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>SIZE [SIZE]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Size is an extremely
+important factor in game effects and needs to be chosen carefully.</font></font></font>
+<table COLS=4 WIDTH="100%" >
+<tr>
+<td><font color="#000000">tiny</font></td>
+
+<td><font color="#000000">small</font></td>
+
+<td><font color="#000000">medium</font></td>
+
+<td><font color="#000000">large</font></td>
+</tr>
+
+<tr>
+<td><font color="#000000">huge</font></td>
+
+<td><font color="#000000">giant</font></td>
+
+<td></td>
+
+<td></td>
+</tr>
+</table>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<center>
+<p><a NAME="mobilesfunct"></a><b><font face="Arial"><font color="#006600"><font size=+1>Special
+Functions</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#006600"><font size=+0>SPEC [SPECIAL
+FUNCTION]</font></font></font></b>
+<p><font color="#000000"><font face="Arial,Helvetica"><a href="flags.html#Spec">Special
+functions</a></font><font face="Arial"><font size=+0> are basically complex
+hard coded MOBprograms. The only way to generate new ones is to physically
+write them into the code. The advantage is that they can accomplish tasks
+beyond the scope of normal MOBprograms.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<br>
+<center>
+<p><a NAME="mobilepos"></a><b><font face="Arial"><font color="#006600"><font size=+1>Positions</font></font></font></b></center>
+
+<p><br>
+<br>
+<br>
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>POSITION [START/DEFAULT]
+[POSITION]</font></font></font></b>
+<p><font face="Arial"><font color="#006600"><font size=+0>The <b>Start</b>
+position is the position the mobile loads in.</font></font></font>
+<br><font face="Arial"><font color="#006600"><font size=+0>The <b>Default</b>
+position is what the mobile assumes after a fight.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<center>
+<p><a NAME="mobilemoney"></a><b><font face="Arial"><font color="#006600"><font size=+1>Money</font></font></font></b></center>
+
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>GOLD [NUMBER]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>This is the average
+amount of money mobiles will carry measured in local currency. Non-intelligent
+mobiles shouldn't carry money unless they hoard cash based on their nature.
+An undead might have lingering memories of wealth and seeks to collect
+as much as possible to provide a connection to its former life.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<br>
+<center>
+<p><a NAME="mobileshop"></a><b><font face="Arial"><font color="#006600"><font size=+1>Shop
+Data</font></font></font></b></center>
+
+<p><font face="Arial"><font color="#000000"><font size=+0>Shops are defined
+to allow mobiles to sell and buy items. Note: a mobile does not need to
+have defined item types, he could only sell items and refuse to buy any.
+Any items to be sold must be placed in the shopkeeper's inventory with
+resets. Reset items automatically replenish but items sold to the shopkeeper
+do not.</font></font></font>
+<p><b><font face="Arial"><font color="#3366FF"><font size=+0>SHOP HOURS
+[#OPENING] [#CLOSING]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>SHOP PROFIT
+[#MARKUP% BUYER] [#MARKDOWN% SELLER]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>SHOP TYPE
+[#0-4] [ITEM TYPE]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>SHOP CURRENCY
+[CURRENCY NAME / DEFAULT]</font></font></font></b>
+<br><b><font face="Arial"><font color="#3366FF"><font size=+0>SHOP DELETE
+[#0-4]</font></font></font></b>
+<p><font face="Arial"><font color="#000000"><font size=+0>Shop hours define
+when the shopkeeper will do business, so a 7-11 open 24 hours would be
+set from 0 to 23.</font></font></font>
+<br><font face="Arial"><font color="#000000"><font size=+0>Profit Markup
+should never be less than 100 and Markdown should never be above 100.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>

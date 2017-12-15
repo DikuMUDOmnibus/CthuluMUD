@@ -1,0 +1,839 @@
+# -------------------------------------------------------------------------
+#
+# All game races...
+#
+# -------------------------------------------------------------------------
+#
+# RACE	'name'			# Start of the race entry
+#
+#	Number	nn		# Old race number for mapping
+#
+#	PC	Yes/No		# Suitable for PCs?
+#
+#	Act	'act_flag'	# Default act parameters
+#
+#	Aff	'aff_flags'	# Default affects
+#
+#	Off	'off_flags'	# Default offensive capabilities
+#
+#	Imm	'imm_flags'	# Default immunities
+#
+#	EnvImm	'envimm_flags'	# Default environment immunities
+#
+#	Res	'res_flags'	# Default resistance flags
+#
+#	Vuln	'vuln_flags'	# Default vulnerability flags
+#
+#	Body	'form_flags'	# Body form/description
+#
+#	Parts	'part_flags'	# Bits that can get chopped off
+#
+#	Size	'size_value'	# Default size
+#				#  tiny, small, medium, large, huge, giant
+#
+#	Tracks	'tracks'	# Default unidentified tracks
+#
+#	Nature	'nature_flags'	# Default nature
+#
+#	Society	soc_id		# Id of default society
+#
+#	Lang	'language'	# Racial language
+#
+# When adding a new race, do not forget to add a new society for it as well.
+#
+# Most races should have Off dodge and intelligent ones should also have parry.
+#
+
+# 1
+RACE	'human'
+	Number  1
+	Society	101
+	PC	'Yes'
+	Off	'dodge parry'
+	Body	'edible sentient biped mammal'
+	Parts	'head arms legs heart brains guts hands feet fingers ear eye'
+	Size	'medium'
+        Mat     'skin'
+	Tracks	'ape like'
+	Lang	'english'
+        Life    75
+        Cult    'marduk'
+
+# 2	
+RACE	'spider'
+	Number  2
+	Society	102
+	Off	'dodge'
+	Aff	'dark-vision'
+	Res	'cold'
+	Vuln	'bash'
+	Body	'poison insect spider noweapon'
+	Parts	'head legs guts feet eyestalks'
+	Size	'small'
+        Mat     'chitin'
+	Tracks	'insectoid' 
+
+# 3
+RACE	'scorpionmen'
+	Number  3
+	Society	103
+	Off	'fast dodge parry'
+	Res	'bash'
+	Vuln	'mental'
+	Body	'poison insect sentient'
+	Parts	'head arms legs heart brains guts hands feet fingers'
+	Parts	'eyestalks tail claws long-tail stinger'
+	Size	'large'
+        Mat     'chitin'
+	Tracks	'insectoidal'
+
+# 4
+RACE	'satyr'
+	Number  4
+	Society	104
+        Nature  'sly charismatic'        
+	Off	'dodge parry'
+	Aff	'infrared detect-invisible dark-vision'
+	Res	'charm poison'
+	Vuln	'iron'
+	Body	'edible sentient biped mammal'
+	Parts	'head arms legs heart brains guts hands feet fingers ear eye'
+	Parts	'horns hoofs'
+	Size	'medium'
+        Mat     'skin'
+	Tracks	'hooved'
+	Lang	'greek'
+
+# 5	
+RACE	'gargoyle'
+	Number  5
+	Society	105
+        Nature  'armoured'
+	Off	'dodge parry'
+	Aff	'flying detect-evil'
+	Res	'holy'
+	Vuln	'silver'
+	Body	'sentient magical construct'
+	Parts	'head arms legs heart brains guts hands feet fingers ear eye'
+	Parts	'wings horns hoofs'
+	Size	'medium'
+        Mat     'granite'
+	Tracks	'demonic'
+	Lang	'latin'
+
+# 6
+RACE	'elf'
+	Number  6
+	Society	106
+        Nature  'magical charismatic'
+	Off	'dodge parry'
+	Aff	'infrared'
+	Res	'charm'
+	Vuln	'iron'
+	Body	'edible sentient biped mammal'
+	Parts	'head arms legs heart brains guts hands feet fingers ear eye'
+	Size	'medium'
+        Mat     'skin'
+	Tracks	'ape like'
+	Lang	'japanese'
+
+# 7
+RACE	'dwarf'
+	Number  7
+	Society	107
+        Nature  'robust'
+	Off	'dodge parry'
+	Aff	'infrared'
+	Res	'magic poison disease'
+	Vuln	'drowning'
+	Body	'edible sentient biped mammal'
+	Parts	'head arms legs heart brains guts hands feet fingers ear eye'
+	Size	'small'
+        Mat     'skin'
+	Tracks	'ape like'
+	Lang	'old english'
+
+# 8
+RACE	'highlander'
+	Number  8
+	Society	108	
+	Off	'dodge parry fast'
+	Aff	'regeneration'
+	Imm	'drowning poison bash'
+	Vuln	'slash'
+	Body	'sentient biped mammal magical'
+	Parts	'head'
+	Size	'medium'
+        Mat     'skin'
+	Tracks	'ape like'
+	Lang	'english'
+
+# 9
+RACE	'giant'
+	Number  9
+	Society	109
+        Nature  'gullible monsterous lumbering'
+	Off	'dodge parry bash crush'
+	Res	'fire'
+	Res	'cold'
+	Vuln	'mental lightning'
+	Body	'edible sentient biped mammal'
+	Parts	'head arms legs heart brains guts hands feet fingers ear eye'
+	Size	'giant'
+        Mat     'leathery skin'
+	Tracks	'ape like'
+	Lang	'gaelic'
+
+# 10
+RACE	'bat'
+	Number  10
+	Society	110
+	Aff	'flying dark-vision'
+	Off	'dodge fast'
+	Vuln	'light'
+	Body	'edible animal mammal noweapon'
+	Parts	'head wings legs heart brains guts feet eye ear'
+        Mat     'leathery skin'
+	Size	'tiny'
+	Tracks	'bat'
+
+# 11
+RACE	'bear'
+	Number  11
+	Society	111
+        Nature  'strong'
+	Off	'dodge parry crush disarm berserk'
+	Res	'bash cold'
+	Body	'edible animal mammal'
+	Parts	'head legs heart brains guts feet eye ear fangs claws'
+        Mat     'fur'
+	Size	'large'
+	Tracks	'bear'
+
+# 12
+RACE	'cat'
+	Number  12
+	Society	112
+        Nature  'agile'
+	Aff	'dark-vision'
+	Off	'dodge'
+	Body	'edible animal mammal noweapon'
+	Parts	'head legs heart brains guts feet eye ear fangs claws tail'
+        Mat     'fur'
+	Size	'small'
+	Tracks	'cat'
+
+# 13
+RACE	'centipede'
+	Number  13
+	Society	113
+	Off	'fast dodge'
+	Aff	'dark-vision'
+	Res	'pierce cold'
+	Vuln	'bash'
+	Body	'poison insect noweapon'
+	Parts	'head legs guts feet eye tail'
+	Size	'small'
+        Mat     'chitin'
+	Tracks	'insectoid' 
+
+# 14
+RACE	'dog'
+	Number  14
+	Society	114
+	Off	'dodge'
+	Body	'edible animal mammal noweapon'
+	Parts	'head legs heart brains guts feet eye ear fangs claw tail'
+        Mat     'fur'
+	Size	'small'
+	Tracks	'canine'
+
+# 15
+RACE	'doll'
+	Number  15
+	Society	115
+	Off	'dodge parry'
+        Imm     'mental'
+	Res	'bash light'
+	Vuln	'slash fire acid lightning energy'
+	Body	'other construct biped'
+	Parts	'head arms legs geet hands eye ear'
+        Mat     'plastic'
+	Size	'small'
+	Tracks	'ape like'
+	Lang	'japanese'
+
+# 16
+RACE	'rat'
+	Number  16
+	Society	116
+	Aff	'dark-vision'
+	Off	'dodge'
+	Body	'edible animal mammal noweapon'
+	Parts	'head legs heart brains guts feet eye ear fangs claws tail'
+        Mat     'fur'
+	Size	'small'
+	Tracks	'cat'
+
+# 17
+RACE	'fox'
+	Number  17
+	Society	117
+        Nature  'sly'
+	Aff	'dark-vision'
+	Off	'fast dodge'
+	Body	'edible animal mammal noweapon'
+	Parts	'head legs heart brains guts feet eye ear fangs claw tail'
+        Mat     'fur'
+	Size	'small'
+	Tracks	'canine'
+
+# 18
+RACE	'goblin'
+	Number  18
+	Society	118
+        Nature  'dumb'
+	Off	'dodge parry'
+	Aff	'infrared'
+	Res	'disease'
+	Vuln	'magic'
+	Body	'edible sentient biped mammal'
+	Parts	'head arms legs heart brains guts hands feet fingers ear eye'
+	Size	'small'
+        Mat     'leathery skin'
+	Tracks	'ape like'
+	Lang	'romany'
+
+# 19
+RACE	'hobgoblin'
+	Number  19
+	Society	119
+	Off	'dodge parry fast'
+	Aff	'infrared'
+	Res	'disease poison'
+	Body	'edible sentient biped mammal'
+	Parts	'head arms legs heart brains guts hands feet fingers ear eye'
+	Size	'medium'
+        Mat     'leathery skin'
+	Tracks	'ape like'
+	Lang	'romany'
+
+# 20
+RACE	'kobold'
+	Number  20
+	Society	120
+	Off	'dodge parry'
+	Aff	'infrared'
+	Nature	'lucky'
+	Res	'poison'
+	Vuln	'magic'
+	Body	'edible sentient biped mammal'
+	Parts	'head arms legs heart brains guts hands feet fingers ear eye'
+	Size	'small'
+        Mat     'leathery skin'
+	Tracks	'canine'
+	Lang	'romany'
+
+# 21
+RACE	'lizard'
+	Number  21
+	Society	121
+	Off	'dodge fast'
+	Res	'poison'
+	Vuln	'cold'
+	Body	'edible animal reptile cold_blood noweapon'
+	Parts	'head legs heart guts brains feet eye ear tail claws'
+	Size	'tiny'
+        Mat     'reptile leather'
+	Tracks	'lizard'
+
+# 22
+RACE	'machine'
+	Number  22
+	Society	122
+	Aff	'dark-vision'
+	Off	'dodge parry fade'
+	Imm	'charm disease mental holy negative'
+	Res	'fire cold'
+	Body	'other construct sentinet machine'
+	Parts	'head arms legs hands feet eye ear'
+        Mat     'steel'
+	Size	'medium'
+	Tracks	'strange'
+
+# 23
+RACE	'orc'
+	Number  23
+	Society	123
+        Nature  'dumb disgusting'
+	Off	'dodge parry'
+	Aff	'infrared'
+	Res	'disease'
+	Vuln	'light'
+	Body	'edible sentient biped mammal'
+	Parts	'head arms legs heart brains guts hands feet fingers ear eye'
+	Size	'medium'
+        Mat     'leathery skin'
+	Tracks	'ape like'
+	Lang	'romany'
+
+# 24
+RACE	'cattle'
+	Number  24
+	Society	124
+	Off	'dodge'
+	Body	'edible animal mammal noweapon'
+	Parts	'head legs heart guts brains feet eye ear tail'
+        Mat     'leather'
+	Size	'medium'
+	Tracks	'hooved'
+
+# 25
+RACE	'rabbit'
+	Number  25
+	Society	125
+	Off	'dodge fast'
+	Body	'edible animal mammal noweapon'
+	Parts	'head legs heart guts brains feet eye ear tail'
+	Size	'small'
+        Mat     'fur'
+	Tracks	'bunny'
+	
+# 26
+RACE	'monster'
+	Number  26
+	Society	126
+	Act	'noalign'
+	Imm	'charm summon'
+	Vuln	'magic'
+	Body	'edible biped'
+	Parts	'head arms legs heart guts brains feet hands eye ear tail'
+	Parts	'fangs claws'
+	Size	'medium'
+	Tracks	'monsterous'
+	Lang	'english'
+
+# 27
+RACE	'snake'
+	Number  27
+	Society	127
+        Nature  'exposed'
+	Off	'fast dodge'
+	Res	'poison'
+	Vuln	'cold'
+	Body	'edible animal reptile snake cold-blood worm noweapon'
+	Parts	'head fangs brains guts eye long-tongue scales'
+	Size	'medium'
+        Mat     'reptile leather'
+	Tracks	'serpentine'
+
+# 28
+RACE	'bird'
+	Number  28
+	Society	128
+	Aff	'flying'
+	Off	'fast dodge'
+	Body	'edible animal bird noweapon'
+	Parts	'head legs heart guts feet wings eye tail'
+	Size	'small'
+        Mat     'feathers'
+	Tracks	'bird'
+
+# 29
+RACE	'troll'
+	Number  29
+	Society	129
+        Nature  'armoured robust disgusting'
+	Aff	'regeneration infrared detect-hidden'
+	Off	'dodge parry berserk bash'
+	Res	'charm bash'
+	Vuln	'fire acid'
+	Body	'sentient biped'
+	Parts	'head arms legs heart brains guts hands feet eye ear'
+	Size	'large'
+	Tracks	'ape like'
+        Mat     'sandstone'
+	Lang	'gaelic'
+
+# 30
+RACE	'water fowl'
+	Number  30
+	Society	130
+	Aff	'flying swim'
+	Off	'fast dodge'	
+	Res	'drowning'
+	Body	'edible animal bird noweapon'
+	Parts	'head legs heart guts feet wings eye tail'
+	Size	'small'
+        Mat     'feathers'
+	Tracks	'bird'
+
+# 31
+RACE	'wolf'
+	Number  31
+	Society	131
+	Aff	'dark-vision'
+	Off	'fast dodge'
+	Body	'edible animal mammal noweapon'
+	Parts	'head legs heart brains guts feet eye ear fangs claw tail'
+        Mat     'fur'
+	Size	'medium'
+	Tracks	'canine'
+
+# 32
+RACE	'wyvern'
+	Number  32
+	Society	132
+        Nature  'agile'
+	Aff	'flying detect-invis detect-hidden'
+	Off	'bash fast dodge parry tail crush'
+	Imm	'poison'
+	Vuln	'light'
+	Body	'poison dragon cold-blood noweapon'
+	Parts	'head legs heart guts feet wings eye tail fangs claws scales'
+	Parts	'long-tail stinger'
+	Size	'huge'
+        Mat     'scales'
+	Tracks	'draconic'
+
+# 33
+RACE	'undead'
+	Number  33
+	Society	133
+        Nature  'robust disgusting'
+	Act	'undead'
+	Aff	'protect-good'
+	Off	'parry kick bash'
+	Imm	'poison mental disease drowning'
+	Vuln	'fire holy'
+	Body	'undead'
+	Parts	'head arms legs feet hands eye ear'
+	Size	'medium'
+        Mat     'skin'
+	Tracks	'ape like'
+
+# 34
+RACE	'demon'
+	Number  34
+	Society	134
+        Nature  'smart magical'
+	Aff	'protect-good dark-vision regeneration'
+	Off	'backstab dodge parry tail assist-race'
+	Imm	'disease poison'
+	Res	'charm'
+	Vuln	'holy mithril'
+	Body	'poison sentient biped magical'
+	Parts	'head arms legs brains heart guts hands feet eye ear'
+	Parts	'tail long-tongue wings fangs claws hoofs'
+	Size	'medium'
+	Tracks	'demonic'
+        Mat     'scales'
+	Lang	'latin'
+
+# 35
+RACE	'avatar'
+	Number  35
+	Society	135
+        Nature  'magical charismatic'
+	Aff	'protect-evil sanctuary'
+	Off	'parry dodge assist-align assist-race'
+	Imm	'holy'
+	Res	'disease charm'
+	Vuln	'negative'
+	Body	'magical sentient biped'
+	Parts	'heard arms legs hands feet eye ear'
+	Size	'medium'
+        Mat     'silk'
+	Tracks	'ape like'
+
+# 36
+RACE	'deep one'
+	Number  36
+	Society	136
+	PC	'Yes'
+        Nature  'robust'
+	Aff	'swim water-breathing'
+	Off	'dodge parry bash assist-race tail'
+	Imm	'drowning'
+	Res	'cold'
+	Body	'edible sentient biped amphibian cold-blood'
+	Parts	'head arms legs heart guts brains hands feet eye long-tongue'
+	Parts	'tail claws scales'
+	Size	'large'
+        Mat     'scales'
+	Tracks	'frog like'	
+	Lang	'atlantean'
+        Life    120    
+        Cult    'dagon'
+
+# 37
+RACE	'snake people'
+	Number  37
+	Society	137
+        Nature  'strong'
+	Aff	'detect-hidden sneak'
+	Off	'fast dodge parry assist-race'
+	Imm	'poison'
+	Res	'disease mental'
+	Body	'edible sentient biped reptile snake cold-blood'
+	Parts	'head arms legs hands heart brains guts eye ear long-tongue'
+	Parts	'fangs claws scales'
+	Size	'medium'
+        Mat     'reptile leather'
+	Tracks	'serpentine'
+	Lang	'stygian'
+
+# 38
+RACE	'mi-go'
+	Number  38
+	Society	138
+	PC	'Yes'
+        Nature  'fragile sly'
+	Act	'brainsucked'
+	Aff	'infrared flying'
+	Off	'disarm fast dodge parry assist-race'
+	Imm	'poison cold'
+	Res	'disease mental bullets'
+	Vuln	'fire bash'
+	Body	'poison sentient insect'
+	Parts	'head legs brains guts eyestalks long-tongue tentacles'
+	Parts	'wings claws'
+	Size	'large'
+        Mat     'chitin'
+	Tracks	'insectoid'
+	Lang	'chinese'
+        Life    50
+        Cult    'yog'
+
+# 39
+RACE	'ghoul'
+	Number  39
+	Society	139
+	Aff	'dark-vision'
+	Off	'dodge parry assist-race kick-dirt'
+	Imm	'poison disease'
+	Res	'mental cold pierce bullets charm'
+	Vuln	'holy light'
+	Body	'poison sentient biped undead mammal'
+	Parts	'heads arms legs heart brains guts hands feet claws fangs'
+	Size	'medium'
+        Mat     'skin'
+	Tracks	'ape like'
+	Lang	'english'
+
+# 40
+RACE	'ghast'
+	Number  40
+	Society	140
+	Aff	'dark-vision'
+	Off	'dodge parry assist-race kick berserk'
+	Imm	'poison disease'
+	Res	'mental cold weapon bullets'
+	Vuln	'holy light'
+	Body	'poison sentient biped undead mammal'
+	Parts	'heads arms legs heart brains guts hands feet claws fangs'
+	Size	'medium'
+        Mat     'leathery skin'
+	Tracks	'ape like'
+	Lang	'english'
+
+# 41
+RACE	'shambler'
+	Number  41
+	Society	141
+        Nature  'robust disgusting'
+	Act	'wimpy'
+	Aff	'dark-vision detect-invis detect-hidden'
+	Off	'dodge parry fast fade'
+	Imm	'poison disease'
+	Res	'mental weapon bullets charm magic'
+	Vuln	'lightning'
+	Body	'poison decay sentient blob'
+	Parts	'head brains heart tentacles eyestalks'
+	Size	'large'
+        Mat     'protoplasma'
+	Tracks	'strange'
+
+# 42
+RACE	'byakhee'
+	Number  42
+	Society	142
+        Nature  'agile'
+	Aff	'dark-vision flying'
+	Off	'bash dodge parry fast tail assist-race'
+	Imm	'poison disease cold drowning'
+	Res	'light holy energy magic lightning'
+	Vuln	'fire'
+	Body	'edible sentient reptile bird cold-blood noweapon'
+	Parts	'head arms legs wings heart brains guts claws tail scales'
+	Size	'large'
+        Mat     'leather'
+	Tracks	'bird'
+
+# 43
+RACE	'dragon'
+	Number  43
+	Society	143
+        Nature  'monsterous smart'
+	Aff	'flying dark-vision haste detect-invis detect-hidden'
+	Off	'bash fast dodge tail parry crush'
+	Imm	'poison disease fire'
+	Res	'cold magic'
+	Vuln	'light'
+	Body	'poison sentient dragon'
+	Parts	'head legs heart guts feet wings eye tail fangs claws scales'
+	Parts	'long-tail'
+	Size	'giant'
+        Mat     'scales'
+	Tracks	'draconic'
+
+# 44
+RACE	'fish'
+	Number  44
+	Society	144
+	Aff	'swim water-breathing'
+	Off	'dodge'
+	Res	'cold'
+	Vuln	'fire'
+	Body	'edible animal fish cold-blood noweapon'
+	Parts	'head heart guts eye tail scales'
+	Size	'small'
+        Mat     'scales'
+	Tracks	'suspisous'
+
+# 45
+RACE	'zoog'
+	Number  45
+	Society	145
+	PC	'Yes'
+        Nature  'agile'
+	Act	'dream-native'
+	Aff	'dark-vision detect-hidden'
+	Off	'fast dodge parry assist-race'
+	Res	'mental disease magic'
+	Vuln	'iron steel silver'
+	Body	'edible sentient animal mammal'
+	Parts	'head arms legs hands heart brains guts eye ear long-tongue'
+	Parts	'fangs'
+	Size	'small'
+        Mat     'fur'
+	Tracks	'serpentine'
+	Lang	'cthonic'
+        Life    40
+        Cult    'azathoth'
+
+# 46
+RACE	'old one'
+	Number  46
+	Society	146
+        Nature  'monsterous sly'
+	Aff	'sanctuary regeneration dark-vision detect-hidden detect-invis'
+	Off	'fast dodge parry assist-race'
+	Res	'weapon magic'
+	Vuln	'holy'
+	Body	'sentient blob magical'
+	Parts	'wings guts brains long-tongue tentacles eyestalks'
+	Size	'giant'
+        Mat     'protoplasma'
+	Tracks	'huge'
+	Lang	'cthonic'
+        Life    200
+
+# 47
+RACE	'yithian'
+	Number  47
+	Society	147
+	PC	'Yes'
+	Nature	'sickly exposed'
+	Off	'dodge parry assist-race'
+	Res	'mental disease'
+	Vuln	'weapon'
+	Body	'edible sentient magical reptile'
+	Parts	'head heart brains guts eye long-tongue tentacles eyestalks'
+	Size	'large'
+        Mat     'rubber'
+	Tracks	'suspisous'
+	Lang	'stygian'
+        Life    200
+        Cult    'tiamat'
+
+# 48
+RACE	'plant'
+	Number  48
+	Society	148
+	Nature	'lumbering robust'
+	Off	'parry area-attack'
+	Res	'mental'
+	Body	'edible plant noweapon'
+	Parts	'tentacles leaves'
+	Size	'small'
+        Mat     'plant'
+	Tracks	'suspisous'
+
+# 49
+RACE	'gug'
+	Number  49
+	Society	149
+        Act     'brainsucked'
+        Nature  'strong robust'
+	Aff	'regeneration infrared detect-hidden'
+	Off	'dodge parry berserk crush'
+	Res	'bash'
+	Vuln	'light'
+	Body	'biped sentient animal'
+	Parts	'head arms legs heart brains guts hands feet eye ear'
+	Size	'large'
+	Tracks	'ape like'
+        Mat     'fur'
+	Lang	'gaelic'
+
+# 50
+RACE	'tcho tcho'
+	Number  50
+	Society	150
+        Nature  'dumb strong'
+	Off	'dodge parry bash'
+	Act	'brainsucked'
+	Res	'poison disease'
+	Vuln	'holy'
+	Body	'sentient biped mammal'
+	Parts	'head arms legs heart brains guts hands feet fingers ear eye'
+	Size	'medium'
+        Mat     'skin'
+	Tracks	'ape like'
+	Lang	'chinese'
+
+
+# 51	
+RACE	'insect'
+	Number  51
+	Society	151
+	Nature	'armoured fragile'
+	Aff	'infrared'
+	Vuln	'bash'
+	Body	'poison insect noweapon'
+	Parts	'head legs guts feet eyestalks'
+	Size	'small'
+        Mat     'chitin'
+	Tracks	'insectoid' 
+
+# 52
+RACE	'ghost'
+	Number  52
+	Society	152
+        Nature  'armoured unlucky'
+	Act	'undead'
+	Aff	'protect-good flying detect-invis dark-vision aura'
+	Off	'fade fodge parry'
+	Imm	'poison mental disease drowning'
+	Vuln	'fire holy'
+	Body	'undead decay mist'
+	Size	'medium'
+        Mat     'air'
+	Tracks	'suspisous'
+
+#
+# There must be an 'End' at the end
+#
+
+End
